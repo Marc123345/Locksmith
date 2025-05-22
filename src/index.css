@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 27%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+ 
+    /* Updated primary blue with better contrast */
+    --primary: 215 100% 35%;
+    --primary-foreground: 210 40% 98%;
+ 
+    /* Secondary colors with better contrast */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 215 100% 35%;
+ 
+    /* Muted colors with better contrast */
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 25% 35%;
+ 
+    /* Accent colors with better contrast */
+    --accent: 215 20% 92%;
+    --accent-foreground: 215 100% 35%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Border and input colors with better contrast */
+    --border: 215 20% 85%;
+    --input: 215 20% 85%;
+    --ring: 215 100% 35%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 215 25% 27%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 215 25% 27%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 215 25% 27%;
+    --popover-foreground: 210 40% 98%;
+ 
+    /* Updated dark mode colors for better contrast */
+    --primary: 215 100% 65%;
+    --primary-foreground: 215 25% 27%;
+ 
+    --secondary: 215 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 215 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 75%;
+ 
+    --accent: 215 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 215 32.6% 17.5%;
+    --input: 215 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-foreground antialiased;
+  }
+
+  /* Improved typography for better readability */
+  h1 {
+    @apply text-h1 font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-h2 font-bold tracking-tight;
+  }
+  h3 {
+    @apply text-h3 font-semibold tracking-tight;
+  }
+  h4 {
+    @apply text-h4 font-semibold;
+  }
+  p {
+    @apply text-body leading-relaxed;
+  }
+  .text-body-large {
+    @apply text-body-lg leading-relaxed;
+  }
+  .text-body-small {
+    @apply text-body-sm leading-relaxed;
+  }
+  .text-caption {
+    @apply text-body-xs;
+  }
+
+  /* Improved link styles */
+  a {
+    @apply transition-colors duration-200;
+  }
+  a:hover {
+    @apply text-primary;
+  }
+
+  /* Improved focus styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+}
+
+/* Custom utility classes for text contrast */
+@layer utilities {
+  .text-primary-light {
+    @apply text-primary-light;
+  }
+  .text-primary-lighter {
+    @apply text-primary-lighter;
+  }
+  .bg-primary-light {
+    @apply bg-primary-light;
+  }
+  .bg-primary-lighter {
+    @apply bg-primary-lightest;
+  }
+  .hover-primary {
+    @apply hover:text-primary transition-colors duration-200;
+  }
+}
