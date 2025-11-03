@@ -42,7 +42,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
           <div
             className="absolute inset-0 opacity-20 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${service.heroImage || 'https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2423543_1280.jpg'})`
+              backgroundImage: `url(${service.heroImage || 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp'})`
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
@@ -107,7 +107,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                 {/* Featured Image */}
                 <div className="rounded-xl overflow-hidden shadow-2xl">
                   <img
-                    src={service.contentImage || 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'}
+                    src={service.contentImage || 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp'}
                     alt={`Professional ${service.name.toLowerCase()}`}
                     className="w-full h-80 object-cover"
                   />
@@ -253,7 +253,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
           <div
             className="absolute inset-0 opacity-10 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://cdn.pixabay.com/photo/2018/07/08/14/14/key-3524244_1280.jpg)'
+              backgroundImage: 'url(https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&auto=format&fit=crop&q=80&fm=webp)'
             }}
           />
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

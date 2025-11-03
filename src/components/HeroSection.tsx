@@ -16,14 +16,14 @@ export const HeroSection = () => {
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=2000&auto=format&fit=crop&q=80&fm=webp"
           alt="Professional locksmith working on a lock"
           className="object-cover w-full h-full"
           role="img"
         />
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" 
-          aria-hidden="true" 
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"
+          aria-hidden="true"
         />
       </div>
 

@@ -17,7 +17,7 @@ const services = [
     icon: <Home className="h-6 w-6 text-white" />,
     title: "Residential Services",
     description: "Complete home security solutions including smart locks and master key systems.",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp",
     features: [
       "Lock installation & repair",
       "Smart lock systems",
@@ -30,7 +30,7 @@ const services = [
     icon: <Building2 className="h-6 w-6 text-white" />,
     title: "Commercial Services",
     description: "Advanced security solutions for businesses of all sizes.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp",
     features: [
       "Master key systems",
       "High-security locks",
@@ -43,7 +43,7 @@ const services = [
     icon: <Car className="h-6 w-6 text-white" />,
     title: "Automotive Services",
     description: "Professional automotive locksmith services for all vehicle types.",
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1568630742664-f17825d0bc29?w=800&auto=format&fit=crop&q=80&fm=webp",
     features: [
       "Car lockout assistance",
       "Key programming",
@@ -70,7 +70,7 @@ const testimonials = [
     rating: 5,
     testimonial: "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
     date: "5 months ago",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp",
     source: "Google",
     verified: true
   },
@@ -82,7 +82,7 @@ const testimonials = [
     date: "11 months ago",
     source: "Google",
     verified: true,
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp"
   }
 ];
 
