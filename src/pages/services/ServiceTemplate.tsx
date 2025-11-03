@@ -107,11 +107,26 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                 {/* Featured Image */}
                 <div className="rounded-xl overflow-hidden shadow-2xl">
                   <img
-                    src={service.contentImage || 'https://cdn.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg'}
+                    src={service.contentImage || 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'}
                     alt={`Professional ${service.name.toLowerCase()}`}
                     className="w-full h-80 object-cover"
                   />
                 </div>
+
+                {/* Additional Images Gallery */}
+                {service.additionalImages && service.additionalImages.length > 0 && (
+                  <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {service.additionalImages.map((image, index) => (
+                      <div key={index} className="rounded-lg overflow-hidden shadow-lg">
+                        <img
+                          src={image}
+                          alt={`${service.name} service ${index + 1}`}
+                          className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 {service.serviceAreas && service.serviceAreas.length > 0 && (
                   <div className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-100">

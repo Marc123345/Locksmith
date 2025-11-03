@@ -128,6 +128,21 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   locationPreference={location.name}
                 />
               </div>
+
+              {/* Additional Images Gallery */}
+              {location.additionalImages && location.additionalImages.length > 0 && (
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {location.additionalImages.map((image, index) => (
+                    <div key={index} className="rounded-lg overflow-hidden shadow-lg">
+                      <img
+                        src={image}
+                        alt={`Locksmith service ${index + 1} in ${location.name}`}
+                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>

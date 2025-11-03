@@ -16,7 +16,7 @@ export const HeroSection = () => {
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
           alt="Professional locksmith working on a lock"
           className="object-cover w-full h-full"
           role="img"

@@ -17,7 +17,7 @@ const services = [
     icon: <Home className="h-6 w-6 text-white" />,
     title: "Residential Services",
     description: "Complete home security solutions including smart locks and master key systems.",
-    image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     features: [
       "Lock installation & repair",
       "Smart lock systems",
@@ -30,7 +30,7 @@ const services = [
     icon: <Building2 className="h-6 w-6 text-white" />,
     title: "Commercial Services",
     description: "Advanced security solutions for businesses of all sizes.",
-    image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542083/ZcAJxuj_zr8ucm.jpg",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     features: [
       "Master key systems",
       "High-security locks",
@@ -43,7 +43,7 @@ const services = [
     icon: <Car className="h-6 w-6 text-white" />,
     title: "Automotive Services",
     description: "Professional automotive locksmith services for all vehicle types.",
-    image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542090/PuUH3SZ_i7gupv.jpg",
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     features: [
       "Car lockout assistance",
       "Key programming",
@@ -56,8 +56,8 @@ const services = [
 
 const testimonials = [
   {
+    name: "Jen Jamison",
     name: "Anonymous",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     location: "Annapolis, MD",
     rating: 5,
     testimonial: "Dispatch was courteous and super helpful, I knew the price and the time my tech was expected to arrive. I was at work and had lost my only key to my vehicle, and commute across the bridge for work so I was panicked.",
@@ -70,7 +70,7 @@ const testimonials = [
     location: "Annapolis, MD",
     rating: 5,
     testimonial: "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
-    date: "8 months ago",
+    date: "5 months ago",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     source: "Google",
     verified: true
@@ -84,7 +84,7 @@ const testimonials = [
     source: "Google",
     verified: true,
     image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  }
+];
 ];
 
 const containerVariants = {

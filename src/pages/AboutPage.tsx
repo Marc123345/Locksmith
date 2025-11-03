@@ -104,7 +104,7 @@ const AboutPage = () => {
           >
             <div className="relative rounded-xl overflow-hidden shadow-xl mb-8">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Royi and Yuli - Owners of A Secure Annapolis Locksmith"
                 className="w-full h-auto"
               />

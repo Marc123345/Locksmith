@@ -11,6 +11,7 @@ export interface LocationData {
   directions: string[];
   heroImage?: string;
   contentImage?: string;
+  additionalImages?: string[];
   faqs: Array<{
     question: string;
     answer: string;
