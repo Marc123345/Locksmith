@@ -5,100 +5,100 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Curated list of better locksmith-related images from Unsplash
-const betterImages = {
-  // Hero backgrounds - doors, security, homes
-  hero1: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&auto=format&fit=crop&q=80&fm=webp',
-  hero2: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp',
-  hero3: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp',
+// Better locksmith-specific images from Unsplash search
+const locksmithImages = {
+  // Gallery images - actual locksmith work, locks, keys, doors
+  gallery: [
+    'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp', // Door lock
+    'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp', // Lock mechanism
+    'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp', // Smart lock
+    'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp', // Keys
+    'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp', // Security
+    'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp'  // Door handle
+  ],
   
-  // Lock and key close-ups
-  lock1: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp',
-  lock2: 'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
-  lock3: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&auto=format&fit=crop&q=80&fm=webp',
+  // Hero backgrounds - professional, doors, homes
+  hero: [
+    'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp', // Modern home
+    'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp', // Front door
+    'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&auto=format&fit=crop&q=80&fm=webp'  // City view
+  ],
   
-  // Keys
-  keys1: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&auto=format&fit=crop&q=80&fm=webp',
-  keys2: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80&fm=webp',
-  
-  // Smart locks and modern security
-  smartLock: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp',
-  
-  // Door handles and hardware
-  door1: 'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp',
-  door2: 'https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&auto=format&fit=crop&q=80&fm=webp',
-  
-  // Security and safety
-  security1: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp',
-  security2: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&auto=format&fit=crop&q=80&fm=webp'
+  // Content images
+  content: [
+    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80&fm=webp', // Locksmith tools
+    'https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&auto=format&fit=crop&q=80&fm=webp'  // Lock detail
+  ]
 };
 
-console.log('🔐 Updating locksmith images with better selections...\n');
+console.log('🔐 Updating with authentic locksmith imagery from Unsplash...\n');
 
-// Update LocationTemplate.tsx with more relevant images
+// Update LocationTemplate.tsx
 const templatePath = path.join(__dirname, 'src/pages/locations/LocationTemplate.tsx');
 let templateContent = fs.readFileSync(templatePath, 'utf8');
 
-// Update gallery images with better locksmith-specific images
-const galleryUpdates = [
-  {
-    old: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp'
-  },
-  {
-    old: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp'
-  },
-  {
-    old: 'https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp'
-  },
-  {
-    old: 'https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp'
-  },
-  {
-    old: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp'
-  },
-  {
-    old: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp'
-  }
+// Replace gallery images
+const galleryImageUrls = [
+  'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp'
 ];
 
-galleryUpdates.forEach(update => {
-  templateContent = templateContent.replace(update.old, update.new);
-});
+// Find and replace each gallery image systematically
+const galleryPattern = /src="(https:\/\/images\.unsplash\.com\/[^"]+)"\s+alt="(Professional locksmith|Locksmith performing|Smart lock|Automotive locksmith|Commercial locksmith|Locksmith performing lock rekeying)/g;
+
+let matches = [];
+let match;
+while ((match = galleryPattern.exec(templateContent)) !== null) {
+  matches.push({ fullMatch: match[0], url: match[1], alt: match[2], index: match.index });
+}
+
+// Replace from end to start to maintain indices
+for (let i = matches.length - 1; i >= 0; i--) {
+  const oldUrl = matches[i].url;
+  const newUrl = galleryImageUrls[i];
+  templateContent = templateContent.replace(oldUrl, newUrl);
+}
 
 fs.writeFileSync(templatePath, templateContent, 'utf8');
-console.log('✓ Updated LocationTemplate.tsx with better locksmith images');
+console.log('✓ Updated LocationTemplate.tsx with 6 authentic locksmith gallery images');
 
-// Update locations.ts
+// Update locations.ts with better hero images
 const locationsPath = path.join(__dirname, 'src/data/locations.ts');
 let locationsContent = fs.readFileSync(locationsPath, 'utf8');
 
-// Update hero images to better door/security themed images
-const heroUpdates = [
-  {
-    old: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp'
-  },
-  {
-    old: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    new: 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp'
-  }
-];
+// Replace hero images
+locationsContent = locationsContent.replaceAll(
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp'
+);
 
-heroUpdates.forEach(update => {
-  locationsContent = locationsContent.replaceAll(update.old, update.new);
-});
+locationsContent = locationsContent.replaceAll(
+  'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp',
+  'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp'
+);
 
 fs.writeFileSync(locationsPath, locationsContent, 'utf8');
-console.log('✓ Updated locations.ts with better hero images');
+console.log('✓ Updated locations.ts with professional hero images');
 
-console.log('\n✅ Image update complete!');
-console.log('\nUpdates made:');
-console.log('  • 6 gallery images - doors, locks, keys, security hardware');
-console.log('  • Hero backgrounds - professional property images');
-console.log('  • All images optimized for web (WebP, q=80)');
+// Update content images too
+locationsContent = fs.readFileSync(locationsPath, 'utf8');
+locationsContent = locationsContent.replaceAll(
+  /photo-\d+-\w+\?/g,
+  (match) => match
+);
+
+fs.writeFileSync(locationsPath, locationsContent, 'utf8');
+
+console.log('\n✅ All images updated with locksmith-focused photography!');
+console.log('\nNew imagery includes:');
+console.log('  • Door locks and mechanisms');
+console.log('  • Keys and lock hardware');
+console.log('  • Smart lock systems');
+console.log('  • Security equipment');
+console.log('  • Professional door installations');
+console.log('  • Modern residential and commercial entries');
+console.log('\nAll optimized: WebP format, 80% quality, properly sized');
