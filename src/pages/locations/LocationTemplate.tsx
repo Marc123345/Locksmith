@@ -128,10 +128,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   locationPreference={location.name}
                 />
               </div>
+            </div>
+          </div>
+        </section>
 
-              {/* Additional Images Gallery */}
-              {location.additionalImages && location.additionalImages.length > 0 && (
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Image Gallery Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,7 +147,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp"
                   alt="Professional locksmith working on door lock installation"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -159,7 +159,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
               <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp"
                   alt="Locksmith performing emergency lockout service"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -171,7 +171,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
               <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp"
                   alt="Smart lock installation and programming service"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -183,7 +183,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
               <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp"
                   alt="Automotive locksmith working on car key programming"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -195,7 +195,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
               <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp"
                   alt="Commercial locksmith installing high-security systems"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -207,7 +207,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
               <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp"
                   alt="Locksmith performing lock rekeying service"
                   className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -216,21 +216,6 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <p className="text-gray-600">Professional rekeying service for enhanced security</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-                  {location.additionalImages.map((image, index) => (
-                    <div key={index} className="rounded-lg overflow-hidden shadow-lg">
-                      <img
-                        src={image}
-                        alt={`Locksmith service ${index + 1} in ${location.name}`}
-                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
         </section>
