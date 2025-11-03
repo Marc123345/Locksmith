@@ -7,10 +7,20 @@ import { useScroll } from "@/hooks/useScroll";
 import { CONTACT } from "@/utils/contact";
 
 const locationLinks = [
+  { name: "Annapolis, MD", href: "/locations/annapolis" },
   { name: "Arnold, MD", href: "/locations/arnold" },
-  { name: "Edgewater, MD", href: "/locations/edgewater" },
-  { name: "Severna Park, MD", href: "/locations/severna-park" },
+  { name: "Bay Ridge, MD", href: "/locations/bay-ridge" },
+  { name: "Broadneck, MD", href: "/locations/broadneck" },
+  { name: "Cape St. Claire, MD", href: "/locations/cape-st-claire" },
   { name: "Crownsville, MD", href: "/locations/crownsville" },
+  { name: "Eastport, MD", href: "/locations/eastport" },
+  { name: "Edgewater, MD", href: "/locations/edgewater" },
+  { name: "Edgewater Beach, MD", href: "/locations/edgewater-beach" },
+  { name: "Hillsmere Shores, MD", href: "/locations/hillsmere-shores" },
+  { name: "Mayo, MD", href: "/locations/mayo" },
+  { name: "Parole, MD", href: "/locations/parole" },
+  { name: "Riva, MD", href: "/locations/riva" },
+  { name: "Severna Park, MD", href: "/locations/severna-park" },
 ];
 
 const serviceLinks = [

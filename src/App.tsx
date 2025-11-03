@@ -20,6 +20,16 @@ import ArnoldPage from '@/pages/locations/ArnoldPage';
 import EdgewaterPage from '@/pages/locations/EdgewaterPage';
 import SevernaParkPage from '@/pages/locations/SevernaParkPage';
 import CrownsvillePage from '@/pages/locations/CrownsvillePage';
+import AnnapolisPage from '@/pages/locations/AnnapolisPage';
+import ParolePage from '@/pages/locations/ParolePage';
+import BayRidgePage from '@/pages/locations/BayRidgePage';
+import HillsmereShoresPage from '@/pages/locations/HillsmereShoresPage';
+import EastportPage from '@/pages/locations/EastportPage';
+import RivaPage from '@/pages/locations/RivaPage';
+import CapeStClairePage from '@/pages/locations/CapeStClairePage';
+import BroadneckPage from '@/pages/locations/BroadneckPage';
+import EdgewaterBeachPage from '@/pages/locations/EdgewaterBeachPage';
+import MayoPage from '@/pages/locations/MayoPage';
 
 // Import service pages
 import LockChangePage from '@/pages/services/LockChangePage';
@@ -62,6 +72,16 @@ function App() {
             <Route path="/locations/edgewater" element={<EdgewaterPage />} />
             <Route path="/locations/severna-park" element={<SevernaParkPage />} />
             <Route path="/locations/crownsville" element={<CrownsvillePage />} />
+            <Route path="/locations/annapolis" element={<AnnapolisPage />} />
+            <Route path="/locations/parole" element={<ParolePage />} />
+            <Route path="/locations/bay-ridge" element={<BayRidgePage />} />
+            <Route path="/locations/hillsmere-shores" element={<HillsmereShoresPage />} />
+            <Route path="/locations/eastport" element={<EastportPage />} />
+            <Route path="/locations/riva" element={<RivaPage />} />
+            <Route path="/locations/cape-st-claire" element={<CapeStClairePage />} />
+            <Route path="/locations/broadneck" element={<BroadneckPage />} />
+            <Route path="/locations/edgewater-beach" element={<EdgewaterBeachPage />} />
+            <Route path="/locations/mayo" element={<MayoPage />} />
 
             {/* Specific service pages */}
             <Route path="/services/lock-change" element={<LockChangePage />} />

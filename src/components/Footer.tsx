@@ -90,25 +90,35 @@ const Footer = () => {
           {/* Service Areas */}
           <div className="space-y-4">
             <h3 className="font-semibold text-lg mb-4">Service Areas</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/locations/annapolis" className="text-muted-foreground hover:text-primary transition-colors">
+                  Annapolis
+                </Link>
+              </li>
               <li>
                 <Link to="/locations/arnold" className="text-muted-foreground hover:text-primary transition-colors">
-                  Arnold, MD
+                  Arnold
                 </Link>
               </li>
               <li>
                 <Link to="/locations/edgewater" className="text-muted-foreground hover:text-primary transition-colors">
-                  Edgewater, MD
+                  Edgewater
                 </Link>
               </li>
               <li>
                 <Link to="/locations/severna-park" className="text-muted-foreground hover:text-primary transition-colors">
-                  Severna Park, MD
+                  Severna Park
                 </Link>
               </li>
               <li>
-                <Link to="/locations/crownsville" className="text-muted-foreground hover:text-primary transition-colors">
-                  Crownsville, MD
+                <Link to="/locations/parole" className="text-muted-foreground hover:text-primary transition-colors">
+                  Parole
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/eastport" className="text-muted-foreground hover:text-primary transition-colors">
+                  Eastport
                 </Link>
               </li>
             </ul>

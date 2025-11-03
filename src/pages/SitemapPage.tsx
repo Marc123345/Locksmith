@@ -41,9 +41,51 @@ const mainPages = [
 
 const locationPages = [
   {
+    path: '/locations/annapolis',
+    title: 'Annapolis, MD',
+    description: 'Professional locksmith services in Downtown Annapolis, Eastport, and Hillsmere Shores',
+    lastMod: '2025-03-24',
+    priority: '0.9'
+  },
+  {
     path: '/locations/arnold',
     title: 'Arnold, MD',
     description: 'Locksmith services in Arnold, Cape St. Claire, and Bay Hills',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/bay-ridge',
+    title: 'Bay Ridge, MD',
+    description: 'Trusted locksmith services in Bay Ridge and South Annapolis',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/broadneck',
+    title: 'Broadneck, MD',
+    description: 'Expert locksmith services throughout the Broadneck Peninsula',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/cape-st-claire',
+    title: 'Cape St. Claire, MD',
+    description: 'Trusted locksmith services in Cape St. Claire Community',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/crownsville',
+    title: 'Crownsville, MD',
+    description: 'Locksmith services in Crownsville, Herald Harbor, and Arden on the Severn',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/eastport',
+    title: 'Eastport, MD',
+    description: 'Your local locksmith right here in Eastport',
     lastMod: '2025-03-24',
     priority: '0.8'
   },
@@ -55,16 +97,44 @@ const locationPages = [
     priority: '0.8'
   },
   {
-    path: '/locations/severna-park',
-    title: 'Severna Park, MD',
-    description: 'Locksmith services in Severna Park, Benfield, and Chartwell',
+    path: '/locations/edgewater-beach',
+    title: 'Edgewater Beach, MD',
+    description: 'Waterfront locksmith services in Edgewater Beach and Mayo',
     lastMod: '2025-03-24',
     priority: '0.8'
   },
   {
-    path: '/locations/crownsville',
-    title: 'Crownsville, MD',
-    description: 'Locksmith services in Crownsville, Herald Harbor, and Arden on the Severn',
+    path: '/locations/hillsmere-shores',
+    title: 'Hillsmere Shores, MD',
+    description: 'Local locksmith services in Hillsmere Shores and Forest Drive',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/mayo',
+    title: 'Mayo, MD',
+    description: 'Reliable locksmith services in Mayo and South River Communities',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/parole',
+    title: 'Parole, MD',
+    description: 'Fast locksmith services in Parole, Annapolis Mall Area, and Riva Road',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/riva',
+    title: 'Riva, MD',
+    description: 'Professional locksmith services in Riva and South River Areas',
+    lastMod: '2025-03-24',
+    priority: '0.8'
+  },
+  {
+    path: '/locations/severna-park',
+    title: 'Severna Park, MD',
+    description: 'Locksmith services in Severna Park, Benfield, and Chartwell',
     lastMod: '2025-03-24',
     priority: '0.8'
   }
