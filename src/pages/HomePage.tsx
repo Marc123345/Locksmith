@@ -57,7 +57,6 @@ const services = [
 const testimonials = [
   {
     name: "Jen Jamison",
-    name: "Anonymous",
     location: "Annapolis, MD",
     rating: 5,
     testimonial: "Dispatch was courteous and super helpful, I knew the price and the time my tech was expected to arrive. I was at work and had lost my only key to my vehicle, and commute across the bridge for work so I was panicked.",
@@ -84,7 +83,7 @@ const testimonials = [
     source: "Google",
     verified: true,
     image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-];
+  }
 ];
 
 const containerVariants = {
