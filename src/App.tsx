@@ -15,6 +15,20 @@ import PrivacyPage from '@/pages/PrivacyPage';
 import TermsPage from '@/pages/TermsPage';
 import SitemapPage from '@/pages/SitemapPage';
 
+// Import location pages
+import ArnoldPage from '@/pages/locations/ArnoldPage';
+import EdgewaterPage from '@/pages/locations/EdgewaterPage';
+import SevernaParkPage from '@/pages/locations/SevernaParkPage';
+import CrownsvillePage from '@/pages/locations/CrownsvillePage';
+
+// Import service pages
+import LockChangePage from '@/pages/services/LockChangePage';
+import LockRekeyPage from '@/pages/services/LockRekeyPage';
+import CarKeyProgrammingPage from '@/pages/services/CarKeyProgrammingPage';
+import EmergencyLockoutPage from '@/pages/services/EmergencyLockoutPage';
+import LockRepairPage from '@/pages/services/LockRepairPage';
+import LostCarKeysPage from '@/pages/services/LostCarKeysPage';
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -42,23 +56,37 @@ function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/sitemap" element={<SitemapPage />} />
-            
+
+            {/* Location pages */}
+            <Route path="/locations/arnold" element={<ArnoldPage />} />
+            <Route path="/locations/edgewater" element={<EdgewaterPage />} />
+            <Route path="/locations/severna-park" element={<SevernaParkPage />} />
+            <Route path="/locations/crownsville" element={<CrownsvillePage />} />
+
+            {/* Specific service pages */}
+            <Route path="/services/lock-change" element={<LockChangePage />} />
+            <Route path="/services/lock-rekey" element={<LockRekeyPage />} />
+            <Route path="/services/car-key-programming" element={<CarKeyProgrammingPage />} />
+            <Route path="/services/emergency-lockout" element={<EmergencyLockoutPage />} />
+            <Route path="/services/lock-repair" element={<LockRepairPage />} />
+            <Route path="/services/lost-car-keys" element={<LostCarKeysPage />} />
+
             {/* Service-specific routes with hash navigation */}
-            <Route 
-              path="/services/residential" 
-              element={<Navigate to="/services#residential" replace />} 
+            <Route
+              path="/services/residential"
+              element={<Navigate to="/services#residential" replace />}
             />
-            <Route 
-              path="/services/commercial" 
-              element={<Navigate to="/services#commercial" replace />} 
+            <Route
+              path="/services/commercial"
+              element={<Navigate to="/services#commercial" replace />}
             />
-            <Route 
-              path="/services/automotive" 
-              element={<Navigate to="/services#automotive" replace />} 
+            <Route
+              path="/services/automotive"
+              element={<Navigate to="/services#automotive" replace />}
             />
-            <Route 
-              path="/services/emergency" 
-              element={<Navigate to="/services#emergency" replace />} 
+            <Route
+              path="/services/emergency"
+              element={<Navigate to="/services#emergency" replace />}
             />
 
             {/* Catch all route - redirect to home */}

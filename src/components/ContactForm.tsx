@@ -28,7 +28,13 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-const ContactForm = () => {
+interface ContactFormProps {
+  pageSource?: string;
+  serviceType?: string;
+  locationPreference?: string;
+}
+
+const ContactForm = ({ pageSource, serviceType, locationPreference }: ContactFormProps = {}) => {
   const [isSubmitting, setIsSubmitting] = useSafeState(false);
   const [submitError, setSubmitError] = useSafeState<string | null>(null);
   const [submitSuccess, setSubmitSuccess] = useSafeState(false);
@@ -62,6 +68,9 @@ const ContactForm = () => {
           email: data.email,
           phone: data.phone,
           message: data.message,
+          page_source: pageSource,
+          service_type: serviceType,
+          location_preference: locationPreference,
         }]);
 
       if (error) {

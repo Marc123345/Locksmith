@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-muted pt-12 pb-6 mt-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
@@ -87,33 +87,65 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Service Areas */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg mb-4">Service Areas</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/locations/arnold" className="text-muted-foreground hover:text-primary transition-colors">
+                  Arnold, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/edgewater" className="text-muted-foreground hover:text-primary transition-colors">
+                  Edgewater, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/severna-park" className="text-muted-foreground hover:text-primary transition-colors">
+                  Severna Park, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/crownsville" className="text-muted-foreground hover:text-primary transition-colors">
+                  Crownsville, MD
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Services */}
           <div className="space-y-4">
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services#residential" className="text-muted-foreground hover:text-primary transition-colors">
-                  Residential Locksmith
+                <Link to="/services/lock-change" className="text-muted-foreground hover:text-primary transition-colors">
+                  Lock Change
                 </Link>
               </li>
               <li>
-                <Link to="/services#commercial" className="text-muted-foreground hover:text-primary transition-colors">
-                  Commercial Locksmith
+                <Link to="/services/lock-rekey" className="text-muted-foreground hover:text-primary transition-colors">
+                  Lock Rekey
                 </Link>
               </li>
               <li>
-                <Link to="/services#automotive" className="text-muted-foreground hover:text-primary transition-colors">
-                  Automotive Locksmith
+                <Link to="/services/car-key-programming" className="text-muted-foreground hover:text-primary transition-colors">
+                  Car Key Programming
                 </Link>
               </li>
               <li>
-                <Link to="/services#emergency" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/services/emergency-lockout" className="text-muted-foreground hover:text-primary transition-colors">
                   Emergency Lockout
                 </Link>
               </li>
               <li>
-                <Link to="/services#security" className="text-muted-foreground hover:text-primary transition-colors">
-                  Security Systems
+                <Link to="/services/lock-repair" className="text-muted-foreground hover:text-primary transition-colors">
+                  Lock Repair
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/lost-car-keys" className="text-muted-foreground hover:text-primary transition-colors">
+                  Lost Car Keys
                 </Link>
               </li>
             </ul>
