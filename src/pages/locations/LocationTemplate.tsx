@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, Home, Building2, Car, Wrench } from 'lucide-react';
 import { CONTACT } from '@/utils/contact';
 import ContactForm from '@/components/ContactForm';
 import PricingSection from '@/components/PricingSection';
@@ -12,7 +12,6 @@ import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import { standardPricing } from '@/data/pricing';
 import { getTestimonialsByLocation } from '@/data/testimonials';
 import type { LocationData } from '@/data/locations';
-import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 interface LocationTemplateProps {
   location: LocationData;
@@ -38,29 +37,36 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
       <SpecialOfferBanner />
 
       <div className="min-h-screen bg-white">
-        <section className="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Breadcrumbs />
+        {/* Hero Section with Background Image */}
+        <section className="relative bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24 overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-20 bg-cover bg-center"
+            style={{
+              backgroundImage: 'url(https://cdn.pixabay.com/photo/2020/02/03/00/12/lock-4815329_1280.jpg)'
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
 
-            <div className="mt-8 text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {location.title}
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8">
+              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 {location.subtitle}
               </p>
 
-              <div className="flex flex-wrap justify-center gap-6 mt-8">
+              <div className="flex flex-wrap justify-center gap-4 mt-10">
                 <a
                   href={`tel:${CONTACT.PHONE}`}
-                  className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105 shadow-xl"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   {CONTACT.PHONE_DISPLAY}
                 </a>
                 <a
                   href={`mailto:${CONTACT.EMAIL}`}
-                  className="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-400 transition-colors"
+                  className="inline-flex items-center px-8 py-4 bg-blue-500 text-white rounded-lg font-semibold text-lg hover:bg-blue-400 transition-all hover:scale-105 shadow-xl border-2 border-blue-300"
                 >
                   <Mail className="h-5 w-5 mr-2" />
                   Email Us
@@ -70,45 +76,52 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           </div>
         </section>
 
-        <section className="py-16">
+        {/* Main Content Section */}
+        <section className="py-20 bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">
                   Your Trusted Locksmith in {location.name}
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed mb-8">
                   {location.description}
                 </p>
 
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">Hours of Operation</h3>
-                      <p className="text-gray-700">Mon–Sat: 8:00 AM – 8:00 PM</p>
-                      <p className="text-gray-700">Sun: Emergency Services Only</p>
-                    </div>
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                    <Clock className="h-8 w-8 text-blue-600 mb-3" />
+                    <h3 className="font-bold text-gray-900 mb-3 text-lg">Hours of Operation</h3>
+                    <p className="text-gray-700 font-medium">Mon–Sat: 8:00 AM – 8:00 PM</p>
+                    <p className="text-gray-700 font-medium">Sun: Emergency Services Only</p>
                   </div>
 
-                  <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">Service Areas</h3>
-                      <p className="text-gray-700">
-                        {location.neighborhoods.join(', ')}
-                      </p>
-                    </div>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                    <MapPin className="h-8 w-8 text-blue-600 mb-3" />
+                    <h3 className="font-bold text-gray-900 mb-3 text-lg">Service Areas</h3>
+                    <p className="text-gray-700">
+                      {location.neighborhoods.slice(0, 3).join(', ')}
+                      {location.neighborhoods.length > 3 && ' & more'}
+                    </p>
                   </div>
+                </div>
+
+                {/* Featured Image */}
+                <div className="mt-8 rounded-xl overflow-hidden shadow-2xl">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2017/03/10/13/49/keys-2132114_1280.jpg"
+                    alt={`Professional locksmith services in ${location.name}`}
+                    className="w-full h-80 object-cover"
+                  />
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-10 border border-gray-100 sticky top-24">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   Get in Touch
                 </h3>
-                <p className="text-gray-700 mb-6">
-                  Need fast locksmith help in {location.name}? Fill out the form below:
+                <p className="text-gray-600 mb-6 text-lg">
+                  Need fast locksmith help in {location.name}? Fill out the form below and we'll respond immediately:
                 </p>
                 <ContactForm
                   pageSource={`/locations/${location.slug}`}
@@ -119,64 +132,88 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
+        {/* Services Grid Section */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              Full-Service Locksmith Solutions in {location.name}
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Full-Service Locksmith Solutions in {location.name}
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From emergency lockouts to complete security upgrades, we handle all your locksmith needs with professional expertise.
+              </p>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Residential Locksmith Services
+              <div className="group bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-blue-100">
+                <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Home className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Residential Locksmith
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 leading-relaxed">
                   Home security is our top priority. Our residential locksmith services in {location.name} include lock rekeying, deadbolt installation, smart lock upgrades, and emergency home lockouts.
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Automotive Locksmith Services
+              <div className="group bg-gradient-to-br from-green-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-green-100">
+                <div className="bg-green-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Car className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Automotive Locksmith
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 leading-relaxed">
                   Need a car locksmith in {location.name}? Whether you're locked out, lost your keys, or your fob isn't working — we offer car door unlocks, ignition repair, transponder key programming, and more.
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Commercial Locksmith Services
+              <div className="group bg-gradient-to-br from-purple-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-purple-100">
+                <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Building2 className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Commercial Locksmith
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 leading-relaxed">
                   Business owners trust us for expert commercial locksmith services in {location.name} — including master key systems, keyless entry, panic bars, and high-security locks.
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Emergency Locksmith in {location.name}
+              <div className="group bg-gradient-to-br from-red-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-red-100">
+                <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Phone className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  24/7 Emergency Service
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 leading-relaxed">
                   Locked out late at night? We're available 24/7 for emergency locksmith services in {location.name}. We arrive fast, fix the issue quickly, and get you back inside safely.
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="group bg-gradient-to-br from-orange-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-orange-100">
+                <div className="bg-orange-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Wrench className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Lock Repair & Installation
                 </h3>
-                <p className="text-gray-700">
-                  We install, repair, and replace all major lock brands — from traditional deadbolts to the latest in smart lock technology.
+                <p className="text-gray-700 leading-relaxed">
+                  We install, repair, and replace all major lock brands — from traditional deadbolts to the latest in smart lock technology. Professional service guaranteed.
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <div className="group bg-gradient-to-br from-teal-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-teal-100">
+                <div className="bg-teal-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <Clock className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   Fast Response Time
                 </h3>
-                <p className="text-gray-700">
-                  Our mobile locksmiths typically arrive in {location.responseTime} for emergency and scheduled services throughout {location.name}.
+                <p className="text-gray-700 leading-relaxed">
+                  Our mobile locksmiths typically arrive in {location.responseTime} for emergency and scheduled services throughout {location.name} and surrounding areas.
                 </p>
               </div>
             </div>
@@ -185,48 +222,55 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
         <PricingSection pricing={standardPricing} />
 
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        {/* CTA Section with Image */}
+        <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
+          <div
+            className="absolute inset-0 opacity-10 bg-cover bg-center"
+            style={{
+              backgroundImage: 'url(https://cdn.pixabay.com/photo/2016/12/06/14/33/lock-1886634_1280.jpg)'
+            }}
+          />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Call Now for Immediate Locksmith Help in {location.name}
             </h2>
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
               Don't wait when security is at stake. Whether you're locked out or upgrading your locks, call A Secure Annapolis Locksmith today.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-6 mb-12">
               <a
                 href={`tel:${CONTACT.PHONE}`}
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-10 py-5 bg-white text-blue-600 rounded-lg text-xl font-bold hover:bg-blue-50 transition-all hover:scale-105 shadow-2xl"
               >
-                <Phone className="h-6 w-6 mr-2" />
+                <Phone className="h-6 w-6 mr-3" />
                 {CONTACT.PHONE_DISPLAY}
               </a>
               <a
                 href={`mailto:${CONTACT.EMAIL}`}
-                className="inline-flex items-center px-8 py-4 bg-gray-100 text-gray-900 rounded-lg text-lg font-semibold hover:bg-gray-200 transition-colors"
+                className="inline-flex items-center px-10 py-5 bg-blue-500 text-white rounded-lg text-xl font-bold hover:bg-blue-400 transition-all hover:scale-105 shadow-2xl border-2 border-white"
               >
-                <Mail className="h-6 w-6 mr-2" />
-                {CONTACT.EMAIL}
+                <Mail className="h-6 w-6 mr-3" />
+                Email Us
               </a>
             </div>
 
-            <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-              <div className="flex items-start">
-                <span className="text-green-600 font-bold text-xl mr-2">✓</span>
-                <p className="text-gray-700">Fast, local response in {location.name}</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-3xl font-bold mb-2">✓</div>
+                <p className="text-white font-medium">Fast, local response in {location.name}</p>
               </div>
-              <div className="flex items-start">
-                <span className="text-green-600 font-bold text-xl mr-2">✓</span>
-                <p className="text-gray-700">Fully licensed, bonded & insured</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-3xl font-bold mb-2">✓</div>
+                <p className="text-white font-medium">Fully licensed, bonded & insured</p>
               </div>
-              <div className="flex items-start">
-                <span className="text-green-600 font-bold text-xl mr-2">✓</span>
-                <p className="text-gray-700">Trusted by hundreds of {location.name} residents</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-3xl font-bold mb-2">✓</div>
+                <p className="text-white font-medium">Trusted by hundreds of residents</p>
               </div>
-              <div className="flex items-start">
-                <span className="text-green-600 font-bold text-xl mr-2">✓</span>
-                <p className="text-gray-700">15+ years serving Anne Arundel County</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-3xl font-bold mb-2">✓</div>
+                <p className="text-white font-medium">15+ years serving Anne Arundel County</p>
               </div>
             </div>
           </div>
