@@ -1,13 +1,33 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/useScroll";
 import { CONTACT } from "@/utils/contact";
 
+const locationLinks = [
+  { name: "Arnold, MD", href: "/locations/arnold" },
+  { name: "Edgewater, MD", href: "/locations/edgewater" },
+  { name: "Severna Park, MD", href: "/locations/severna-park" },
+  { name: "Crownsville, MD", href: "/locations/crownsville" },
+];
+
+const serviceLinks = [
+  { name: "Lock Change", href: "/services/lock-change" },
+  { name: "Lock Rekey", href: "/services/lock-rekey" },
+  { name: "Car Key Programming", href: "/services/car-key-programming" },
+  { name: "Emergency Lockout", href: "/services/emergency-lockout" },
+  { name: "Lock Repair", href: "/services/lock-repair" },
+  { name: "Lost Car Keys", href: "/services/lost-car-keys" },
+];
+
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const isScrolled = useScroll(10);
   const location = useLocation();
   const navigate = useNavigate();
@@ -15,6 +35,10 @@ export const Header = () => {
   // Close menu on route change
   useEffect(() => {
     setIsOpen(false);
+    setLocationsOpen(false);
+    setServicesOpen(false);
+    setMobileLocationsOpen(false);
+    setMobileServicesOpen(false);
   }, [location.pathname]);
 
   const toggleMenu = useCallback(() => setIsOpen(prev => !prev), []);
@@ -23,7 +47,6 @@ export const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
   ];
@@ -39,6 +62,8 @@ export const Header = () => {
   const handleNavigation = (href: string) => {
     navigate(href);
     closeMenu();
+    setLocationsOpen(false);
+    setServicesOpen(false);
     if (href.includes('#')) {
       setTimeout(() => {
         const element = document.getElementById(href.split('#')[1]);
@@ -72,21 +97,21 @@ export const Header = () => {
       >
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16 md:h-20" role="navigation">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center hover:opacity-80 transition-opacity"
               onClick={closeMenu}
               aria-label="A Secure Annapolis Locksmith Home"
             >
-              <img 
-                src="https://i.imgur.com/VfpMzbE.png" 
-                alt="A Secure Annapolis Locksmith Logo" 
+              <img
+                src="https://i.imgur.com/VfpMzbE.png"
+                alt="A Secure Annapolis Locksmith Logo"
                 className="h-12 w-auto md:h-16"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1 lg:space-x-8">
+            <div className="hidden md:flex items-center space-x-1 lg:space-x-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -103,14 +128,81 @@ export const Header = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button 
-                size="sm" 
+
+              {/* Locations Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setLocationsOpen(true)}
+                onMouseLeave={() => setLocationsOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "text-sm lg:text-base transition-colors relative py-2 px-3 font-medium flex items-center",
+                    isActive('/locations')
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  )}
+                >
+                  Locations
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {locationsOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
+                    {locationLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        to={link.href}
+                        className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
+                        onClick={() => handleNavigation(link.href)}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setServicesOpen(true)}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "text-sm lg:text-base transition-colors relative py-2 px-3 font-medium flex items-center",
+                    isActive('/services')
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
+                  )}
+                >
+                  Services
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                {servicesOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
+                    {serviceLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        to={link.href}
+                        className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
+                        onClick={() => handleNavigation(link.href)}
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Button
+                size="sm"
                 variant="white"
                 className="shadow-lg hover:shadow-xl whitespace-nowrap ml-4"
                 asChild
               >
                 <a href={`tel:${CONTACT.PHONE}`} className="flex items-center">
-                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" /> 
+                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
                   Call Now
                 </a>
               </Button>
@@ -151,7 +243,7 @@ export const Header = () => {
         aria-modal="true"
         aria-label="Main navigation"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 pb-24">
           <div className="space-y-1">
             {navLinks.map((link) => (
               <Link
@@ -169,15 +261,66 @@ export const Header = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Mobile Locations Dropdown */}
+            <div>
+              <button
+                onClick={() => setMobileLocationsOpen(!mobileLocationsOpen)}
+                className="w-full flex items-center justify-between py-2 px-4 rounded-lg transition-colors font-medium hover:bg-muted text-foreground hover:text-primary"
+              >
+                Locations
+                <ChevronDown className={cn("h-4 w-4 transition-transform", mobileLocationsOpen && "rotate-180")} />
+              </button>
+              {mobileLocationsOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {locationLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
+                      onClick={() => handleNavigation(link.href)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Services Dropdown */}
+            <div>
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="w-full flex items-center justify-between py-2 px-4 rounded-lg transition-colors font-medium hover:bg-muted text-foreground hover:text-primary"
+              >
+                Services
+                <ChevronDown className={cn("h-4 w-4 transition-transform", mobileServicesOpen && "rotate-180")} />
+              </button>
+              {mobileServicesOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {serviceLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
+                      onClick={() => handleNavigation(link.href)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <div className="pt-2 pb-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 variant="white"
                 className="w-full shadow-lg hover:shadow-xl"
                 asChild
               >
                 <a href={`tel:${CONTACT.PHONE}`} className="flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" /> 
+                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
                   Call: {CONTACT.PHONE_DISPLAY}
                 </a>
               </Button>
@@ -187,14 +330,14 @@ export const Header = () => {
       </div>
 
       {/* Mobile Bottom CTA */}
-      <div 
+      <div
         className="md:hidden fixed bottom-0 left-0 right-0 bg-primary p-3 shadow-lg z-50"
         role="complementary"
         aria-label="Quick contact"
       >
-        <Button 
+        <Button
           variant="white"
-          size="lg" 
+          size="lg"
           className="w-full shadow-lg hover:shadow-xl font-bold text-sm"
           asChild
         >
