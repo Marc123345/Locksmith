@@ -24,18 +24,16 @@ const ServiceCard = React.memo(({ icon, title, description, features, image, hre
 
   // Generate responsive Cloudinary URL
   const getResponsiveImage = (url: string) => {
-    if (url.includes('cloudinary')) {
-      // Extract base URL and image path
-      const baseUrl = url.split('/upload/')[0] + '/upload/';
-      const imagePath = url.split('/upload/')[1];
-      
-      // Define transformations for different sizes
+    // For Unsplash images, use their built-in responsive parameters
+    if (url.includes('unsplash.com')) {
+      const baseUrl = url.split('?')[0];
       return {
-        small: `${baseUrl}c_fill,g_center,h_1200,w_1200/f_auto,q_auto/${imagePath}`,
-        medium: `${baseUrl}c_fill,g_center,h_1400,w_1400/f_auto,q_auto/${imagePath}`,
-        large: `${baseUrl}c_fill,g_center,h_1600,w_1600/f_auto,q_auto/${imagePath}`
+        small: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
+        medium: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+        large: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80`
       };
     }
+    // Fallback for other image sources
     return { small: url, medium: url, large: url };
   };
 

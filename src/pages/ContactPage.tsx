@@ -82,7 +82,7 @@ export default function ContactPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://i.imgur.com/SLG0swh.jpeg"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
             alt="Professional locksmith service"
             className="w-full h-full object-cover"
           />

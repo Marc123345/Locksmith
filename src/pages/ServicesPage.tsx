@@ -17,7 +17,7 @@ export default function ServicesPage() {
       id: "residential",
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <Home className="h-8 w-8 text-white" />,
       features: [
         "Lock installation & repair",
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       id: "commercial",
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542083/ZcAJxuj_zr8ucm.jpg",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <Building2 className="h-8 w-8 text-white" />,
       features: [
         "High-security locks",
@@ -52,7 +52,7 @@ export default function ServicesPage() {
       id: "automotive",
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542090/PuUH3SZ_i7gupv.jpg",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <Car className="h-8 w-8 text-white" />,
       features: [
         "Car lockout assistance",
@@ -70,7 +70,7 @@ export default function ServicesPage() {
       id: "emergency",
       title: "Emergency Services",
       description: "Same-day locksmith services when you need help the most.",
-      image: "https://i.imgur.com/wFxaokF.jpeg",
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <AlertTriangle className="h-8 w-8 text-white" />,
       features: [
         "Same-day availability",

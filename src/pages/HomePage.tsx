@@ -56,7 +56,7 @@ const services = [
 
 const testimonials = [
   {
-    name: "Jen Jamison",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     location: "Annapolis, MD",
     rating: 5,
     testimonial: "Dispatch was courteous and super helpful, I knew the price and the time my tech was expected to arrive. I was at work and had lost my only key to my vehicle, and commute across the bridge for work so I was panicked.",
@@ -69,7 +69,7 @@ const testimonials = [
     location: "Annapolis, MD",
     rating: 5,
     testimonial: "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
-    date: "5 months ago",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     source: "Google",
     verified: true
   },
@@ -82,7 +82,7 @@ const testimonials = [
     source: "Google",
     verified: true
   }
-];
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
 
 const containerVariants = {
   hidden: { opacity: 0 },

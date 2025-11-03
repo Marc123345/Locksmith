@@ -10,7 +10,7 @@ const ServiceSection = () => {
     residential: {
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://i.imgur.com/ArewVfi.jpeg",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <Home className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Lock installation & repair",
@@ -24,7 +24,7 @@ const ServiceSection = () => {
     commercial: {
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542083/ZcAJxuj_zr8ucm.jpg",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <Building className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "High-security locks",
@@ -37,7 +37,7 @@ const ServiceSection = () => {
     automotive: {
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://res.cloudinary.com/dadgglcaq/image/upload/v1746542090/PuUH3SZ_i7gupv.jpg",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <Car className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Car lockout assistance",
@@ -51,7 +51,7 @@ const ServiceSection = () => {
     emergency: {
       title: "Emergency Services",
       description: "Same-day locksmith services when you need help the most.",
-      image: "https://i.imgur.com/wFxaokF.jpeg",
+      image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       icon: <AlertTriangle className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Same-day availability",
@@ -70,16 +70,16 @@ const ServiceSection = () => {
 
   // Generate responsive Cloudinary URL
   const getResponsiveImage = (url: string) => {
-    if (url.includes('cloudinary')) {
-      const baseUrl = url.split('/upload/')[0] + '/upload/';
-      const imagePath = url.split('/upload/')[1];
-      
+    // For Unsplash images, use their built-in responsive parameters
+    if (url.includes('unsplash.com')) {
+      const baseUrl = url.split('?')[0];
       return {
-        small: `${baseUrl}c_fill,g_center,h_1000,w_1000/f_auto,q_auto/${imagePath}`,
-        medium: `${baseUrl}c_fill,g_center,h_1200,w_1200/f_auto,q_auto/${imagePath}`,
-        large: `${baseUrl}c_fill,g_center,h_1400,w_1400/f_auto,q_auto/${imagePath}`
+        small: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
+        medium: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+        large: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80`
       };
     }
+    // Fallback for other image sources
     return { small: url, medium: url, large: url };
   };
 
