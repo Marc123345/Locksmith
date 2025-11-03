@@ -42,7 +42,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           <div
             className="absolute inset-0 opacity-20 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://cdn.pixabay.com/photo/2020/02/03/00/12/lock-4815329_1280.jpg)'
+              backgroundImage: `url(${location.heroImage || 'https://cdn.pixabay.com/photo/2020/02/03/00/12/lock-4815329_1280.jpg'})`
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
@@ -109,7 +109,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 {/* Featured Image */}
                 <div className="mt-8 rounded-xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://cdn.pixabay.com/photo/2017/03/10/13/49/keys-2132114_1280.jpg"
+                    src={location.contentImage || 'https://cdn.pixabay.com/photo/2017/03/10/13/49/keys-2132114_1280.jpg'}
                     alt={`Professional locksmith services in ${location.name}`}
                     className="w-full h-80 object-cover"
                   />

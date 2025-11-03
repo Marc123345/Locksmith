@@ -42,7 +42,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
           <div
             className="absolute inset-0 opacity-20 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2423543_1280.jpg)'
+              backgroundImage: `url(${service.heroImage || 'https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2423543_1280.jpg'})`
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
@@ -107,7 +107,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                 {/* Featured Image */}
                 <div className="rounded-xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://cdn.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg"
+                    src={service.contentImage || 'https://cdn.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg'}
                     alt={`Professional ${service.name.toLowerCase()}`}
                     className="w-full h-80 object-cover"
                   />

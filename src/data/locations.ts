@@ -9,6 +9,8 @@ export interface LocationData {
   distance: string;
   responseTime: string;
   directions: string[];
+  heroImage?: string;
+  contentImage?: string;
   faqs: Array<{
     question: string;
     answer: string;
@@ -25,6 +27,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Arnold, MD',
     subtitle: 'Expert Locksmith Services in Arnold, Cape St. Claire, and Bay Hills',
     description: 'A Secure Annapolis Locksmith is the trusted name for professional locksmith services in Arnold, MD. Whether you\'re locked out, need new locks installed, or want to upgrade your home or business security, we\'re the go-to Arnold locksmith for fast, affordable, and licensed service. We proudly serve Arnold, Cape St. Claire, Bay Hills, and the Broadneck Peninsula with expert residential, automotive, and commercial locksmith solutions.',
+    heroImage: 'https://cdn.pixabay.com/photo/2017/06/20/22/14/man-2423543_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2016/11/29/03/36/architecture-1867187_1280.jpg',
     neighborhoods: [
       'Arnold',
       'Cape St. Claire',
@@ -69,6 +73,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Edgewater, MD',
     subtitle: 'Professional Locksmith Services in Edgewater, Mayo, and Woodland Beach',
     description: 'Looking for a licensed and reliable locksmith in Edgewater, MD? A Secure Annapolis Locksmith provides fast, professional locksmith services for homes, businesses, and vehicles throughout Edgewater, Mayo, and Woodland Beach. As a locally owned and operated business, we understand the urgency of lockouts and the importance of security.',
+    heroImage: 'https://cdn.pixabay.com/photo/2020/02/03/00/12/lock-4815329_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2017/03/10/13/49/keys-2132114_1280.jpg',
     neighborhoods: [
       'Edgewater',
       'Mayo',
@@ -107,6 +113,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Severna Park, MD',
     subtitle: 'Fast & Affordable Locksmith Services in Severna Park, Benfield, and Chartwell',
     description: 'When you need a trusted locksmith in Severna Park, MD, A Secure Annapolis Locksmith is the local name you can count on. We provide fast, professional locksmith services for homes, cars, and businesses across Severna Park, Benfield, Chartwell, and surrounding neighborhoods. Whether it\'s a lockout, rekey, or security upgrade, we\'re just minutes away with mobile service available 7 days a week.',
+    heroImage: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/lock-1886634_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2018/07/08/14/14/key-3524244_1280.jpg',
     neighborhoods: [
       'Severna Park',
       'Benfield',
@@ -140,6 +148,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Crownsville, MD',
     subtitle: 'Local Locksmith Services in Crownsville, Herald Harbor, and Arden on the Severn',
     description: 'At A Secure Annapolis Locksmith, we provide dependable locksmith services in Crownsville, MD for residential, automotive, and commercial needs. From Herald Harbor to Arden on the Severn, our mobile locksmiths offer quick and affordable solutions 7 days a week.',
+    heroImage: 'https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2016/03/09/09/22/workplace-1245776_1280.jpg',
     neighborhoods: [
       'Crownsville',
       'Herald Harbor',
@@ -173,6 +183,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Annapolis, MD',
     subtitle: 'Professional Locksmith Services in Downtown Annapolis, Eastport, and Hillsmere Shores',
     description: 'A Secure Annapolis Locksmith is your trusted local locksmith serving Annapolis, MD and surrounding neighborhoods. Whether you need emergency lockout service, lock installation, rekeying, or automotive locksmith solutions, we provide fast, reliable, and affordable service throughout the greater Annapolis area. As a locally owned and operated business based right here in Annapolis, we understand the unique security needs of our community.',
+    heroImage: 'https://cdn.pixabay.com/photo/2018/01/25/08/14/beverages-3105631_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2014/07/10/17/18/lock-389161_1280.jpg',
     neighborhoods: [
       'Downtown Annapolis',
       'Eastport',
@@ -218,6 +230,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Parole, MD',
     subtitle: 'Fast Locksmith Services in Parole, Annapolis Mall Area, and Riva Road',
     description: 'Need a locksmith in Parole, MD? A Secure Annapolis Locksmith provides prompt, professional locksmith services throughout the Parole area, including the Annapolis Mall district, Riva Road, and Jennifer Road. Whether you\'re locked out of your car at the mall, need your home rekeyed, or require commercial lock installation, our mobile locksmiths arrive quickly with the tools and expertise to solve your problem.',
+    heroImage: 'https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2017/08/10/08/10/lock-2619370_1280.jpg',
     neighborhoods: [
       'Parole',
       'Annapolis Mall Area',
@@ -258,6 +272,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Bay Ridge, MD',
     subtitle: 'Trusted Locksmith Services in Bay Ridge and South Annapolis',
     description: 'A Secure Annapolis Locksmith proudly serves the Bay Ridge community with comprehensive locksmith services. From emergency lockouts to smart lock installations, our experienced technicians provide reliable solutions for Bay Ridge residents and businesses. We understand the unique character of this waterfront neighborhood and deliver personalized service with the urgency you deserve.',
+    heroImage: 'https://cdn.pixabay.com/photo/2016/03/09/09/17/computer-1245714_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2015/05/28/14/38/padlock-789645_1280.jpg',
     neighborhoods: [
       'Bay Ridge',
       'South Annapolis',
@@ -296,6 +312,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Hillsmere Shores, MD',
     subtitle: 'Local Locksmith Services in Hillsmere Shores and Forest Drive',
     description: 'Hillsmere Shores residents trust A Secure Annapolis Locksmith for all their security needs. Our mobile locksmiths provide fast, friendly service throughout Hillsmere Shores, offering everything from emergency lockouts to complete security system installations. We\'re your neighborhood locksmith, committed to keeping your home and family safe.',
+    heroImage: 'https://cdn.pixabay.com/photo/2015/07/02/10/11/lock-828854_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2016/11/29/02/05/audience-1866738_1280.jpg',
     neighborhoods: [
       'Hillsmere Shores',
       'Forest Drive Corridor',
@@ -334,6 +352,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Eastport, MD',
     subtitle: 'Your Local Locksmith Right Here in Eastport',
     description: 'Located right in Eastport, A Secure Annapolis Locksmith is your immediate neighbor for all locksmith needs. We serve the Eastport community with unmatched speed and reliability, whether you need a residential lockout service, commercial lock installation, or automotive key programming. Being based in Eastport means we know the area intimately and can reach you faster than anyone else.',
+    heroImage: 'https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2014/12/11/18/33/lock-563478_1280.jpg',
     neighborhoods: [
       'Eastport',
       'Historic Eastport',
@@ -370,6 +390,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Riva, MD',
     subtitle: 'Professional Locksmith Services in Riva and South River Areas',
     description: 'Serving the Riva, MD community with expert locksmith services, A Secure Annapolis Locksmith provides fast mobile service throughout the Riva and South River areas. Whether you need residential rekeying, commercial lock systems, or emergency lockout assistance, our licensed locksmiths deliver professional solutions with small-town service and big-city expertise.',
+    heroImage: 'https://cdn.pixabay.com/photo/2016/04/15/11/46/padlock-1330451_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2017/01/18/21/22/computer-1990123_1280.jpg',
     neighborhoods: [
       'Riva',
       'South River',
@@ -409,6 +431,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Cape St. Claire, MD',
     subtitle: 'Trusted Locksmith Services in Cape St. Claire Community',
     description: 'Cape St. Claire residents choose A Secure Annapolis Locksmith for reliable, professional locksmith services. Our experienced team understands the unique needs of this close-knit community and provides personalized service for every home and business. From emergency lockouts to complete security upgrades, we\'re your trusted Cape St. Claire locksmith partner.',
+    heroImage: 'https://cdn.pixabay.com/photo/2015/09/02/13/24/girl-919048_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2015/01/09/11/09/startup-594090_1280.jpg',
     neighborhoods: [
       'Cape St. Claire',
       'Broadneck Peninsula',
@@ -447,6 +471,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Broadneck, MD',
     subtitle: 'Expert Locksmith Services Throughout the Broadneck Peninsula',
     description: 'Serving the entire Broadneck Peninsula, A Secure Annapolis Locksmith provides comprehensive locksmith solutions for residents and businesses. Our mobile locksmiths bring professional service directly to your location, whether you need emergency assistance, security upgrades, or routine lock maintenance throughout the Broadneck area.',
+    heroImage: 'https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2018/03/20/20/48/door-3244926_1280.jpg',
     neighborhoods: [
       'Broadneck Peninsula',
       'Cape St. Claire',
@@ -486,6 +512,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Edgewater Beach, MD',
     subtitle: 'Waterfront Locksmith Services in Edgewater Beach and Mayo',
     description: 'Edgewater Beach residents rely on A Secure Annapolis Locksmith for specialized locksmith services tailored to waterfront living. We understand the unique security challenges of coastal properties and provide expert solutions including marine-grade locks, smart security systems, and emergency services throughout Edgewater Beach and the surrounding Mayo area.',
+    heroImage: 'https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2017/08/01/11/48/woman-2564660_1280.jpg',
     neighborhoods: [
       'Edgewater Beach',
       'Mayo',
@@ -525,6 +553,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Mayo, MD',
     subtitle: 'Reliable Locksmith Services in Mayo and South River Communities',
     description: 'Mayo, MD residents trust A Secure Annapolis Locksmith for dependable locksmith services. Our mobile team serves the Mayo area with fast response times and professional solutions for all your residential, commercial, and automotive locksmith needs. From emergency lockouts to complete security system installations, we\'re your local locksmith partner in Mayo.',
+    heroImage: 'https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594_1280.jpg',
+    contentImage: 'https://cdn.pixabay.com/photo/2015/05/15/14/27/notebook-768603_1280.jpg',
     neighborhoods: [
       'Mayo',
       'South River',
