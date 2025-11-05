@@ -33,9 +33,12 @@ export const services: ServiceData[] = [
     heroImage: 'https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1600',
     contentImage: 'https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=800',
     additionalImages: [
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp'
+      'https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/4207715/pexels-photo-4207715.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/210719/pexels-photo-210719.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/48727/pexels-photo-48727.jpeg?auto=compress&cs=tinysrgb&w=800'
     ],
     features: [
       'Deadbolt and door knob locks',
