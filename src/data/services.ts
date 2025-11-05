@@ -30,8 +30,8 @@ export const services: ServiceData[] = [
     title: 'Professional Lock Change Services in Annapolis, MD',
     subtitle: 'Trusted Lock Replacement & Installation in Eastport, Hillsmere Shores, and Parole',
     description: 'When it\'s time to replace or upgrade your locks, trust A Secure Annapolis Locksmith — your local expert for lock change services in Annapolis, MD. Whether you\'ve just moved into a new home, experienced a security concern, or want to install high-security or smart locks, we\'ve got you covered. We proudly serve Annapolis, Eastport, Hillsmere Shores, Parole, and surrounding communities.',
-    heroImage: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1600&auto=format&fit=crop&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
+    heroImage: 'https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    contentImage: 'https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=800',
     additionalImages: [
       'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp',
       'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp',
@@ -69,8 +69,8 @@ export const services: ServiceData[] = [
     title: 'Lock Rekeying in Annapolis, MD',
     subtitle: 'Affordable Rekeying for Homes, Apartments, and Businesses in Eastport, Parole, and Murray Hill',
     description: 'Rekeying is the simplest way to restore security and peace of mind without replacing all your locks. A Secure Annapolis Locksmith specializes in lock rekey services in Annapolis, MD, helping homeowners, landlords, and businesses stay protected. When you rekey a lock, we adjust the internal pins so that old keys no longer work.',
-    heroImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp',
+    heroImage: 'https://images.pexels.com/photos/213849/pexels-photo-213849.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    contentImage: 'https://images.pexels.com/photos/6069236/pexels-photo-6069236.jpeg?auto=compress&cs=tinysrgb&w=800',
     additionalImages: [
       'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp',
       'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
@@ -234,7 +234,7 @@ export const services: ServiceData[] = [
     title: 'Lock Repair Services in Annapolis, MD',
     subtitle: 'Reliable Lock Repair for Homes & Businesses in Eastport, Bay Ridge, and Downtown Annapolis',
     description: 'Is your door lock sticking, spinning, or completely broken? At A Secure Annapolis Locksmith, we offer fast, affordable lock repair services in Annapolis, MD, for homes, apartments, condos, and businesses. From worn-out deadbolts to malfunctioning smart locks, we repair all types of locks using professional tools and industry-best practices.',
-    heroImage: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&auto=format&fit=crop&q=80&fm=webp',
+    heroImage: 'https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=1600',
     contentImage: 'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp',
     additionalImages: [
       'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp',
