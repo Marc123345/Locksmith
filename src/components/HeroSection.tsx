@@ -19,6 +19,7 @@ export const HeroSection = () => {
           src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=2000&auto=format&fit=crop&q=80&fm=webp"
           alt="Professional locksmith working on a lock"
           className="object-cover w-full h-full"
+          loading="lazy"
           role="img"
         />
         <div
