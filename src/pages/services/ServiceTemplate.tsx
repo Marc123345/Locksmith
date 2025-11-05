@@ -22,6 +22,46 @@ interface ServiceTemplateProps {
 export default function ServiceTemplate({ service, pricing = standardPricing }: ServiceTemplateProps) {
   const testimonials = getTestimonialsByService(service.id);
 
+  // Related services and locations for internal linking
+  const relatedLinks = [
+    {
+      title: 'Emergency Lockout Service',
+      description: '24/7 emergency locksmith service available throughout Anne Arundel County',
+      href: '/services/emergency-lockout',
+      type: 'service' as const
+    },
+    {
+      title: 'Lock Rekey Service',
+      description: 'Professional lock rekeying for enhanced security',
+      href: '/services/lock-rekey',
+      type: 'service' as const
+    },
+    {
+      title: 'Lock Change Service',
+      description: 'Complete lock replacement and installation services',
+      href: '/services/lock-change',
+      type: 'service' as const
+    },
+    {
+      title: 'Annapolis Locksmith',
+      description: 'Local locksmith services in downtown Annapolis and Eastport',
+      href: '/locations/annapolis',
+      type: 'location' as const
+    },
+    {
+      title: 'Severna Park Locksmith',
+      description: 'Fast locksmith services in Severna Park and Benfield',
+      href: '/locations/severna-park',
+      type: 'location' as const
+    },
+    {
+      title: 'Arnold Locksmith',
+      description: 'Expert locksmith services in Arnold and Cape St. Claire',
+      href: '/locations/arnold',
+      type: 'location' as const
+    }
+  ].filter(link => !link.href.includes(service.slug));
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,11 +69,136 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
   return (
     <>
       <Helmet>
+        {/* Primary Meta Tags */}
         <title>{service.metaTitle}</title>
+        <meta name="title" content={service.metaTitle} />
         <meta name="description" content={service.metaDescription} />
+        <meta name="keywords" content={`${service.name}, ${service.name} Annapolis, locksmith ${service.slug}, emergency ${service.slug}, 24/7 ${service.slug}, professional locksmith, Anne Arundel County locksmith`} />
+
+        {/* Geographic Meta Tags */}
+        <meta name="geo.region" content="US-MD" />
+        <meta name="geo.placename" content="Annapolis, MD" />
+        <meta name="geo.position" content="38.978764;-76.492786" />
+        <meta name="ICBM" content="38.978764, -76.492786" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://asecureannapolis.com/services/${service.slug}`} />
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
+        <meta property="og:image" content={service.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://asecureannapolis.com/services/${service.slug}`} />
+        <meta property="twitter:title" content={service.metaTitle} />
+        <meta property="twitter:description" content={service.metaDescription} />
+        <meta property="twitter:image" content={service.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+
+        {/* Canonical */}
         <link rel="canonical" href={`https://asecureannapolis.com/services/${service.slug}`} />
+
+        {/* Schema.org Markup for Service */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": service.name,
+            "name": service.name,
+            "description": service.metaDescription,
+            "image": service.heroImage,
+            "provider": {
+              "@type": "Locksmith",
+              "name": "A Secure Annapolis Locksmith",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
+                "addressLocality": "Annapolis",
+                "addressRegion": "MD",
+                "postalCode": "21403",
+                "addressCountry": "US"
+              },
+              "telephone": CONTACT.PHONE,
+              "email": CONTACT.EMAIL,
+              "url": "https://asecureannapolis.com",
+              "priceRange": "$$",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "150"
+              }
+            },
+            "areaServed": service.serviceAreas.map(area => ({
+              "@type": "City",
+              "name": area
+            })),
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": `https://asecureannapolis.com/services/${service.slug}`,
+              "servicePhone": CONTACT.PHONE,
+              "availableLanguage": {
+                "@type": "Language",
+                "name": "English"
+              }
+            },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "USD"
+              }
+            }
+          })}
+        </script>
+
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://asecureannapolis.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://asecureannapolis.com/services"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": service.name,
+                "item": `https://asecureannapolis.com/services/${service.slug}`
+              }
+            ]
+          })}
+        </script>
+
+        {/* FAQ Schema */}
+        {service.faqs && service.faqs.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": service.faqs.map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            })}
+          </script>
+        )}
       </Helmet>
 
       <div className="pt-16 md:pt-20">
@@ -86,11 +251,17 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  {service.name}
+                  Professional {service.name} in Annapolis, MD
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  {service.description}
-                </p>
+                <div className="text-lg text-gray-700 leading-relaxed mb-8">
+                  <p className="mb-4">{service.description}</p>
+                  <p className="mb-4">
+                    At A Secure Annapolis Locksmith, we provide expert {service.name.toLowerCase()} with
+                    fast response times and competitive pricing. Our licensed and insured technicians are
+                    available to serve {service.serviceAreas.length > 0 ? service.serviceAreas.join(', ') : 'Anne Arundel County'} with
+                    professional service you can trust.
+                  </p>
+                </div>
 
                 {service.features && service.features.length > 0 && (
                   <div className="mb-8 bg-white rounded-xl p-8 shadow-lg border border-gray-100">
@@ -282,6 +453,8 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
             </div>
           </div>
         </section>
+
+        <RelatedContent links={relatedLinks} />
 
         <WhyChooseUs />
       </div>
