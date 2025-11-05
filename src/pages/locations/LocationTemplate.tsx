@@ -34,7 +34,9 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
         <link rel="canonical" href={`https://asecureannapolis.com/locations/${location.slug}`} />
       </Helmet>
 
-      <SpecialOfferBanner />
+      <div className="pt-16 md:pt-20">
+        <SpecialOfferBanner />
+      </div>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section with Background Image */}

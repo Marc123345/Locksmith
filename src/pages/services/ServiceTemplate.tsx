@@ -34,7 +34,9 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
         <link rel="canonical" href={`https://asecureannapolis.com/services/${service.slug}`} />
       </Helmet>
 
-      <SpecialOfferBanner />
+      <div className="pt-16 md:pt-20">
+        <SpecialOfferBanner />
+      </div>
 
       <div className="min-h-screen bg-white">
         {/* Hero Section with Background Image */}
