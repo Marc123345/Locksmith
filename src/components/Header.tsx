@@ -264,7 +264,7 @@ export const Header = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 md:hidden",
+          "fixed inset-0 bg-black/50 z-40 transition-opacity duration-300 lg:hidden",
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={closeMenu}
@@ -275,7 +275,7 @@ export const Header = () => {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-x-0 top-0 z-40 h-screen bg-background pt-20 transition-transform duration-300 ease-in-out md:hidden overflow-y-auto",
+          "fixed inset-x-0 top-0 z-40 h-screen bg-background pt-20 transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto",
           isOpen ? "translate-y-0" : "-translate-y-full"
         )}
         role="dialog"
@@ -370,7 +370,7 @@ export const Header = () => {
 
       {/* Mobile Bottom CTA */}
       <div
-        className="md:hidden fixed bottom-0 left-0 right-0 bg-primary p-3 shadow-lg z-50"
+        className="lg:hidden fixed bottom-0 left-0 right-0 bg-primary p-3 shadow-lg z-50"
         role="complementary"
         aria-label="Quick contact"
       >
