@@ -157,17 +157,22 @@ export const Header = () => {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 {locationsOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
-                    {locationLinks.map((link) => (
-                      <Link
-                        key={link.href}
-                        to={link.href}
-                        className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
-                        onClick={() => handleNavigation(link.href)}
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-0 mt-1 w-72 bg-background border border-border rounded-lg shadow-xl py-3 z-50">
+                    <div className="px-4 py-2 border-b border-border">
+                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Service Areas</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-1 p-2">
+                      {locationLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          className="px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors hover:text-primary font-medium"
+                          onClick={() => handleNavigation(link.href)}
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -190,17 +195,31 @@ export const Header = () => {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
-                    {serviceLinks.map((link) => (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-background border border-border rounded-lg shadow-xl py-3 z-50">
+                    <div className="px-4 py-2 border-b border-border">
+                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Our Services</p>
+                    </div>
+                    <div className="py-2">
+                      {serviceLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          className="block px-4 py-2.5 text-sm hover:bg-muted transition-colors hover:text-primary font-medium"
+                          onClick={() => handleNavigation(link.href)}
+                        >
+                          {link.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="px-4 py-2 border-t border-border bg-muted/50">
                       <Link
-                        key={link.href}
-                        to={link.href}
-                        className="block px-4 py-2 text-sm hover:bg-muted transition-colors"
-                        onClick={() => handleNavigation(link.href)}
+                        to="/services"
+                        className="text-xs text-primary hover:underline font-semibold"
+                        onClick={() => handleNavigation('/services')}
                       >
-                        {link.name}
+                        View All Services →
                       </Link>
-                    ))}
+                    </div>
                   </div>
                 )}
               </div>

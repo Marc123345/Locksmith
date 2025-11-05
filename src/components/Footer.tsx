@@ -4,48 +4,58 @@ import { CONTACT } from "@/utils/contact";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted pt-12 pb-6 mt-12">
+    <footer className="bg-muted pt-16 pb-6 mt-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:col-span-2">
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
-              <img 
-                src="https://i.imgur.com/VfpMzbE.png" 
-                alt="A Secure Annapolis Locksmith Logo" 
+              <img
+                src="https://i.imgur.com/VfpMzbE.png"
+                alt="A Secure Annapolis Locksmith Logo"
                 className="h-16 w-auto"
               />
             </Link>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Professional locksmith services offering residential, commercial, and automotive solutions, including lockouts. Licensed, bonded, and insured for your peace of mind.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://facebook.com/asecureannapolis" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://facebook.com/asecureannapolis"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Follow us on Facebook"
               >
                 <Facebook size={20} />
               </a>
-              <a 
-                href="https://instagram.com/asecureannapolis" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://instagram.com/asecureannapolis"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram size={20} />
               </a>
-              <a 
-                href="https://twitter.com/asecureannapolis" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://twitter.com/asecureannapolis"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Follow us on Twitter"
               >
                 <Twitter size={20} />
+              </a>
+            </div>
+            <div className="pt-4">
+              <p className="text-xs text-muted-foreground mb-2">24/7 Emergency Service</p>
+              <a
+                href={`tel:${CONTACT.PHONE}`}
+                className="inline-flex items-center text-primary hover:underline font-semibold text-lg"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                {CONTACT.PHONE_DISPLAY}
               </a>
             </div>
           </div>
@@ -93,32 +103,72 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/locations/annapolis" className="text-muted-foreground hover:text-primary transition-colors">
-                  Annapolis
+                  Annapolis, MD
                 </Link>
               </li>
               <li>
                 <Link to="/locations/arnold" className="text-muted-foreground hover:text-primary transition-colors">
-                  Arnold
+                  Arnold, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/edgewater" className="text-muted-foreground hover:text-primary transition-colors">
-                  Edgewater
+                <Link to="/locations/bay-ridge" className="text-muted-foreground hover:text-primary transition-colors">
+                  Bay Ridge, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/severna-park" className="text-muted-foreground hover:text-primary transition-colors">
-                  Severna Park
+                <Link to="/locations/broadneck" className="text-muted-foreground hover:text-primary transition-colors">
+                  Broadneck, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/parole" className="text-muted-foreground hover:text-primary transition-colors">
-                  Parole
+                <Link to="/locations/cape-st-claire" className="text-muted-foreground hover:text-primary transition-colors">
+                  Cape St. Claire, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/crownsville" className="text-muted-foreground hover:text-primary transition-colors">
+                  Crownsville, MD
                 </Link>
               </li>
               <li>
                 <Link to="/locations/eastport" className="text-muted-foreground hover:text-primary transition-colors">
-                  Eastport
+                  Eastport, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/edgewater" className="text-muted-foreground hover:text-primary transition-colors">
+                  Edgewater, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/edgewater-beach" className="text-muted-foreground hover:text-primary transition-colors">
+                  Edgewater Beach, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/hillsmere-shores" className="text-muted-foreground hover:text-primary transition-colors">
+                  Hillsmere Shores, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/mayo" className="text-muted-foreground hover:text-primary transition-colors">
+                  Mayo, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/parole" className="text-muted-foreground hover:text-primary transition-colors">
+                  Parole, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/riva" className="text-muted-foreground hover:text-primary transition-colors">
+                  Riva, MD
+                </Link>
+              </li>
+              <li>
+                <Link to="/locations/severna-park" className="text-muted-foreground hover:text-primary transition-colors">
+                  Severna Park, MD
                 </Link>
               </li>
             </ul>
@@ -161,39 +211,46 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Resources */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                <a href={`tel:${CONTACT.PHONE}`} className="hover:text-primary transition-colors">
-                  {CONTACT.PHONE_DISPLAY}
-                </a>
+            <h3 className="font-semibold text-lg mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/sitemap" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Site Map
+                </Link>
               </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                <a 
+              <li>
+                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+            <div className="pt-4 space-y-3">
+              <div className="flex items-start text-sm">
+                <MapPin className="h-4 w-4 mr-2 text-primary shrink-0 mt-0.5" />
+                <a
                   href={CONTACT.MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   {CONTACT.ADDRESS}
                 </a>
-              </li>
-              <li className="flex items-start">
-                <Clock className="h-5 w-5 mr-2 text-primary shrink-0 mt-0.5" />
-                <div>
-                  <p>Hours of Operation:</p>
-                  <ul className="text-sm text-muted-foreground space-y-1 mt-1">
-                    {CONTACT.HOURS.map(({ day, hours }) => (
-                      <li key={day}>{day}: {hours}</li>
-                    ))}
-                  </ul>
+              </div>
+              <div className="flex items-start text-sm">
+                <Clock className="h-4 w-4 mr-2 text-primary shrink-0 mt-0.5" />
+                <div className="text-muted-foreground">
+                  <p className="font-medium">Open 24/7</p>
+                  <p className="text-xs">Emergency Services Available</p>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
 
