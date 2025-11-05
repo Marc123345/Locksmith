@@ -232,6 +232,24 @@ export default function SitemapPage() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
 
+          {/* XML Sitemap Link */}
+          <div className="mb-8 p-4 bg-blue-50 border-2 border-blue-200 rounded-lg">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-lg font-bold text-gray-900">XML Sitemap for Search Engines</h2>
+                <p className="text-sm text-gray-600 mt-1">Submit this sitemap to Google Search Console and Bing Webmaster Tools</p>
+              </div>
+              <a
+                href="/sitemap.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"
+              >
+                View XML
+              </a>
+            </div>
+          </div>
+
           {renderPageList(mainPages, 'Main Pages')}
           {renderPageList(locationPages, 'Service Areas')}
           {renderPageList(servicePages, 'Specialized Services')}
