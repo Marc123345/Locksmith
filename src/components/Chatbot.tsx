@@ -13,11 +13,12 @@ interface Message {
 }
 
 interface ConversationState {
-  step: 'welcome' | 'name' | 'service' | 'location' | 'contact' | 'email' | 'phone' | 'complete';
-  name?: string;
-  service?: string;
+  step: 'welcome' | 'location' | 'address' | 'service' | 'urgency' | 'name' | 'contact' | 'phone' | 'complete';
   location?: string;
-  email?: string;
+  address?: string;
+  service?: string;
+  urgency?: string;
+  name?: string;
   phone?: string;
 }
 
@@ -41,8 +42,9 @@ export const Chatbot = () => {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       setTimeout(() => addBotMessage(
-        "👋 Hi! I'm your virtual assistant from A Secure Annapolis Locksmith. I'm here to help you find the right locksmith service quickly.\n\nWhat's your name?",
-        'name'
+        "👋 Hi! I'm your virtual assistant from A Secure Annapolis Locksmith. I'm here to help you get fast, local service.\n\n📍 First, which area do you need service in?",
+        'location',
+        ['Annapolis', 'Arnold', 'Severna Park', 'Edgewater', 'Parole', 'Eastport', 'Crownsville', 'Other Area']
       ), 500);
     }
   }, [isOpen]);
@@ -104,10 +106,9 @@ export const Chatbot = () => {
           .insert({
             session_id: sessionId,
             visitor_name: state.name,
-            visitor_email: state.email,
             visitor_phone: state.phone,
             service_interest: state.service,
-            location_preference: state.location
+            location_preference: `${state.address || ''}, ${state.location || ''}`.trim()
           })
           .select('id')
           .single();
@@ -118,10 +119,9 @@ export const Chatbot = () => {
           .from('chatbot_conversations')
           .update({
             visitor_name: state.name,
-            visitor_email: state.email,
             visitor_phone: state.phone,
             service_interest: state.service,
-            location_preference: state.location,
+            location_preference: `${state.address || ''}, ${state.location || ''}`.trim(),
             lead_score: calculateLeadScore()
           })
           .eq('id', conversationId);
@@ -144,11 +144,11 @@ export const Chatbot = () => {
 
   const calculateLeadScore = (): number => {
     let score = 0;
-    if (state.name) score += 20;
-    if (state.email) score += 30;
-    if (state.phone) score += 30;
+    if (state.location) score += 25;
+    if (state.address) score += 20;
+    if (state.phone) score += 35;
     if (state.service) score += 10;
-    if (state.location) score += 10;
+    if (state.urgency === 'Emergency') score += 10;
     return score;
   };
 
@@ -156,45 +156,54 @@ export const Chatbot = () => {
     const trimmedInput = input.trim();
 
     switch (state.step) {
-      case 'name':
-        setState(prev => ({ ...prev, name: trimmedInput }));
+      case 'location':
+        setState(prev => ({ ...prev, location: trimmedInput }));
+        const responseTime = getResponseTime(trimmedInput);
         await addBotMessage(
-          `Great to meet you, ${trimmedInput}! 👋\n\nWhat type of locksmith service do you need help with today?`,
+          `Perfect! We serve ${trimmedInput} with ${responseTime} response time. 🚗\n\n📮 What's your street address or nearest intersection in ${trimmedInput}?`,
+          'address'
+        );
+        break;
+
+      case 'address':
+        setState(prev => ({ ...prev, address: trimmedInput }));
+        await addBotMessage(
+          `Great! I've got your location: ${trimmedInput}, ${state.location}.\n\n🔧 What service do you need?`,
           'service',
-          ['Emergency Lockout', 'Lock Installation', 'Lock Rekey', 'Car Key Service', 'Smart Locks', 'Other']
+          ['Emergency Lockout', 'Lock Rekey', 'Lock Change', 'Car Keys', 'Lock Repair', 'Smart Locks']
         );
         break;
 
       case 'service':
         setState(prev => ({ ...prev, service: trimmedInput }));
         await addBotMessage(
-          `Perfect! ${trimmedInput} is one of our specialties.\n\nWhich area are you located in?`,
-          'location',
-          ['Annapolis', 'Severna Park', 'Arnold', 'Edgewater', 'Other Area']
+          `Got it - ${trimmedInput}. ⏰ How urgent is this?`,
+          'urgency',
+          ['Emergency (ASAP)', 'Today', 'This Week', 'Just Browsing']
         );
         break;
 
-      case 'location':
-        setState(prev => ({ ...prev, location: trimmedInput }));
-        await addBotMessage(
-          `Excellent! We serve ${trimmedInput} with fast response times.\n\nTo help you better, could you share your email address?`,
-          'email'
-        );
-        break;
-
-      case 'email':
-        if (validateEmail(trimmedInput)) {
-          setState(prev => ({ ...prev, email: trimmedInput }));
+      case 'urgency':
+        setState(prev => ({ ...prev, urgency: trimmedInput }));
+        if (trimmedInput.includes('Emergency') || trimmedInput.includes('Today')) {
           await addBotMessage(
-            'Thank you! And what\'s the best phone number to reach you?',
-            'phone'
+            `Understood! For urgent service in ${state.location}, we can help right away. 📞\n\nWhat's your name?`,
+            'name'
           );
         } else {
           await addBotMessage(
-            'Hmm, that doesn\'t look like a valid email. Could you please check and re-enter your email address?',
-            'email'
+            `No problem! We'll get you scheduled. What's your name?`,
+            'name'
           );
         }
+        break;
+
+      case 'name':
+        setState(prev => ({ ...prev, name: trimmedInput }));
+        await addBotMessage(
+          `Thanks, ${trimmedInput}! Last step - what's the best phone number to reach you at?`,
+          'phone'
+        );
         break;
 
       case 'phone':
@@ -217,8 +226,21 @@ export const Chatbot = () => {
     }
   };
 
+  const getResponseTime = (location: string): string => {
+    const fastAreas = ['Annapolis', 'Eastport', 'Parole'];
+    const mediumAreas = ['Arnold', 'Severna Park', 'Edgewater'];
+
+    if (fastAreas.some(area => location.includes(area))) {
+      return '15-20 minute';
+    } else if (mediumAreas.some(area => location.includes(area))) {
+      return '20-30 minute';
+    }
+    return '30-40 minute';
+  };
+
   const completeConversation = async () => {
     const leadScore = calculateLeadScore();
+    const isUrgent = state.urgency?.includes('Emergency') || state.urgency?.includes('Today');
 
     // Update conversation as completed
     await supabase
@@ -230,14 +252,14 @@ export const Chatbot = () => {
       })
       .eq('session_id', sessionId);
 
+    const urgentMessage = isUrgent
+      ? `\n\n🚨 Since this is urgent, please CALL US NOW at ${CONTACT.PHONE_DISPLAY} for immediate dispatch to ${state.location}!`
+      : `\n\nOur team will contact you within the hour at ${state.phone}.`;
+
     await addBotMessage(
-      `Perfect! ✅ I've got all your information:\n\n👤 Name: ${state.name}\n📧 Email: ${state.email}\n📞 Phone: ${state.phone}\n🔧 Service: ${state.service}\n📍 Location: ${state.location}\n\nOur team will contact you within the hour, or you can call us right now at ${CONTACT.PHONE_DISPLAY} for immediate assistance!\n\nIs there anything else I can help you with?`,
+      `Perfect! ✅ I've got everything we need:\n\n👤 Name: ${state.name}\n📍 Location: ${state.address}, ${state.location}\n📞 Phone: ${state.phone}\n🔧 Service: ${state.service}\n⏰ Urgency: ${state.urgency}${urgentMessage}\n\nAnything else I can help with?`,
       'complete'
     );
-  };
-
-  const validateEmail = (email: string): boolean => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
   const validatePhone = (phone: string): boolean => {
@@ -283,11 +305,11 @@ export const Chatbot = () => {
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Bot className="h-6 w-6" />
+                  <MapPin className="h-6 w-6" />
                 </div>
                 <div>
-                  <div className="font-bold">Locksmith Assistant</div>
-                  <div className="text-xs text-blue-100">Usually replies instantly</div>
+                  <div className="font-bold">Local Locksmith Assistant</div>
+                  <div className="text-xs text-blue-100">Serving Anne Arundel County</div>
                 </div>
               </div>
               <button
