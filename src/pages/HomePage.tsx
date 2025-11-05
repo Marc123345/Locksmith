@@ -7,6 +7,7 @@ import ServiceSection from '@/components/ServiceSection';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
+import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Home, Building2, Car, Phone, MapPin, ArrowRight } from 'lucide-react';
@@ -107,6 +108,7 @@ const itemVariants = {
 export default function HomePage() {
   return (
     <>
+      <LocalBusinessSchema page="home" />
       <HeroSection />
       <TrustedBySection />
       <StatsSection />
