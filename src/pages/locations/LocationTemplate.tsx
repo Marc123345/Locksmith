@@ -9,6 +9,9 @@ import TestimonialSection from '@/components/TestimonialSection';
 import DirectionsSection from '@/components/DirectionsSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import SpecialOfferBanner from '@/components/SpecialOfferBanner';
+import IconShowcase from '@/components/IconShowcase';
+import ServiceVisuals from '@/components/ServiceVisuals';
+import RelatedContent from '@/components/RelatedContent';
 import { standardPricing } from '@/data/pricing';
 import { getTestimonialsByLocation } from '@/data/testimonials';
 import type { LocationData } from '@/data/locations';
@@ -19,6 +22,46 @@ interface LocationTemplateProps {
 
 export default function LocationTemplate({ location }: LocationTemplateProps) {
   const testimonials = getTestimonialsByLocation(location.id);
+
+  // Related services and locations for internal linking
+  const relatedLinks = [
+    {
+      title: 'Emergency Lockout Service',
+      description: `Fast emergency lockout help available 24/7 in ${location.name}`,
+      href: '/services/emergency-lockout',
+      type: 'service' as const
+    },
+    {
+      title: 'Lock Rekey Service',
+      description: `Professional lock rekeying for enhanced security in ${location.name}`,
+      href: '/services/lock-rekey',
+      type: 'service' as const
+    },
+    {
+      title: 'Car Key Programming',
+      description: `Automotive key cutting and programming services in ${location.name}`,
+      href: '/services/car-key-programming',
+      type: 'service' as const
+    },
+    {
+      title: 'Annapolis Locksmith',
+      description: 'Professional locksmith services in downtown Annapolis and Eastport',
+      href: '/locations/annapolis',
+      type: 'location' as const
+    },
+    {
+      title: 'Severna Park Locksmith',
+      description: 'Fast, affordable locksmith services in Severna Park and Benfield',
+      href: '/locations/severna-park',
+      type: 'location' as const
+    },
+    {
+      title: 'Arnold Locksmith',
+      description: 'Expert locksmith services in Arnold, Cape St. Claire, and Bay Hills',
+      href: '/locations/arnold',
+      type: 'location' as const
+    }
+  ].filter(link => !link.href.includes(location.slug));
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -108,13 +151,9 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   </div>
                 </div>
 
-                {/* Featured Image */}
-                <div className="mt-8 rounded-xl overflow-hidden shadow-2xl">
-                  <img
-                    src={location.contentImage || 'https://cdn.pixabay.com/photo/2017/03/10/13/49/keys-2132114_1280.jpg'}
-                    alt={`Professional locksmith services in ${location.name}`}
-                    className="w-full h-80 object-cover"
-                  />
+                {/* Service Visuals - Replaces Image */}
+                <div className="mt-8">
+                  <ServiceVisuals serviceName={`Locksmith Services in ${location.name}`} />
                 </div>
               </div>
 
@@ -134,91 +173,19 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           </div>
         </section>
 
-        {/* Image Gallery Section */}
+        {/* Icon Showcase Section - Replaces Image Gallery */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Professional Locksmith Work in {location.name}
+                Professional Locksmith Services in {location.name}
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See the quality and expertise we bring to every service call
+                Comprehensive security solutions for your home, business, and vehicle
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp"
-                  alt="Professional locksmith working on door lock installation"
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="bg-white p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Lock Installation</h3>
-                  <p className="text-gray-600">Expert installation of all lock types for homes and businesses</p>
-                </div>
-              </div>
-
-              <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp"
-                  alt="Locksmith performing emergency lockout service"
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="bg-white p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Emergency Service</h3>
-                  <p className="text-gray-600">Fast response to lockouts and emergency situations</p>
-                </div>
-              </div>
-
-              <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp"
-                  alt="Smart lock installation and programming service"
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="bg-white p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Smart Lock Upgrades</h3>
-                  <p className="text-gray-600">Modern security solutions with smart lock technology</p>
-                </div>
-              </div>
-
-              <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp"
-                  alt="Automotive locksmith working on car key programming"
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="bg-white p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Automotive Keys</h3>
-                  <p className="text-gray-600">Car key cutting, programming, and replacement services</p>
-                </div>
-              </div>
-
-              <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp"
-                  alt="Commercial locksmith installing high-security systems"
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="bg-white p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Commercial Security</h3>
-                  <p className="text-gray-600">Advanced security systems for businesses and offices</p>
-                </div>
-              </div>
-
-              <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-                <img
-                  src="https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp"
-                  alt="Locksmith performing lock rekeying service"
-                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="bg-white p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Lock Rekeying</h3>
-                  <p className="text-gray-600">Professional rekeying service for enhanced security</p>
-                </div>
-              </div>
-            </div>
+            <IconShowcase />
           </div>
         </section>
 
@@ -380,6 +347,8 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           directions={location.directions}
           distance={location.distance}
         />
+
+        <RelatedContent links={relatedLinks} />
 
         <WhyChooseUs />
       </div>

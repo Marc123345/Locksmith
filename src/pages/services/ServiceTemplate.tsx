@@ -8,6 +8,8 @@ import FAQSection from '@/components/FAQSection';
 import TestimonialSection from '@/components/TestimonialSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import SpecialOfferBanner from '@/components/SpecialOfferBanner';
+import ServiceVisuals from '@/components/ServiceVisuals';
+import RelatedContent from '@/components/RelatedContent';
 import { standardPricing } from '@/data/pricing';
 import { getTestimonialsByService } from '@/data/testimonials';
 import type { ServiceData } from '@/data/services';
@@ -106,29 +108,10 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                   </div>
                 )}
 
-                {/* Featured Image */}
-                <div className="rounded-xl overflow-hidden shadow-2xl">
-                  <img
-                    src={service.contentImage || 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp'}
-                    alt={`Professional ${service.name.toLowerCase()}`}
-                    className="w-full h-80 object-cover"
-                  />
+                {/* Service Visuals - Replaces Images */}
+                <div className="mt-8">
+                  <ServiceVisuals serviceName={service.name} />
                 </div>
-
-                {/* Additional Images Gallery */}
-                {service.additionalImages && service.additionalImages.length > 0 && (
-                  <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {service.additionalImages.map((image, index) => (
-                      <div key={index} className="rounded-lg overflow-hidden shadow-lg">
-                        <img
-                          src={image}
-                          alt={`${service.name} service ${index + 1}`}
-                          className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
 
                 {service.serviceAreas && service.serviceAreas.length > 0 && (
                   <div className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-100">
