@@ -17,7 +17,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Professional locksmith services offering residential, commercial, and automotive solutions, including lockouts. Licensed, bonded, and insured for your peace of mind.
+              Professional locksmith services offering residential, commercial, and automotive solutions. Licensed, bonded, and insured for your peace of mind.
             </p>
             <div className="flex space-x-4">
               <a
@@ -46,16 +46,6 @@ const Footer = () => {
                 aria-label="Follow us on Twitter"
               >
                 <Twitter size={20} />
-              </a>
-            </div>
-            <div className="pt-4">
-              <p className="text-xs text-muted-foreground mb-2">24/7 Emergency Service</p>
-              <a
-                href={`tel:${CONTACT.PHONE}`}
-                className="inline-flex items-center text-primary hover:underline font-semibold text-lg"
-              >
-                <Phone className="h-4 w-4 mr-2" />
-                {CONTACT.PHONE_DISPLAY}
               </a>
             </div>
           </div>
@@ -211,44 +201,48 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Contact Us */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/sitemap" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Site Map
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-            <div className="pt-4 space-y-3">
-              <div className="flex items-start text-sm">
-                <MapPin className="h-4 w-4 mr-2 text-primary shrink-0 mt-0.5" />
+            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">24/7 Emergency</p>
+                <a
+                  href={`tel:${CONTACT.PHONE}`}
+                  className="inline-flex items-center text-primary hover:underline font-bold text-xl"
+                >
+                  <Phone className="h-5 w-5 mr-2" />
+                  {CONTACT.PHONE_DISPLAY}
+                </a>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="h-4 w-4 mr-2 text-primary shrink-0 mt-1" />
                 <a
                   href={CONTACT.MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
                   {CONTACT.ADDRESS}
                 </a>
               </div>
-              <div className="flex items-start text-sm">
-                <Clock className="h-4 w-4 mr-2 text-primary shrink-0 mt-0.5" />
-                <div className="text-muted-foreground">
-                  <p className="font-medium">Open 24/7</p>
-                  <p className="text-xs">Emergency Services Available</p>
+              <div className="flex items-start">
+                <Clock className="h-4 w-4 mr-2 text-primary shrink-0 mt-1" />
+                <div className="text-sm">
+                  <p className="font-semibold text-foreground">Open 24/7</p>
+                  <p className="text-muted-foreground text-xs">Emergency Services Available</p>
                 </div>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-border">
+              <p className="text-xs text-muted-foreground mb-2">Resources</p>
+              <div className="flex flex-col space-y-2">
+                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  Terms of Service
+                </Link>
               </div>
             </div>
           </div>

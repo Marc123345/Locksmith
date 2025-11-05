@@ -121,16 +121,16 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1 lg:space-x-6">
+            <div className="hidden lg:flex items-center space-x-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
                   className={cn(
-                    "text-sm lg:text-base transition-colors relative py-2 px-3 font-medium",
+                    "text-base transition-colors relative py-2 px-4 font-medium rounded-lg",
                     isActive(link.href)
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-muted"
                   )}
                   onClick={() => handleNavigation(link.href)}
                   aria-current={isActive(link.href) ? "page" : undefined}
@@ -147,14 +147,14 @@ export const Header = () => {
               >
                 <button
                   className={cn(
-                    "text-sm lg:text-base transition-colors relative py-2 px-3 font-medium flex items-center",
+                    "text-base transition-colors relative py-2 px-4 font-medium flex items-center rounded-lg",
                     isActive('/locations')
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-muted"
                   )}
                 >
                   Locations
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", locationsOpen && "rotate-180")} />
                 </button>
                 {locationsOpen && (
                   <div className="absolute top-full left-0 mt-1 w-72 bg-background border border-border rounded-lg shadow-xl py-3 z-50">
@@ -185,14 +185,14 @@ export const Header = () => {
               >
                 <button
                   className={cn(
-                    "text-sm lg:text-base transition-colors relative py-2 px-3 font-medium flex items-center",
+                    "text-base transition-colors relative py-2 px-4 font-medium flex items-center rounded-lg",
                     isActive('/services')
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-muted"
                   )}
                 >
                   Services
-                  <ChevronDown className="ml-1 h-4 w-4" />
+                  <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", servicesOpen && "rotate-180")} />
                 </button>
                 {servicesOpen && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-background border border-border rounded-lg shadow-xl py-3 z-50">
@@ -225,28 +225,38 @@ export const Header = () => {
               </div>
 
               <Button
-                size="sm"
-                variant="white"
-                className="shadow-lg hover:shadow-xl whitespace-nowrap ml-4"
+                size="default"
+                className="shadow-lg hover:shadow-xl whitespace-nowrap ml-2 bg-primary hover:bg-primary/90 text-white font-bold"
                 asChild
               >
                 <a href={`tel:${CONTACT.PHONE}`} className="flex items-center">
-                  <Phone className="mr-2 h-4 w-4" aria-hidden="true" />
-                  Call Now
+                  <Phone className="mr-2 h-5 w-5" aria-hidden="true" />
+                  {CONTACT.PHONE_DISPLAY}
                 </a>
               </Button>
             </div>
 
             {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors relative z-50"
-              onClick={toggleMenu}
-              aria-label={isOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isOpen}
-              aria-controls="mobile-menu"
-            >
-              {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
-            </button>
+            <div className="flex lg:hidden items-center gap-2">
+              <Button
+                size="sm"
+                className="bg-primary hover:bg-primary/90 text-white font-semibold"
+                asChild
+              >
+                <a href={`tel:${CONTACT.PHONE}`} className="flex items-center">
+                  <Phone className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </Button>
+              <button
+                className="p-2 hover:bg-muted rounded-lg transition-colors relative z-50"
+                onClick={toggleMenu}
+                aria-label={isOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
+              >
+                {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+              </button>
+            </div>
           </nav>
         </div>
       </header>
