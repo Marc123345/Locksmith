@@ -50,25 +50,29 @@ export default function ContactPage() {
     },
   ];
 
-  const serviceAreas = [
+  const primaryServiceAreas = [
     "Annapolis",
+    "Severna Park",
     "Arnold",
+    "Edgewater"
+  ];
+
+  const additionalServiceAreas = [
+    "Millersville",
+    "Crownsville",
+    "Pasadena",
+    "Glen Burnie",
+    "Crofton",
+    "Davidsonville",
     "Bay Ridge",
     "Broadneck",
     "Cape St. Claire",
-    "Crownsville",
-    "Crofton",
-    "Davidsonville",
     "Eastport",
-    "Edgewater",
     "Edgewater Beach",
-    "Glen Burnie",
     "Hillsmere Shores",
     "Mayo",
     "Parole",
-    "Pasadena",
-    "Riva",
-    "Severna Park"
+    "Riva"
   ];
 
   const trustIndicators = [
@@ -206,34 +210,68 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-6">Service Areas</h2>
+              <h2 className="text-3xl font-bold mb-6">Serving Annapolis & Surrounding Areas</h2>
               <p className="text-muted-foreground mb-8">
-                We provide fast, reliable mobile locksmith services throughout Annapolis and surrounding communities.
+                We provide fast, reliable locksmith services throughout Annapolis and nearby communities.
               </p>
-              
+
               <div className="rounded-lg overflow-hidden shadow-lg mb-8 h-[300px]">
                 <MapComponent />
               </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Areas We Serve</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Professional locksmith services throughout Anne Arundel County
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4">
-                  {serviceAreas.map((area, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="flex items-center text-sm"
-                    >
-                      <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                      <span>{area}</span>
-                    </motion.div>
-                  ))}
+
+              <div className="bg-white p-6 rounded-lg shadow-lg space-y-6">
+                {/* Primary Service Areas */}
+                <div>
+                  <h3 className="text-lg font-bold text-primary mb-3">Primary Service Areas:</h3>
+                  <div className="grid grid-cols-2 gap-y-2 gap-x-4">
+                    {primaryServiceAreas.map((area, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                        className="flex items-center"
+                      >
+                        <MapPin className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                        <span className="font-medium">{area}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Also Serving */}
+                <div className="pt-4 border-t border-gray-200">
+                  <h3 className="text-lg font-semibold text-gray-700 mb-3">Also Serving:</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-y-2 gap-x-4">
+                    {additionalServiceAreas.map((area, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: (index + 4) * 0.03 }}
+                        className="flex items-center text-sm"
+                      >
+                        <MapPin className="h-4 w-4 text-gray-400 mr-2 flex-shrink-0" />
+                        <span className="text-gray-700">{area}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Call for Other Areas */}
+                <div className="pt-4 border-t border-gray-200 bg-primary/5 -mx-6 -mb-6 px-6 py-4 rounded-b-lg">
+                  <p className="text-sm text-gray-600 flex items-start">
+                    <Phone className="h-4 w-4 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                    <span>
+                      <strong>Don't see your area listed?</strong> We service many additional locations throughout Anne Arundel County and surrounding areas. Call us at{' '}
+                      <a href={`tel:${CONTACT.PHONE}`} className="text-primary font-semibold hover:underline">
+                        {CONTACT.PHONE_DISPLAY}
+                      </a>{' '}
+                      to check if we can serve your location.
+                    </span>
+                  </p>
                 </div>
               </div>
             </motion.div>
