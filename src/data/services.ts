@@ -38,7 +38,7 @@ export const services: ServiceData[] = [
       'https://images.pexels.com/photos/4207715/pexels-photo-4207715.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/210719/pexels-photo-210719.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/48727/pexels-photo-48727.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=800'
     ],
     features: [
       'Deadbolt and door knob locks',

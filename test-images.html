@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock Change Images Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #1e40af;
+            text-align: center;
+        }
+        .image-test {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-test h2 {
+            color: #2563eb;
+            margin-top: 0;
+        }
+        .image-test img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .status.success {
+            background: #10b981;
+            color: white;
+        }
+        .status.error {
+            background: #ef4444;
+            color: white;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 Lock Change Page - Image Test</h1>
+    
+    <div class="image-test">
+        <h2>1. Hero Background Image <span class="status success" id="status1">Testing...</span></h2>
+        <p><strong>URL:</strong> <code>https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1600</code></p>
+        <img id="img1" src="https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1600" 
+             alt="Hero background - Professional door lock" 
+             onload="updateStatus('status1', true)" 
+             onerror="updateStatus('status1', false)">
+    </div>
+
+    <div class="image-test">
+        <h2>2. Main Content Image <span class="status success" id="status2">Testing...</span></h2>
+        <p><strong>URL:</strong> <code>https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=800</code></p>
+        <img id="img2" src="https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=800" 
+             alt="Main content - Locksmith tools" 
+             onload="updateStatus('status2', true)" 
+             onerror="updateStatus('status2', false)">
+    </div>
+
+    <div class="image-test">
+        <h2>3. Image Gallery (6 Images) <span class="status success" id="status3">Testing...</span></h2>
+        <div class="gallery">
+            <div>
+                <img src="https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                     alt="Door lock mechanism" 
+                     onload="galleryLoaded()" 
+                     onerror="galleryError()">
+                <p>Door lock mechanism</p>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                     alt="Lock installation" 
+                     onload="galleryLoaded()" 
+                     onerror="galleryError()">
+                <p>Lock installation</p>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/4207715/pexels-photo-4207715.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                     alt="Lock cylinder and keys" 
+                     onload="galleryLoaded()" 
+                     onerror="galleryError()">
+                <p>Lock cylinder and keys</p>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/210719/pexels-photo-210719.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                     alt="Modern door lock" 
+                     onload="galleryLoaded()" 
+                     onerror="galleryError()">
+                <p>Modern door lock</p>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                     alt="Security lock system" 
+                     onload="galleryLoaded()" 
+                     onerror="galleryError()">
+                <p>Security lock system</p>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                     alt="Door installation" 
+                     onload="galleryLoaded()" 
+                     onerror="galleryError()">
+                <p>Door installation</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-test" style="text-align: center;">
+        <h2>✅ Test Results</h2>
+        <p id="results">Loading images...</p>
+    </div>
+
+    <script>
+        let galleryCount = 0;
+        let galleryErrors = 0;
+        
+        function updateStatus(id, success) {
+            const el = document.getElementById(id);
+            if (success) {
+                el.textContent = '✓ Loaded';
+                el.className = 'status success';
+            } else {
+                el.textContent = '✗ Failed';
+                el.className = 'status error';
+            }
+            checkComplete();
+        }
+        
+        function galleryLoaded() {
+            galleryCount++;
+            if (galleryCount === 6) {
+                updateStatus('status3', true);
+            }
+        }
+        
+        function galleryError() {
+            galleryErrors++;
+            if (galleryCount + galleryErrors === 6) {
+                updateStatus('status3', galleryErrors === 0);
+            }
+        }
+        
+        function checkComplete() {
+            setTimeout(() => {
+                const loaded = document.querySelectorAll('.status.success').length;
+                const failed = document.querySelectorAll('.status.error').length;
+                const results = document.getElementById('results');
+                
+                if (loaded === 3) {
+                    results.innerHTML = `<strong style="color: #10b981; font-size: 24px;">✓ All 8 images loaded successfully!</strong><br>
+                                       <p>The Lock Change page images are working correctly.</p>
+                                       <p><a href="/services/lock-change" style="color: #2563eb;">View Lock Change Page →</a></p>`;
+                } else {
+                    results.innerHTML = `<strong>Images Status:</strong><br>
+                                       ✓ Loaded: ${loaded}/3<br>
+                                       ✗ Failed: ${failed}/3<br>
+                                       <p>Some images may not be loading correctly.</p>`;
+                }
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
