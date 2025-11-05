@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, MapPin, Home, Building2, Car, Key, Lock, Wrench, AlertCircle, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/useScroll";
@@ -23,13 +23,63 @@ const locationLinks = [
   { name: "Severna Park, MD", href: "/locations/severna-park" },
 ];
 
-const serviceLinks = [
-  { name: "Lock Change", href: "/services/lock-change" },
-  { name: "Lock Rekey", href: "/services/lock-rekey" },
-  { name: "Car Key Programming", href: "/services/car-key-programming" },
-  { name: "Emergency Lockout", href: "/services/emergency-lockout" },
-  { name: "Lock Repair", href: "/services/lock-repair" },
-  { name: "Lost Car Keys", href: "/services/lost-car-keys" },
+const serviceCategories = [
+  {
+    title: "Emergency Services",
+    icon: AlertCircle,
+    services: [
+      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "24/7 fast response" },
+    ]
+  },
+  {
+    title: "Residential",
+    icon: Home,
+    services: [
+      { name: "Lock Change", href: "/services/lock-change", description: "Upgrade your home security" },
+      { name: "Lock Rekey", href: "/services/lock-rekey", description: "Cost-effective solution" },
+      { name: "Lock Repair", href: "/services/lock-repair", description: "Fix broken locks" },
+    ]
+  },
+  {
+    title: "Automotive",
+    icon: Car,
+    services: [
+      { name: "Car Key Programming", href: "/services/car-key-programming", description: "All makes & models" },
+      { name: "Lost Car Keys", href: "/services/lost-car-keys", description: "On-site replacement" },
+    ]
+  }
+];
+
+const locationCategories = [
+  {
+    title: "Central Annapolis",
+    locations: [
+      { name: "Annapolis", href: "/locations/annapolis" },
+      { name: "Eastport", href: "/locations/eastport" },
+      { name: "Parole", href: "/locations/parole" },
+      { name: "Bay Ridge", href: "/locations/bay-ridge" },
+    ]
+  },
+  {
+    title: "North County",
+    locations: [
+      { name: "Severna Park", href: "/locations/severna-park" },
+      { name: "Arnold", href: "/locations/arnold" },
+      { name: "Cape St. Claire", href: "/locations/cape-st-claire" },
+      { name: "Broadneck", href: "/locations/broadneck" },
+    ]
+  },
+  {
+    title: "West & South",
+    locations: [
+      { name: "Crownsville", href: "/locations/crownsville" },
+      { name: "Edgewater", href: "/locations/edgewater" },
+      { name: "Edgewater Beach", href: "/locations/edgewater-beach" },
+      { name: "Mayo", href: "/locations/mayo" },
+      { name: "Riva", href: "/locations/riva" },
+      { name: "Hillsmere Shores", href: "/locations/hillsmere-shores" },
+    ]
+  }
 ];
 
 export const Header = () => {
@@ -139,7 +189,7 @@ export const Header = () => {
                 </Link>
               ))}
 
-              {/* Locations Dropdown */}
+              {/* Locations Mega Menu */}
               <div
                 className="relative"
                 onMouseEnter={() => setLocationsOpen(true)}
@@ -157,27 +207,56 @@ export const Header = () => {
                   <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", locationsOpen && "rotate-180")} />
                 </button>
                 {locationsOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-72 bg-background border border-border rounded-lg shadow-xl py-3 z-50">
-                    <div className="px-4 py-2 border-b border-border">
-                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Service Areas</p>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[600px] bg-background border border-border rounded-xl shadow-2xl z-50 overflow-hidden">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-5 w-5" />
+                        <h3 className="text-lg font-bold">Anne Arundel County Service Areas</h3>
+                      </div>
+                      <p className="text-xs text-blue-100 mt-1">Fast, local locksmith service throughout the region</p>
                     </div>
-                    <div className="grid grid-cols-2 gap-1 p-2">
-                      {locationLinks.map((link) => (
-                        <Link
-                          key={link.href}
-                          to={link.href}
-                          className="px-3 py-2 text-sm hover:bg-muted rounded-md transition-colors hover:text-primary font-medium"
-                          onClick={() => handleNavigation(link.href)}
-                        >
-                          {link.name}
-                        </Link>
+                    <div className="grid grid-cols-3 gap-6 p-6">
+                      {locationCategories.map((category) => (
+                        <div key={category.title}>
+                          <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
+                            {category.title}
+                          </h4>
+                          <div className="space-y-1">
+                            {category.locations.map((location) => (
+                              <Link
+                                key={location.href}
+                                to={location.href}
+                                className="block px-3 py-2 text-sm hover:bg-blue-50 rounded-md transition-colors hover:text-primary font-medium group"
+                                onClick={() => handleNavigation(location.href)}
+                              >
+                                <span className="group-hover:translate-x-1 inline-block transition-transform">
+                                  {location.name}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
                       ))}
+                    </div>
+                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-t border-border">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-sm">
+                          <Phone className="h-4 w-4 text-primary" />
+                          <span className="font-semibold">Need service now?</span>
+                        </div>
+                        <a
+                          href={`tel:${CONTACT.PHONE}`}
+                          className="text-primary font-bold text-lg hover:text-primary/80 transition-colors"
+                        >
+                          {CONTACT.PHONE_DISPLAY}
+                        </a>
+                      </div>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* Services Dropdown */}
+              {/* Services Mega Menu */}
               <div
                 className="relative"
                 onMouseEnter={() => setServicesOpen(true)}
@@ -195,30 +274,67 @@ export const Header = () => {
                   <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", servicesOpen && "rotate-180")} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-background border border-border rounded-lg shadow-xl py-3 z-50">
-                    <div className="px-4 py-2 border-b border-border">
-                      <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Our Services</p>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[700px] bg-background border border-border rounded-xl shadow-2xl z-50 overflow-hidden">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
+                      <div className="flex items-center gap-2">
+                        <Wrench className="h-5 w-5" />
+                        <h3 className="text-lg font-bold">Professional Locksmith Services</h3>
+                      </div>
+                      <p className="text-xs text-blue-100 mt-1">Expert solutions for all your lock and key needs</p>
                     </div>
-                    <div className="py-2">
-                      {serviceLinks.map((link) => (
+                    <div className="grid grid-cols-3 gap-6 p-6">
+                      {serviceCategories.map((category) => {
+                        const IconComponent = category.icon;
+                        return (
+                          <div key={category.title} className="space-y-3">
+                            <div className="flex items-center gap-2">
+                              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                                <IconComponent className="h-4 w-4 text-primary" />
+                              </div>
+                              <h4 className="text-sm font-bold text-foreground">
+                                {category.title}
+                              </h4>
+                            </div>
+                            <div className="space-y-1">
+                              {category.services.map((service) => (
+                                <Link
+                                  key={service.href}
+                                  to={service.href}
+                                  className="block px-3 py-2.5 hover:bg-blue-50 rounded-lg transition-colors group"
+                                  onClick={() => handleNavigation(service.href)}
+                                >
+                                  <div className="font-medium text-sm group-hover:text-primary transition-colors">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-xs text-muted-foreground mt-0.5">
+                                    {service.description}
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-t border-border">
+                      <div className="flex items-center justify-between">
                         <Link
-                          key={link.href}
-                          to={link.href}
-                          className="block px-4 py-2.5 text-sm hover:bg-muted transition-colors hover:text-primary font-medium"
-                          onClick={() => handleNavigation(link.href)}
+                          to="/services"
+                          className="text-sm text-primary font-semibold hover:underline"
+                          onClick={() => handleNavigation('/services')}
                         >
-                          {link.name}
+                          View All Services →
                         </Link>
-                      ))}
-                    </div>
-                    <div className="px-4 py-2 border-t border-border bg-muted/50">
-                      <Link
-                        to="/services"
-                        className="text-xs text-primary hover:underline font-semibold"
-                        onClick={() => handleNavigation('/services')}
-                      >
-                        View All Services →
-                      </Link>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-semibold text-gray-600">24/7 Emergency Service</span>
+                          <a
+                            href={`tel:${CONTACT.PHONE}`}
+                            className="text-primary font-bold hover:text-primary/80 transition-colors"
+                          >
+                            {CONTACT.PHONE_DISPLAY}
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -311,16 +427,26 @@ export const Header = () => {
                 <ChevronDown className={cn("h-4 w-4 transition-transform", mobileLocationsOpen && "rotate-180")} />
               </button>
               {mobileLocationsOpen && (
-                <div className="ml-4 mt-1 space-y-1">
-                  {locationLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      to={link.href}
-                      className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
-                      onClick={() => handleNavigation(link.href)}
-                    >
-                      {link.name}
-                    </Link>
+                <div className="ml-4 mt-1 space-y-3">
+                  {locationCategories.map((category) => (
+                    <div key={category.title}>
+                      <div className="flex items-center gap-2 px-4 py-2">
+                        <MapPin className="h-4 w-4 text-primary" />
+                        <span className="text-xs font-bold text-muted-foreground uppercase">{category.title}</span>
+                      </div>
+                      <div className="space-y-1">
+                        {category.locations.map((location) => (
+                          <Link
+                            key={location.href}
+                            to={location.href}
+                            className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
+                            onClick={() => handleNavigation(location.href)}
+                          >
+                            {location.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
               )}
@@ -336,17 +462,30 @@ export const Header = () => {
                 <ChevronDown className={cn("h-4 w-4 transition-transform", mobileServicesOpen && "rotate-180")} />
               </button>
               {mobileServicesOpen && (
-                <div className="ml-4 mt-1 space-y-1">
-                  {serviceLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      to={link.href}
-                      className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
-                      onClick={() => handleNavigation(link.href)}
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                <div className="ml-4 mt-1 space-y-3">
+                  {serviceCategories.map((category) => {
+                    const IconComponent = category.icon;
+                    return (
+                      <div key={category.title}>
+                        <div className="flex items-center gap-2 px-4 py-2">
+                          <IconComponent className="h-4 w-4 text-primary" />
+                          <span className="text-xs font-bold text-muted-foreground uppercase">{category.title}</span>
+                        </div>
+                        <div className="space-y-1">
+                          {category.services.map((service) => (
+                            <Link
+                              key={service.href}
+                              to={service.href}
+                              className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
+                              onClick={() => handleNavigation(service.href)}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               )}
             </div>
