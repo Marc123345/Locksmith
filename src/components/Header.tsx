@@ -106,6 +106,9 @@ export const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
+  ];
+
+  const afterDropdownLinks = [
     { name: "About", href: "/about" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
@@ -188,73 +191,6 @@ export const Header = () => {
                   {link.name}
                 </Link>
               ))}
-
-              {/* Locations Mega Menu */}
-              <div
-                className="relative"
-                onMouseEnter={() => setLocationsOpen(true)}
-                onMouseLeave={() => setLocationsOpen(false)}
-              >
-                <button
-                  className={cn(
-                    "text-base transition-colors relative py-2 px-4 font-medium flex items-center rounded-lg",
-                    isActive('/locations')
-                      ? "text-primary bg-primary/5"
-                      : "text-foreground hover:text-primary hover:bg-muted"
-                  )}
-                >
-                  Locations
-                  <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", locationsOpen && "rotate-180")} />
-                </button>
-                {locationsOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[600px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-[60]">
-                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
-                      <div className="flex items-center gap-2">
-                        <MapPin className="h-5 w-5" />
-                        <h3 className="text-lg font-bold">Anne Arundel County Service Areas</h3>
-                      </div>
-                      <p className="text-xs text-blue-100 mt-1">Fast, local locksmith service throughout the region</p>
-                    </div>
-                    <div className="grid grid-cols-3 gap-6 p-6">
-                      {locationCategories.map((category) => (
-                        <div key={category.title}>
-                          <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
-                            {category.title}
-                          </h4>
-                          <div className="space-y-1">
-                            {category.locations.map((location) => (
-                              <Link
-                                key={location.href}
-                                to={location.href}
-                                className="block px-3 py-2 text-sm hover:bg-blue-50 rounded-md transition-colors hover:text-primary font-medium group"
-                                onClick={() => handleNavigation(location.href)}
-                              >
-                                <span className="group-hover:translate-x-1 inline-block transition-transform">
-                                  {location.name}
-                                </span>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-t border-border">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-sm">
-                          <Phone className="h-4 w-4 text-primary" />
-                          <span className="font-semibold">Need service now?</span>
-                        </div>
-                        <a
-                          href={`tel:${CONTACT.PHONE}`}
-                          className="text-primary font-bold text-lg hover:text-primary/80 transition-colors"
-                        >
-                          {CONTACT.PHONE_DISPLAY}
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
 
               {/* Services Mega Menu */}
               <div
@@ -339,6 +275,90 @@ export const Header = () => {
                   </div>
                 )}
               </div>
+
+              {/* Locations Mega Menu */}
+              <div
+                className="relative"
+                onMouseEnter={() => setLocationsOpen(true)}
+                onMouseLeave={() => setLocationsOpen(false)}
+              >
+                <button
+                  className={cn(
+                    "text-base transition-colors relative py-2 px-4 font-medium flex items-center rounded-lg",
+                    isActive('/locations')
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-muted"
+                  )}
+                >
+                  Locations
+                  <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", locationsOpen && "rotate-180")} />
+                </button>
+                {locationsOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[600px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-[60]">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-5 w-5" />
+                        <h3 className="text-lg font-bold">Anne Arundel County Service Areas</h3>
+                      </div>
+                      <p className="text-xs text-blue-100 mt-1">Fast, local locksmith service throughout the region</p>
+                    </div>
+                    <div className="grid grid-cols-3 gap-6 p-6">
+                      {locationCategories.map((category) => (
+                        <div key={category.title}>
+                          <h4 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
+                            {category.title}
+                          </h4>
+                          <div className="space-y-1">
+                            {category.locations.map((location) => (
+                              <Link
+                                key={location.href}
+                                to={location.href}
+                                className="block px-3 py-2 text-sm hover:bg-blue-50 rounded-md transition-colors hover:text-primary font-medium group"
+                                onClick={() => handleNavigation(location.href)}
+                              >
+                                <span className="group-hover:translate-x-1 inline-block transition-transform">
+                                  {location.name}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-t border-border">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 text-sm">
+                          <Phone className="h-4 w-4 text-primary" />
+                          <span className="font-semibold">Need service now?</span>
+                        </div>
+                        <a
+                          href={`tel:${CONTACT.PHONE}`}
+                          className="text-primary font-bold text-lg hover:text-primary/80 transition-colors"
+                        >
+                          {CONTACT.PHONE_DISPLAY}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {afterDropdownLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className={cn(
+                    "text-base transition-colors relative py-2 px-4 font-medium rounded-lg",
+                    isActive(link.href)
+                      ? "text-primary bg-primary/5"
+                      : "text-foreground hover:text-primary hover:bg-muted"
+                  )}
+                  onClick={() => handleNavigation(link.href)}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                >
+                  {link.name}
+                </Link>
+              ))}
 
               <Button
                 size="default"
@@ -429,41 +449,6 @@ export const Header = () => {
               </Link>
             ))}
 
-            {/* Mobile Locations Dropdown */}
-            <div>
-              <button
-                onClick={() => setMobileLocationsOpen(!mobileLocationsOpen)}
-                className="w-full flex items-center justify-between py-2 px-4 rounded-lg transition-colors font-medium hover:bg-muted text-foreground hover:text-primary"
-              >
-                Locations
-                <ChevronDown className={cn("h-4 w-4 transition-transform", mobileLocationsOpen && "rotate-180")} />
-              </button>
-              {mobileLocationsOpen && (
-                <div className="ml-4 mt-1 space-y-3">
-                  {locationCategories.map((category) => (
-                    <div key={category.title}>
-                      <div className="flex items-center gap-2 px-4 py-2">
-                        <MapPin className="h-4 w-4 text-primary" />
-                        <span className="text-xs font-bold text-muted-foreground uppercase">{category.title}</span>
-                      </div>
-                      <div className="space-y-1">
-                        {category.locations.map((location) => (
-                          <Link
-                            key={location.href}
-                            to={location.href}
-                            className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
-                            onClick={() => handleNavigation(location.href)}
-                          >
-                            {location.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
             {/* Mobile Services Dropdown */}
             <div>
               <button
@@ -501,6 +486,58 @@ export const Header = () => {
                 </div>
               )}
             </div>
+
+            {/* Mobile Locations Dropdown */}
+            <div>
+              <button
+                onClick={() => setMobileLocationsOpen(!mobileLocationsOpen)}
+                className="w-full flex items-center justify-between py-2 px-4 rounded-lg transition-colors font-medium hover:bg-muted text-foreground hover:text-primary"
+              >
+                Locations
+                <ChevronDown className={cn("h-4 w-4 transition-transform", mobileLocationsOpen && "rotate-180")} />
+              </button>
+              {mobileLocationsOpen && (
+                <div className="ml-4 mt-1 space-y-3">
+                  {locationCategories.map((category) => (
+                    <div key={category.title}>
+                      <div className="flex items-center gap-2 px-4 py-2">
+                        <MapPin className="h-4 w-4 text-primary" />
+                        <span className="text-xs font-bold text-muted-foreground uppercase">{category.title}</span>
+                      </div>
+                      <div className="space-y-1">
+                        {category.locations.map((location) => (
+                          <Link
+                            key={location.href}
+                            to={location.href}
+                            className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
+                            onClick={() => handleNavigation(location.href)}
+                          >
+                            {location.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {afterDropdownLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className={cn(
+                  "block py-2 px-4 rounded-lg transition-colors font-medium",
+                  isActive(link.href)
+                    ? "bg-primary/10 text-primary"
+                    : "hover:bg-muted text-foreground hover:text-primary"
+                )}
+                onClick={() => handleNavigation(link.href)}
+                aria-current={isActive(link.href) ? "page" : undefined}
+              >
+                {link.name}
+              </Link>
+            ))}
 
             <div className="pt-2 pb-4">
               <Button
