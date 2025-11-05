@@ -17,7 +17,7 @@ const services = [
     icon: <Home className="h-6 w-6 text-white" />,
     title: "Residential Services",
     description: "Complete home security solutions including smart locks and master key systems.",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp",
+    image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2010.jpeg?updatedAt=1762342827491",
     features: [
       "Lock installation & repair",
       "Smart lock systems",
@@ -30,7 +30,7 @@ const services = [
     icon: <Building2 className="h-6 w-6 text-white" />,
     title: "Commercial Services",
     description: "Advanced security solutions for businesses of all sizes.",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp",
+    image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%208.jpeg?updatedAt=1762342827514",
     features: [
       "Master key systems",
       "High-security locks",
@@ -43,7 +43,7 @@ const services = [
     icon: <Car className="h-6 w-6 text-white" />,
     title: "Automotive Services",
     description: "Professional automotive locksmith services for all vehicle types.",
-    image: "https://images.unsplash.com/photo-1568630742664-f17825d0bc29?w=800&auto=format&fit=crop&q=80&fm=webp",
+    image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2012.jpeg?updatedAt=1762342827618",
     features: [
       "Car lockout assistance",
       "Key programming",

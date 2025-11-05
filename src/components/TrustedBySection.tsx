@@ -3,24 +3,20 @@ import { motion } from "framer-motion";
 export const TrustedBySection = () => {
   const trustedByImages = [
     {
-      src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%204.jpeg?updatedAt=1762342827098",
       alt: "Professional Security Solutions"
     },
     {
-      src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%205.jpeg?updatedAt=1762342826818",
       alt: "Advanced Lock Technology"
     },
     {
-      src: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%203.jpeg?updatedAt=1762342826949",
       alt: "Smart Home Security"
     },
     {
-      src: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%206.jpeg?updatedAt=1762342827058",
       alt: "Commercial Security Systems"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Residential Lock Services"
     }
   ];
 

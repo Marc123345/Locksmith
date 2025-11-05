@@ -17,7 +17,7 @@ export default function ServicesPage() {
       id: "residential",
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2010.jpeg?updatedAt=1762342827491",
       icon: <Home className="h-8 w-8 text-white" />,
       features: [
         "Lock installation & repair",
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       id: "commercial",
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%208.jpeg?updatedAt=1762342827514",
       icon: <Building2 className="h-8 w-8 text-white" />,
       features: [
         "High-security locks",
@@ -52,7 +52,7 @@ export default function ServicesPage() {
       id: "automotive",
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2012.jpeg?updatedAt=1762342827618",
       icon: <Car className="h-8 w-8 text-white" />,
       features: [
         "Car lockout assistance",
@@ -70,7 +70,7 @@ export default function ServicesPage() {
       id: "emergency",
       title: "Emergency Services",
       description: "Same-day locksmith services when you need help the most.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2013.jpeg?updatedAt=1762342827770",
       icon: <AlertTriangle className="h-8 w-8 text-white" />,
       features: [
         "Same-day availability",
