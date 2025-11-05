@@ -70,11 +70,156 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
   return (
     <>
       <Helmet>
+        {/* Primary Meta Tags */}
         <title>{location.metaTitle}</title>
+        <meta name="title" content={location.metaTitle} />
         <meta name="description" content={location.metaDescription} />
+        <meta name="keywords" content={`locksmith ${location.name}, emergency locksmith ${location.name}, car locksmith ${location.name}, residential locksmith ${location.name}, commercial locksmith ${location.name}, lock rekey ${location.name}, 24/7 locksmith ${location.name}, mobile locksmith ${location.name}`} />
+
+        {/* Geographic Meta Tags */}
+        <meta name="geo.region" content="US-MD" />
+        <meta name="geo.placename" content={location.name} />
+        <meta name="geo.position" content="38.978764;-76.492786" />
+        <meta name="ICBM" content="38.978764, -76.492786" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://asecureannapolis.com/locations/${location.slug}`} />
         <meta property="og:title" content={location.metaTitle} />
         <meta property="og:description" content={location.metaDescription} />
+        <meta property="og:image" content={location.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://asecureannapolis.com/locations/${location.slug}`} />
+        <meta property="twitter:title" content={location.metaTitle} />
+        <meta property="twitter:description" content={location.metaDescription} />
+        <meta property="twitter:image" content={location.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+
+        {/* Canonical */}
         <link rel="canonical" href={`https://asecureannapolis.com/locations/${location.slug}`} />
+
+        {/* Schema.org Markup for LocalBusiness */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Locksmith",
+            "name": `A Secure Annapolis Locksmith - ${location.name}`,
+            "description": location.metaDescription,
+            "image": location.heroImage,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
+              "addressLocality": "Annapolis",
+              "addressRegion": "MD",
+              "postalCode": "21403",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 38.978764,
+              "longitude": -76.492786
+            },
+            "url": `https://asecureannapolis.com/locations/${location.slug}`,
+            "telephone": CONTACT.PHONE,
+            "email": CONTACT.EMAIL,
+            "priceRange": "$$",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "08:00",
+                "closes": "20:00"
+              }
+            ],
+            "areaServed": {
+              "@type": "City",
+              "name": location.name
+            },
+            "serviceArea": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 38.978764,
+                "longitude": -76.492786
+              },
+              "geoRadius": "25000"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "150"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Locksmith Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Emergency Lockout Service",
+                    "description": `24/7 emergency locksmith service in ${location.name}`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Residential Locksmith",
+                    "description": `Home lock installation, rekeying, and repair in ${location.name}`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Automotive Locksmith",
+                    "description": `Car key replacement, programming, and lockout service in ${location.name}`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Commercial Locksmith",
+                    "description": `Business security systems and lock installation in ${location.name}`
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
+
+        {/* BreadcrumbList Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://asecureannapolis.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Locations",
+                "item": "https://asecureannapolis.com/locations"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": location.name,
+                "item": `https://asecureannapolis.com/locations/${location.slug}`
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <div className="pt-16 md:pt-20">
@@ -127,11 +272,16 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Your Trusted Locksmith in {location.name}
+                  Your Trusted Local Locksmith in {location.name}
                 </h2>
-                <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                  {location.description}
-                </p>
+                <div className="text-lg text-gray-700 leading-relaxed mb-8">
+                  <p className="mb-4">{location.description}</p>
+                  <p className="mb-4">
+                    As a locally owned and operated locksmith company serving {location.name} and Anne Arundel County,
+                    we pride ourselves on delivering fast, reliable service with competitive pricing. Our licensed and
+                    insured technicians are available {location.responseTime === '24/7' ? '24 hours a day, 7 days a week' : 'with response times of ' + location.responseTime}.
+                  </p>
+                </div>
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
@@ -207,10 +357,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Home className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Residential Locksmith
+                  Residential Locksmith Services
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Home security is our top priority. Our residential locksmith services in {location.name} include lock rekeying, deadbolt installation, smart lock upgrades, and emergency home lockouts.
+                  Home security is our top priority. Our residential locksmith services in {location.name} include <a href="/services/lock-rekey" className="text-blue-600 hover:underline">lock rekeying</a>, deadbolt installation, <a href="/services/lock-change" className="text-blue-600 hover:underline">lock changes</a>, smart lock upgrades, and <a href="/services/emergency-lockout" className="text-blue-600 hover:underline">emergency home lockouts</a>.
                 </p>
               </div>
 
@@ -219,10 +369,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Car className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Automotive Locksmith
+                  Automotive Locksmith Services
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Need a car locksmith in {location.name}? Whether you're locked out, lost your keys, or your fob isn't working — we offer car door unlocks, ignition repair, transponder key programming, and more.
+                  Need a car locksmith in {location.name}? Whether you're locked out, <a href="/services/lost-car-keys" className="text-blue-600 hover:underline">lost your keys</a>, or your fob isn't working — we offer car door unlocks, ignition repair, <a href="/services/car-key-programming" className="text-blue-600 hover:underline">transponder key programming</a>, and more.
                 </p>
               </div>
 
@@ -231,10 +381,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Commercial Locksmith
+                  Commercial Locksmith Services
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Business owners trust us for expert commercial locksmith services in {location.name} — including master key systems, keyless entry, panic bars, and high-security locks.
+                  Business owners in {location.name} trust us for expert commercial locksmith services — including master key systems, keyless entry, panic bars, and high-security locks. We secure offices, retail stores, and warehouses throughout the area.
                 </p>
               </div>
 
@@ -255,10 +405,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Wrench className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Lock Repair & Installation
+                  Lock Repair & Installation Services
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  We install, repair, and replace all major lock brands — from traditional deadbolts to the latest in smart lock technology. Professional service guaranteed.
+                  We install, <a href="/services/lock-repair" className="text-blue-600 hover:underline">repair</a>, and replace all major lock brands serving {location.name} — from traditional deadbolts to the latest in smart lock technology. Professional service guaranteed with a satisfaction guarantee.
                 </p>
               </div>
 
