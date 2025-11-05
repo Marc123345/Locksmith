@@ -51,8 +51,24 @@ export default function ContactPage() {
   ];
 
   const serviceAreas = [
-    "Annapolis", "Severna Park", "Edgewater", "Arnold",
-    "Crofton", "Davidsonville", "Pasadena", "Glen Burnie"
+    "Annapolis",
+    "Arnold",
+    "Bay Ridge",
+    "Broadneck",
+    "Cape St. Claire",
+    "Crownsville",
+    "Crofton",
+    "Davidsonville",
+    "Eastport",
+    "Edgewater",
+    "Edgewater Beach",
+    "Glen Burnie",
+    "Hillsmere Shores",
+    "Mayo",
+    "Parole",
+    "Pasadena",
+    "Riva",
+    "Severna Park"
   ];
 
   const trustIndicators = [
@@ -201,17 +217,20 @@ export default function ContactPage() {
               
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-semibold mb-4">Areas We Serve</h3>
-                <div className="grid grid-cols-2 gap-y-2">
+                <p className="text-sm text-muted-foreground mb-4">
+                  Professional locksmith services throughout Anne Arundel County
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4">
                   {serviceAreas.map((area, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-center"
+                      transition={{ delay: index * 0.05 }}
+                      className="flex items-center text-sm"
                     >
-                      <MapPin className="h-4 w-4 text-primary mr-2" />
+                      <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                       <span>{area}</span>
                     </motion.div>
                   ))}
