@@ -207,7 +207,7 @@ export const Header = () => {
                   <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", locationsOpen && "rotate-180")} />
                 </button>
                 {locationsOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[600px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[600px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-[60]">
                     <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
                       <div className="flex items-center gap-2">
                         <MapPin className="h-5 w-5" />
@@ -274,7 +274,7 @@ export const Header = () => {
                   <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", servicesOpen && "rotate-180")} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[700px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[700px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-[60]">
                     <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
                       <div className="flex items-center gap-2">
                         <Wrench className="h-5 w-5" />
@@ -376,6 +376,18 @@ export const Header = () => {
           </nav>
         </div>
       </header>
+
+      {/* Desktop Dropdown Overlay */}
+      {(locationsOpen || servicesOpen) && (
+        <div
+          className="hidden lg:block fixed inset-0 bg-black/20 z-40 transition-opacity duration-200"
+          onClick={() => {
+            setLocationsOpen(false);
+            setServicesOpen(false);
+          }}
+          aria-hidden="true"
+        />
+      )}
 
       {/* Mobile Menu Overlay */}
       <div
