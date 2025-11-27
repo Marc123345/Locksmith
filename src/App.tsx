@@ -4,7 +4,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import Chatbot from '@/components/Chatbot';
 
 // Import pages
 import HomePage from '@/pages/HomePage';
@@ -115,7 +114,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <Chatbot />
       </div>
     </ErrorBoundary>
   );
