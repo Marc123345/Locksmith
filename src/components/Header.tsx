@@ -111,6 +111,7 @@ export const Header = () => {
   const afterDropdownLinks = [
     { name: "About", href: "/about" },
     { name: "Testimonials", href: "/testimonials" },
+    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 

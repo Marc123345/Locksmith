@@ -138,3 +138,52 @@
     @apply hover:text-primary transition-colors duration-200;
   }
 }
+
+/* Blog Content Styles */
+.blog-content {
+  @apply text-foreground;
+}
+
+.blog-content h2 {
+  @apply text-3xl font-bold mt-8 mb-4 text-foreground;
+}
+
+.blog-content h3 {
+  @apply text-2xl font-semibold mt-6 mb-3 text-foreground;
+}
+
+.blog-content p {
+  @apply mb-4 leading-relaxed text-foreground;
+}
+
+.blog-content ul {
+  @apply mb-4 ml-6 list-disc space-y-2;
+}
+
+.blog-content li {
+  @apply text-foreground leading-relaxed;
+}
+
+.blog-content strong {
+  @apply font-semibold text-foreground;
+}
+
+.blog-content a {
+  @apply text-primary hover:underline;
+}
+
+.blog-content .contact-box {
+  @apply bg-muted border-l-4 border-primary p-6 rounded-lg mt-8 mb-8;
+}
+
+.blog-content .contact-box h3 {
+  @apply text-2xl font-bold mb-2 mt-0;
+}
+
+.blog-content .contact-box p {
+  @apply mb-2;
+}
+
+.blog-content .contact-box em {
+  @apply text-muted-foreground;
+}
