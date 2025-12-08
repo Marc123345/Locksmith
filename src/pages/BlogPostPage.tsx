@@ -209,11 +209,11 @@ const BlogPostPage = () => {
           </Link>
 
           {post.featured_image && (
-            <div className="rounded-xl overflow-hidden mb-8 h-[400px] md:h-[500px]">
+            <div className="relative rounded-xl overflow-hidden mb-8 h-[400px] md:h-[500px]">
               <img
                 src={post.featured_image}
                 alt={post.title}
-                className="w-full h-full object-cover"
+                className="absolute top-0 left-0 w-full h-full object-cover"
               />
             </div>
           )}
