@@ -150,8 +150,26 @@ const BlogPostPage = () => {
       name: post.author,
     },
     publisher: {
-      '@type': 'Organization',
+      '@type': 'LocalBusiness',
+      '@id': 'https://www.asecureannapolislocksmith.com/#localbusiness',
       name: 'A Secure Annapolis Locksmith',
+      image: 'https://i.imgur.com/VfpMzbE.png',
+      telephone: CONTACT.PHONE,
+      email: CONTACT.EMAIL,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: CONTACT.ADDRESS,
+        addressLocality: 'Annapolis',
+        addressRegion: 'MD',
+        postalCode: '21403',
+        addressCountry: 'US',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '38.9784',
+        longitude: '-76.4922',
+      },
+      areaServed: post.location ? [post.location, 'Anne Arundel County', 'Maryland'] : ['Annapolis', 'Anne Arundel County', 'Maryland'],
       logo: {
         '@type': 'ImageObject',
         url: 'https://i.imgur.com/VfpMzbE.png',
@@ -167,6 +185,10 @@ const BlogPostPage = () => {
           name="description"
           content={post.meta_description || post.excerpt}
         />
+        <meta name="geo.region" content="US-MD" />
+        <meta name="geo.placename" content={post.location || 'Annapolis'} />
+        <meta name="geo.position" content="38.9784;-76.4922" />
+        <meta name="ICBM" content="38.9784, -76.4922" />
         <link
           rel="canonical"
           href={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`}
