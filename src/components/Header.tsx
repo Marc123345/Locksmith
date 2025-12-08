@@ -168,7 +168,7 @@ export const Header = () => {
               aria-label="A Secure Annapolis Locksmith Home"
             >
               <img
-                src="https://i.imgur.com/VfpMzbE.png"
+                src="https://ik.imagekit.io/qcvroy8xpd/Last.jpg"
                 alt="A Secure Annapolis Locksmith Logo"
                 className="h-12 w-auto md:h-16"
               />
