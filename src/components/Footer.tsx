@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4 lg:col-span-2">
             <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
               <img
-                src="https://ik.imagekit.io/qcvroy8xpd/Last.jpg"
+                src="https://i.imgur.com/VfpMzbE.png"
                 alt="A Secure Annapolis Locksmith Logo"
                 className="h-16 w-auto"
               />

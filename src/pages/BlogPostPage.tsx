@@ -153,7 +153,7 @@ const BlogPostPage = () => {
       '@type': 'LocalBusiness',
       '@id': 'https://www.asecureannapolislocksmith.com/#localbusiness',
       name: 'A Secure Annapolis Locksmith',
-      image: 'https://ik.imagekit.io/qcvroy8xpd/Last.jpg',
+      image: 'https://i.imgur.com/VfpMzbE.png',
       telephone: CONTACT.PHONE,
       email: CONTACT.EMAIL,
       address: {
@@ -172,7 +172,7 @@ const BlogPostPage = () => {
       areaServed: post.location ? [post.location, 'Anne Arundel County', 'Maryland'] : ['Annapolis', 'Anne Arundel County', 'Maryland'],
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ik.imagekit.io/qcvroy8xpd/Last.jpg',
+        url: 'https://i.imgur.com/VfpMzbE.png',
       },
     },
   };
