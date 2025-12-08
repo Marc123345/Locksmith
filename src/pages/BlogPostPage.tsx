@@ -187,11 +187,11 @@ const BlogPostPage = () => {
           </Link>
 
           {post.featured_image && (
-            <div className="rounded-xl overflow-hidden mb-8">
+            <div className="rounded-xl overflow-hidden mb-8 h-[400px] md:h-[500px]">
               <img
                 src={post.featured_image}
                 alt={post.title}
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
           )}
