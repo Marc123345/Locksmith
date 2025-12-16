@@ -1,27 +1,32 @@
 import { motion } from "framer-motion";
+import { Shield, Award, Clock, Users } from "lucide-react";
 
 export const TrustedBySection = () => {
-  const trustedByImages = [
+  const trustIndicators = [
     {
-      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%204.jpeg?updatedAt=1762342827098",
-      alt: "Professional Security Solutions"
+      icon: Shield,
+      title: "Licensed & Insured",
+      subtitle: "Full protection"
     },
     {
-      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%205.jpeg?updatedAt=1762342826818",
-      alt: "Advanced Lock Technology"
+      icon: Award,
+      title: "5-Star Rated",
+      subtitle: "50+ reviews"
     },
     {
-      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%203.jpeg?updatedAt=1762342826949",
-      alt: "Smart Home Security"
+      icon: Clock,
+      title: "Same-Day Service",
+      subtitle: "Fast response"
     },
     {
-      src: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%206.jpeg?updatedAt=1762342827058",
-      alt: "Commercial Security Systems"
+      icon: Users,
+      title: "1000+ Customers",
+      subtitle: "Trusted locally"
     }
   ];
 
   return (
-    <section className="py-8 bg-white border-b">
+    <section className="py-12 bg-gradient-to-b from-muted/30 to-white border-b">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,24 +34,27 @@ export const TrustedBySection = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-sm xs:text-base text-muted-foreground mb-6">Trusted By Industry Leaders</p>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-12">
-            {trustedByImages.map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="w-28 xs:w-36 md:w-44 lg:w-48 h-auto transition-all duration-300"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-            ))}
+          <p className="text-sm xs:text-base font-semibold text-primary mb-8">Why Choose Us</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
+            {trustIndicators.map((indicator, index) => {
+              const Icon = indicator.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex flex-col items-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 group"
+                >
+                  <div className="bg-primary/10 p-4 rounded-full mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Icon className="h-8 w-8 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-base md:text-lg mb-1 text-center">{indicator.title}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground text-center">{indicator.subtitle}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>

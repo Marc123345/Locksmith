@@ -16,14 +16,14 @@ export const HeroSection = () => {
     >
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
-          src="https://ik.imagekit.io/qcvroy8xpd/downloads/asset%201.jpeg?updatedAt=1762342827350"
+          src="https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
           alt="Professional locksmith working on a lock"
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full scale-105"
           loading="lazy"
           role="img"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"
+          className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50"
           aria-hidden="true"
         />
       </div>
@@ -36,12 +36,12 @@ export const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight tracking-tight">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
               Professional Local{" "}
-              <span className="text-primary">Locksmith Services</span>
+              <span className="text-primary drop-shadow-lg">Locksmith Services</span>
               {" "}in Annapolis
             </h1>
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white/95 mb-6 md:mb-8 leading-relaxed max-w-2xl mx-auto font-medium">
               Licensed and insured locksmith solutions for residential, commercial, and automotive needs. Same-day service available with fast response times.
             </p>
             

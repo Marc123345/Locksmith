@@ -17,7 +17,7 @@ export default function ServicesPage() {
       id: "residential",
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2010.jpeg?updatedAt=1762342827491",
+      image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
       icon: <Home className="h-8 w-8 text-white" />,
       features: [
         "Lock installation & repair",
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       id: "commercial",
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%208.jpeg?updatedAt=1762342827514",
+      image: "https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
       icon: <Building2 className="h-8 w-8 text-white" />,
       features: [
         "High-security locks",
@@ -52,7 +52,7 @@ export default function ServicesPage() {
       id: "automotive",
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2012.jpeg?updatedAt=1762342827618",
+      image: "https://images.unsplash.com/photo-1568630742664-f17825d0bc29?w=1000&auto=format&fit=crop&q=80&fm=webp",
       icon: <Car className="h-8 w-8 text-white" />,
       features: [
         "Car lockout assistance",
@@ -70,7 +70,7 @@ export default function ServicesPage() {
       id: "emergency",
       title: "Emergency Services",
       description: "Same-day locksmith services when you need help the most.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/downloads/asset%2013.jpeg?updatedAt=1762342827770",
+      image: "https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
       icon: <AlertTriangle className="h-8 w-8 text-white" />,
       features: [
         "Same-day availability",
