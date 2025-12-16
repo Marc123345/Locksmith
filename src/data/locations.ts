@@ -29,7 +29,7 @@ export const locations: LocationData[] = [
     subtitle: 'Expert Locksmith Services in Arnold, Cape St. Claire, and Bay Hills',
     description: 'A Secure Annapolis Locksmith is the trusted name for professional locksmith services in Arnold, MD. Whether you\'re locked out, need new locks installed, or want to upgrade your home or business security, we\'re the go-to Arnold locksmith for fast, affordable, and licensed service. We proudly serve Arnold, Cape St. Claire, Bay Hills, and the Broadneck Peninsula with expert residential, automotive, and commercial locksmith solutions.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto',
-    contentImage: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_MKgRTMc19.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Arnold',
       'Cape St. Claire',
@@ -75,7 +75,7 @@ export const locations: LocationData[] = [
     subtitle: 'Professional Locksmith Services in Edgewater, Mayo, and Woodland Beach',
     description: 'Looking for a licensed and reliable locksmith in Edgewater, MD? A Secure Annapolis Locksmith provides fast, professional locksmith services for homes, businesses, and vehicles throughout Edgewater, Mayo, and Woodland Beach. As a locally owned and operated business, we understand the urgency of lockouts and the importance of security.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
-    contentImage: 'https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto',
     neighborhoods: [
       'Edgewater',
       'Mayo',
@@ -115,7 +115,7 @@ export const locations: LocationData[] = [
     subtitle: 'Fast & Affordable Locksmith Services in Severna Park, Benfield, and Chartwell',
     description: 'When you need a trusted locksmith in Severna Park, MD, A Secure Annapolis Locksmith is the local name you can count on. We provide fast, professional locksmith services for homes, cars, and businesses across Severna Park, Benfield, Chartwell, and surrounding neighborhoods. Whether it\'s a lockout, rekey, or security upgrade, we\'re just minutes away with mobile service available 7 days a week.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto',
-    contentImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto',
     neighborhoods: [
       'Severna Park',
       'Benfield',
@@ -149,8 +149,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Crownsville, MD',
     subtitle: 'Local Locksmith Services in Crownsville, Herald Harbor, and Arden on the Severn',
     description: 'At A Secure Annapolis Locksmith, we provide dependable locksmith services in Crownsville, MD for residential, automotive, and commercial needs. From Herald Harbor to Arden on the Severn, our mobile locksmiths offer quick and affordable solutions 7 days a week.',
-    heroImage: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Crownsville',
       'Herald Harbor',
@@ -185,7 +185,7 @@ export const locations: LocationData[] = [
     subtitle: 'Professional Locksmith Services in Downtown Annapolis, Eastport, and Hillsmere Shores',
     description: 'A Secure Annapolis Locksmith is your trusted local locksmith serving Annapolis, MD and surrounding neighborhoods. Whether you need emergency lockout service, lock installation, rekeying, or automotive locksmith solutions, we provide fast, reliable, and affordable service throughout the greater Annapolis area. As a locally owned and operated business based right here in Annapolis, we understand the unique security needs of our community.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto',
-    contentImage: 'https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Downtown Annapolis',
       'Eastport',
@@ -232,7 +232,7 @@ export const locations: LocationData[] = [
     subtitle: 'Fast Locksmith Services in Parole, Annapolis Mall Area, and Riva Road',
     description: 'Need a locksmith in Parole, MD? A Secure Annapolis Locksmith provides prompt, professional locksmith services throughout the Parole area, including the Annapolis Mall district, Riva Road, and Jennifer Road. Whether you\'re locked out of your car at the mall, need your home rekeyed, or require commercial lock installation, our mobile locksmiths arrive quickly with the tools and expertise to solve your problem.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto',
-    contentImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Parole',
       'Annapolis Mall Area',
@@ -273,8 +273,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Bay Ridge, MD',
     subtitle: 'Trusted Locksmith Services in Bay Ridge and South Annapolis',
     description: 'A Secure Annapolis Locksmith proudly serves the Bay Ridge community with comprehensive locksmith services. From emergency lockouts to smart lock installations, our experienced technicians provide reliable solutions for Bay Ridge residents and businesses. We understand the unique character of this waterfront neighborhood and deliver personalized service with the urgency you deserve.',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_MKgRTMc19.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto',
     neighborhoods: [
       'Bay Ridge',
       'South Annapolis',
@@ -313,8 +313,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Hillsmere Shores, MD',
     subtitle: 'Local Locksmith Services in Hillsmere Shores and Forest Drive',
     description: 'Hillsmere Shores residents trust A Secure Annapolis Locksmith for all their security needs. Our mobile locksmiths provide fast, friendly service throughout Hillsmere Shores, offering everything from emergency lockouts to complete security system installations. We\'re your neighborhood locksmith, committed to keeping your home and family safe.',
-    heroImage: 'https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
     neighborhoods: [
       'Hillsmere Shores',
       'Forest Drive Corridor',
@@ -354,7 +354,7 @@ export const locations: LocationData[] = [
     subtitle: 'Your Local Locksmith Right Here in Eastport',
     description: 'Located right in Eastport, A Secure Annapolis Locksmith is your immediate neighbor for all locksmith needs. We serve the Eastport community with unmatched speed and reliability, whether you need a residential lockout service, commercial lock installation, or automotive key programming. Being based in Eastport means we know the area intimately and can reach you faster than anyone else.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto',
-    contentImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto',
     neighborhoods: [
       'Eastport',
       'Historic Eastport',
@@ -391,8 +391,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Riva, MD',
     subtitle: 'Professional Locksmith Services in Riva and South River Areas',
     description: 'Serving the Riva, MD community with expert locksmith services, A Secure Annapolis Locksmith provides fast mobile service throughout the Riva and South River areas. Whether you need residential rekeying, commercial lock systems, or emergency lockout assistance, our licensed locksmiths deliver professional solutions with small-town service and big-city expertise.',
-    heroImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Riva',
       'South River',
@@ -432,8 +432,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Cape St. Claire, MD',
     subtitle: 'Trusted Locksmith Services in Cape St. Claire Community',
     description: 'Cape St. Claire residents choose A Secure Annapolis Locksmith for reliable, professional locksmith services. Our experienced team understands the unique needs of this close-knit community and provides personalized service for every home and business. From emergency lockouts to complete security upgrades, we\'re your trusted Cape St. Claire locksmith partner.',
-    heroImage: 'https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Cape St. Claire',
       'Broadneck Peninsula',
@@ -472,8 +472,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Broadneck, MD',
     subtitle: 'Expert Locksmith Services Throughout the Broadneck Peninsula',
     description: 'Serving the entire Broadneck Peninsula, A Secure Annapolis Locksmith provides comprehensive locksmith solutions for residents and businesses. Our mobile locksmiths bring professional service directly to your location, whether you need emergency assistance, security upgrades, or routine lock maintenance throughout the Broadneck area.',
-    heroImage: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto',
     neighborhoods: [
       'Broadneck Peninsula',
       'Cape St. Claire',
@@ -513,8 +513,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Edgewater Beach, MD',
     subtitle: 'Waterfront Locksmith Services in Edgewater Beach and Mayo',
     description: 'Edgewater Beach residents rely on A Secure Annapolis Locksmith for specialized locksmith services tailored to waterfront living. We understand the unique security challenges of coastal properties and provide expert solutions including marine-grade locks, smart security systems, and emergency services throughout Edgewater Beach and the surrounding Mayo area.',
-    heroImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_MKgRTMc19.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Edgewater Beach',
       'Mayo',
@@ -554,8 +554,8 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Mayo, MD',
     subtitle: 'Reliable Locksmith Services in Mayo and South River Communities',
     description: 'Mayo, MD residents trust A Secure Annapolis Locksmith for dependable locksmith services. Our mobile team serves the Mayo area with fast response times and professional solutions for all your residential, commercial, and automotive locksmith needs. From emergency lockouts to complete security system installations, we\'re your local locksmith partner in Mayo.',
-    heroImage: 'https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80&fm=webp',
-    contentImage: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Mayo',
       'South River',

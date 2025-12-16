@@ -71,7 +71,7 @@ const testimonials = [
     rating: 5,
     testimonial: "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
     date: "5 months ago",
-    image: "https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp",
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto",
     source: "Google",
     verified: true
   },
@@ -83,7 +83,7 @@ const testimonials = [
     date: "11 months ago",
     source: "Google",
     verified: true,
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp"
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto"
   }
 ];
 

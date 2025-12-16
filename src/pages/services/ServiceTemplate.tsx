@@ -211,7 +211,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
           <div
             className="absolute inset-0 opacity-20 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${service.heroImage || 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=1600&auto=format&fit=crop&q=80&fm=webp'})`
+              backgroundImage: `url(${service.heroImage || 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto'})`
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/90 to-blue-800/90" />
@@ -409,7 +409,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
           <div
             className="absolute inset-0 opacity-10 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1600&auto=format&fit=crop&q=80&fm=webp)'
+              backgroundImage: 'url(https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto)'
             }}
           />
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
