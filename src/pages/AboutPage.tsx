@@ -102,16 +102,43 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="relative rounded-xl overflow-hidden shadow-xl mb-8">
-              <img
-                src="https://ik.imagekit.io/qcvroy8xpd/xiaHI6p.png?updatedAt=1762342992950"
-                alt="Royi and Yuli - Owners of A Secure Annapolis Locksmith"
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Royi & Yuli</h3>
-                <p className="text-lg text-white/90">Owners & Master Locksmiths</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+              <div className="bg-primary/5 rounded-xl p-12 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="bg-primary/10 p-8 rounded-full inline-block mb-6">
+                    <Lock className="h-20 w-20 text-primary" />
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">Royi & Yuli</h3>
+                  <p className="text-xl text-muted-foreground mb-2">Owners & Master Locksmiths</p>
+                  <div className="flex items-center justify-center gap-2 text-primary">
+                    <Shield className="h-5 w-5" />
+                    <span className="font-medium">Licensed & Insured</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div className="bg-white rounded-xl p-6 shadow-lg">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Award className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">15+ Years Experience</h4>
+                      <p className="text-muted-foreground">Serving Annapolis with expert locksmith services since 2010</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-lg">
+                  <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <Users className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">1000+ Happy Customers</h4>
+                      <p className="text-muted-foreground">Trusted by homeowners and businesses across the region</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bg-muted/30 rounded-xl p-8">

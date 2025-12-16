@@ -28,7 +28,7 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Arnold, MD',
     subtitle: 'Expert Locksmith Services in Arnold, Cape St. Claire, and Bay Hills',
     description: 'A Secure Annapolis Locksmith is the trusted name for professional locksmith services in Arnold, MD. Whether you\'re locked out, need new locks installed, or want to upgrade your home or business security, we\'re the go-to Arnold locksmith for fast, affordable, and licensed service. We proudly serve Arnold, Cape St. Claire, Bay Hills, and the Broadneck Peninsula with expert residential, automotive, and commercial locksmith solutions.',
-    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/downloads/image-gen%20(2).png?updatedAt=1762344047885',
+    heroImage: 'https://images.pexels.com/photos/277593/pexels-photo-277593.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80',
     contentImage: 'https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     neighborhoods: [
       'Arnold',
@@ -74,7 +74,7 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Edgewater, MD',
     subtitle: 'Professional Locksmith Services in Edgewater, Mayo, and Woodland Beach',
     description: 'Looking for a licensed and reliable locksmith in Edgewater, MD? A Secure Annapolis Locksmith provides fast, professional locksmith services for homes, businesses, and vehicles throughout Edgewater, Mayo, and Woodland Beach. As a locally owned and operated business, we understand the urgency of lockouts and the importance of security.',
-    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/downloads/image-gen%20(3).png?updatedAt=1762344122435',
+    heroImage: 'https://images.pexels.com/photos/213849/pexels-photo-213849.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80',
     contentImage: 'https://images.unsplash.com/photo-1568630742664-f17825d0bc29?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     neighborhoods: [
       'Edgewater',
@@ -114,7 +114,7 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Severna Park, MD',
     subtitle: 'Fast & Affordable Locksmith Services in Severna Park, Benfield, and Chartwell',
     description: 'When you need a trusted locksmith in Severna Park, MD, A Secure Annapolis Locksmith is the local name you can count on. We provide fast, professional locksmith services for homes, cars, and businesses across Severna Park, Benfield, Chartwell, and surrounding neighborhoods. Whether it\'s a lockout, rekey, or security upgrade, we\'re just minutes away with mobile service available 7 days a week.',
-    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/downloads/image-gen%20(1).jpg?updatedAt=1762343961795',
+    heroImage: 'https://images.pexels.com/photos/277559/pexels-photo-277559.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80',
     contentImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     neighborhoods: [
       'Severna Park',
@@ -184,7 +184,7 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Annapolis, MD',
     subtitle: 'Professional Locksmith Services in Downtown Annapolis, Eastport, and Hillsmere Shores',
     description: 'A Secure Annapolis Locksmith is your trusted local locksmith serving Annapolis, MD and surrounding neighborhoods. Whether you need emergency lockout service, lock installation, rekeying, or automotive locksmith solutions, we provide fast, reliable, and affordable service throughout the greater Annapolis area. As a locally owned and operated business based right here in Annapolis, we understand the unique security needs of our community.',
-    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/downloads/envato-labs-image-edit%20(5).jpg?updatedAt=1762343897690',
+    heroImage: 'https://images.pexels.com/photos/4207715/pexels-photo-4207715.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80',
     contentImage: 'https://images.unsplash.com/photo-1565611211147-0aab50d5e59a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     neighborhoods: [
       'Downtown Annapolis',
@@ -231,7 +231,7 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Parole, MD',
     subtitle: 'Fast Locksmith Services in Parole, Annapolis Mall Area, and Riva Road',
     description: 'Need a locksmith in Parole, MD? A Secure Annapolis Locksmith provides prompt, professional locksmith services throughout the Parole area, including the Annapolis Mall district, Riva Road, and Jennifer Road. Whether you\'re locked out of your car at the mall, need your home rekeyed, or require commercial lock installation, our mobile locksmiths arrive quickly with the tools and expertise to solve your problem.',
-    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/downloads/envato-labs-image-edit%20(6).jpg?updatedAt=1762344231721',
+    heroImage: 'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80',
     contentImage: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     neighborhoods: [
       'Parole',
@@ -353,7 +353,7 @@ export const locations: LocationData[] = [
     title: 'A Secure Annapolis Locksmith in Eastport, MD',
     subtitle: 'Your Local Locksmith Right Here in Eastport',
     description: 'Located right in Eastport, A Secure Annapolis Locksmith is your immediate neighbor for all locksmith needs. We serve the Eastport community with unmatched speed and reliability, whether you need a residential lockout service, commercial lock installation, or automotive key programming. Being based in Eastport means we know the area intimately and can reach you faster than anyone else.',
-    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/downloads/image-gen%20(2).jpg?updatedAt=1762344294596',
+    heroImage: 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80',
     contentImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp',
     neighborhoods: [
       'Eastport',

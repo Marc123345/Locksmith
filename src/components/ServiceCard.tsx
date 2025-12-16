@@ -46,7 +46,7 @@ const ServiceCard = React.memo(({ icon, title, description, features, image, hre
       className={cn("h-full", className)}
     >
       <Card 
-        className="h-full flex flex-col border-2 hover:border-primary/50 transition-all duration-200 overflow-hidden"
+        className="h-full flex flex-col border-2 hover:border-primary/50 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-2xl"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
