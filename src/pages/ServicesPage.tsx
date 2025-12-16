@@ -17,7 +17,7 @@ export default function ServicesPage() {
       id: "residential",
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto",
       icon: <Home className="h-8 w-8 text-white" />,
       features: [
         "Lock installation & repair",
@@ -35,7 +35,7 @@ export default function ServicesPage() {
       id: "commercial",
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto",
       icon: <Building2 className="h-8 w-8 text-white" />,
       features: [
         "High-security locks",
@@ -52,7 +52,7 @@ export default function ServicesPage() {
       id: "automotive",
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://images.unsplash.com/photo-1568630742664-f17825d0bc29?w=1000&auto=format&fit=crop&q=80&fm=webp",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto",
       icon: <Car className="h-8 w-8 text-white" />,
       features: [
         "Car lockout assistance",
@@ -70,7 +70,7 @@ export default function ServicesPage() {
       id: "emergency",
       title: "Emergency Services",
       description: "Same-day locksmith services when you need help the most.",
-      image: "https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto",
       icon: <AlertTriangle className="h-8 w-8 text-white" />,
       features: [
         "Same-day availability",
@@ -154,7 +154,7 @@ export default function ServicesPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            src="https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto"
             alt="Professional locksmith services"
             className="w-full h-full object-cover"
           />
