@@ -10,7 +10,7 @@ const ServiceSection = () => {
     residential: {
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto",
       icon: <Home className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Lock installation & repair",
@@ -24,7 +24,7 @@ const ServiceSection = () => {
     commercial: {
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto",
       icon: <Building className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "High-security locks",
@@ -37,7 +37,7 @@ const ServiceSection = () => {
     automotive: {
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto",
       icon: <Car className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Car lockout assistance",
