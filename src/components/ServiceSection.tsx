@@ -10,7 +10,7 @@ const ServiceSection = () => {
     residential: {
       title: "Residential Services",
       description: "Comprehensive security solutions for your home, from basic locks to advanced smart systems.",
-      image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto",
       icon: <Home className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Lock installation & repair",
@@ -24,7 +24,7 @@ const ServiceSection = () => {
     commercial: {
       title: "Commercial Services",
       description: "Advanced security solutions to protect your business and assets.",
-      image: "https://images.pexels.com/photos/4207707/pexels-photo-4207707.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto",
       icon: <Building className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "High-security locks",
@@ -37,7 +37,7 @@ const ServiceSection = () => {
     automotive: {
       title: "Automotive Services",
       description: "Fast and reliable solutions for all vehicle lock and key issues.",
-      image: "https://images.unsplash.com/photo-1568630742664-f17825d0bc29?w=1000&auto=format&fit=crop&q=80&fm=webp",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto",
       icon: <Car className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Car lockout assistance",
@@ -51,7 +51,7 @@ const ServiceSection = () => {
     emergency: {
       title: "Emergency Services",
       description: "Same-day locksmith services when you need help the most.",
-      image: "https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80",
+      image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto",
       icon: <AlertTriangle className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Same-day availability",

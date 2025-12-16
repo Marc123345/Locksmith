@@ -30,15 +30,15 @@ export const services: ServiceData[] = [
     title: 'Professional Lock Change Services in Annapolis, MD',
     subtitle: 'Trusted Lock Replacement & Installation in Eastport, Hillsmere Shores, and Parole',
     description: 'When it\'s time to replace or upgrade your locks, trust A Secure Annapolis Locksmith — your local expert for lock change services in Annapolis, MD. Whether you\'ve just moved into a new home, experienced a security concern, or want to install high-security or smart locks, we\'ve got you covered. We proudly serve Annapolis, Eastport, Hillsmere Shores, Parole, and surrounding communities.',
-    heroImage: 'https://images.pexels.com/photos/3962295/pexels-photo-3962295.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    contentImage: 'https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto',
     additionalImages: [
-      'https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/4219654/pexels-photo-4219654.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/4207715/pexels-photo-4207715.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/210719/pexels-photo-210719.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/279810/pexels-photo-279810.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=800'
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_MKgRTMc19.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto'
     ],
     features: [
       'Deadbolt and door knob locks',
@@ -72,12 +72,12 @@ export const services: ServiceData[] = [
     title: 'Lock Rekeying in Annapolis, MD',
     subtitle: 'Affordable Rekeying for Homes, Apartments, and Businesses in Eastport, Parole, and Murray Hill',
     description: 'Rekeying is the simplest way to restore security and peace of mind without replacing all your locks. A Secure Annapolis Locksmith specializes in lock rekey services in Annapolis, MD, helping homeowners, landlords, and businesses stay protected. When you rekey a lock, we adjust the internal pins so that old keys no longer work.',
-    heroImage: 'https://images.pexels.com/photos/3512803/pexels-photo-3512803.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    contentImage: 'https://images.pexels.com/photos/416322/pexels-photo-416322.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_MKgRTMc19.jpg?tr=f-auto,q-auto',
     additionalImages: [
-      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp'
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto'
     ],
     features: [
       'Cost-effective alternative to lock replacement',
@@ -129,12 +129,12 @@ export const services: ServiceData[] = [
     title: 'Car Key Programming in Annapolis, MD',
     subtitle: 'Mobile Auto Locksmith Services for Key Fobs, Smart Keys & Transponders',
     description: 'If your key fob stopped working or you\'ve purchased a replacement that needs syncing, A Secure Annapolis Locksmith offers mobile car key programming in Annapolis, MD. We program and replace car keys for most makes and models — right where you are, no towing required. Our expert locksmiths are trained to handle transponders, remote key fobs, and push-to-start smart keys.',
-    heroImage: 'https://images.pexels.com/photos/1599908/pexels-photo-1599908.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    contentImage: 'https://images.pexels.com/photos/775084/pexels-photo-775084.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto',
     additionalImages: [
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1572006432805-e229f7d0a0f5?w=800&auto=format&fit=crop&q=80&fm=webp'
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto'
     ],
     features: [
       'Domestic vehicles (Ford, Chevy, Dodge)',
@@ -168,12 +168,12 @@ export const services: ServiceData[] = [
     title: 'Emergency House Lockout Services in Annapolis, MD',
     subtitle: 'Fast & Reliable Emergency Locksmith Help in Eastport, Murray Hill, and Downtown Annapolis',
     description: 'At A Secure Annapolis Locksmith, we specialize in emergency house lockout services in Annapolis, MD and surrounding areas. Whether you misplaced your keys, left them inside, or experienced a malfunctioning lock, our licensed technicians respond quickly — day or night. We understand how stressful it is to be locked out of your home.',
-    heroImage: 'https://images.pexels.com/photos/6947321/pexels-photo-6947321.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    contentImage: 'https://images.pexels.com/photos/2034947/pexels-photo-2034947.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto',
     additionalImages: [
-      'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp'
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_MKgRTMc19.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto'
     ],
     features: [
       'Rapid Response – 24/7 Availability',
@@ -237,12 +237,12 @@ export const services: ServiceData[] = [
     title: 'Lock Repair Services in Annapolis, MD',
     subtitle: 'Reliable Lock Repair for Homes & Businesses in Eastport, Bay Ridge, and Downtown Annapolis',
     description: 'Is your door lock sticking, spinning, or completely broken? At A Secure Annapolis Locksmith, we offer fast, affordable lock repair services in Annapolis, MD, for homes, apartments, condos, and businesses. From worn-out deadbolts to malfunctioning smart locks, we repair all types of locks using professional tools and industry-best practices.',
-    heroImage: 'https://images.pexels.com/photos/4574921/pexels-photo-4574921.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    contentImage: 'https://images.pexels.com/photos/4591741/pexels-photo-4591741.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto',
     additionalImages: [
-      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=80&fm=webp'
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto'
     ],
     features: [
       'Deadbolts',
@@ -277,12 +277,12 @@ export const services: ServiceData[] = [
     title: 'Lost Car Key Replacement in Annapolis, MD',
     subtitle: 'Mobile Car Key Services in Annapolis, Parole, and Hillsmere Shores',
     description: 'Losing your car keys is stressful — but replacing them doesn\'t have to be. A Secure Annapolis Locksmith offers fast, affordable lost car key replacement in Annapolis, MD, and surrounding areas. Our fully mobile locksmiths can cut and program keys for most vehicles, right at your location — no towing, no dealerships, no long waits.',
-    heroImage: 'https://images.pexels.com/photos/7378393/pexels-photo-7378393.jpeg?auto=compress&cs=tinysrgb&w=1600',
-    contentImage: 'https://images.pexels.com/photos/10186981/pexels-photo-10186981.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto',
+    contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto',
     additionalImages: [
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80&fm=webp',
-      'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop&q=80&fm=webp'
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto',
+      'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto'
     ],
     features: [
       'Domestic cars (Ford, Chevy, Chrysler, etc.)',

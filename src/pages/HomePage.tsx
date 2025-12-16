@@ -18,7 +18,7 @@ const services = [
     icon: <Home className="h-6 w-6 text-white" />,
     title: "Residential Services",
     description: "Complete home security solutions including smart locks and master key systems.",
-    image: "https://images.pexels.com/photos/584399/pexels-photo-584399.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(6)_54ouVneOuu.jpg?tr=f-auto,q-auto",
     features: [
       "Lock installation & repair",
       "Smart lock systems",
@@ -31,7 +31,7 @@ const services = [
     icon: <Building2 className="h-6 w-6 text-white" />,
     title: "Commercial Services",
     description: "Advanced security solutions for businesses of all sizes.",
-    image: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto",
     features: [
       "Master key systems",
       "High-security locks",
@@ -44,7 +44,7 @@ const services = [
     icon: <Car className="h-6 w-6 text-white" />,
     title: "Automotive Services",
     description: "Professional automotive locksmith services for all vehicle types.",
-    image: "https://images.pexels.com/photos/1599908/pexels-photo-1599908.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto",
     features: [
       "Car lockout assistance",
       "Key programming",
@@ -71,7 +71,7 @@ const testimonials = [
     rating: 5,
     testimonial: "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
     date: "5 months ago",
-    image: "https://images.unsplash.com/photo-1614267118556-5c0b6cfbfaaf?w=800&auto=format&fit=crop&q=80&fm=webp",
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto",
     source: "Google",
     verified: true
   },
@@ -83,7 +83,7 @@ const testimonials = [
     date: "11 months ago",
     source: "Google",
     verified: true,
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&auto=format&fit=crop&q=80&fm=webp"
+    image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto"
   }
 ];
 
