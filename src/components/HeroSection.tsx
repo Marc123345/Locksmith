@@ -23,17 +23,21 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-white pt-16">
-      {/* Visual Element: Soft Gradient & Image */}
+      {/* --- UPDATED BACKGROUND SECTION --- */}
       <div className="absolute inset-0 w-full h-full">
+        {/* 1. Increased image opacity from 15% to 50% for much better visibility */}
         <img
           src="https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto"
           alt="Annapolis Locksmith Professional"
-          className="object-cover w-full h-full opacity-15 select-none"
+          className="object-cover w-full h-full opacity-50 select-none scale-105"
         />
-        {/* Light-mode gradients for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-colors-primary)_0%,_transparent_25%)] opacity-[0.03]" />
+        {/* 2. Made the white overlay gradient much more transparent in the middle */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/30 to-white/95" />
+        
+        {/* Subtle color tint remains very low */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-colors-primary)_0%,_transparent_25%)] opacity-[0.05]" />
       </div>
+      {/* ---------------------------------- */}
 
       <div className="container relative z-10 mx-auto px-6">
         <motion.div
@@ -44,12 +48,12 @@ export const HeroSection = () => {
         >
           {/* Status Badge */}
           <motion.div variants={itemVariants} className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-200 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-600">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-slate-700">
                 Available Now in Annapolis
               </span>
             </div>
@@ -58,15 +62,15 @@ export const HeroSection = () => {
           {/* Clean Typography Headline */}
           <motion.h1 
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 mb-6 leading-[0.9]"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 mb-6 leading-[0.9] drop-shadow-sm"
           >
             A Secure <span className="text-primary italic font-serif font-medium">Annapolis</span> <br /> Locksmith
           </motion.h1>
 
-          {/* Prominent Google Review Badge - Light Version */}
+          {/* Prominent Google Review Badge */}
           <motion.div variants={itemVariants} className="flex flex-col items-center mb-10">
-            <div className="inline-flex items-center gap-6 px-6 py-4 rounded-3xl bg-white border border-slate-200 shadow-[0_10px_30px_rgba(0,0,0,0.04)] transition-transform hover:scale-[1.02]">
-              <div className="flex flex-col items-start border-r border-slate-100 pr-6">
+            <div className="inline-flex items-center gap-6 px-6 py-4 rounded-3xl bg-white/90 backdrop-blur-md border border-white/50 shadow-[0_10px_30px_rgba(0,0,0,0.08)] transition-transform hover:scale-[1.02]">
+              <div className="flex flex-col items-start border-r border-slate-200 pr-6">
                 <img 
                   src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" 
                   alt="Google" 
@@ -109,15 +113,15 @@ export const HeroSection = () => {
               <Button 
                 variant="outline" 
                 size="xl" 
-                className="h-16 px-10 text-xl rounded-full border-slate-200 text-slate-600 bg-white hover:bg-slate-50"
+                className="h-16 px-10 text-xl rounded-full border-slate-300 text-slate-700 bg-white/80 backdrop-blur-sm hover:bg-white"
                 asChild
               >
                 <Link to="/contact">Request a Quote</Link>
               </Button>
             </div>
 
-            {/* Address with Map Link Style */}
-            <div className="flex items-center gap-2 text-slate-500 text-sm font-medium">
+            {/* Address */}
+            <div className="flex items-center gap-2 text-slate-600 text-sm font-medium bg-white/50 px-3 py-1 rounded-full backdrop-blur-sm">
               <MapPin className="h-4 w-4 text-primary" />
               <span>222 Severn Ave Ste 1 Building 7-6A, Annapolis, MD 21403</span>
             </div>
@@ -126,20 +130,20 @@ export const HeroSection = () => {
           {/* Balanced Trust Grid */}
           <motion.div 
             variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto border-t border-slate-100 pt-10"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto border-t border-slate-200/50 pt-10"
           >
             {[
               { icon: Shield, title: "Licensed & Insured", sub: "MD Registry #4920" },
               { icon: Clock, title: "20-Min Response", sub: "Local Emergency Service" },
               { icon: CheckCircle2, title: "Price Guarantee", sub: "No Hidden Service Fees" }
             ].map((feature, i) => (
-              <div key={i} className="flex items-center gap-4 px-4">
-                <div className="h-12 w-12 shrink-0 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center">
+              <div key={i} className="flex items-center gap-4 px-4 rounded-2xl bg-white/60 backdrop-blur-sm p-3">
+                <div className="h-12 w-12 shrink-0 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shadow-sm">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h3 className="text-slate-900 font-bold text-sm leading-tight">{feature.title}</h3>
-                  <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mt-0.5">{feature.sub}</p>
+                  <p className="text-slate-500 text-xs font-semibold uppercase tracking-wider mt-0.5">{feature.sub}</p>
                 </div>
               </div>
             ))}
