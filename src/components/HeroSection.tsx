@@ -17,9 +17,12 @@ export const HeroSection = () => {
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
           src="https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto"
-          alt="Professional locksmith working on a lock"
+          alt="Professional locksmith working on a lock in Annapolis MD"
           className="object-cover w-full h-full scale-105"
-          loading="lazy"
+          width="1920"
+          height="1080"
+          loading="eager"
+          fetchPriority="high"
           role="img"
         />
         <div

@@ -33,10 +33,12 @@ export const BlogCard = ({
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
       {featuredImage && (
-        <Link to={`/blog/${slug}`} className="relative block overflow-hidden h-48">
+        <Link to={`/blog/${slug}`} className="relative block overflow-hidden h-48" aria-label={`Read article: ${title}`}>
           <img
             src={featuredImage}
-            alt={title}
+            alt={`${title} - locksmith blog post`}
+            width="800"
+            height="600"
             className="absolute top-0 left-0 w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             loading="lazy"
           />

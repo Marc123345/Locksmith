@@ -51,15 +51,17 @@ const ServiceCard = React.memo(({ icon, title, description, features, image, hre
         onMouseLeave={handleMouseLeave}
       >
         <div className="relative w-full h-0 pb-[120%]">
-          <img 
+          <img
             src={responsiveImage.medium}
             srcSet={`
-              ${responsiveImage.small} 1200w,
-              ${responsiveImage.medium} 1400w,
+              ${responsiveImage.small} 800w,
+              ${responsiveImage.medium} 1200w,
               ${responsiveImage.large} 1600w
             `}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            alt={`${title} service`}
+            alt={`${title} locksmith service in Annapolis MD`}
+            width="1200"
+            height="1440"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
           />

@@ -73,10 +73,13 @@ const TestimonialCard = ({
             </div>
             <div className="text-right">
               <div className="flex items-center text-sm text-muted-foreground">
-                <img 
+                <img
                   src={source === "Google" ? "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" : "https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg"}
-                  alt={`${source} logo`}
+                  alt={`${source} review platform logo`}
+                  width="16"
+                  height="16"
                   className="h-4 w-4 mr-1"
+                  loading="lazy"
                 />
                 {source}
               </div>

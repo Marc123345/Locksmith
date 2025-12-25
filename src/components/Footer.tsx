@@ -9,11 +9,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="space-y-4 lg:col-span-2">
-            <Link to="/" className="inline-block hover:opacity-80 transition-opacity">
+            <Link to="/" className="inline-block hover:opacity-80 transition-opacity" aria-label="Return to homepage">
               <img
                 src="https://i.imgur.com/VfpMzbE.png"
                 alt="A Secure Annapolis Locksmith Logo"
+                width="200"
+                height="64"
                 className="h-16 w-auto"
+                loading="lazy"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
