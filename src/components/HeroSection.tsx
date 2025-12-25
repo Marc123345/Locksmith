@@ -1,128 +1,144 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Shield, Clock, Star, CheckCircle2 } from "lucide-react";
+import { Phone, ArrowRight, Shield, Clock, MapPin, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CONTACT } from "@/utils/contact";
 
-// Animation variants for staggered entrance
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 export const HeroSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section 
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" 
-      role="banner"
-    >
-      {/* Background with subtle parallax effect simulation */}
+    <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-neutral-950">
+      {/* Dynamic Background */}
       <div className="absolute inset-0 w-full h-full">
         <img
           src="https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto"
-          alt="Professional locksmith"
-          className="object-cover w-full h-full scale-110 motion-safe:animate-[subtle-zoom_20s_infinite_alternate]"
+          alt="Professional locksmith in Annapolis"
+          className="object-cover w-full h-full opacity-60 scale-105 motion-safe:animate-[subtle-zoom_30s_infinite_alternate]"
         />
-        {/* Multi-layered overlay for depth */}
-        <div className="absolute inset-0 bg-neutral-950/70" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-900/40 to-neutral-950" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4">
+      <div className="container relative z-10 mx-auto px-4 py-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-5xl mx-auto text-center"
         >
-          {/* Top Badge */}
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            <span className="text-primary text-xs md:text-sm font-bold tracking-wider uppercase">Available Now In Annapolis</span>
+          {/* Trust Badge / Google Review */}
+          <motion.div variants={itemVariants} className="flex flex-col items-center mb-8">
+            <div className="flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 px-4 py-2 rounded-2xl shadow-2xl">
+              <img 
+                src="https://ik.imagekit.io/qcvroy8xpd/Google_Review_(1).svg" 
+                alt="Google Reviews" 
+                className="h-6 w-auto"
+              />
+              <div className="flex flex-col items-start leading-none">
+                <span className="text-white font-bold text-sm">4.9 Rating</span>
+                <span className="text-neutral-400 text-[10px] uppercase tracking-wider">60+ Verified Reviews</span>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Headline */}
           <motion.h1 
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight leading-[1.1]"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight"
           >
-            Securing Your World, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-foreground to-primary italic">
-              One Lock at a Time
-            </span>
+            A Secure <span className="text-primary italic">Annapolis</span> <br className="hidden md:block" /> Locksmith
           </motion.h1>
 
-          {/* Subheadline */}
           <motion.p 
             variants={itemVariants}
-            className="text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto"
           >
-            Licensed, bonded, and insured. We provide 24/7 premium locksmith solutions for residential, commercial, and automotive needs across Annapolis.
+            Trusted local experts providing 24/7 residential, commercial, and automotive lock services. Fast response, fair pricing, and professional care.
           </motion.p>
           
-          {/* Action Buttons */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 mb-16 justify-center items-center"
-          >
+          {/* CTAs */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-16 justify-center">
             <Button 
-              size="lg" 
-              className="group relative h-14 px-8 text-lg bg-primary hover:bg-primary/90 transition-all duration-300 rounded-full shadow-[0_0_20px_rgba(var(--primary),0.3)]"
+              size="xl" 
+              className="h-16 px-10 text-xl rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold transition-all shadow-lg shadow-primary/20 group"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               asChild
             >
               <a href={`tel:${CONTACT.PHONE}`}>
-                <Phone className="mr-2 h-5 w-5 fill-current" />
-                <span>Call {CONTACT.PHONE_DISPLAY}</span>
-                <ArrowRight className={`ml-2 h-5 w-5 transition-transform duration-300 ${isHovered ? 'translate-x-1' : ''}`} />
+                <Phone className="mr-2 h-6 w-6" />
+                Call {CONTACT.PHONE_DISPLAY}
+                <ArrowRight className={`ml-2 h-6 w-6 transition-transform ${isHovered ? 'translate-x-1' : ''}`} />
               </a>
             </Button>
-
             <Button 
-              variant="outline"
-              size="lg"
-              className="h-14 px-8 text-lg text-white border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-all rounded-full"
+              variant="outline" 
+              size="xl" 
+              className="h-16 px-10 text-xl rounded-full border-white/20 text-white bg-white/5 backdrop-blur-md hover:bg-white/10"
               asChild
             >
-              <Link to="/contact">Request Quote</Link>
+              <Link to="/contact">Book Online</Link>
             </Button>
           </motion.div>
           
-          {/* Trust Grid */}
+          {/* Feature Grid */}
           <motion.div 
             variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left"
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left border-t border-white/10 pt-12"
           >
-            {[
-              { icon: Shield, title: "Licensed & Insured", desc: "MD License #4920" },
-              { icon: Clock, title: "15-Min Response", desc: "Fastest in the city" },
-              { icon: Star, title: "4.9/5 Rating", desc: "Based on 200+ jobs" }
-            ].map((feature, idx) => (
-              <div 
-                key={idx}
-                className="group p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-primary/50 transition-all duration-300"
-              >
-                <feature.icon className="h-8 w-8 text-primary mb-3 transition-transform group-hover:scale-110" />
-                <h3 className="text-white font-bold text-lg">{feature.title}</h3>
-                <p className="text-neutral-400 text-sm">{feature.desc}</p>
+            <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors">
+              <div className="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <Shield className="text-primary h-6 w-6" />
               </div>
-            ))}
+              <div>
+                <h3 className="text-white font-semibold">Licensed & Insured</h3>
+                <p className="text-neutral-400 text-sm">Full protection for every job.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 p-4 rounded-2xl hover:bg-white/5 transition-colors">
+              <div className="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <Clock className="text-primary h-6 w-6" />
+              </div>
+              <div>
+                <h3 className="text-white font-semibold">Fast Response</h3>
+                <p className="text-neutral-400 text-sm">On-site in 20 mins or less.</p>
+              </div>
+            </div>
+
+            {/* Address Card */}
+            <a 
+              href="https://goo.gl/maps/YOUR_MAP_LINK_HERE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/50 transition-all group"
+            >
+              <div className="h-12 w-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                <MapPin className="text-primary h-6 w-6" />
+              </div>
+              <div className="relative">
+                <h3 className="text-white font-semibold flex items-center gap-1">
+                  Visit Us <ExternalLink className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </h3>
+                <address className="text-neutral-400 text-xs not-italic leading-relaxed">
+                  222 Severn Ave Ste 1, Bldg 7-6A<br />
+                  Annapolis, MD 21403
+                </address>
+              </div>
+            </a>
           </motion.div>
         </motion.div>
       </div>
