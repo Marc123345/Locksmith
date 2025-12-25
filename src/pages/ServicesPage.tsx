@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import ServiceSection from "@/components/ServiceSection";
 import CallToAction from "@/components/CallToAction";
 import { Card, CardContent } from "@/components/ui/card";
@@ -150,6 +151,32 @@ export default function ServicesPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Professional Locksmith Services in Annapolis, MD | A Secure Annapolis Locksmith</title>
+        <meta
+          name="description"
+          content="Comprehensive locksmith services in Annapolis - residential, commercial, and automotive. Emergency lockouts, lock installation, rekeying, smart locks, and more. Same-day service available."
+        />
+        <meta
+          name="keywords"
+          content="locksmith services Annapolis, emergency lockout, lock installation, lock rekey, car locksmith, residential locksmith, commercial locksmith, smart lock installation, Annapolis MD"
+        />
+        <link rel="canonical" href="https://asecureannapolis.com/services" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://asecureannapolis.com/services" />
+        <meta property="og:title" content="Professional Locksmith Services in Annapolis, MD" />
+        <meta property="og:description" content="Comprehensive locksmith services in Annapolis - residential, commercial, and automotive. Emergency lockouts, lock installation, rekeying, and more." />
+        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://asecureannapolis.com/services" />
+        <meta property="twitter:title" content="Professional Locksmith Services in Annapolis, MD" />
+        <meta property="twitter:description" content="Comprehensive locksmith services in Annapolis - residential, commercial, and automotive. Emergency lockouts, lock installation, rekeying, and more." />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { HeroSection } from '@/components/HeroSection';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { FeatureSection } from '@/components/FeatureSection';
@@ -108,6 +109,31 @@ const itemVariants = {
 export default function HomePage() {
   return (
     <>
+      <Helmet>
+        <title>A Secure Annapolis Locksmith | Professional Locksmith Services in Annapolis, MD</title>
+        <meta
+          name="description"
+          content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions. Fast response, licensed & insured."
+        />
+        <meta
+          name="keywords"
+          content="locksmith Annapolis, emergency locksmith, 24/7 locksmith Annapolis MD, residential locksmith, commercial locksmith, car locksmith, lock rekey, lock change, Annapolis Maryland locksmith"
+        />
+        <link rel="canonical" href="https://asecureannapolis.com/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://asecureannapolis.com/" />
+        <meta property="og:title" content="A Secure Annapolis Locksmith | Professional Locksmith Services" />
+        <meta property="og:description" content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions." />
+        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://asecureannapolis.com/" />
+        <meta property="twitter:title" content="A Secure Annapolis Locksmith | Professional Locksmith Services" />
+        <meta property="twitter:description" content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions." />
+      </Helmet>
       <LocalBusinessSchema page="home" />
       <HeroSection />
       <TrustedBySection />

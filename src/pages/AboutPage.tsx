@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Clock, Users, Wrench, BadgeCheck, ArrowRight, Star, Lock, CheckCircle2, Heart } from 'lucide-react';
 import { Link } from "react-router-dom";
@@ -76,6 +77,32 @@ const itemVariants = {
 const AboutPage = () => {
   return (
     <>
+      <Helmet>
+        <title>About Us | A Secure Annapolis Locksmith - Family Owned & Operated</title>
+        <meta
+          name="description"
+          content="Meet the family behind A Secure Annapolis Locksmith. Husband and wife team Royi and Yuli provide professional, licensed locksmith services in Annapolis, MD. 15+ years experience."
+        />
+        <meta
+          name="keywords"
+          content="about A Secure Annapolis Locksmith, family owned locksmith, Royi Yuli locksmith, licensed locksmith Annapolis, experienced locksmith Maryland"
+        />
+        <link rel="canonical" href="https://asecureannapolis.com/about" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://asecureannapolis.com/about" />
+        <meta property="og:title" content="About Us | A Secure Annapolis Locksmith" />
+        <meta property="og:description" content="Meet the family behind A Secure Annapolis Locksmith. Husband and wife team providing professional locksmith services in Annapolis, MD." />
+        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://asecureannapolis.com/about" />
+        <meta property="twitter:title" content="About Us | A Secure Annapolis Locksmith" />
+        <meta property="twitter:description" content="Meet the family behind A Secure Annapolis Locksmith. Husband and wife team providing professional locksmith services in Annapolis, MD." />
+      </Helmet>
+
       {/* Family Business Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
