@@ -34,7 +34,7 @@ export const TrustedBySection = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-sm xs:text-base font-semibold text-primary mb-8">Why Choose Us</p>
+          <h2 className="text-sm xs:text-base font-semibold text-primary mb-8">Why Choose Us</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
             {trustIndicators.map((indicator, index) => {
               const Icon = indicator.icon;

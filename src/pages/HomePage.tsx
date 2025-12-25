@@ -352,6 +352,7 @@ export default function HomePage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
+                title="A Secure Annapolis Locksmith Service Area Map"
               ></iframe>
             </motion.div>
           </div>
