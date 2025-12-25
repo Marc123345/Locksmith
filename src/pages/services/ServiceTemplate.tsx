@@ -181,24 +181,6 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
             ]
           })}
         </script>
-
-        {/* FAQ Schema */}
-        {service.faqs && service.faqs.length > 0 && (
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": service.faqs.map(faq => ({
-                "@type": "Question",
-                "name": faq.question,
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": faq.answer
-                }
-              }))
-            })}
-          </script>
-        )}
       </Helmet>
 
       <div className="pt-16 md:pt-20">
