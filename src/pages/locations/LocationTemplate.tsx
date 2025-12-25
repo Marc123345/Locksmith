@@ -99,7 +99,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
         <meta property="twitter:image" content={location.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
 
         {/* Canonical */}
-        <link rel="canonical" href={`https://asecureannapolis.com/locations/${location.slug}`} />
+        <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
 
         {/* Schema.org Markup for LocalBusiness */}
         <script type="application/ld+json">

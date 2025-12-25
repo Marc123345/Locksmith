@@ -119,7 +119,7 @@ export default function HomePage() {
           name="keywords"
           content="locksmith Annapolis, emergency locksmith, 24/7 locksmith Annapolis MD, residential locksmith, commercial locksmith, car locksmith, lock rekey, lock change, Annapolis Maryland locksmith"
         />
-        <link rel="canonical" href="https://asecureannapolis.com/" />
+        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />

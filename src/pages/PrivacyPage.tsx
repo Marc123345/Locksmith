@@ -10,7 +10,7 @@ export default function PrivacyPage() {
         <title>Privacy Policy | A Secure Annapolis Locksmith</title>
         <meta name="description" content="Read our privacy policy to understand how A Secure Annapolis Locksmith protects and handles your personal information and data." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://asecureannapolis.com/privacy" />
+        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/privacy" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://asecureannapolis.com/privacy" />
