@@ -127,7 +127,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
-                "reviewCount": "150"
+                "reviewCount": "60"
               }
             },
             "areaServed": service.serviceAreas.map(area => ({

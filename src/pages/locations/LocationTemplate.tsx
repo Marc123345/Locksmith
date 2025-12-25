@@ -150,7 +150,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "150"
+              "reviewCount": "60"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

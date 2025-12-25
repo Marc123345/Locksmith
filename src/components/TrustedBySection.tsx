@@ -11,7 +11,7 @@ export const TrustedBySection = () => {
     {
       icon: Award,
       title: "5-Star Rated",
-      subtitle: "50+ reviews"
+      subtitle: "60+ reviews"
     },
     {
       icon: Clock,
