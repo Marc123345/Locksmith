@@ -69,7 +69,7 @@ const BlogPage = () => {
           name="description"
           content="Expert locksmith tips, security advice, and home safety guides from A Secure Annapolis Locksmith. Stay informed about the latest in lock technology and security solutions."
         />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/blog" />
+        <link rel="canonical" href="https://asecureannapolis.com/blog" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 pt-16">

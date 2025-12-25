@@ -41,9 +41,23 @@
   <!-- Blog Pages -->
   <url>
     <loc>https://asecureannapolis.com/blog</loc>
-    <lastmod>2025-12-07</lastmod>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://asecureannapolis.com/blog/choose-locksmith-avoid-scams-annapolis</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://asecureannapolis.com/blog/locked-out-edgewater-mobile-locksmith</loc>
+    <lastmod>2025-12-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -54,7 +68,7 @@
   </url>
 
   <url>
-    <loc>https://asecureannapolis.com/blog/locked-out-edgewater-mobile-locksmith</loc>
+    <loc>https://asecureannapolis.com/blog/crownsville-home-security-deadbolts</loc>
     <lastmod>2025-12-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -69,13 +83,6 @@
 
   <url>
     <loc>https://asecureannapolis.com/blog/home-lockout-guide-annapolis</loc>
-    <lastmod>2025-12-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://asecureannapolis.com/blog/crownsville-home-security-deadbolts</loc>
     <lastmod>2025-12-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

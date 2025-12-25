@@ -191,7 +191,7 @@ const BlogPostPage = () => {
         <meta name="ICBM" content="38.9784, -76.4922" />
         <link
           rel="canonical"
-          href={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`}
+          href={`https://asecureannapolis.com/blog/${post.slug}`}
         />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
