@@ -1,24 +1,44 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { ScrollText } from "lucide-react";
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
-        >
-          <div className="flex items-center justify-center mb-8">
-            <div className="bg-primary/10 p-4 rounded-full">
-              <ScrollText className="h-8 w-8 text-primary" />
+    <>
+      <Helmet>
+        <title>Terms of Service | A Secure Annapolis Locksmith</title>
+        <meta name="description" content="Read our terms of service for locksmith services in Annapolis, MD. Learn about our service agreements, warranties, and customer policies." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://asecureannapolis.com/terms" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://asecureannapolis.com/terms" />
+        <meta property="og:title" content="Terms of Service | A Secure Annapolis Locksmith" />
+        <meta property="og:description" content="Read our terms of service for locksmith services in Annapolis, MD." />
+        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content="https://asecureannapolis.com/terms" />
+        <meta property="twitter:title" content="Terms of Service | A Secure Annapolis Locksmith" />
+        <meta property="twitter:description" content="Read our terms of service for locksmith services in Annapolis, MD." />
+      </Helmet>
+
+      <div className="min-h-screen pt-24 pb-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="flex items-center justify-center mb-8">
+              <div className="bg-primary/10 p-4 rounded-full">
+                <ScrollText className="h-8 w-8 text-primary" />
+              </div>
             </div>
-          </div>
-          
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Terms of Service</h1>
+
+            <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Terms of Service</h1>
           
           <div className="prose max-w-none">
             <section className="mb-8">
@@ -99,5 +119,6 @@ export default function TermsPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }
