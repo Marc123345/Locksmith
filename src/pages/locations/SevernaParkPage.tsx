@@ -1,11 +1,12 @@
 import { getLocationBySlug } from '@/data/locations';
 import LocationTemplate from './LocationTemplate';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 export default function SevernaParkPage() {
   const location = getLocationBySlug('severna-park');
 
   if (!location) {
-    return <div>Location not found</div>;
+    return <NotFoundPage />;
   }
 
   return <LocationTemplate location={location} />;

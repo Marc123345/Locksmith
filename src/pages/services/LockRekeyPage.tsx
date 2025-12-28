@@ -1,12 +1,13 @@
 import { getServiceBySlug } from '@/data/services';
 import { standardPricing } from '@/data/pricing';
 import ServiceTemplate from './ServiceTemplate';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 export default function LockRekeyPage() {
   const service = getServiceBySlug('lock-rekey');
 
   if (!service) {
-    return <div>Service not found</div>;
+    return <NotFoundPage />;
   }
 
   return <ServiceTemplate service={service} pricing={standardPricing} />;

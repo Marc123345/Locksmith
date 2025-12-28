@@ -1,11 +1,12 @@
 import { getLocationBySlug } from '@/data/locations';
 import LocationTemplate from './LocationTemplate';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 export default function CapeStClairePage() {
   const location = getLocationBySlug('cape-st-claire');
 
   if (!location) {
-    return <div>Location not found</div>;
+    return <NotFoundPage />;
   }
 
   return <LocationTemplate location={location} />;

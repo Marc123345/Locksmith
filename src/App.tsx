@@ -17,6 +17,7 @@ import SitemapPage from '@/pages/SitemapPage';
 import BlogPage from '@/pages/BlogPage';
 import BlogPostPage from '@/pages/BlogPostPage';
 import LocationsPage from '@/pages/LocationsPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 // Import location pages
 import ArnoldPage from '@/pages/locations/ArnoldPage';
@@ -115,8 +116,8 @@ function App() {
               element={<Navigate to="/services#emergency" replace />}
             />
 
-            {/* Catch all route - redirect to home */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Catch all route - 404 page */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />
