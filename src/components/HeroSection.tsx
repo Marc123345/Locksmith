@@ -41,11 +41,11 @@ export const HeroSection = () => {
           className="max-w-5xl mx-auto text-center"
         >
           {/* Main Headline - Now the clear starting point */}
-          <motion.h1
+          <motion.h1 
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 mb-8 leading-[0.9] drop-shadow-sm"
           >
-            Locksmith <span className="text-primary italic font-serif font-medium">Annapolis</span>
+            A Secure <span className="text-primary italic font-serif font-medium">Annapolis</span> <br /> Locksmith
           </motion.h1>
 
           {/* Prominent Google Review Badge */}
