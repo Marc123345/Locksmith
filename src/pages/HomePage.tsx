@@ -123,14 +123,14 @@ export default function HomePage() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/" />
         <meta property="og:title" content="A Secure Annapolis Locksmith | Professional Locksmith Services" />
         <meta property="og:description" content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/" />
         <meta property="twitter:title" content="A Secure Annapolis Locksmith | Professional Locksmith Services" />
         <meta property="twitter:description" content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions." />
       </Helmet>

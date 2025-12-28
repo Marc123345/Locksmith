@@ -165,14 +165,14 @@ export default function ServicesPage() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/services" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/services" />
         <meta property="og:title" content="Professional Locksmith Services in Annapolis, MD" />
         <meta property="og:description" content="Comprehensive locksmith services in Annapolis - residential, commercial, and automotive. Emergency lockouts, lock installation, rekeying, and more." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/services" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/services" />
         <meta property="twitter:title" content="Professional Locksmith Services in Annapolis, MD" />
         <meta property="twitter:description" content="Comprehensive locksmith services in Annapolis - residential, commercial, and automotive. Emergency lockouts, lock installation, rekeying, and more." />
       </Helmet>

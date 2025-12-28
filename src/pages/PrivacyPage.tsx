@@ -13,13 +13,13 @@ export default function PrivacyPage() {
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/privacy" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/privacy" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/privacy" />
         <meta property="og:title" content="Privacy Policy | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Read our privacy policy to understand how we protect your personal information." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/privacy" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/privacy" />
         <meta property="twitter:title" content="Privacy Policy | A Secure Annapolis Locksmith" />
         <meta property="twitter:description" content="Read our privacy policy to understand how we protect your personal information." />
       </Helmet>

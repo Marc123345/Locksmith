@@ -91,14 +91,14 @@ const AboutPage = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/about" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/about" />
         <meta property="og:title" content="About Us | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Meet the family behind A Secure Annapolis Locksmith. Husband and wife team providing professional locksmith services in Annapolis, MD." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/about" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/about" />
         <meta property="twitter:title" content="About Us | A Secure Annapolis Locksmith" />
         <meta property="twitter:description" content="Meet the family behind A Secure Annapolis Locksmith. Husband and wife team providing professional locksmith services in Annapolis, MD." />
       </Helmet>

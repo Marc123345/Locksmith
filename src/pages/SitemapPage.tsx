@@ -236,13 +236,13 @@ export default function SitemapPage() {
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/sitemap" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/sitemap" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/sitemap" />
         <meta property="og:title" content="Sitemap | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Browse all pages on our website. Find locksmith services and service areas in Annapolis, MD." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/sitemap" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/sitemap" />
         <meta property="twitter:title" content="Sitemap | A Secure Annapolis Locksmith" />
         <meta property="twitter:description" content="Browse all pages on our website. Find locksmith services and service areas in Annapolis, MD." />
       </Helmet>

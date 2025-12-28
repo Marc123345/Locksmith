@@ -132,14 +132,14 @@ export default function ContactPage() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/contact" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/contact" />
         <meta property="og:title" content="Contact Us | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call for emergency lockout help or request a free quote online." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/contact" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/contact" />
         <meta property="twitter:title" content="Contact Us | A Secure Annapolis Locksmith" />
         <meta property="twitter:description" content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call for emergency lockout help or request a free quote online." />
       </Helmet>

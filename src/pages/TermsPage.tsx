@@ -13,13 +13,13 @@ export default function TermsPage() {
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/terms" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://asecureannapolis.com/terms" />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/terms" />
         <meta property="og:title" content="Terms of Service | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Read our terms of service for locksmith services in Annapolis, MD." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://asecureannapolis.com/terms" />
+        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/terms" />
         <meta property="twitter:title" content="Terms of Service | A Secure Annapolis Locksmith" />
         <meta property="twitter:description" content="Read our terms of service for locksmith services in Annapolis, MD." />
       </Helmet>
