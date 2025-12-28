@@ -98,7 +98,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
         <meta property="twitter:image" content={service.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
 
         {/* Canonical */}
-        <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
+        <link rel="canonical" href={`https://asecureannapolis.com/services/${service.slug}`} />
 
         {/* Schema.org Markup for Service */}
         <script type="application/ld+json">
