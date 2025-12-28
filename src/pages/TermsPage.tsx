@@ -10,7 +10,7 @@ export default function TermsPage() {
         <title>Terms of Service | A Secure Annapolis Locksmith</title>
         <meta name="description" content="Read our terms of service for locksmith services in Annapolis, MD. Learn about our service agreements, warranties, and customer policies." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/terms" />
+        <link rel="canonical" href="https://asecureannapolis.com/terms" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://asecureannapolis.com/terms" />

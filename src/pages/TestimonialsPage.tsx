@@ -144,7 +144,7 @@ export default function TestimonialsPage() {
         <meta name="description" content="Read reviews from our satisfied customers in Annapolis, MD. See why we're the trusted locksmith with 4.9 stars and 1000+ happy customers since 2010." />
         <meta name="keywords" content="locksmith reviews Annapolis, A Secure Annapolis testimonials, locksmith customer reviews, trusted locksmith Annapolis, verified locksmith reviews" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/testimonials" />
+        <link rel="canonical" href="https://asecureannapolis.com/testimonials" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://asecureannapolis.com/testimonials" />

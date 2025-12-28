@@ -1,7 +1,11 @@
-# Redirect HTTP to HTTPS and non-www to www
-http://asecureannapolislocksmith.com/* https://www.asecureannapolislocksmith.com/:splat 301!
-http://www.asecureannapolislocksmith.com/* https://www.asecureannapolislocksmith.com/:splat 301!
-https://asecureannapolislocksmith.com/* https://www.asecureannapolislocksmith.com/:splat 301!
+# Redirect all variations to canonical domain
+http://asecureannapolislocksmith.com/* https://asecureannapolis.com/:splat 301!
+http://www.asecureannapolislocksmith.com/* https://asecureannapolis.com/:splat 301!
+https://asecureannapolislocksmith.com/* https://asecureannapolis.com/:splat 301!
+https://www.asecureannapolislocksmith.com/* https://asecureannapolis.com/:splat 301!
+http://asecureannapolis.com/* https://asecureannapolis.com/:splat 301!
+http://www.asecureannapolis.com/* https://asecureannapolis.com/:splat 301!
+https://www.asecureannapolis.com/* https://asecureannapolis.com/:splat 301!
 
 # SPA fallback - must be last
 /* /index.html 200

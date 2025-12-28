@@ -151,7 +151,7 @@ const BlogPostPage = () => {
     },
     publisher: {
       '@type': 'LocalBusiness',
-      '@id': 'https://www.asecureannapolislocksmith.com/#localbusiness',
+      '@id': 'https://asecureannapolis.com/#localbusiness',
       name: 'A Secure Annapolis Locksmith',
       image: 'https://i.imgur.com/VfpMzbE.png',
       telephone: CONTACT.PHONE,
@@ -191,7 +191,7 @@ const BlogPostPage = () => {
         <meta name="ICBM" content="38.9784, -76.4922" />
         <link
           rel="canonical"
-          href={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`}
+          href={`https://asecureannapolis.com/blog/${post.slug}`}
         />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}

@@ -161,7 +161,7 @@ export default function ServicesPage() {
           name="keywords"
           content="locksmith services Annapolis, emergency lockout, lock installation, lock rekey, car locksmith, residential locksmith, commercial locksmith, smart lock installation, Annapolis MD"
         />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/services" />
+        <link rel="canonical" href="https://asecureannapolis.com/services" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />

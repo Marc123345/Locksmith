@@ -233,7 +233,7 @@ export default function SitemapPage() {
         <title>Sitemap | A Secure Annapolis Locksmith - All Pages</title>
         <meta name="description" content="Browse all pages on A Secure Annapolis Locksmith website. Find locksmith services, service areas, and helpful resources in Annapolis, MD." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/sitemap" />
+        <link rel="canonical" href="https://asecureannapolis.com/sitemap" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://asecureannapolis.com/sitemap" />
