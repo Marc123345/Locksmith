@@ -16,6 +16,7 @@ import TermsPage from '@/pages/TermsPage';
 import SitemapPage from '@/pages/SitemapPage';
 import BlogPage from '@/pages/BlogPage';
 import BlogPostPage from '@/pages/BlogPostPage';
+import LocationsPage from '@/pages/LocationsPage';
 
 // Import location pages
 import ArnoldPage from '@/pages/locations/ArnoldPage';
@@ -70,6 +71,7 @@ function App() {
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/sitemap" element={<SitemapPage />} />
+            <Route path="/locations" element={<LocationsPage />} />
 
             {/* Location pages */}
             <Route path="/locations/arnold" element={<ArnoldPage />} />

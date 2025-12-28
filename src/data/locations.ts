@@ -593,3 +593,7 @@ export const locations: LocationData[] = [
 export const getLocationBySlug = (slug: string): LocationData | undefined => {
   return locations.find(loc => loc.slug === slug);
 };
+
+export const getAllLocations = (): LocationData[] => {
+  return locations;
+};

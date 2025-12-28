@@ -83,19 +83,19 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://asecureannapolis.com/services/${service.slug}`} />
+        <meta property="og:url" content={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
         <meta property="og:title" content={service.metaTitle} />
         <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:image" content={service.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+        <meta property="og:image" content={service.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://asecureannapolis.com/services/${service.slug}`} />
+        <meta property="twitter:url" content={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
         <meta property="twitter:title" content={service.metaTitle} />
         <meta property="twitter:description" content={service.metaDescription} />
-        <meta property="twitter:image" content={service.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+        <meta property="twitter:image" content={service.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
 
         {/* Canonical */}
         <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
@@ -122,7 +122,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
               },
               "telephone": CONTACT.PHONE,
               "email": CONTACT.EMAIL,
-              "url": "https://asecureannapolis.com",
+              "url": "https://www.asecureannapolislocksmith.com",
               "priceRange": "$$",
               "aggregateRating": {
                 "@type": "AggregateRating",
@@ -136,7 +136,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
             })),
             "availableChannel": {
               "@type": "ServiceChannel",
-              "serviceUrl": `https://asecureannapolis.com/services/${service.slug}`,
+              "serviceUrl": `https://www.asecureannapolislocksmith.com/services/${service.slug}`,
               "servicePhone": CONTACT.PHONE,
               "availableLanguage": {
                 "@type": "Language",
@@ -164,19 +164,19 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://asecureannapolis.com"
+                "item": "https://www.asecureannapolislocksmith.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Services",
-                "item": "https://asecureannapolis.com/services"
+                "item": "https://www.asecureannapolislocksmith.com/services"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": service.name,
-                "item": `https://asecureannapolis.com/services/${service.slug}`
+                "item": `https://www.asecureannapolislocksmith.com/services/${service.slug}`
               }
             ]
           })}

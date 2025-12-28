@@ -84,19 +84,19 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://asecureannapolis.com/locations/${location.slug}`} />
+        <meta property="og:url" content={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
         <meta property="og:title" content={location.metaTitle} />
         <meta property="og:description" content={location.metaDescription} />
-        <meta property="og:image" content={location.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+        <meta property="og:image" content={location.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://asecureannapolis.com/locations/${location.slug}`} />
+        <meta property="twitter:url" content={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
         <meta property="twitter:title" content={location.metaTitle} />
         <meta property="twitter:description" content={location.metaDescription} />
-        <meta property="twitter:image" content={location.heroImage || 'https://asecureannapolis.com/og-image.jpg'} />
+        <meta property="twitter:image" content={location.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
 
         {/* Canonical */}
         <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
@@ -122,7 +122,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
               "latitude": 38.978764,
               "longitude": -76.492786
             },
-            "url": `https://asecureannapolis.com/locations/${location.slug}`,
+            "url": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`,
             "telephone": CONTACT.PHONE,
             "email": CONTACT.EMAIL,
             "priceRange": "$$",
@@ -203,19 +203,19 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://asecureannapolis.com"
+                "item": "https://www.asecureannapolislocksmith.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Locations",
-                "item": "https://asecureannapolis.com/locations"
+                "item": "https://www.asecureannapolislocksmith.com/locations"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": location.name,
-                "item": `https://asecureannapolis.com/locations/${location.slug}`
+                "item": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`
               }
             ]
           })}
