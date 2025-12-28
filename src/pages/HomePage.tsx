@@ -110,7 +110,7 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>A Secure Annapolis Locksmith | Professional Locksmith Services in Annapolis, MD</title>
+        <title>A Secure Annapolis Locksmith | 24/7 Service MD</title>
         <meta
           name="description"
           content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions. Fast response, licensed & insured."
