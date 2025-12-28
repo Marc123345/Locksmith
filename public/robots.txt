@@ -1,5 +1,21 @@
 User-agent: *
 Allow: /
+Allow: /assets/
+Allow: /static/
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Disallow low-value or private areas
+Disallow: /api/admin
+Disallow: /test/
+Disallow: /.well-known/
+Disallow: /*?*utm_*
+Disallow: /*?*sessionid*
 
 # Sitemap location
-Sitemap: https://www.asecureannapolislocksmith.com/sitemap.xml
+Sitemap: https://www.asecureannapolislocksmith.com/sitemap-index.xml

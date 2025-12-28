@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FYP20WLRN"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- DNS Prefetch & Preconnect for external resources -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://plausible.io" />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+    <link rel="dns-prefetch" href="https://ik.imagekit.io" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/VfpMzbE.png" />
+
+    <!-- Defer non-critical analytics scripts -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-5FYP20WLRN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-5FYP20WLRN');
     </script>
 
-    <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-WxFh8_UBx64N5Mczv8jH0.js"></script>
+    <!-- Privacy-friendly analytics by Plausible (deferred) -->
+    <script defer src="https://plausible.io/js/pa-WxFh8_UBx64N5Mczv8jH0.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
       plausible.init()
     </script>
-
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="https://i.imgur.com/VfpMzbE.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://plausible.io https://form.jotform.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.supabase.co https://ik.imagekit.io https://res.cloudinary.com https://plausible.io; frame-src 'self' https://www.google.com https://form.jotform.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />

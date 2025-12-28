@@ -27,8 +27,12 @@ export const HeroSection = () => {
       <div className="absolute inset-0 w-full h-full">
         <img
           src="https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto"
-          alt="Annapolis Locksmith Professional"
+          alt="Professional locksmith working on a lock in Annapolis MD"
           className="object-cover w-full h-full opacity-50 select-none scale-105"
+          loading="eager"
+          fetchPriority="high"
+          width="1920"
+          height="1080"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/20 to-white" />
       </div>
@@ -56,6 +60,9 @@ export const HeroSection = () => {
                   src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" 
                   alt="Google" 
                   className="h-5 mb-1"
+                  width="74"
+                  height="24"
+                  loading="eager"
                 />
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Verified Business</span>
               </div>
