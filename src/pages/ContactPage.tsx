@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, ArrowRight, Shield, BadgeCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -28,6 +27,25 @@ const itemVariants = {
 };
 
 export default function ContactPage() {
+  const jotformContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://form.jotform.com/jsform/253124306063446';
+    script.async = true;
+
+    if (jotformContainerRef.current) {
+      jotformContainerRef.current.appendChild(script);
+    }
+
+    return () => {
+      if (jotformContainerRef.current && jotformContainerRef.current.contains(script)) {
+        jotformContainerRef.current.removeChild(script);
+      }
+    };
+  }, []);
+
   const faqs = [
     {
       question: "How quickly can you respond to an emergency?",
@@ -226,10 +244,10 @@ export default function ContactPage() {
             >
               <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
               <p className="text-muted-foreground mb-8">
-                Fill out the form below and we'll get back to you as soon as possible. 
+                Fill out the form below and we'll get back to you as soon as possible.
                 For immediate assistance during business hours, please call us.
               </p>
-              <ContactForm />
+              <div ref={jotformContainerRef} className="jotform-container" />
             </motion.div>
             
             <motion.div
