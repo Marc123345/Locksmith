@@ -87,7 +87,7 @@ const AboutPage = () => {
           name="keywords"
           content="about A Secure Annapolis Locksmith, family owned locksmith, Royi Yuli locksmith, licensed locksmith Annapolis, experienced locksmith Maryland"
         />
-        <link rel="canonical" href="https://asecureannapolis.com/about" />
+        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/about" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />

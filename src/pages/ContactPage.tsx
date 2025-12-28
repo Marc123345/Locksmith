@@ -110,7 +110,7 @@ export default function ContactPage() {
           name="keywords"
           content="contact locksmith Annapolis, locksmith phone number, free locksmith quote, emergency locksmith contact, Annapolis locksmith near me"
         />
-        <link rel="canonical" href="https://asecureannapolis.com/contact" />
+        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/contact" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
