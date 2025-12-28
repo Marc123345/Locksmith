@@ -26,10 +26,4 @@ export default defineConfig({
     // Use esbuild for minification (faster and included by default)
     minify: 'esbuild',
   },
-  // Enable compression
-  server: {
-    headers: {
-      'Cache-Control': 'no-cache',
-    },
-  },
 });
