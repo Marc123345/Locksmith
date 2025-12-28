@@ -4,7 +4,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import ErrorBoundary from '@/components/ErrorBoundary';
-import FloatingPhone from '@/components/FloatingPhone';
 
 // Import pages
 import HomePage from '@/pages/HomePage';
@@ -119,7 +118,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        <FloatingPhone />
       </div>
     </ErrorBoundary>
   );
