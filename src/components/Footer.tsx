@@ -257,7 +257,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-8 pt-6 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} A Secure Annapolis Locksmith. All rights reserved.</p>
+          <p>© 2026 A Secure Annapolis Locksmith. All rights reserved.</p>
           <div className="mt-2 flex flex-wrap justify-center gap-x-4">
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
