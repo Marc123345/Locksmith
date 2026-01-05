@@ -53,7 +53,7 @@ INSERT INTO blog_posts (
     <p>Older vehicles (typically pre-1990s) use simple metal keys without electronic chips. These are the quickest and least expensive to replace—a mobile locksmith can cut a new key in minutes, often for under $50.</p>
 
     <h3>Transponder keys (chip keys)</h3>
-    <p>Most cars from the mid-1990s onward use transponder keys with embedded RFID chips. The chip must be programmed to match your car\'s immobilizer system. Mobile locksmiths can cut and program these keys on-site, typically within 30-45 minutes.</p>
+    <p>Most cars from the mid-1990s onward use transponder keys with embedded RFID chips. The chip must be programmed to match your car''s immobilizer system. Mobile locksmiths can cut and program these keys on-site, typically within 30-45 minutes.</p>
 
     <h3>Key fobs and remote keys</h3>
     <p>Modern vehicles use key fobs (remote entry devices) or combination keys with both a metal blade and remote functions. These require both cutting (if there is a metal component) and electronic programming. Mobile locksmiths can handle both, though the process may take 45 minutes to an hour depending on your vehicle make and model.</p>
@@ -68,8 +68,8 @@ INSERT INTO blog_posts (
       <li><strong>Initial call:</strong> You provide your location, vehicle year/make/model, and describe the situation (lost all keys, spare key needed, broken key, etc.).</li>
       <li><strong>Arrival time:</strong> The locksmith gives you an estimated arrival time, usually 30-60 minutes for emergency service.</li>
       <li><strong>Verification:</strong> The locksmith will verify your ownership of the vehicle through registration, title, or valid ID matching the vehicle registration.</li>
-      <li><strong>Key cutting:</strong> If your key has a metal blade, the locksmith cuts a new key using your vehicle\'s key code or by decoding the lock.</li>
-      <li><strong>Programming:</strong> For transponder, fob, or smart keys, the locksmith uses specialized equipment to program the new key to your vehicle\'s computer system.</li>
+      <li><strong>Key cutting:</strong> If your key has a metal blade, the locksmith cuts a new key using your vehicle''s key code or by decoding the lock.</li>
+      <li><strong>Programming:</strong> For transponder, fob, or smart keys, the locksmith uses specialized equipment to program the new key to your vehicle''s computer system.</li>
       <li><strong>Testing:</strong> The locksmith tests the new key to ensure it starts the vehicle, unlocks doors, and activates any remote features.</li>
       <li><strong>Payment and advice:</strong> After confirming everything works, you pay for the service. The locksmith may also recommend getting a spare key made while they are there.</li>
     </ol>
@@ -79,7 +79,7 @@ INSERT INTO blog_posts (
 
     <ul>
       <li>Vehicle year, make, and model (e.g., 2018 Honda Accord)</li>
-      <li>VIN (Vehicle Identification Number)—usually visible through the windshield on the driver\'s side or on your registration</li>
+      <li>VIN (Vehicle Identification Number)—usually visible through the windshield on the driver''s side or on your registration</li>
       <li>Your exact location (address or specific location description)</li>
       <li>Whether you have any working keys or if all keys are lost</li>
       <li>Proof of ownership (registration, title, or insurance card)</li>
@@ -101,7 +101,7 @@ INSERT INTO blog_posts (
     <h2>Common questions about lost car keys</h2>
 
     <h3>Can you make a key if I have no spare?</h3>
-    <p>Yes. Experienced mobile locksmiths can create a new key even if you have lost all keys. They use specialized tools to decode your vehicle\'s locks or access the key code through the VIN, then cut and program a new key on-site.</p>
+    <p>Yes. Experienced mobile locksmiths can create a new key even if you have lost all keys. They use specialized tools to decode your vehicle''s locks or access the key code through the VIN, then cut and program a new key on-site.</p>
 
     <h3>How long does car key replacement take?</h3>
     <p>For most vehicles, expect 30 minutes to 2 hours depending on key type and vehicle complexity. Basic keys take the least time, while smart keys and luxury vehicles may require more extensive programming.</p>
@@ -122,7 +122,7 @@ INSERT INTO blog_posts (
       <li><strong>Get a spare key made:</strong> Having a backup key stored at home or with a trusted family member can save time and money if you lose your primary key.</li>
       <li><strong>Use a key tracker:</strong> Bluetooth key trackers like Tile or AirTag can help you locate misplaced keys using your smartphone.</li>
       <li><strong>Keep your key fob in good condition:</strong> Replace fob batteries regularly (usually every 1-2 years) to avoid unexpected failures.</li>
-      <li><strong>Store your VIN and locksmith contact info:</strong> Keep a photo of your VIN and a trusted locksmith\'s number in your phone for quick access in emergencies.</li>
+      <li><strong>Store your VIN and locksmith contact info:</strong> Keep a photo of your VIN and a trusted locksmith''s number in your phone for quick access in emergencies.</li>
       <li><strong>Consider keyless entry codes:</strong> Some vehicles allow you to set a keypad entry code on the door, providing backup access if you are locked out.</li>
     </ul>
 
@@ -131,7 +131,7 @@ INSERT INTO blog_posts (
 
     <ul>
       <li><strong>Local and licensed:</strong> Choose a locksmith based in Anne Arundel County with proper licensing and insurance.</li>
-      <li><strong>Experience with your vehicle type:</strong> Ask if they regularly work on your car\'s make and model, especially for newer or luxury vehicles.</li>
+      <li><strong>Experience with your vehicle type:</strong> Ask if they regularly work on your car''s make and model, especially for newer or luxury vehicles.</li>
       <li><strong>Transparent pricing:</strong> Get a clear quote upfront that includes all charges—cutting, programming, service call fee, and any parts.</li>
       <li><strong>Fast response time:</strong> For emergency situations, prioritize locksmiths who can arrive within an hour.</li>
       <li><strong>Good reviews and reputation:</strong> Check online reviews and ask for references to ensure quality service.</li>
@@ -153,7 +153,7 @@ INSERT INTO blog_posts (
     <h2>Get back on the road fast in Arnold and Severna Park</h2>
     <p>Losing your car keys is never convenient, but with a reliable mobile automotive locksmith, you can have a new key cut, programmed, and tested at your location the same day—often within an hour or two. Instead of paying for a tow to the dealership and waiting days for an appointment, a local locksmith offers faster, more affordable service right where you are.</p>
 
-    <p>Whether you are at home in Severna Park, at work in Arnold, or stranded in a parking lot somewhere in Anne Arundel County, a mobile locksmith gives you a practical solution that gets you driving again with minimal disruption. Keep a trusted locksmith\'s contact information saved in your phone, and you will always have a fast, professional option when car key problems arise.</p>
+    <p>Whether you are at home in Severna Park, at work in Arnold, or stranded in a parking lot somewhere in Anne Arundel County, a mobile locksmith gives you a practical solution that gets you driving again with minimal disruption. Keep a trusted locksmith''s contact information saved in your phone, and you will always have a fast, professional option when car key problems arise.</p>
   </div>',
   'Lost your car keys in Arnold or Severna Park? Learn how mobile automotive locksmiths provide same-day car key replacement and programming at your location—faster and more affordable than dealerships. Complete 2025 guide with pricing, process details, and expert tips.',
   'A Secure Annapolis Locksmith',
