@@ -100,6 +100,9 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
         {/* Canonical */}
         <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
 
+        {/* Robots directives */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
         {/* Schema.org Markup for Service */}
         <script type="application/ld+json">
           {JSON.stringify({
