@@ -8,6 +8,96 @@
   Content-Security-Policy: frame-ancestors 'none'
   Cache-Control: public, max-age=0, must-revalidate
 
+/
+  Link: <https://www.asecureannapolislocksmith.com/>; rel="canonical"
+
+/contact
+  Link: <https://www.asecureannapolislocksmith.com/contact>; rel="canonical"
+
+/blog
+  Link: <https://www.asecureannapolislocksmith.com/blog>; rel="canonical"
+
+/about
+  Link: <https://www.asecureannapolislocksmith.com/about>; rel="canonical"
+
+/services
+  Link: <https://www.asecureannapolislocksmith.com/services>; rel="canonical"
+
+/services/emergency-lockout
+  Link: <https://www.asecureannapolislocksmith.com/services/emergency-lockout>; rel="canonical"
+
+/services/lock-rekey
+  Link: <https://www.asecureannapolislocksmith.com/services/lock-rekey>; rel="canonical"
+
+/services/lock-change
+  Link: <https://www.asecureannapolislocksmith.com/services/lock-change>; rel="canonical"
+
+/services/lock-repair
+  Link: <https://www.asecureannapolislocksmith.com/services/lock-repair>; rel="canonical"
+
+/services/car-key-programming
+  Link: <https://www.asecureannapolislocksmith.com/services/car-key-programming>; rel="canonical"
+
+/services/lost-car-keys
+  Link: <https://www.asecureannapolislocksmith.com/services/lost-car-keys>; rel="canonical"
+
+/locations
+  Link: <https://www.asecureannapolislocksmith.com/locations>; rel="canonical"
+
+/locations/annapolis
+  Link: <https://www.asecureannapolislocksmith.com/locations/annapolis>; rel="canonical"
+
+/locations/arnold
+  Link: <https://www.asecureannapolislocksmith.com/locations/arnold>; rel="canonical"
+
+/locations/severna-park
+  Link: <https://www.asecureannapolislocksmith.com/locations/severna-park>; rel="canonical"
+
+/locations/edgewater
+  Link: <https://www.asecureannapolislocksmith.com/locations/edgewater>; rel="canonical"
+
+/locations/bay-ridge
+  Link: <https://www.asecureannapolislocksmith.com/locations/bay-ridge>; rel="canonical"
+
+/locations/broadneck
+  Link: <https://www.asecureannapolislocksmith.com/locations/broadneck>; rel="canonical"
+
+/locations/cape-st-claire
+  Link: <https://www.asecureannapolislocksmith.com/locations/cape-st-claire>; rel="canonical"
+
+/locations/crownsville
+  Link: <https://www.asecureannapolislocksmith.com/locations/crownsville>; rel="canonical"
+
+/locations/eastport
+  Link: <https://www.asecureannapolislocksmith.com/locations/eastport>; rel="canonical"
+
+/locations/edgewater-beach
+  Link: <https://www.asecureannapolislocksmith.com/locations/edgewater-beach>; rel="canonical"
+
+/locations/hillsmere-shores
+  Link: <https://www.asecureannapolislocksmith.com/locations/hillsmere-shores>; rel="canonical"
+
+/locations/mayo
+  Link: <https://www.asecureannapolislocksmith.com/locations/mayo>; rel="canonical"
+
+/locations/parole
+  Link: <https://www.asecureannapolislocksmith.com/locations/parole>; rel="canonical"
+
+/locations/riva
+  Link: <https://www.asecureannapolislocksmith.com/locations/riva>; rel="canonical"
+
+/testimonials
+  Link: <https://www.asecureannapolislocksmith.com/testimonials>; rel="canonical"
+
+/privacy
+  Link: <https://www.asecureannapolislocksmith.com/privacy>; rel="canonical"
+
+/terms
+  Link: <https://www.asecureannapolislocksmith.com/terms>; rel="canonical"
+
+/sitemap
+  Link: <https://www.asecureannapolislocksmith.com/sitemap>; rel="canonical"
+
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
