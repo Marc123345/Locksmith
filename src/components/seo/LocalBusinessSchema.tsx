@@ -212,7 +212,8 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
       "https://www.instagram.com/asecureannapolis",
       "https://www.twitter.com/asecureannapolis",
       "https://www.yelp.com/biz/a-secure-annapolis-locksmith",
-      "https://www.linkedin.com/company/a-secure-annapolis-locksmith"
+      "https://www.linkedin.com/company/a-secure-annapolis-locksmith",
+      "https://www.thumbtack.com/md/annapolis/locksmiths/secure-annapolis-locksmith/service/550518270306156552"
     ],
     "hasMap": "https://www.google.com/maps/place/222+Severn+Ave,+Annapolis,+MD+21403",
     "slogan": "Your Trusted Local Locksmith in Anne Arundel County",

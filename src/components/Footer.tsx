@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Phone, MapPin, Clock } from "lucide-react";
+import { Facebook, Instagram, Twitter, Phone, MapPin, Clock, Star } from "lucide-react";
 import { CONTACT } from "@/utils/contact";
 
 const Footer = () => {
@@ -49,6 +49,15 @@ const Footer = () => {
                 aria-label="Follow us on Twitter"
               >
                 <Twitter size={20} />
+              </a>
+              <a
+                href="https://www.thumbtack.com/md/annapolis/locksmiths/secure-annapolis-locksmith/service/550518270306156552"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Find us on Thumbtack"
+              >
+                <Star size={20} />
               </a>
             </div>
           </div>
