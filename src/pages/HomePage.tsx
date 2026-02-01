@@ -92,7 +92,7 @@ const testimonials = [
 const faqs = [
   {
     question: "Are you licensed to operate in Maryland?",
-    answer: "Yes, we are fully licensed by the State of Maryland (MD Registry #4920), bonded, and insured. All our technicians carry valid state credentials and undergo background checks."
+    answer: "Yes, we are fully licensed by the State of Maryland, bonded, and insured. All our technicians undergo background checks and maintain proper credentials."
   },
   {
     question: "How quickly can you respond to an emergency lockout?",
@@ -141,11 +141,11 @@ export default function HomePage() {
         <title>Locksmith Annapolis MD | Licensed & Insured | A Secure</title>
         <meta
           name="description"
-          content="Top-rated locksmith in Annapolis, MD since 2010. Licensed (MD Registry #4920), insured, and locally owned. Fast response for home, business, and car lockouts. Call (410) 849-6069."
+          content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts. Call (410) 849-6069."
         />
         <meta
           name="keywords"
-          content="locksmith Annapolis, Annapolis locksmith, emergency locksmith Annapolis MD, residential locksmith, commercial locksmith, car locksmith, MD Registry 4920, licensed locksmith Maryland"
+          content="locksmith Annapolis, Annapolis locksmith, emergency locksmith Annapolis MD, residential locksmith, commercial locksmith, car locksmith, licensed locksmith Maryland"
         />
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
@@ -182,7 +182,7 @@ export default function HomePage() {
                 Looking for a reliable locksmith in Annapolis? Since 2010, A Secure has provided professional lock and key services across Anne Arundel County. Unlike national dispatch centers, we are a <strong>locally owned business</strong> located right here on Severn Ave.
               </p>
               <p className="text-lg leading-relaxed">
-                Whether you're locked out of your car at the City Dock or need to upgrade the locks on your home in Eastport, our <strong>licensed technicians (MD Registry #4920)</strong> are ready to help. From downtown Annapolis to Severna Park, we bring expertise and fast response times to every call.
+                Whether you're locked out of your car at the City Dock or need to upgrade the locks on your home in Eastport, our <strong>licensed technicians</strong> are ready to help. From downtown Annapolis to Severna Park, we bring expertise and fast response times to every call.
               </p>
             </div>
           </motion.div>
@@ -533,7 +533,7 @@ export default function HomePage() {
 
       <CallToAction
         title="Need a Locksmith Today?"
-        subtitle="Licensed technicians ready to help. MD Registry #4920 • 20-min response time."
+        subtitle="Licensed technicians ready to help. 20-min average response time."
         primaryButtonText="Contact Us"
         secondaryButtonText="Request Service"
         variant="centered"
