@@ -249,7 +249,6 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "Professional License",
         "name": "Maryland Locksmith License",
-        "identifier": "MD Registry #4920",
         "recognizedBy": {
           "@type": "Organization",
           "name": "State of Maryland"

@@ -5,8 +5,8 @@ export const TrustedBySection = () => {
   const trustIndicators = [
     {
       icon: Shield,
-      title: "Verified Expertise",
-      subtitle: "MD Registry #4920"
+      title: "Licensed & Insured",
+      subtitle: "Maryland Certified"
     },
     {
       icon: Award,
