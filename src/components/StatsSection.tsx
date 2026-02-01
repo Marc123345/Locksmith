@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { Clock, Users, Wrench, Star } from "lucide-react";
+import { Clock, Users, Wrench, Shield } from "lucide-react";
 
 const stats = [
-  { 
-    number: "15+", 
-    label: "Years Experience", 
+  {
+    number: "15+",
+    label: "Years Experience",
     icon: <Clock className="h-8 w-8 text-primary" />,
     description: "Serving Annapolis since 2010"
   },
-  { 
-    number: "1000+", 
-    label: "Satisfied Customers", 
+  {
+    number: "4.9/5",
+    label: "Top-Rated",
     icon: <Users className="h-8 w-8 text-primary" />,
-    description: "5-star rated service"
+    description: "Based on 60+ verified reviews"
   },
-  { 
-    number: "Same-Day", 
-    label: "Service Available", 
+  {
+    number: "20-Min",
+    label: "Response Time",
     icon: <Wrench className="h-8 w-8 text-primary" />,
-    description: "Fast response times"
+    description: "Fast emergency service"
   },
-  { 
-    number: "100%", 
-    label: "Satisfaction Rate", 
-    icon: <Star className="h-8 w-8 text-primary" />,
-    description: "Guaranteed results"
+  {
+    number: "#4920",
+    label: "MD Registry",
+    icon: <Shield className="h-8 w-8 text-primary" />,
+    description: "Licensed & insured"
   }
 ];
 

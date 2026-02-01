@@ -17,42 +17,42 @@ import { motion } from 'framer-motion';
 const services = [
   {
     icon: <Home className="h-6 w-6 text-white" />,
-    title: "Residential Services",
-    description: "Complete home security solutions including smart locks and master key systems.",
+    title: "Residential Locksmith",
+    description: "Secure your home with modern protection solutions.",
     image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(4)_iYsRLa_HJp.jpg?tr=f-auto,q-auto",
     features: [
-      "Lock installation & repair",
-      "Smart lock systems",
-      "Emergency lockout service",
-      "Security assessments"
+      "Emergency House Lockouts",
+      "Deadbolt Installation & Repair",
+      "Smart Lock Upgrades (Keyless Entry)",
+      "Rekeying Services"
     ],
-    href: "/contact"
+    href: "/services"
   },
   {
     icon: <Building2 className="h-6 w-6 text-white" />,
-    title: "Commercial Services",
-    description: "Advanced security solutions for businesses of all sizes.",
+    title: "Commercial Security",
+    description: "Protecting Annapolis businesses and retail fronts.",
     image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(8)_Y1KJcwdRO.png?tr=f-auto,q-auto",
     features: [
-      "Master key systems",
-      "High-security locks",
-      "Security consultation",
-      "Emergency service"
+      "Master Key Systems",
+      "High-Security Lock Installation",
+      "Commercial Door Hardware",
+      "Access Control Consultation"
     ],
-    href: "/contact"
+    href: "/services"
   },
   {
     icon: <Car className="h-6 w-6 text-white" />,
-    title: "Automotive Services",
-    description: "Professional automotive locksmith services for all vehicle types.",
+    title: "Automotive Locksmith",
+    description: "Mobile service that comes to you—no towing needed.",
     image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto",
     features: [
-      "Car lockout assistance",
-      "Key programming",
-      "Transponder keys",
-      "Ignition repair"
+      "Car Key Replacement & Programming",
+      "Emergency Vehicle Opening",
+      "Ignition Repair & Key Extraction",
+      "Transponder Keys"
     ],
-    href: "/contact"
+    href: "/services"
   }
 ];
 
@@ -110,33 +110,56 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>A Secure Annapolis Locksmith | 24/7 Service MD</title>
+        <title>Locksmith Annapolis MD | Licensed & Insured | A Secure</title>
         <meta
           name="description"
-          content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions. Fast response, licensed & insured."
+          content="Top-rated locksmith in Annapolis, MD since 2010. Licensed (MD Registry #4920), insured, and locally owned. Fast response for home, business, and car lockouts. Call (410) 849-6069."
         />
         <meta
           name="keywords"
-          content="locksmith Annapolis, emergency locksmith, 24/7 locksmith Annapolis MD, residential locksmith, commercial locksmith, car locksmith, lock rekey, lock change, Annapolis Maryland locksmith"
+          content="locksmith Annapolis, Annapolis locksmith, emergency locksmith Annapolis MD, residential locksmith, commercial locksmith, car locksmith, MD Registry 4920, licensed locksmith Maryland"
         />
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.asecureannapolislocksmith.com/" />
-        <meta property="og:title" content="A Secure Annapolis Locksmith | Professional Locksmith Services" />
-        <meta property="og:description" content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions." />
+        <meta property="og:title" content="Locksmith Annapolis MD | Licensed & Insured | A Secure" />
+        <meta property="og:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/" />
-        <meta property="twitter:title" content="A Secure Annapolis Locksmith | Professional Locksmith Services" />
-        <meta property="twitter:description" content="Trusted locksmith in Annapolis, MD. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions." />
+        <meta property="twitter:title" content="Locksmith Annapolis MD | Licensed & Insured | A Secure" />
+        <meta property="twitter:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
       </Helmet>
       <LocalBusinessSchema page="home" />
       <HeroSection />
       <TrustedBySection />
+
+      {/* Introduction / About Snippet */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">A Secure Annapolis: Your Local Security Experts</h2>
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p className="text-lg leading-relaxed mb-4">
+                Looking for a reliable locksmith in Annapolis? Since 2010, A Secure has provided professional lock and key services across Anne Arundel County. Unlike national dispatch centers, we are a <strong>locally owned business</strong> located right here on Severn Ave.
+              </p>
+              <p className="text-lg leading-relaxed">
+                Whether you're locked out of your car at the City Dock or need to upgrade the locks on your home in Eastport, our <strong>licensed technicians (MD Registry #4920)</strong> are ready to help. From downtown Annapolis to Severna Park, we bring expertise and fast response times to every call.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <StatsSection />
       <FeatureSection />
 
@@ -227,9 +250,9 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">What Our Customers Say</h2>
+            <h2 className="text-4xl font-bold mb-4">What Our Neighbors Are Saying</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Read verified reviews from our satisfied customers in Annapolis.
+              Read verified reviews from Annapolis residents and business owners.
             </p>
           </motion.div>
 
@@ -289,15 +312,15 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h2 className="text-4xl font-bold">Serving Annapolis & Surrounding Areas</h2>
+              <h2 className="text-4xl font-bold">Serving Annapolis & Surrounding Communities</h2>
               <p className="text-lg text-muted-foreground">
-                We provide fast, reliable locksmith services throughout Annapolis and nearby communities.
+                We provide mobile locksmith services throughout Anne Arundel County. From the City Dock to Severna Park, we're your trusted local experts.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-lg">Primary Service Areas:</h3>
+                  <h3 className="font-semibold text-lg text-primary">Central:</h3>
                   <ul className="space-y-2">
-                    {["Annapolis", "Severna Park", "Arnold", "Edgewater"].map((area, index) => (
+                    {["Annapolis", "Eastport", "Parole"].map((area, index) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
@@ -313,9 +336,45 @@ export default function HomePage() {
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-lg">Also Serving:</h3>
+                  <h3 className="font-semibold text-lg text-primary">North:</h3>
                   <ul className="space-y-2">
-                    {["Millersville", "Crownsville", "Pasadena", "Glen Burnie"].map((area, index) => (
+                    {["Severna Park", "Arnold", "Cape St. Claire", "Broadneck"].map((area, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-center text-base"
+                      >
+                        <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                        {area}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="font-semibold text-lg text-primary">South:</h3>
+                  <ul className="space-y-2">
+                    {["Edgewater", "Mayo", "Hillsmere Shores", "Bay Ridge"].map((area, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 + 0.4 }}
+                        className="flex items-center text-base"
+                      >
+                        <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                        {area}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="font-semibold text-lg text-primary">West:</h3>
+                  <ul className="space-y-2">
+                    {["Crownsville", "Riva"].map((area, index) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -20 }}

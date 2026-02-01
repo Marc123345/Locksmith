@@ -5,23 +5,23 @@ export const TrustedBySection = () => {
   const trustIndicators = [
     {
       icon: Shield,
-      title: "Licensed & Insured",
-      subtitle: "Full protection"
+      title: "Verified Expertise",
+      subtitle: "MD Registry #4920"
     },
     {
       icon: Award,
-      title: "5-Star Rated",
-      subtitle: "60+ reviews"
+      title: "Upfront Pricing",
+      subtitle: "No hidden fees"
     },
     {
       icon: Clock,
-      title: "Same-Day Service",
-      subtitle: "Fast response"
+      title: "Rapid Response",
+      subtitle: "20-min dispatch"
     },
     {
       icon: Users,
-      title: "1000+ Customers",
-      subtitle: "Trusted locally"
+      title: "Satisfaction Guaranteed",
+      subtitle: "We make it right"
     }
   ];
 
@@ -34,7 +34,7 @@ export const TrustedBySection = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-sm xs:text-base font-semibold text-primary mb-8">Why Choose Us</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Why Annapolis Trusts Us</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
             {trustIndicators.map((indicator, index) => {
               const Icon = indicator.icon;
