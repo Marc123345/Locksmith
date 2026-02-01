@@ -31,7 +31,6 @@ export interface LocalSEOConfig {
     twitter?: string;
     linkedin?: string;
     yelp?: string;
-    thumbtack?: string;
   };
 }
 
@@ -80,8 +79,7 @@ export const LOCAL_SEO_CONFIG: LocalSEOConfig = {
     instagram: 'https://www.instagram.com/asecureannapolis',
     twitter: 'https://www.twitter.com/asecureannapolis',
     linkedin: 'https://www.linkedin.com/company/a-secure-annapolis-locksmith',
-    yelp: 'https://www.yelp.com/biz/a-secure-annapolis-locksmith',
-    thumbtack: 'https://www.thumbtack.com/md/annapolis/locksmiths/secure-annapolis-locksmith/service/550518270306156552'
+    yelp: 'https://www.yelp.com/biz/a-secure-annapolis-locksmith'
   }
 };
 
