@@ -38,7 +38,7 @@ export const locations: LocationData[] = [
       'Bay Dale'
     ],
     distance: '5.5 miles',
-    responseTime: 'under 30 minutes',
+    responseTime: '20–30 minutes',
     directions: [
       'Head south on MD-2 (Ritchie Hwy) toward Annapolis',
       'Turn left onto Rowe Blvd',
@@ -49,7 +49,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'How fast can a locksmith arrive in Arnold, MD?',
-        answer: 'Our mobile locksmiths are based in Annapolis and typically reach Arnold in under 30 minutes.'
+        answer: 'Our mobile locksmiths are based in Annapolis and typically reach Arnold within 20–30 minutes.'
       },
       {
         question: 'Do you offer 24-hour locksmith services in Arnold?',
@@ -157,7 +157,7 @@ export const locations: LocationData[] = [
       'Arden on the Severn'
     ],
     distance: '10 miles',
-    responseTime: '7 days a week',
+    responseTime: '20–30 minutes',
     directions: [
       'Head southeast on Crownsville Rd',
       'Merge onto US-50 E',

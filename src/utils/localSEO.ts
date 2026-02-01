@@ -77,6 +77,7 @@ export const LOCAL_SEO_CONFIG: LocalSEOConfig = {
   socialProfiles: {
     facebook: 'https://www.facebook.com/asecureannapolis',
     instagram: 'https://www.instagram.com/asecureannapolis',
+    twitter: 'https://www.twitter.com/asecureannapolis',
     linkedin: 'https://www.linkedin.com/company/a-secure-annapolis-locksmith',
     yelp: 'https://www.yelp.com/biz/a-secure-annapolis-locksmith'
   }

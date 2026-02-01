@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com/asecureannapolis"
+                href="https://www.facebook.com/asecureannapolis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="https://instagram.com/asecureannapolis"
+                href="https://www.instagram.com/asecureannapolis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -42,7 +42,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://twitter.com/asecureannapolis"
+                href="https://www.twitter.com/asecureannapolis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -237,8 +237,8 @@ const Footer = () => {
               <div className="flex items-start">
                 <Clock className="h-4 w-4 mr-2 text-primary shrink-0 mt-1" />
                 <div className="text-sm">
-                  <p className="font-semibold text-foreground">Open 24/7</p>
-                  <p className="text-muted-foreground text-xs">Emergency Services Available</p>
+                  <p className="font-semibold text-foreground">24/7 Emergency Service</p>
+                  <p className="text-muted-foreground text-xs">Mon-Sat: 8AM-8PM | Sun: Emergency Only</p>
                 </div>
               </div>
             </div>

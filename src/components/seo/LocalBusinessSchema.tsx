@@ -210,6 +210,7 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
     "sameAs": [
       "https://www.facebook.com/asecureannapolis",
       "https://www.instagram.com/asecureannapolis",
+      "https://www.twitter.com/asecureannapolis",
       "https://www.yelp.com/biz/a-secure-annapolis-locksmith",
       "https://www.linkedin.com/company/a-secure-annapolis-locksmith"
     ],
