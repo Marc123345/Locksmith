@@ -168,10 +168,10 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Sarah Mitchell"
+          "name": "Jen Jamison"
         },
-        "datePublished": "2024-10-15",
-        "reviewBody": "Quick response time and professional service. They rekeyed all my locks after moving into my new home in Annapolis. Highly recommend!",
+        "datePublished": "2024-08-01",
+        "reviewBody": "Dispatch was courteous and super helpful, I knew the price and the time my tech was expected to arrive. I was at work and had lost my only key to my vehicle, and commute across the bridge for work so I was panicked.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -182,10 +182,10 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "John Anderson"
+          "name": "Malorie"
         },
-        "datePublished": "2024-09-22",
-        "reviewBody": "Locked out of my car at the Annapolis Mall. They arrived in 15 minutes and had me back in my car quickly. Great service!",
+        "datePublished": "2024-09-01",
+        "reviewBody": "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -196,10 +196,10 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
         "@type": "Review",
         "author": {
           "@type": "Person",
-          "name": "Emily Thompson"
+          "name": "Emma Cutler"
         },
-        "datePublished": "2024-08-30",
-        "reviewBody": "Professional and efficient. Installed smart locks throughout our Severna Park home. The technician was knowledgeable and thorough.",
+        "datePublished": "2024-03-01",
+        "reviewBody": "Thank you for offering such a great service for my son! Finding a company that actually called back and went the extra mile to accommodate our needs was such a relief. Professional, courteous and speedy.",
         "reviewRating": {
           "@type": "Rating",
           "ratingValue": "5",
@@ -215,7 +215,7 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
     ],
     "hasMap": "https://www.google.com/maps/place/222+Severn+Ave,+Annapolis,+MD+21403",
     "slogan": "Your Trusted Local Locksmith in Anne Arundel County",
-    "foundingDate": "2008",
+    "foundingDate": "2010",
     "founder": {
       "@type": "Person",
       "name": "A Secure Annapolis Locksmith"
@@ -241,6 +241,50 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
       {
         "@type": "Organization",
         "name": "Associated Locksmiths of America"
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional License",
+        "name": "Maryland Locksmith License",
+        "identifier": "MD Registry #4920",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "State of Maryland"
+        }
+      }
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Satisfaction Guarantee",
+        "description": "We stand behind our workmanship. If the lock isn't fixed right, we make it right.",
+        "warranty": {
+          "@type": "WarrantyPromise",
+          "durationOfWarranty": {
+            "@type": "QuantitativeValue",
+            "value": 90,
+            "unitCode": "DAY"
+          }
+        }
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Response Time",
+        "value": "20 minutes average"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Emergency Service",
+        "value": "24/7 Available"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Service Type",
+        "value": "Mobile Locksmith Service"
       }
     ]
   };

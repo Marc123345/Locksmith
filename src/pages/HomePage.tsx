@@ -9,9 +9,10 @@ import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Home, Building2, Car, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const services = [
@@ -88,6 +89,33 @@ const testimonials = [
   }
 ];
 
+const faqs = [
+  {
+    question: "Are you licensed to operate in Maryland?",
+    answer: "Yes, we are fully licensed by the State of Maryland (MD Registry #4920), bonded, and insured. All our technicians carry valid state credentials and undergo background checks."
+  },
+  {
+    question: "How quickly can you respond to an emergency lockout?",
+    answer: "We provide 20-minute average response times for emergency lockouts in the Annapolis area. We dispatch the nearest available technician to minimize your wait time."
+  },
+  {
+    question: "Do you charge extra for after-hours service?",
+    answer: "We provide transparent, upfront pricing before we start any work. While emergency service rates may apply outside regular business hours, you'll know the cost before we begin."
+  },
+  {
+    question: "What areas do you serve?",
+    answer: "We serve all of Anne Arundel County including Annapolis, Severna Park, Arnold, Edgewater, Eastport, Parole, Crownsville, Riva, Mayo, Cape St. Claire, Broadneck, Hillsmere Shores, and Bay Ridge."
+  },
+  {
+    question: "Do you offer a warranty on your work?",
+    answer: "Yes, we provide a 90-day workmanship guarantee on all services. If the job isn't done right, we'll return and make it right at no additional charge."
+  },
+  {
+    question: "Can you make keys for high-security locks and smart locks?",
+    answer: "Yes, our technicians are trained and equipped to work with high-security locks, smart locks, electronic access control systems, and traditional lock systems."
+  }
+];
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -135,6 +163,7 @@ export default function HomePage() {
         <meta property="twitter:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
       </Helmet>
       <LocalBusinessSchema page="home" />
+      <FAQSchema faqs={faqs} />
       <HeroSection />
       <TrustedBySection />
 
@@ -418,9 +447,93 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Business Hours */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
+              <h2 className="text-3xl font-bold mb-4">Business Hours</h2>
+              <p className="text-lg text-muted-foreground">
+                We're here when you need us. Emergency service available 24/7.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Monday - Friday</span>
+                  <span className="text-lg">8:00 AM - 8:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Saturday</span>
+                  <span className="text-lg">8:00 AM - 8:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Sunday</span>
+                  <span className="text-lg">Emergency Service Only</span>
+                </div>
+                <div className="mt-6 p-4 bg-primary/5 rounded-lg">
+                  <p className="text-center text-sm font-semibold text-primary">
+                    24/7 Emergency Lockout Service Available • Call (410) 849-6069
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <HelpCircle className="h-12 w-12 text-primary mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Get answers to common questions about our locksmith services in Annapolis.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <details className="group">
+                  <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg">
+                    <span>{faq.question}</span>
+                    <span className="ml-4 flex-shrink-0 text-primary group-open:rotate-180 transition-transform">
+                      ▼
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6 pt-2 text-muted-foreground">
+                    {faq.answer}
+                  </div>
+                </details>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <CallToAction
         title="Need a Locksmith Today?"
-        subtitle="Our professional technicians are available for same-day service."
+        subtitle="Licensed technicians ready to help. MD Registry #4920 • 20-min response time."
         primaryButtonText="Contact Us"
         secondaryButtonText="Request Service"
         variant="centered"

@@ -8,32 +8,32 @@ const features = [
   {
     icon: <Shield className="h-10 w-10 text-primary" />,
     title: "Licensed & Insured",
-    description: "All our technicians are fully licensed, bonded, and insured for your peace of mind.",
+    description: "Maryland licensed (Registry #4920), bonded, and fully insured. All technicians carry valid state credentials.",
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
-    title: "Same-Day Service",
-    description: "We're available for emergency locksmith services when you need them most.",
+    title: "20-Minute Response",
+    description: "Fast dispatch for emergency lockouts. We minimize your wait time and get you back inside quickly.",
   },
   {
     icon: <Award className="h-10 w-10 text-primary" />,
-    title: "5-Star Rated",
-    description: "Consistently rated 5 stars by our satisfied customers across Google and Yelp.",
+    title: "Top-Rated Service",
+    description: "4.9/5 rating based on 60+ verified Google reviews from actual customers in Annapolis.",
   },
   {
     icon: <ThumbsUp className="h-10 w-10 text-primary" />,
-    title: "Satisfaction Guaranteed",
-    description: "We stand behind our work with a 100% satisfaction guarantee on all services.",
+    title: "90-Day Workmanship Guarantee",
+    description: "We stand behind our work. If the job isn't done right, we'll return and make it right.",
   },
   {
     icon: <Wrench className="h-10 w-10 text-primary" />,
-    title: "Experienced Technicians",
-    description: "Our locksmiths have years of experience handling all types of lock and security issues.",
+    title: "15+ Years Experience",
+    description: "Serving Annapolis since 2010 with expertise in residential, commercial, and automotive locks.",
   },
   {
     icon: <BadgeCheck className="h-10 w-10 text-primary" />,
     title: "Upfront Pricing",
-    description: "No hidden fees or surprises. We provide clear, upfront pricing before any work begins.",
+    description: "No hidden fees. You'll know the cost before we start—no surprise charges added to the bill.",
   },
 ];
 
@@ -42,9 +42,9 @@ export const FeatureSection = () => {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Why Choose Us</h2>
+          <h2 className="text-3xl font-bold mb-4">What Sets Us Apart</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We pride ourselves on providing exceptional locksmith services with integrity, professionalism, and attention to detail.
+            We're not a dispatch center—we're a locally owned locksmith business with real technicians, transparent pricing, and verifiable credentials.
           </p>
         </div>
         
