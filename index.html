@@ -104,6 +104,12 @@
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "07:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
             "opens": "07:00",
             "closes": "20:00"
@@ -112,19 +118,7 @@
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": "Friday",
             "opens": "07:00",
-            "closes": "15:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "00:00",
-            "closes": "00:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "07:00",
-            "closes": "20:00"
+            "closes": "14:30"
           }
         ],
         "sameAs": [
@@ -279,40 +273,6 @@
             "position": 1,
             "name": "Home",
             "item": "https://www.asecureannapolislocksmith.com"
-          }
-        ]
-      }
-    </script>
-
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How quickly can you respond to an emergency?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "For emergency lockouts, we typically arrive within 20-30 minutes in the Annapolis area during business hours. Response times may vary based on your location and current demand."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are your locksmiths licensed and insured?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, all our locksmiths are fully licensed, bonded, and insured. We maintain all required state and local certifications to ensure the highest level of professionalism and security."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you provide free estimates?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, we provide free estimates for all non-emergency services. For emergency services, we'll provide a clear price quote over the phone before dispatching a technician."
-            }
           }
         ]
       }

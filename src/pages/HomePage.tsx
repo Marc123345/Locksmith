@@ -466,16 +466,20 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b">
-                  <span className="font-semibold text-lg">Monday - Friday</span>
-                  <span className="text-lg">8:00 AM - 8:00 PM</span>
+                  <span className="font-semibold text-lg">Sunday</span>
+                  <span className="text-lg">7:00 AM - 7:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Monday - Thursday</span>
+                  <span className="text-lg">7:00 AM - 8:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Friday</span>
+                  <span className="text-lg">7:00 AM - 2:30 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b">
                   <span className="font-semibold text-lg">Saturday</span>
-                  <span className="text-lg">8:00 AM - 8:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b">
-                  <span className="font-semibold text-lg">Sunday</span>
-                  <span className="text-lg">Emergency Service Only</span>
+                  <span className="text-lg">Closed</span>
                 </div>
                 <div className="mt-6 p-4 bg-primary/5 rounded-lg">
                   <p className="text-center text-sm font-semibold text-primary">
