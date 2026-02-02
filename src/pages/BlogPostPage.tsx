@@ -185,6 +185,10 @@ const BlogPostPage = () => {
           name="description"
           content={post.meta_description || post.excerpt}
         />
+        <meta
+          name="keywords"
+          content={`locksmith ${post.location || 'Annapolis'}, ${post.category || 'locksmith services'}, ${post.tags?.join(', ') || 'lock repair, security'}`}
+        />
         <meta name="geo.region" content="US-MD" />
         <meta name="geo.placename" content={post.location || 'Annapolis'} />
         <meta name="geo.position" content="38.9784;-76.4922" />
@@ -193,6 +197,16 @@ const BlogPostPage = () => {
           rel="canonical"
           href={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`}
         />
+        <meta property="og:title" content={`${post.title} | A Secure Annapolis Locksmith`} />
+        <meta property="og:description" content={post.meta_description || post.excerpt} />
+        <meta property="og:url" content={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={post.featured_image || 'https://www.asecureannapolislocksmith.com/image.png'} />
+        <meta property="article:published_time" content={post.published_date} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.meta_description || post.excerpt} />
+        <meta name="twitter:image" content={post.featured_image || 'https://www.asecureannapolislocksmith.com/image.png'} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

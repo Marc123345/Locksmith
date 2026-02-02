@@ -11,16 +11,16 @@ export default function LocalBusinessSchema({ page = 'home', locationName, servi
   const baseSchema = {
     "@context": "https://schema.org",
     "@type": "Locksmith",
-    "@id": "https://asecureannapolis.com/#locksmith",
+    "@id": "https://www.asecureannapolislocksmith.com/#locksmith",
     "name": "A Secure Annapolis Locksmith",
     "alternateName": "A Secure Locksmith",
     "description": "Professional locksmith services in Annapolis, MD and Anne Arundel County. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions.",
-    "url": "https://asecureannapolis.com",
-    "logo": "https://asecureannapolis.com/logo.png",
+    "url": "https://www.asecureannapolislocksmith.com",
+    "logo": "https://www.asecureannapolislocksmith.com/logo.png",
     "image": [
-      "https://asecureannapolis.com/images/locksmith-service.jpg",
-      "https://asecureannapolis.com/images/emergency-lockout.jpg",
-      "https://asecureannapolis.com/images/lock-installation.jpg"
+      "https://www.asecureannapolislocksmith.com/images/locksmith-service.jpg",
+      "https://www.asecureannapolislocksmith.com/images/emergency-lockout.jpg",
+      "https://www.asecureannapolislocksmith.com/images/lock-installation.jpg"
     ],
     "telephone": CONTACT.PHONE,
     "email": CONTACT.EMAIL,

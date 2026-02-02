@@ -150,11 +150,13 @@ export default function TestimonialsPage() {
         <meta property="og:url" content="https://www.asecureannapolislocksmith.com/testimonials" />
         <meta property="og:title" content="Customer Testimonials & Reviews | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Read reviews from our satisfied customers. 4.9 stars with 1000+ happy customers since 2010." />
+        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/testimonials" />
         <meta property="twitter:title" content="Customer Testimonials & Reviews | A Secure Annapolis Locksmith" />
+        <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
         <meta property="twitter:description" content="Read reviews from our satisfied customers. 4.9 stars with 1000+ happy customers since 2010." />
       </Helmet>
 

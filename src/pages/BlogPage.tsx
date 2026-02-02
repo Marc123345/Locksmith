@@ -69,7 +69,20 @@ const BlogPage = () => {
           name="description"
           content="Expert locksmith tips, security advice, and home safety guides from A Secure Annapolis Locksmith. Stay informed about the latest in lock technology and security solutions."
         />
+        <meta
+          name="keywords"
+          content="locksmith blog, security tips, lock advice, home security, Annapolis locksmith, lock technology, security solutions, lock maintenance, key duplication tips"
+        />
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/blog" />
+        <meta property="og:title" content="Locksmith Blog | Security Tips & Advice | A Secure Annapolis Locksmith" />
+        <meta property="og:description" content="Expert locksmith tips, security advice, and home safety guides from A Secure Annapolis Locksmith. Stay informed about the latest in lock technology and security solutions." />
+        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Locksmith Blog | Security Tips & Advice" />
+        <meta name="twitter:description" content="Expert locksmith tips, security advice, and home safety guides from A Secure Annapolis Locksmith." />
+        <meta name="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 pt-16">

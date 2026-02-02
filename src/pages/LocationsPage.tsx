@@ -37,11 +37,13 @@ export default function LocationsPage() {
         <meta property="og:url" content="https://www.asecureannapolislocksmith.com/locations" />
         <meta property="og:title" content="Service Areas | A Secure Annapolis Locksmith" />
         <meta property="og:description" content="Find professional locksmith services in your area across Anne Arundel County." />
+        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/locations" />
         <meta property="twitter:title" content="Service Areas | A Secure Annapolis Locksmith" />
         <meta property="twitter:description" content="Find professional locksmith services in your area across Anne Arundel County." />
+        <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
       </Helmet>
 
       <div className="min-h-screen bg-white pt-20">
