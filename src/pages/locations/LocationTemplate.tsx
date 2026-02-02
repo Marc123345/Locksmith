@@ -307,7 +307,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 </div>
               </div>
 
-              <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-10 border border-gray-100 sticky top-24">
+              <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-10 border border-gray-100">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   Get in Touch
                 </h3>

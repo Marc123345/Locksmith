@@ -27,7 +27,7 @@ const ContactForm = ({ pageSource, serviceType, locationPreference }: ContactFor
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-visible">
       <iframe
         id="JotFormIFrame-253124306063446"
         title="Royi Locksmith Form"
@@ -39,10 +39,10 @@ const ContactForm = ({ pageSource, serviceType, locationPreference }: ContactFor
         style={{
           minWidth: '100%',
           maxWidth: '100%',
-          height: '539px',
+          height: '800px',
           border: 'none'
         }}
-        scrolling="no"
+        scrolling="yes"
       />
     </div>
   );
