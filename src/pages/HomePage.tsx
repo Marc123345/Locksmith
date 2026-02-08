@@ -232,7 +232,7 @@ export default function HomePage() {
         />
         <meta
           name="keywords"
-          content="locksmith Annapolis MD, Annapolis locksmith, emergency locksmith Annapolis, locksmith near me Annapolis, residential locksmith Annapolis MD, commercial locksmith Annapolis, car locksmith Annapolis, lock change Annapolis, rekey locks Annapolis, 24/7 locksmith Annapolis Maryland, locksmith 21403, locksmith Anne Arundel County"
+          content="locksmith Annapolis MD, Annapolis locksmith, emergency locksmith Annapolis, locksmith near me Annapolis, residential locksmith Annapolis MD, commercial locksmith Annapolis, car locksmith Annapolis, lock change Annapolis, rekey locks Annapolis, same-day locksmith Annapolis Maryland, locksmith 21403, locksmith Anne Arundel County"
         />
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
@@ -595,7 +595,7 @@ export default function HomePage() {
               <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
               <h2 className="text-3xl font-bold mb-4">Annapolis Locksmith Hours</h2>
               <p className="text-lg text-muted-foreground">
-                Serving the Annapolis area when you need us. Emergency service available 24/7.
+                Serving the Annapolis area when you need us. Same-day emergency service available.
               </p>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -618,7 +618,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-6 p-4 bg-primary/5 rounded-lg">
                   <p className="text-center text-sm font-semibold text-primary">
-                    24/7 Emergency Lockout Service Available in Annapolis -- Call {CONTACT.PHONE_DISPLAY}
+                    Same-Day Emergency Lockout Service Available in Annapolis -- Call {CONTACT.PHONE_DISPLAY}
                   </p>
                 </div>
               </div>
@@ -731,7 +731,7 @@ export default function HomePage() {
                   >
                     {CONTACT.PHONE_DISPLAY}
                   </a>
-                  <p className="text-xs text-muted-foreground mt-1">24/7 Emergency Service Available</p>
+                  <p className="text-xs text-muted-foreground mt-1">Same-Day Emergency Service Available</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">

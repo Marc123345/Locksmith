@@ -23,7 +23,7 @@ export default function BusinessSnapshot() {
           </a>
           <div className="flex items-center gap-2">
             <Clock className="h-4 w-4 text-blue-400 flex-shrink-0" />
-            <span className="text-slate-300">Mon--Thu 7AM--8PM | Fri 7AM--2:30PM | Sun 7AM--7PM | 24/7 Emergency</span>
+            <span className="text-slate-300">Mon--Thu 7AM--8PM | Fri 7AM--2:30PM | Sun 7AM--7PM | Same-Day Emergency</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0" />

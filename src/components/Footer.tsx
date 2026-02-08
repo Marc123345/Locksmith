@@ -214,7 +214,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <div className="space-y-4">
               <div>
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">24/7 Emergency</p>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">Same-Day Emergency</p>
                 <a
                   href={`tel:${CONTACT.PHONE}`}
                   className="inline-flex items-center text-primary hover:underline font-bold text-xl"
@@ -237,8 +237,8 @@ const Footer = () => {
               <div className="flex items-start">
                 <Clock className="h-4 w-4 mr-2 text-primary shrink-0 mt-1" />
                 <div className="text-sm">
-                  <p className="font-semibold text-foreground">24/7 Emergency Service</p>
-                  <p className="text-muted-foreground text-xs">Mon-Sat: 8AM-8PM | Sun: Emergency Only</p>
+                  <p className="font-semibold text-foreground">Same-Day Emergency Service</p>
+                  <p className="text-muted-foreground text-xs">Mon-Thu: 7AM-8PM | Fri: 7AM-2:30PM | Sun: 7AM-7PM</p>
                 </div>
               </div>
             </div>
