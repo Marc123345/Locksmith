@@ -36,8 +36,8 @@ export default function LicensingSection() {
                     <FileCheck className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-900 text-sm">State of Maryland</p>
-                    <p className="text-xs text-slate-500">Registered Locksmith</p>
+                    <p className="font-semibold text-slate-900 text-sm">MD DLLR Registry #413</p>
+                    <p className="text-xs text-slate-500">Dept. of Labor, Licensing & Regulation</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
