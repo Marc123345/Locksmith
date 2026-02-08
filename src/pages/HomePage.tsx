@@ -174,7 +174,7 @@ const serviceSchema = {
 const faqs = [
   {
     question: "Are you licensed to operate in Maryland?",
-    answer: "Yes, we are fully licensed by the State of Maryland, bonded, and insured. All our technicians undergo background checks and maintain proper credentials."
+    answer: "Yes, we are registered with the Maryland Dept. of Labor, Licensing & Regulation (DLLR #413), fully bonded, and insured. All our technicians undergo background checks and maintain proper credentials."
   },
   {
     question: "How quickly can you respond to an emergency lockout in Annapolis?",

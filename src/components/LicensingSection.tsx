@@ -23,9 +23,10 @@ export default function LicensingSection() {
                 maintain proper credentials as required by the State of Maryland.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Maryland requires locksmiths to be registered with the Department of Labor. This means
-                every job we perform is backed by state oversight, giving you peace of mind that your
-                home, business, or vehicle is in qualified hands.
+                Maryland requires locksmiths to be registered with the Department of Labor, Licensing &
+                Regulation (DLLR). Our registration number is 413, meaning every job we perform is backed
+                by state oversight, giving you peace of mind that your home, business, or vehicle is in
+                qualified hands.
               </p>
             </div>
 
