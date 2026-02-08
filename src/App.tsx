@@ -6,42 +6,42 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
 // Import pages
-import HomePage from '@/pages/HomePage';
-import AboutPage from '@/pages/AboutPage';
-import ServicesPage from '@/pages/ServicesPage';
-import TestimonialsPage from '@/pages/TestimonialsPage';
-import ContactPage from '@/pages/ContactPage';
-import PrivacyPage from '@/pages/PrivacyPage';
-import TermsPage from '@/pages/TermsPage';
-import SitemapPage from '@/pages/SitemapPage';
-import BlogPage from '@/pages/BlogPage';
-import BlogPostPage from '@/pages/BlogPostPage';
-import LocationsPage from '@/pages/LocationsPage';
-import NotFoundPage from '@/pages/NotFoundPage';
+import HomePage from '@/views/HomePage';
+import AboutPage from '@/views/AboutPage';
+import ServicesPage from '@/views/ServicesPage';
+import TestimonialsPage from '@/views/TestimonialsPage';
+import ContactPage from '@/views/ContactPage';
+import PrivacyPage from '@/views/PrivacyPage';
+import TermsPage from '@/views/TermsPage';
+import SitemapPage from '@/views/SitemapPage';
+import BlogPage from '@/views/BlogPage';
+import BlogPostPage from '@/views/BlogPostPage';
+import LocationsPage from '@/views/LocationsPage';
+import NotFoundPage from '@/views/NotFoundPage';
 
 // Import location pages
-import ArnoldPage from '@/pages/locations/ArnoldPage';
-import EdgewaterPage from '@/pages/locations/EdgewaterPage';
-import SevernaParkPage from '@/pages/locations/SevernaParkPage';
-import CrownsvillePage from '@/pages/locations/CrownsvillePage';
-import AnnapolisPage from '@/pages/locations/AnnapolisPage';
-import ParolePage from '@/pages/locations/ParolePage';
-import BayRidgePage from '@/pages/locations/BayRidgePage';
-import HillsmereShoresPage from '@/pages/locations/HillsmereShoresPage';
-import EastportPage from '@/pages/locations/EastportPage';
-import RivaPage from '@/pages/locations/RivaPage';
-import CapeStClairePage from '@/pages/locations/CapeStClairePage';
-import BroadneckPage from '@/pages/locations/BroadneckPage';
-import EdgewaterBeachPage from '@/pages/locations/EdgewaterBeachPage';
-import MayoPage from '@/pages/locations/MayoPage';
+import ArnoldPage from '@/views/locations/ArnoldPage';
+import EdgewaterPage from '@/views/locations/EdgewaterPage';
+import SevernaParkPage from '@/views/locations/SevernaParkPage';
+import CrownsvillePage from '@/views/locations/CrownsvillePage';
+import AnnapolisPage from '@/views/locations/AnnapolisPage';
+import ParolePage from '@/views/locations/ParolePage';
+import BayRidgePage from '@/views/locations/BayRidgePage';
+import HillsmereShoresPage from '@/views/locations/HillsmereShoresPage';
+import EastportPage from '@/views/locations/EastportPage';
+import RivaPage from '@/views/locations/RivaPage';
+import CapeStClairePage from '@/views/locations/CapeStClairePage';
+import BroadneckPage from '@/views/locations/BroadneckPage';
+import EdgewaterBeachPage from '@/views/locations/EdgewaterBeachPage';
+import MayoPage from '@/views/locations/MayoPage';
 
 // Import service pages
-import LockChangePage from '@/pages/services/LockChangePage';
-import LockRekeyPage from '@/pages/services/LockRekeyPage';
-import CarKeyProgrammingPage from '@/pages/services/CarKeyProgrammingPage';
-import EmergencyLockoutPage from '@/pages/services/EmergencyLockoutPage';
-import LockRepairPage from '@/pages/services/LockRepairPage';
-import LostCarKeysPage from '@/pages/services/LostCarKeysPage';
+import LockChangePage from '@/views/services/LockChangePage';
+import LockRekeyPage from '@/views/services/LockRekeyPage';
+import CarKeyProgrammingPage from '@/views/services/CarKeyProgrammingPage';
+import EmergencyLockoutPage from '@/views/services/EmergencyLockoutPage';
+import LockRepairPage from '@/views/services/LockRepairPage';
+import LostCarKeysPage from '@/views/services/LostCarKeysPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();

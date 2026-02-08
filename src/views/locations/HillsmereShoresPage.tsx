@@ -1,0 +1,13 @@
+import { getLocationBySlug } from '@/data/locations';
+import LocationTemplate from './LocationTemplate';
+import NotFoundPage from '@/views/NotFoundPage';
+
+export default function HillsmereShoresPage() {
+  const location = getLocationBySlug('hillsmere-shores');
+
+  if (!location) {
+    return <NotFoundPage />;
+  }
+
+  return <LocationTemplate location={location} />;
+}
