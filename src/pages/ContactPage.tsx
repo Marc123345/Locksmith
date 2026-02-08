@@ -53,7 +53,7 @@ export default function ContactPage() {
     },
     {
       question: "Are your locksmiths licensed and insured?",
-      answer: "Yes, we are registered with the Maryland Dept. of Labor, Licensing & Regulation (DLLR #413), fully bonded, and insured. We maintain all required state certifications to ensure the highest level of professionalism and security.",
+      answer: "Yes, all our locksmiths are fully licensed, bonded, and insured. We maintain all required state and local certifications to ensure the highest level of professionalism and security.",
     },
     {
       question: "Do you provide free estimates?",

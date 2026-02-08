@@ -27,7 +27,7 @@ const pricingRanges = [
   {
     category: 'Emergency',
     items: [
-      { service: 'Emergency Lockout (Day)', range: 'Starting at $95', note: 'During business hours' },
+      { service: 'Emergency Lockout (Day)', range: 'Starting at $95', note: 'Mon--Fri 7AM--8PM' },
       { service: 'Emergency Lockout (After-Hours)', range: '$95 + service fee', note: 'Evenings & weekends' },
       { service: 'Service Call Fee', range: '$39', note: 'Applied to all visits' },
     ],

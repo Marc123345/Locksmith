@@ -149,7 +149,7 @@ export const HeroSection = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto border-t border-slate-200/60 pt-12"
           >
             {[
-              { icon: Shield, title: "Licensed & Insured", sub: "MD DLLR #413" },
+              { icon: Shield, title: "Licensed & Insured", sub: "Maryland Certified" },
               { icon: Clock, title: "20-Min Response", sub: "Local Emergency Service" },
               { icon: CheckCircle2, title: "Price Guarantee", sub: "No Hidden Service Fees" }
             ].map((feature, i) => (

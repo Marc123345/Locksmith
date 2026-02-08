@@ -50,13 +50,13 @@ export const LOCAL_SEO_CONFIG: LocalSEOConfig = {
     lng: -76.492786
   },
   hours: {
-    monday: '07:00-20:00',
-    tuesday: '07:00-20:00',
-    wednesday: '07:00-20:00',
-    thursday: '07:00-21:00',
-    friday: '07:00-15:00',
-    saturday: 'closed',
-    sunday: '07:00-20:00',
+    monday: '08:00-20:00',
+    tuesday: '08:00-20:00',
+    wednesday: '08:00-20:00',
+    thursday: '08:00-20:00',
+    friday: '08:00-20:00',
+    saturday: '08:00-20:00',
+    sunday: '00:00-23:59' // Emergency only
   },
   serviceAreas: [
     'Annapolis, MD',
@@ -132,21 +132,9 @@ export function generateLocalBusinessJSON(options?: {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday"],
-        "opens": "07:00",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
         "closes": "20:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Thursday",
-        "opens": "07:00",
-        "closes": "21:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Friday",
-        "opens": "07:00",
-        "closes": "15:00"
       }
     ],
     "areaServed": serviceAreas.map(area => ({

@@ -23,10 +23,9 @@ export default function LicensingSection() {
                 maintain proper credentials as required by the State of Maryland.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Maryland requires locksmiths to be registered with the Department of Labor, Licensing &
-                Regulation (DLLR). Our registration number is 413, meaning every job we perform is backed
-                by state oversight, giving you peace of mind that your home, business, or vehicle is in
-                qualified hands.
+                Maryland requires locksmiths to be registered with the Department of Labor. This means
+                every job we perform is backed by state oversight, giving you peace of mind that your
+                home, business, or vehicle is in qualified hands.
               </p>
             </div>
 
@@ -37,8 +36,8 @@ export default function LicensingSection() {
                     <FileCheck className="h-5 w-5 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-slate-900 text-sm">MD DLLR Registry #413</p>
-                    <p className="text-xs text-slate-500">Dept. of Labor, Licensing & Regulation</p>
+                    <p className="font-semibold text-slate-900 text-sm">State of Maryland</p>
+                    <p className="text-xs text-slate-500">Registered Locksmith</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

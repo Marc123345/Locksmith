@@ -174,7 +174,7 @@ const serviceSchema = {
 const faqs = [
   {
     question: "Are you licensed to operate in Maryland?",
-    answer: "Yes, we are registered with the Maryland Dept. of Labor, Licensing & Regulation (DLLR #413), fully bonded, and insured. All our technicians undergo background checks and maintain proper credentials."
+    answer: "Yes, we are fully licensed by the State of Maryland, bonded, and insured. All our technicians undergo background checks and maintain proper credentials."
   },
   {
     question: "How quickly can you respond to an emergency lockout in Annapolis?",
@@ -599,16 +599,16 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b">
-                  <span className="font-semibold text-lg">Sunday - Wednesday</span>
+                  <span className="font-semibold text-lg">Sunday</span>
+                  <span className="text-lg">7:00 AM - 7:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Monday - Thursday</span>
                   <span className="text-lg">7:00 AM - 8:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b">
-                  <span className="font-semibold text-lg">Thursday</span>
-                  <span className="text-lg">7:00 AM - 9:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b">
                   <span className="font-semibold text-lg">Friday</span>
-                  <span className="text-lg">7:00 AM - 3:00 PM</span>
+                  <span className="text-lg">7:00 AM - 2:30 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b">
                   <span className="font-semibold text-lg">Saturday</span>

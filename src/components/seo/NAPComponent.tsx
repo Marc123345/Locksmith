@@ -132,11 +132,9 @@ export default function NAPComponent({
               <Clock className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
               <div>
                 <div className="text-sm text-gray-400">Hours</div>
-                <div itemProp="openingHours" content="Su-We 07:00-20:00, Th 07:00-21:00, Fr 07:00-15:00">
-                  Sun-Wed: 7:00 AM - 8:00 PM<br />
-                  Thu: 7:00 AM - 9:00 PM<br />
-                  Fri: 7:00 AM - 3:00 PM<br />
-                  Sat: Closed
+                <div itemProp="openingHours" content="Mo-Sa 08:00-20:00">
+                  Mon-Sat: 8:00 AM - 8:00 PM<br />
+                  Sun: Emergency Service Only
                 </div>
               </div>
             </div>
@@ -203,8 +201,8 @@ export default function NAPComponent({
         )}
 
         <div className="flex items-start gap-4">
-          <div className="bg-blue-100 rounded-full p-3">
-            <MapPin className="h-6 w-6 text-blue-600" />
+          <div className="bg-purple-100 rounded-full p-3">
+            <MapPin className="h-6 w-6 text-purple-600" />
           </div>
           <div>
             <div className="text-sm text-gray-500 font-medium mb-1">Our Location</div>
@@ -236,15 +234,11 @@ export default function NAPComponent({
             </div>
             <div>
               <div className="text-sm text-gray-500 font-medium mb-1">Business Hours</div>
-              <div className="text-gray-900" itemProp="openingHours" content="Su-We 07:00-20:00, Th 07:00-21:00, Fr 07:00-15:00">
-                <div>Sunday - Wednesday</div>
-                <div className="font-semibold">7:00 AM - 8:00 PM</div>
-                <div className="mt-2">Thursday</div>
-                <div className="font-semibold">7:00 AM - 9:00 PM</div>
-                <div className="mt-2">Friday</div>
-                <div className="font-semibold">7:00 AM - 3:00 PM</div>
-                <div className="mt-2">Saturday</div>
-                <div className="font-semibold">Closed</div>
+              <div className="text-gray-900" itemProp="openingHours" content="Mo-Sa 08:00-20:00">
+                <div>Monday - Saturday</div>
+                <div className="font-semibold">8:00 AM - 8:00 PM</div>
+                <div className="mt-2">Sunday</div>
+                <div className="font-semibold">Emergency Service Only</div>
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ const features = [
   {
     icon: <Shield className="h-10 w-10 text-primary" />,
     title: "Licensed & Insured",
-    description: "Maryland licensed (Registry #413), bonded, and fully insured. All technicians carry valid state credentials.",
+    description: "Maryland licensed (Registry #4920), bonded, and fully insured. All technicians carry valid state credentials.",
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
@@ -18,7 +18,7 @@ const features = [
   {
     icon: <Award className="h-10 w-10 text-primary" />,
     title: "Top-Rated Service",
-    description: "4.9/5 rating based on 100+ verified reviews across Google and Thumbtack from actual customers in Annapolis.",
+    description: "4.9/5 rating based on 60+ verified Google reviews from actual customers in Annapolis.",
   },
   {
     icon: <ThumbsUp className="h-10 w-10 text-primary" />,

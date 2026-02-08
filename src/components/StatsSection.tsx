@@ -13,7 +13,7 @@ const stats = [
     number: "4.9/5",
     label: "Top-Rated",
     icon: <Users className="h-8 w-8 text-primary" />,
-    description: "Based on 100+ verified reviews"
+    description: "Based on 60+ verified reviews"
   },
   {
     number: "20-Min",
@@ -22,7 +22,7 @@ const stats = [
     description: "Fast emergency service"
   },
   {
-    number: "#413",
+    number: "#4920",
     label: "MD Registry",
     icon: <Shield className="h-8 w-8 text-primary" />,
     description: "Licensed & insured"
