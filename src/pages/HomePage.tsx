@@ -12,7 +12,7 @@ import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star } from 'lucide-react';
+import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { CONTACT } from '@/utils/contact';
 import {
@@ -34,7 +34,7 @@ const services = [
       "Smart Lock Upgrades (Keyless Entry)",
       "Rekeying Services"
     ],
-    href: "/services"
+    href: "/services/lock-change"
   },
   {
     icon: <Building2 className="h-6 w-6 text-white" />,
@@ -47,7 +47,7 @@ const services = [
       "Commercial Door Hardware",
       "Access Control Consultation"
     ],
-    href: "/services"
+    href: "/services/lock-repair"
   },
   {
     icon: <Car className="h-6 w-6 text-white" />,
@@ -60,9 +60,99 @@ const services = [
       "Ignition Repair & Key Extraction",
       "Transponder Keys"
     ],
-    href: "/services"
+    href: "/services/car-key-programming"
   }
 ];
+
+const serviceAreaLinks: { name: string; href: string }[][] = [
+  [
+    { name: "Annapolis", href: "/" },
+    { name: "Eastport", href: "/locations/eastport" },
+    { name: "Parole", href: "/locations/parole" },
+  ],
+  [
+    { name: "Severna Park", href: "/locations/severna-park" },
+    { name: "Arnold", href: "/locations/arnold" },
+    { name: "Cape St. Claire", href: "/locations/cape-st-claire" },
+    { name: "Broadneck", href: "/locations/broadneck" },
+  ],
+  [
+    { name: "Edgewater", href: "/locations/edgewater" },
+    { name: "Mayo", href: "/locations/mayo" },
+    { name: "Hillsmere Shores", href: "/locations/hillsmere-shores" },
+    { name: "Bay Ridge", href: "/locations/bay-ridge" },
+  ],
+  [
+    { name: "Crownsville", href: "/locations/crownsville" },
+    { name: "Riva", href: "/locations/riva" },
+  ],
+];
+
+const areaLabels = ["Central Annapolis:", "North:", "South:", "West:"];
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "A Secure Annapolis Locksmith",
+  "url": "https://www.asecureannapolislocksmith.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.asecureannapolislocksmith.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Locksmith",
+  "provider": {
+    "@type": "Locksmith",
+    "@id": "https://www.asecureannapolislocksmith.com/#locksmith",
+    "name": "A Secure Annapolis Locksmith",
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Maryland",
+    "containsPlace": [
+      { "@type": "City", "name": "Annapolis" },
+      { "@type": "City", "name": "Severna Park" },
+      { "@type": "City", "name": "Arnold" },
+      { "@type": "City", "name": "Edgewater" },
+      { "@type": "City", "name": "Crownsville" },
+      { "@type": "City", "name": "Riva" },
+      { "@type": "City", "name": "Mayo" },
+      { "@type": "City", "name": "Eastport" },
+      { "@type": "City", "name": "Bay Ridge" },
+      { "@type": "City", "name": "Hillsmere Shores" },
+      { "@type": "City", "name": "Cape St. Claire" },
+      { "@type": "City", "name": "Broadneck" },
+      { "@type": "City", "name": "Parole" },
+    ],
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Locksmith Services in Annapolis MD",
+    "itemListElement": [
+      { "@type": "OfferCatalog", "name": "Emergency Lockout Service", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "House Lockout Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Lockout Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Lockout Annapolis" } },
+      ]},
+      { "@type": "OfferCatalog", "name": "Residential Locksmith", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lock Change Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lock Rekey Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart Lock Installation Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deadbolt Installation Annapolis" } },
+      ]},
+      { "@type": "OfferCatalog", "name": "Automotive Locksmith", "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Key Replacement Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Key Programming Annapolis" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Transponder Key Annapolis" } },
+      ]},
+    ],
+  },
+};
 
 const faqs = [
   {
@@ -147,10 +237,14 @@ export default function HomePage() {
       </Helmet>
       <LocalBusinessSchema page="home" />
       <FAQSchema faqs={faqs} />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+      </Helmet>
       <HeroSection />
       <TrustedBySection />
 
-      <article className="py-16 bg-white" itemScope itemType="https://schema.org/Article">
+      <section className="py-16 bg-white" aria-label="About A Secure Annapolis Locksmith">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -163,18 +257,18 @@ export default function HomePage() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-4">
-                When you're locked out in <strong>Annapolis, MD</strong>, need your locks changed, or want to upgrade your home or business security, you shouldn't have to settle for anything less than fast, honest, and professional service. As a <strong>locally owned locksmith based at 222 Severn Ave in Annapolis</strong>, we've been serving our neighbors for over 15 years with a reputation built on honesty, transparency, and fair pricing.
+                When you're locked out in <strong>Annapolis, MD</strong>, need your <Link to="/services/lock-change" className="text-primary hover:underline">locks changed</Link>, or want to upgrade your home or business security, you shouldn't have to settle for anything less than fast, honest, and professional service. As a <strong>locally owned locksmith based at 222 Severn Ave in Annapolis</strong>, we've been serving our neighbors for over 15 years with a reputation built on honesty, transparency, and fair pricing.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <strong>Eastport</strong>, <strong>Bay Ridge</strong>, <strong>Hillsmere Shores</strong>, <strong>Severna Park</strong>, and <strong>Edgewater</strong>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
+                Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <Link to="/locations/eastport" className="text-primary hover:underline font-semibold">Eastport</Link>, <Link to="/locations/bay-ridge" className="text-primary hover:underline font-semibold">Bay Ridge</Link>, <Link to="/locations/hillsmere-shores" className="text-primary hover:underline font-semibold">Hillsmere Shores</Link>, <Link to="/locations/severna-park" className="text-primary hover:underline font-semibold">Severna Park</Link>, and <Link to="/locations/edgewater" className="text-primary hover:underline font-semibold">Edgewater</Link>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
               </p>
               <p className="text-lg leading-relaxed">
-                Every residential and commercial lock change comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward locksmith services at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over 100 combined reviews</strong>.
+                Every residential and commercial <Link to="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward <Link to="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over {allReviews.length} combined reviews</strong>.
               </p>
             </div>
           </motion.div>
         </div>
-      </article>
+      </section>
 
       <StatsSection />
       <FeatureSection />
@@ -393,78 +487,31 @@ export default function HomePage() {
                 We provide mobile locksmith services throughout <strong>Anne Arundel County</strong>. From the <strong>City Dock</strong> to <strong>Severna Park</strong>, we're your trusted local locksmith experts with 20-minute average response times.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-lg text-primary">Central Annapolis:</h3>
-                  <ul className="space-y-2">
-                    {["Annapolis", "Eastport", "Parole"].map((area, index) => (
-                      <motion.li
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex items-center text-base"
-                      >
-                        <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                        {area}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-lg text-primary">North:</h3>
-                  <ul className="space-y-2">
-                    {["Severna Park", "Arnold", "Cape St. Claire", "Broadneck"].map((area, index) => (
-                      <motion.li
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex items-center text-base"
-                      >
-                        <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                        {area}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-lg text-primary">South:</h3>
-                  <ul className="space-y-2">
-                    {["Edgewater", "Mayo", "Hillsmere Shores", "Bay Ridge"].map((area, index) => (
-                      <motion.li
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.4 }}
-                        className="flex items-center text-base"
-                      >
-                        <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                        {area}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h3 className="font-semibold text-lg text-primary">West:</h3>
-                  <ul className="space-y-2">
-                    {["Crownsville", "Riva"].map((area, index) => (
-                      <motion.li
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 + 0.4 }}
-                        className="flex items-center text-base"
-                      >
-                        <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                        {area}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
+                {serviceAreaLinks.map((group, gi) => (
+                  <div key={gi} className="space-y-4">
+                    <h3 className="font-semibold text-lg text-primary">{areaLabels[gi]}</h3>
+                    <ul className="space-y-2">
+                      {group.map((area, index) => (
+                        <motion.li
+                          key={area.name}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 + gi * 0.15 }}
+                          className="flex items-center text-base"
+                        >
+                          <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
+                          <Link
+                            to={area.href}
+                            className="hover:text-primary transition-colors hover:underline"
+                          >
+                            {area.name}
+                          </Link>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
               <Button size="lg" className="w-full md:w-auto" asChild>
                 <a href={`tel:${CONTACT.PHONE}`} className="flex items-center justify-center">
@@ -576,6 +623,136 @@ export default function HomePage() {
                 </details>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white" aria-label="Locksmith services by neighborhood in Annapolis">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+              Your Neighborhood Locksmith in Anne Arundel County
+            </h2>
+            <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-10">
+              Whether you need an <Link to="/services/emergency-lockout" className="text-primary hover:underline">emergency lockout</Link> in <Link to="/locations/eastport" className="text-primary hover:underline">Eastport</Link>, a <Link to="/services/lock-rekey" className="text-primary hover:underline">lock rekey</Link> in <Link to="/locations/severna-park" className="text-primary hover:underline">Severna Park</Link>, or <Link to="/services/car-key-programming" className="text-primary hover:underline">car key programming</Link> in <Link to="/locations/arnold" className="text-primary hover:underline">Arnold</Link> -- we come to you. Our mobile locksmith service means no towing, no waiting at a shop, and no inflated prices.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { area: "Annapolis (21401/21403)", services: ["Lock Change", "Emergency Lockout", "Car Key Programming"], href: "/" },
+                { area: "Severna Park (21146)", services: ["Residential Rekeying", "Smart Lock Install", "Deadbolt Upgrade"], href: "/locations/severna-park" },
+                { area: "Arnold (21012)", services: ["Lock Repair", "Emergency Lockout", "Key Replacement"], href: "/locations/arnold" },
+                { area: "Edgewater (21037)", services: ["Lock Change", "Home Security Upgrade", "Car Lockout"], href: "/locations/edgewater" },
+                { area: "Eastport", services: ["Emergency Lockout", "Lock Replacement", "Rekey Service"], href: "/locations/eastport" },
+                { area: "Crownsville (21032)", services: ["Residential Locksmith", "Commercial Locks", "Lock Repair"], href: "/locations/crownsville" },
+              ].map((loc) => (
+                <Link
+                  key={loc.area}
+                  to={loc.href}
+                  className="block p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-primary/30 transition-all group"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
+                    <h3 className="font-bold text-slate-900 group-hover:text-primary transition-colors">
+                      {loc.area}
+                    </h3>
+                  </div>
+                  <ul className="space-y-1">
+                    {loc.services.map((s) => (
+                      <li key={s} className="text-sm text-muted-foreground flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
+                        {s}
+                      </li>
+                    ))}
+                  </ul>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <Button variant="outline" size="lg" className="group" asChild>
+                <Link to="/locations">
+                  View All Service Areas
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section
+        className="py-12 bg-muted/30 border-t border-b"
+        aria-label="Business contact information"
+        itemScope
+        itemType="https://schema.org/Locksmith"
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+              <div className="flex items-start gap-3">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-primary" />
+                </div>
+                <address
+                  className="not-italic"
+                  itemProp="address"
+                  itemScope
+                  itemType="https://schema.org/PostalAddress"
+                >
+                  <p className="font-bold text-slate-900">A Secure Annapolis Locksmith</p>
+                  <p className="text-sm text-muted-foreground">
+                    <span itemProp="streetAddress">222 Severn Ave Ste 1 Building 7-6A</span><br />
+                    <span itemProp="addressLocality">Annapolis</span>, <span itemProp="addressRegion">MD</span>{' '}
+                    <span itemProp="postalCode">21403</span>
+                  </p>
+                </address>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Call Us Now</p>
+                  <a
+                    href={`tel:${CONTACT.PHONE}`}
+                    itemProp="telephone"
+                    className="text-primary font-semibold hover:underline"
+                  >
+                    {CONTACT.PHONE_DISPLAY}
+                  </a>
+                  <p className="text-xs text-muted-foreground mt-1">24/7 Emergency Service Available</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <p className="font-bold text-slate-900">Email</p>
+                  <a
+                    href={`mailto:${CONTACT.EMAIL}`}
+                    itemProp="email"
+                    className="text-sm text-primary hover:underline break-all"
+                  >
+                    {CONTACT.EMAIL}
+                  </a>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Serving <span itemProp="areaServed">Annapolis, MD &amp; Anne Arundel County</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <meta itemProp="name" content="A Secure Annapolis Locksmith" />
+            <meta itemProp="url" content="https://www.asecureannapolislocksmith.com" />
+            <meta itemProp="priceRange" content="$$" />
+            <span className="hidden" itemProp="geo" itemScope itemType="https://schema.org/GeoCoordinates">
+              <meta itemProp="latitude" content="38.978764" />
+              <meta itemProp="longitude" content="-76.492786" />
+            </span>
           </div>
         </div>
       </section>
