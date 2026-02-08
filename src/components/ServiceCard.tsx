@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 interface ServiceCardProps {
@@ -24,23 +25,6 @@ const ServiceCard = React.memo(({ icon, title, description, features, image, hre
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
 
-  // Generate responsive Cloudinary URL
-  const getResponsiveImage = (url: string) => {
-    // For Unsplash images, use their built-in responsive parameters
-    if (url.includes('unsplash.com')) {
-      const baseUrl = url.split('?')[0];
-      return {
-        small: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        medium: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
-        large: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80`
-      };
-    }
-    // Fallback for other image sources
-    return { small: url, medium: url, large: url };
-  };
-
-  const responsiveImage = getResponsiveImage(image);
-
   return (
     <motion.div
       whileHover={{ y: -5 }}
@@ -53,19 +37,12 @@ const ServiceCard = React.memo(({ icon, title, description, features, image, hre
         onMouseLeave={handleMouseLeave}
       >
         <div className="relative w-full h-0 pb-[120%]">
-          <img
-            src={responsiveImage.medium}
-            srcSet={`
-              ${responsiveImage.small} 800w,
-              ${responsiveImage.medium} 1200w,
-              ${responsiveImage.large} 1600w
-            `}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          <Image
+            src={image}
             alt={`${title} locksmith service in Annapolis MD`}
-            width="1200"
-            height="1440"
-            className="absolute inset-0 w-full h-full object-cover"
-            loading="lazy"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
           <div className="absolute bottom-10 left-10 right-10">

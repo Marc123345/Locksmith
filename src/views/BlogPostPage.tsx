@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams, notFound } from 'next/navigation';
 import { Calendar, MapPin, Tag, ArrowLeft, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -198,10 +199,13 @@ const BlogPostPage = () => {
 
           {post.featured_image && (
             <div className="relative rounded-xl overflow-hidden mb-8 h-[400px] md:h-[500px]">
-              <img
+              <Image
                 src={post.featured_image}
                 alt={post.title}
-                className="absolute top-0 left-0 w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 896px"
+                className="object-cover"
+                priority
               />
             </div>
           )}

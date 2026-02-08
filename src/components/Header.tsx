@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, MapPin, Home, Car, Wrench, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -168,14 +169,13 @@ export const Header = () => {
               onClick={closeMenu}
               aria-label="A Secure Annapolis Locksmith Home"
             >
-              <img
+              <Image
                 src="https://i.imgur.com/VfpMzbE.png"
                 alt="A Secure Annapolis Locksmith Logo"
-                width="200"
-                height="64"
+                width={200}
+                height={64}
                 className="h-12 w-auto md:h-16"
-                loading="eager"
-                fetchPriority="high"
+                priority
               />
             </Link>
 

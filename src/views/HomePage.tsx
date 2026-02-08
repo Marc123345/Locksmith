@@ -19,6 +19,7 @@ import ServiceFAQClusters from '@/components/ServiceFAQClusters';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star, Mail, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -372,12 +373,13 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
             >
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                 alt="Google Business reviews for A Secure Annapolis Locksmith"
+                width={20}
+                height={20}
                 className="h-5 w-5"
-                width="20"
-                height="20"
+                unoptimized
               />
               <div className="flex items-center gap-1.5">
                 <div className="flex gap-0.5">
@@ -395,12 +397,12 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
             >
-              <img
+              <Image
                 src="https://ik.imagekit.io/qcvroy8xpd/AxTr5f31u3m9vy4eluHPs76N6gbG0xQ8Eq+XAAj1HnGx3oevn+5KaCroNdUzTlDiM8CMqYLdqQ5noPJ3fkQ3PwO5pdGXPL3atcBHaHcKmlBUQv09+b1jrlIvhw+tvUJ+UGUs6hJEIaP0dkmHz8WmW1180f9ngOIL9OHECdU2CTIJ0ICVQtyjxi5hAdxyOj53sehc35L1JDQnKit+BSAAAAAElFTkSuQmCC.png"
                 alt="Thumbtack reviews for A Secure Annapolis Locksmith"
+                width={20}
+                height={20}
                 className="h-5 w-5"
-                width="20"
-                height="20"
               />
               <div className="flex items-center gap-1.5">
                 <div className="flex gap-0.5">

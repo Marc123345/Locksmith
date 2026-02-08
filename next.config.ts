@@ -2,6 +2,16 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   distDir: 'build',
+  images: {
+    remotePatterns: [
+      { hostname: 'i.imgur.com' },
+      { hostname: 'ik.imagekit.io' },
+      { hostname: 'res.cloudinary.com' },
+      { hostname: 'upload.wikimedia.org' },
+      { hostname: 'www.gstatic.com' },
+      { hostname: 'images.unsplash.com' },
+    ],
+  },
   async redirects() {
     return [
       {

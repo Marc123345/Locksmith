@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check, ArrowRight, Clock, Shield, BadgeCheck, MapPin, Phone, Lock, PenTool as Tool, Key, Home, Building2, Car, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { CONTACT } from "@/utils/contact";
 import ServiceCard from "@/components/ServiceCard";
@@ -155,10 +156,13 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://ik.imagekit.io/qcvroy8xpd/image-gen%20(10)_2aUBb2W0k.png?tr=f-auto,q-auto"
             alt="Professional locksmith services"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
         </div>

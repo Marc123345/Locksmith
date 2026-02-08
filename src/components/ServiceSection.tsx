@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Home, Building, Car, AlertTriangle, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -68,26 +69,10 @@ const ServiceSection = () => {
     setActiveService(activeService === serviceKey ? null : serviceKey);
   };
 
-  // Generate responsive Cloudinary URL
-  const getResponsiveImage = (url: string) => {
-    // For Unsplash images, use their built-in responsive parameters
-    if (url.includes('unsplash.com')) {
-      const baseUrl = url.split('?')[0];
-      return {
-        small: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`,
-        medium: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
-        large: `${baseUrl}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80`
-      };
-    }
-    // Fallback for other image sources
-    return { small: url, medium: url, large: url };
-  };
-
   return (
     <div className="space-y-8">
       {Object.entries(services).map(([key, service]) => {
         const isActive = activeService === key;
-        const responsiveImage = getResponsiveImage(service.image);
 
         return (
           <div
@@ -160,17 +145,12 @@ const ServiceSection = () => {
                   
                   <div className="rounded-xl overflow-hidden shadow-lg order-1 lg:order-2">
                     <div className="relative w-full h-0 pb-[120%]">
-                      <img 
-                        src={responsiveImage.medium}
-                        srcSet={`
-                          ${responsiveImage.small} 1000w,
-                          ${responsiveImage.medium} 1200w,
-                          ${responsiveImage.large} 1400w
-                        `}
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                      <Image
+                        src={service.image}
                         alt={`${service.title} illustration`}
-                        className="absolute inset-0 w-full h-full object-cover"
-                        loading="lazy"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                        className="object-cover"
                       />
                       <div 
                         className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"

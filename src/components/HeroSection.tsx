@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Shield, Clock, MapPin, Star, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { CONTACT } from "@/utils/contact";
 
@@ -27,14 +28,13 @@ export const HeroSection = () => {
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-white pt-20">
       {/* Background with optimized visibility */}
       <div className="absolute inset-0 w-full h-full">
-        <img
+        <Image
           src="https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto"
           alt="Professional locksmith working on a lock in Annapolis MD"
-          className="object-cover w-full h-full opacity-50 select-none scale-105"
-          loading="eager"
-          fetchPriority="high"
-          width="1920"
-          height="1080"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-50 select-none scale-105"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/20 to-white" />
       </div>
@@ -58,13 +58,13 @@ export const HeroSection = () => {
           <motion.div variants={itemVariants} className="flex flex-col items-center mb-12">
             <div className="inline-flex items-center gap-6 px-6 py-4 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-transform hover:scale-[1.02]">
               <div className="flex flex-col items-start border-r border-slate-200 pr-6">
-                <img 
-                  src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" 
-                  alt="Google" 
-                  className="h-5 mb-1"
-                  width="74"
-                  height="24"
-                  loading="eager"
+                <Image
+                  src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+                  alt="Google"
+                  width={74}
+                  height={24}
+                  className="h-5 mb-1 w-auto"
+                  unoptimized
                 />
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Verified Business</span>
               </div>

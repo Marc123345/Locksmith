@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Phone, MapPin, Clock } from "lucide-react";
 import { CONTACT } from "@/utils/contact";
 
@@ -10,13 +11,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4 lg:col-span-2">
             <Link href="/" className="inline-block hover:opacity-80 transition-opacity" aria-label="Return to homepage">
-              <img
+              <Image
                 src="https://i.imgur.com/VfpMzbE.png"
                 alt="A Secure Annapolis Locksmith Logo"
-                width="200"
-                height="64"
+                width={200}
+                height={64}
                 className="h-16 w-auto"
-                loading="lazy"
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">

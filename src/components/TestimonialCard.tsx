@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Star, Quote, BadgeCheck } from "lucide-react";
 import { motion } from "framer-motion";
@@ -73,13 +74,13 @@ const TestimonialCard = ({
             </div>
             <div className="text-right">
               <div className="flex items-center text-sm text-muted-foreground">
-                <img
+                <Image
                   src={source === "Google" ? "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" : "https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg"}
                   alt={`${source} review platform logo`}
-                  width="16"
-                  height="16"
+                  width={16}
+                  height={16}
                   className="h-4 w-4 mr-1"
-                  loading="lazy"
+                  unoptimized
                 />
                 {source}
               </div>

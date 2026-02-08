@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, ArrowRight, Shield, BadgeCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from "framer-motion";
 import { CONTACT } from "@/utils/contact";
 import MapComponent from "@/components/GoogleMap";
@@ -121,10 +122,13 @@ export default function ContactPage() {
     <>
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="https://ik.imagekit.io/qcvroy8xpd/image-gen%20(5)_KvdECyJQ5g.jpg?tr=f-auto,q-auto"
             alt="Professional locksmith service"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/60" />
         </div>
