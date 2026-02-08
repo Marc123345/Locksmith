@@ -2,5 +2,6 @@
   "/page": "app/page.js",
   "/about/page": "app/about/page.js",
   "/locations/severna-park/page": "app/locations/severna-park/page.js",
-  "/locations/cape-st-claire/page": "app/locations/cape-st-claire/page.js"
+  "/locations/cape-st-claire/page": "app/locations/cape-st-claire/page.js",
+  "/contact/page": "app/contact/page.js"
 }
