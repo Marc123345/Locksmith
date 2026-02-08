@@ -100,7 +100,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Service Areas</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/locations/annapolis" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Annapolis, MD
                 </Link>
               </li>

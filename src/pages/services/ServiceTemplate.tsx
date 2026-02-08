@@ -45,7 +45,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
     {
       title: 'Annapolis Locksmith',
       description: 'Local locksmith services in downtown Annapolis and Eastport',
-      href: '/locations/annapolis',
+      href: '/',
       type: 'location' as const
     },
     {

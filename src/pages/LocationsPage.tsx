@@ -74,7 +74,7 @@ export default function LocationsPage() {
                   variants={itemVariants}
                 >
                   <Link
-                    to={`/locations/${location.slug}`}
+                    to={location.slug === 'annapolis' ? '/' : `/locations/${location.slug}`}
                     className="block group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all p-6 border border-gray-100 hover:-translate-y-1"
                   >
                     <div className="flex items-start justify-between mb-4">

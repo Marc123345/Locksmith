@@ -46,7 +46,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
     {
       title: 'Annapolis Locksmith',
       description: 'Professional locksmith services in downtown Annapolis and Eastport',
-      href: '/locations/annapolis',
+      href: '/',
       type: 'location' as const
     },
     {

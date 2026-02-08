@@ -7,7 +7,7 @@ import { useScroll } from "@/hooks/useScroll";
 import { CONTACT } from "@/utils/contact";
 
 const locationLinks = [
-  { name: "Annapolis, MD", href: "/locations/annapolis" },
+  { name: "Annapolis, MD", href: "/" },
   { name: "Arnold, MD", href: "/locations/arnold" },
   { name: "Bay Ridge, MD", href: "/locations/bay-ridge" },
   { name: "Broadneck, MD", href: "/locations/broadneck" },
@@ -54,7 +54,7 @@ const locationCategories = [
   {
     title: "Central Annapolis",
     locations: [
-      { name: "Annapolis", href: "/locations/annapolis" },
+      { name: "Annapolis", href: "/" },
       { name: "Eastport", href: "/locations/eastport" },
       { name: "Parole", href: "/locations/parole" },
       { name: "Bay Ridge", href: "/locations/bay-ridge" },
