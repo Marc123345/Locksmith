@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   webpack: (config) => {
     return config;
   },
+  experimental: {
+    turbo: undefined,
+  },
   images: {
     remotePatterns: [
       { hostname: 'i.imgur.com' },
