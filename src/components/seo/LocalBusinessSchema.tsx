@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { CONTACT } from '@/utils/contact';
-import { allReviews, THUMBTACK_URL } from '@/data/reviews';
+import { allReviews, THUMBTACK_URL, GOOGLE_BUSINESS_URL } from '@/data/reviews';
 
 interface LocalBusinessSchemaProps {
   page?: 'home' | 'location' | 'service';
@@ -40,17 +39,12 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
     "@type": "Locksmith",
     "@id": "https://www.asecureannapolislocksmith.com/#locksmith",
     "name": "A Secure Annapolis Locksmith",
-    "alternateName": "A Secure Locksmith",
-    "description": "Professional locksmith services in Annapolis, MD and Anne Arundel County. Rated 4.9 stars on Google and Thumbtack. 24/7 emergency lockout service, residential, commercial, and automotive locksmith solutions. Licensed, insured, and locally owned since 2010.",
-    "url": "https://www.asecureannapolislocksmith.com",
-    "logo": "https://www.asecureannapolislocksmith.com/logo.png",
-    "image": [
-      "https://www.asecureannapolislocksmith.com/images/locksmith-service.jpg",
-      "https://www.asecureannapolislocksmith.com/images/emergency-lockout.jpg",
-      "https://www.asecureannapolislocksmith.com/images/lock-installation.jpg",
-    ],
-    "telephone": CONTACT.PHONE_DISPLAY,
-    "email": CONTACT.EMAIL,
+    "url": "https://www.asecureannapolislocksmith.com/",
+    "image": "https://www.asecureannapolislocksmith.com/path-to-your-logo.png",
+    "description": "Licensed, insured Annapolis locksmith providing residential, commercial and automotive locksmith services with 20-minute response times across Anne Arundel County.",
+    "telephone": "+1-410-849-6069",
+    "email": "asecureannapolislocksmithllc@gmail.com",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
@@ -61,9 +55,19 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 38.978764,
-      "longitude": -76.492786,
+      "latitude": 38.9729,
+      "longitude": -76.4810,
     },
+    "areaServed": [
+      { "@type": "City", "name": "Annapolis" },
+      { "@type": "AdministrativeArea", "name": "Anne Arundel County" },
+      { "@type": "Place", "name": "Eastport, MD" },
+      { "@type": "Place", "name": "Severna Park, MD" },
+      { "@type": "Place", "name": "Arnold, MD" },
+      { "@type": "Place", "name": "Edgewater, MD" },
+      { "@type": "Place", "name": "Bay Ridge, MD" },
+      { "@type": "Place", "name": "Hillsmere Shores, MD" },
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -84,167 +88,113 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
         "closes": "14:30",
       },
     ],
-    "priceRange": "$$",
-    "paymentAccepted": ["Cash", "Credit Card", "Apple Pay", "Square Cash App", "Zelle"],
-    "currenciesAccepted": "USD",
-    "areaServed": [
-      { "@type": "City", "name": "Annapolis", "containedIn": { "@type": "State", "name": "Maryland" } },
-      { "@type": "City", "name": "Arnold" },
-      { "@type": "City", "name": "Severna Park" },
-      { "@type": "City", "name": "Edgewater" },
-      { "@type": "City", "name": "Crownsville" },
-      { "@type": "City", "name": "Parole" },
-      { "@type": "City", "name": "Riva" },
-      { "@type": "City", "name": "Mayo" },
-      { "@type": "City", "name": "Eastport" },
-      { "@type": "City", "name": "Bay Ridge" },
-      { "@type": "City", "name": "Hillsmere Shores" },
-      { "@type": "City", "name": "Cape St. Claire" },
-      { "@type": "City", "name": "Broadneck" },
+    "foundingDate": "2010",
+    "founder": {
+      "@type": "Person",
+      "name": "Royi Mazor",
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Royi Mazor",
+      },
     ],
     "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 38.978764,
-        "longitude": -76.492786,
-      },
-      "geoRadius": "25000",
+      "@type": "AdministrativeArea",
+      "name": "Anne Arundel County, Maryland",
     },
+    "sameAs": [
+      GOOGLE_BUSINESS_URL,
+      THUMBTACK_URL,
+      "https://www.mapquest.com/us/maryland/a-secure-annapolis-locksmith-778450963",
+      "https://www.bbb.org/us/md/annapolis/profile/locksmith/a-secure-annapolis-locksmith-llc-0011-90336421",
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Locksmith Services in Annapolis MD",
+      "name": "Locksmith Services",
       "itemListElement": [
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Emergency Lockout Service in Annapolis",
-            "description": "24/7 emergency locksmith service for home, car, and business lockouts in Annapolis, MD and Anne Arundel County",
-          },
+          "@type": "OfferCatalog",
+          "name": "Residential Locksmith",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Emergency House Lockout",
+                "areaServed": "Annapolis, MD",
+              },
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Lock Change & Rekey",
+                "areaServed": "Annapolis, MD",
+              },
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Deadbolt & Smart Lock Installation",
+                "areaServed": "Annapolis, MD",
+              },
+            },
+          ],
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Residential Locksmith Annapolis",
-            "description": "Home lock installation, rekeying, repair, and smart lock upgrades for Annapolis homeowners",
-          },
+          "@type": "OfferCatalog",
+          "name": "Commercial Locksmith",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Master Key Systems",
+                "areaServed": "Anne Arundel County, MD",
+              },
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "High-Security Lock Installation",
+                "areaServed": "Anne Arundel County, MD",
+              },
+            },
+          ],
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial Locksmith Annapolis",
-            "description": "Business security systems, master key systems, and access control for Annapolis businesses",
-          },
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Automotive Locksmith Annapolis",
-            "description": "Car key replacement, programming, and vehicle lockout service in Annapolis MD",
-          },
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Lock Rekeying Annapolis",
-            "description": "Professional lock rekeying service for Annapolis homes and businesses",
-          },
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Lock Change Annapolis",
-            "description": "Lock change and new lock installation including deadbolts and smart locks with 3-month warranty",
-          },
+          "@type": "OfferCatalog",
+          "name": "Automotive Locksmith",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Car Key Replacement & Programming",
+                "areaServed": "Annapolis, MD",
+              },
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Emergency Vehicle Unlocking",
+                "areaServed": "Annapolis, MD",
+              },
+            },
+          ],
         },
       ],
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": String(allReviews.length),
-      "bestRating": "5",
-      "worstRating": "1",
+      "reviewCount": "100",
     },
     "review": schemaReviews,
-    "sameAs": [
-      THUMBTACK_URL,
-      "https://www.facebook.com/asecureannapolis",
-      "https://www.yelp.com/biz/a-secure-annapolis-locksmith",
-    ],
-    "hasMap": "https://www.google.com/maps/place/A+Secure+Annapolis+Locksmith/@38.9726944,-76.4834868,17z",
-    "slogan": "Your Trusted Local Locksmith in Annapolis, MD and Anne Arundel County",
-    "foundingDate": "2010",
-    "founder": {
-      "@type": "Person",
-      "name": "Yuli Mazor",
-    },
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "value": 3,
-    },
-    "knowsAbout": [
-      "Locksmith Services",
-      "Emergency Lockout",
-      "Lock Rekeying",
-      "Key Duplication",
-      "Smart Locks",
-      "High Security Locks",
-      "Master Key Systems",
-      "Access Control",
-      "Automotive Locksmith",
-      "Residential Locksmith",
-      "Commercial Locksmith",
-      "Lock Change",
-      "Deadbolt Installation",
-      "Car Key Programming",
-      "Door Lock Repair",
-    ],
-    "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "Associated Locksmiths of America",
-      },
-    ],
-    "hasCredential": [
-      {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional License",
-        "name": "Maryland Locksmith License",
-        "recognizedBy": {
-          "@type": "Organization",
-          "name": "State of Maryland",
-        },
-      },
-    ],
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "name": "3-Month Warranty on Lock Changes",
-        "description": "Every residential and commercial lock change comes with a 3-month warranty. If something isn't right, we make it right at no cost.",
-        "warranty": {
-          "@type": "WarrantyPromise",
-          "durationOfWarranty": {
-            "@type": "QuantitativeValue",
-            "value": 90,
-            "unitCode": "DAY",
-          },
-        },
-      },
-    ],
-    "additionalProperty": [
-      { "@type": "PropertyValue", "name": "Response Time", "value": "20 minutes average" },
-      { "@type": "PropertyValue", "name": "Emergency Service", "value": "24/7 Available" },
-      { "@type": "PropertyValue", "name": "Service Type", "value": "Mobile Locksmith Service" },
-      { "@type": "PropertyValue", "name": "Background Check", "value": "All technicians background checked" },
-      { "@type": "PropertyValue", "name": "Top Pro Status", "value": "Thumbtack Top Pro 2025" },
-    ],
   };
 
   if (locationName && page === 'location') {
