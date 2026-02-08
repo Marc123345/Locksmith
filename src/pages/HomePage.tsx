@@ -14,6 +14,13 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { CONTACT } from '@/utils/contact';
+import {
+  allReviews,
+  googleReviews,
+  THUMBTACK_URL,
+  GOOGLE_BUSINESS_URL,
+} from '@/data/reviews';
 
 const services = [
   {
@@ -57,89 +64,34 @@ const services = [
   }
 ];
 
-const THUMBTACK_URL = "https://www.thumbtack.com/md/annapolis/locksmiths/secure-annapolis-locksmith/service/550518270306156552";
-
-const testimonials = [
-  {
-    name: "Jen Jamison",
-    location: "Annapolis, MD",
-    rating: 5,
-    testimonial: "Dispatch was courteous and super helpful, I knew the price and the time my tech was expected to arrive. I was at work and had lost my only key to my vehicle, and commute across the bridge for work so I was panicked.",
-    date: "1 year ago",
-    source: "Google",
-    verified: true
-  },
-  {
-    name: "Tanika W.",
-    location: "Annapolis, MD",
-    rating: 5,
-    testimonial: "Quality and value of work was great. Also, he was in time, responded very quickly, and was very professional dressed in his logo polo shirt.",
-    date: "Aug 2025",
-    source: "Thumbtack",
-    verified: true
-  },
-  {
-    name: "Caitlin B.",
-    location: "Annapolis, MD",
-    rating: 5,
-    testimonial: "Professional, punctual and fast. I highly recommend. Price was also reasonable.",
-    date: "Sep 2025",
-    source: "Thumbtack",
-    verified: true
-  },
-  {
-    name: "Malorie",
-    location: "Annapolis, MD",
-    rating: 5,
-    testimonial: "I highly recommend A Secure Annapolis Locksmith! They were by far the most responsive and efficient company I spoke to when I needed to replace my lock. Very easy to work with and reasonably priced.",
-    date: "1 year ago",
-    source: "Google",
-    verified: true
-  },
-  {
-    name: "Raven J.",
-    location: "Annapolis, MD",
-    rating: 5,
-    testimonial: "Absolutely amazing! On time, friendly, respectful and did amazing work.",
-    date: "Jul 2025",
-    source: "Thumbtack",
-    verified: true
-  },
-  {
-    name: "Desiree Henningsen",
-    location: "Annapolis, MD",
-    rating: 5,
-    testimonial: "After calling another local locksmith and getting an estimate of 90 minutes and a hefty $149 price tag, I called A Secure. They quoted me $95 and were at my car in 15 minutes! Chris was professional, efficient, and quick!",
-    date: "2 years ago",
-    source: "Google",
-    verified: true
-  }
-];
-
 const faqs = [
   {
     question: "Are you licensed to operate in Maryland?",
     answer: "Yes, we are fully licensed by the State of Maryland, bonded, and insured. All our technicians undergo background checks and maintain proper credentials."
   },
   {
-    question: "How quickly can you respond to an emergency lockout?",
-    answer: "We provide 20-minute average response times for emergency lockouts in the Annapolis area. We dispatch the nearest available technician to minimize your wait time."
+    question: "How quickly can you respond to an emergency lockout in Annapolis?",
+    answer: "We provide 20-minute average response times for emergency lockouts in the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole. We dispatch the nearest available technician to minimize your wait time."
   },
   {
     question: "Do you charge extra for after-hours service?",
     answer: "We provide transparent, upfront pricing before we start any work. While emergency service rates may apply outside regular business hours, you'll know the cost before we begin."
   },
   {
-    question: "What areas do you serve?",
+    question: "What areas in Anne Arundel County do you serve?",
     answer: "We serve all of Anne Arundel County including Annapolis, Severna Park, Arnold, Edgewater, Eastport, Parole, Crownsville, Riva, Mayo, Cape St. Claire, Broadneck, Hillsmere Shores, and Bay Ridge."
   },
   {
-    question: "Do you offer a warranty on your work?",
-    answer: "Yes, we provide a 90-day workmanship guarantee on all services. If the job isn't done right, we'll return and make it right at no additional charge."
+    question: "Do you offer a warranty on lock changes in Annapolis?",
+    answer: "Yes, every residential and commercial lock change comes with a 3-month warranty. If something isn't right, we'll make it right at no additional charge."
   },
   {
-    question: "Can you make keys for high-security locks and smart locks?",
+    question: "Can you work with high-security locks and smart locks?",
     answer: "Yes, our technicians are trained and equipped to work with high-security locks, smart locks, electronic access control systems, and traditional lock systems."
+  },
+  {
+    question: "How much does a locksmith cost in Annapolis, MD?",
+    answer: "Our service call fee starts at $39. Final pricing depends on the type of service needed. We always provide upfront pricing before starting any work -- no hidden fees or surprise charges."
   }
 ];
 
@@ -148,7 +100,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.05
     }
   }
 };
@@ -165,37 +117,40 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Locksmith Annapolis MD | Licensed & Insured | A Secure</title>
+        <title>Locksmith Annapolis MD | 4.9 Stars | Licensed & Insured | A Secure</title>
         <meta
           name="description"
-          content="Top-rated locksmith in Annapolis, MD -- 4.9 stars on Google & Thumbtack. Licensed, insured, locally owned since 2010. Emergency lockouts, lock changes, car keys. Call (410) 849-6069."
+          content="A Secure Annapolis Locksmith -- rated 4.9 stars across Google and Thumbtack. Licensed, insured, locally owned since 2010. Emergency lockouts, lock changes, rekeying, car keys. Serving Annapolis, MD and Anne Arundel County. Call (410) 849-6069."
         />
         <meta
           name="keywords"
-          content="locksmith Annapolis MD, Annapolis locksmith, emergency locksmith Annapolis, locksmith near me Annapolis, residential locksmith Annapolis MD, commercial locksmith Annapolis, car locksmith Annapolis, lock change Annapolis, rekey locks Annapolis, 24/7 locksmith Annapolis Maryland"
+          content="locksmith Annapolis MD, Annapolis locksmith, emergency locksmith Annapolis, locksmith near me Annapolis, residential locksmith Annapolis MD, commercial locksmith Annapolis, car locksmith Annapolis, lock change Annapolis, rekey locks Annapolis, 24/7 locksmith Annapolis Maryland, locksmith 21403, locksmith Anne Arundel County"
         />
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
-        {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.asecureannapolislocksmith.com/" />
-        <meta property="og:title" content="Locksmith Annapolis MD | Licensed & Insured | A Secure" />
-        <meta property="og:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
+        <meta property="og:title" content="Locksmith Annapolis MD | 4.9 Stars | A Secure Annapolis Locksmith" />
+        <meta property="og:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts. 4.9 stars on Google and Thumbtack." />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
+        <meta property="og:locale" content="en_US" />
 
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/" />
-        <meta property="twitter:title" content="Locksmith Annapolis MD | Licensed & Insured | A Secure" />
-        <meta property="twitter:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.asecureannapolislocksmith.com/" />
+        <meta name="twitter:title" content="Locksmith Annapolis MD | 4.9 Stars | A Secure Annapolis Locksmith" />
+        <meta name="twitter:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
+
+        <meta name="geo.region" content="US-MD" />
+        <meta name="geo.placename" content="Annapolis" />
+        <meta name="geo.position" content="38.978764;-76.492786" />
+        <meta name="ICBM" content="38.978764, -76.492786" />
       </Helmet>
       <LocalBusinessSchema page="home" />
       <FAQSchema faqs={faqs} />
       <HeroSection />
       <TrustedBySection />
 
-      {/* Introduction / About Snippet */}
-      <section className="py-16 bg-white">
+      <article className="py-16 bg-white" itemScope itemType="https://schema.org/Article">
         <div className="container mx-auto px-4">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -203,29 +158,30 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Annapolis's Trusted Local Locksmith Since 2010</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+              Annapolis's Trusted Local Locksmith -- Serving Your Neighborhood Since 2010
+            </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-4">
-                When you're locked out in Annapolis, need your locks changed, or want to upgrade your home or business security, you shouldn't have to settle for anything less than fast, honest, and professional service. As a <strong>locally owned locksmith based on Severn Ave in Annapolis</strong>, we've been serving our neighbors for over 15 years with a reputation built on transparency, fair pricing, and fast response times.
+                When you're locked out in <strong>Annapolis, MD</strong>, need your locks changed, or want to upgrade your home or business security, you shouldn't have to settle for anything less than fast, honest, and professional service. As a <strong>locally owned locksmith based at 222 Severn Ave in Annapolis</strong>, we've been serving our neighbors for over 15 years with a reputation built on honesty, transparency, and fair pricing.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Our technicians are fully trained, licensed, and insured -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> to <strong>Eastport</strong>, <strong>Bay Ridge</strong>, and <strong>Hillsmere Shores</strong>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area inside and out.
+                Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <strong>Eastport</strong>, <strong>Bay Ridge</strong>, <strong>Hillsmere Shores</strong>, <strong>Severna Park</strong>, and <strong>Edgewater</strong>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
               </p>
               <p className="text-lg leading-relaxed">
-                Every residential and commercial lock change comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward locksmith services at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars</strong> across Google and Thumbtack.
+                Every residential and commercial lock change comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward locksmith services at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over 100 combined reviews</strong>.
               </p>
             </div>
           </motion.div>
         </div>
-      </section>
+      </article>
 
       <StatsSection />
       <FeatureSection />
 
-      {/* Services Preview */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30" aria-label="Locksmith services in Annapolis MD">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -255,53 +211,45 @@ export default function HomePage() {
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               className="group"
               asChild
             >
               <Link to="/services">
                 View All Services
-                <motion.span
-                  className="inline-block ml-2"
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </motion.span>
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Detailed Services */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background" aria-label="Detailed locksmith services">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">How We Can Help</h2>
+            <h2 className="text-4xl font-bold mb-4">How We Can Help in Annapolis</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our comprehensive range of locksmith services.
+              From emergency lockouts to lock installations, we handle it all across Anne Arundel County.
             </p>
           </motion.div>
           <ServiceSection />
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30" aria-label="Customer reviews from Google and Thumbtack">
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-8"
@@ -311,7 +259,7 @@ export default function HomePage() {
           >
             <h2 className="text-4xl font-bold mb-4">What Annapolis Residents Are Saying</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Rated 4.9 stars across Google and Thumbtack. Read verified reviews from your neighbors.
+              Rated 4.9 stars with over 100 verified reviews across Google and Thumbtack. See what your neighbors think.
             </p>
           </motion.div>
 
@@ -322,14 +270,14 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <a
-              href="https://g.co/kgs/2jLLkKi"
+              href={GOOGLE_BUSINESS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                alt="Google reviews"
+                alt="Google Business reviews for A Secure Annapolis Locksmith"
                 className="h-5 w-5"
                 width="20"
                 height="20"
@@ -341,7 +289,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <span className="font-semibold text-sm text-slate-800">4.9</span>
-                <span className="text-sm text-slate-500">(60+ reviews)</span>
+                <span className="text-sm text-slate-500">({googleReviews.length} reviews)</span>
               </div>
             </a>
             <a
@@ -352,7 +300,7 @@ export default function HomePage() {
             >
               <img
                 src="https://assets.thumbtack.com/images/t-favicon-v2.svg"
-                alt="Thumbtack reviews"
+                alt="Thumbtack reviews for A Secure Annapolis Locksmith"
                 className="h-5 w-5"
                 width="20"
                 height="20"
@@ -376,13 +324,13 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {testimonials.map((testimonial, index) => (
+            {allReviews.map((review, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 className="h-full"
               >
-                <TestimonialCard {...testimonial} />
+                <TestimonialCard {...review} />
               </motion.div>
             ))}
           </motion.div>
@@ -399,10 +347,10 @@ export default function HomePage() {
               className="group"
               asChild
             >
-              <Link to="/testimonials">
-                View All Reviews
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <a href={GOOGLE_BUSINESS_URL} target="_blank" rel="noopener noreferrer">
+                See Us on Google
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
             </Button>
             <Button
               variant="outline"
@@ -415,12 +363,22 @@ export default function HomePage() {
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="group"
+              asChild
+            >
+              <Link to="/testimonials">
+                View All Reviews
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
 
-      {/* Service Area */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background" aria-label="Annapolis locksmith service area">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -430,13 +388,13 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h2 className="text-4xl font-bold">Serving Annapolis & Surrounding Communities</h2>
+              <h2 className="text-4xl font-bold">Serving Annapolis & All of Anne Arundel County</h2>
               <p className="text-lg text-muted-foreground">
-                We provide mobile locksmith services throughout Anne Arundel County. From the City Dock to Severna Park, we're your trusted local experts.
+                We provide mobile locksmith services throughout <strong>Anne Arundel County</strong>. From the <strong>City Dock</strong> to <strong>Severna Park</strong>, we're your trusted local locksmith experts with 20-minute average response times.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-lg text-primary">Central:</h3>
+                  <h3 className="font-semibold text-lg text-primary">Central Annapolis:</h3>
                   <ul className="space-y-2">
                     {["Annapolis", "Eastport", "Parole"].map((area, index) => (
                       <motion.li
@@ -509,8 +467,8 @@ export default function HomePage() {
                 </div>
               </div>
               <Button size="lg" className="w-full md:w-auto" asChild>
-                <a href="tel:5551234567" className="flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" /> Call for Service
+                <a href={`tel:${CONTACT.PHONE}`} className="flex items-center justify-center">
+                  <Phone className="mr-2 h-5 w-5" /> Call {CONTACT.PHONE_DISPLAY}
                 </a>
               </Button>
             </motion.div>
@@ -529,15 +487,14 @@ export default function HomePage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
-                title="A Secure Annapolis Locksmith Service Area Map"
+                title="A Secure Annapolis Locksmith location on Google Maps - 222 Severn Ave, Annapolis MD 21403"
               ></iframe>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Business Hours */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30" aria-label="Business hours">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -547,9 +504,9 @@ export default function HomePage() {
           >
             <div className="text-center mb-8">
               <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-bold mb-4">Business Hours</h2>
+              <h2 className="text-3xl font-bold mb-4">Annapolis Locksmith Hours</h2>
               <p className="text-lg text-muted-foreground">
-                We're here when you need us. Emergency service available 24/7.
+                Serving the Annapolis area when you need us. Emergency service available 24/7.
               </p>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -572,7 +529,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-6 p-4 bg-primary/5 rounded-lg">
                   <p className="text-center text-sm font-semibold text-primary">
-                    24/7 Emergency Lockout Service Available • Call (410) 849-6069
+                    24/7 Emergency Lockout Service Available in Annapolis -- Call {CONTACT.PHONE_DISPLAY}
                   </p>
                 </div>
               </div>
@@ -581,8 +538,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background" aria-label="Frequently asked questions about Annapolis locksmith services">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -611,7 +567,7 @@ export default function HomePage() {
                   <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg">
                     <span>{faq.question}</span>
                     <span className="ml-4 flex-shrink-0 text-primary group-open:rotate-180 transition-transform">
-                      ▼
+                      &#9660;
                     </span>
                   </summary>
                   <div className="px-6 pb-6 pt-2 text-muted-foreground">
