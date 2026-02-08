@@ -35,6 +35,9 @@
       plausible.init()
     </script>
 
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://plausible.io https://form.jotform.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.supabase.co https://ik.imagekit.io https://res.cloudinary.com https://plausible.io; frame-src 'self' https://www.google.com https://form.jotform.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+
     <!-- SEO Meta Tags -->
     <title>A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD</title>
     <meta name="title" content="A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD">
@@ -60,6 +63,9 @@
     <meta property="twitter:title" content="A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD">
     <meta property="twitter:description" content="Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.">
     <meta property="twitter:image" content="https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
     <!-- AI Content Metadata -->
     <meta name="ai-content-type" content="business-information">
@@ -98,21 +104,21 @@
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday"],
+            "dayOfWeek": "Sunday",
+            "opens": "07:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
             "opens": "07:00",
             "closes": "20:00"
           },
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Thursday",
-            "opens": "07:00",
-            "closes": "21:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
             "dayOfWeek": "Friday",
             "opens": "07:00",
-            "closes": "15:00"
+            "closes": "14:30"
           }
         ],
         "sameAs": [
@@ -177,7 +183,7 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
-          "reviewCount": "60",
+          "reviewCount": "120",
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -185,7 +191,7 @@
           {
             "@type": "Offer",
             "name": "Emergency Lockout Service",
-            "description": "Same-day emergency lockout assistance for homes, businesses, and vehicles",
+            "description": "24/7 emergency lockout assistance for homes, businesses, and vehicles",
             "areaServed": {
               "@type": "GeoCircle",
               "geoMidpoint": {
@@ -238,7 +244,7 @@
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
-          "reviewCount": "60"
+          "reviewCount": "120"
         },
         "review": {
           "@type": "Review",
@@ -323,7 +329,7 @@
             ✉️ <strong>Email:</strong> <a href="mailto:info@asecureannapolislocksmith.com" style="color: #2563eb;">info@asecureannapolislocksmith.com</a>
           </p>
           <p style="color: #4b5563; margin-top: 20px; font-size: 14px;">
-            We provide same-day emergency locksmith services in Annapolis and surrounding areas.
+            We provide 24/7 emergency locksmith services in Annapolis and surrounding areas.
           </p>
         </div>
       </div>

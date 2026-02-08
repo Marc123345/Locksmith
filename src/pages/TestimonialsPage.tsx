@@ -149,7 +149,7 @@ export default function TestimonialsPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.asecureannapolislocksmith.com/testimonials" />
         <meta property="og:title" content="Customer Testimonials & Reviews | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Read reviews from our satisfied customers. 4.9-star rating across Google and Thumbtack." />
+        <meta property="og:description" content="Read reviews from our satisfied customers. 4.9 stars with 1000+ happy customers since 2010." />
         <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
         <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
 
@@ -157,7 +157,7 @@ export default function TestimonialsPage() {
         <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/testimonials" />
         <meta property="twitter:title" content="Customer Testimonials & Reviews | A Secure Annapolis Locksmith" />
         <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-        <meta property="twitter:description" content="Read reviews from our satisfied customers. 4.9-star rating across Google and Thumbtack." />
+        <meta property="twitter:description" content="Read reviews from our satisfied customers. 4.9 stars with 1000+ happy customers since 2010." />
       </Helmet>
 
       {/* Hero Section */}
@@ -193,9 +193,19 @@ export default function TestimonialsPage() {
               See what our satisfied customers in Annapolis have to say about our professional locksmith services.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
+              <Button 
+                size="lg" 
                 className="bg-primary hover:bg-primary/90 text-lg h-12 px-8"
+                asChild
+              >
+                <a href="https://g.page/r/asecureannapolis/review" target="_blank" rel="noopener noreferrer">
+                  Write a Review
+                </a>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="secondary"
+                className="text-lg h-12 px-8"
                 asChild
               >
                 <Link to="/contact">Contact Us</Link>
