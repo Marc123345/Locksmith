@@ -25,8 +25,8 @@ const CallToAction: React.FC<CallToActionProps> = ({
     <section className="py-16 bg-muted">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Expert Locksmith Services</h2>
-          <p className="text-lg text-muted-foreground mb-8">Professional locksmith solutions for all your security needs. Licensed, bonded, and insured.</p>
+          <h2 className="text-3xl font-bold mb-4">{title}</h2>
+          <p className="text-lg text-muted-foreground mb-8">{subtitle}</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
               size="xl" 
