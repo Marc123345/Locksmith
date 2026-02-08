@@ -1,9 +1,9 @@
 import { getLocationBySlug } from '@/data/locations';
 import LocationTemplate from './LocationTemplate';
-import NotFoundPage from '@/pages/NotFoundPage';
+import NotFoundPage from '@/views/NotFoundPage';
 
-export default function CrownsvillePage() {
-  const location = getLocationBySlug('crownsville');
+export default function AnnapolisPage() {
+  const location = getLocationBySlug('annapolis');
 
   if (!location) {
     return <NotFoundPage />;

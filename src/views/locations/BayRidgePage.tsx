@@ -1,6 +1,6 @@
 import { getLocationBySlug } from '@/data/locations';
 import LocationTemplate from './LocationTemplate';
-import NotFoundPage from '@/pages/NotFoundPage';
+import NotFoundPage from '@/views/NotFoundPage';
 
 export default function BayRidgePage() {
   const location = getLocationBySlug('bay-ridge');

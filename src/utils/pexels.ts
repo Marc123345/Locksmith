@@ -24,7 +24,7 @@ interface PexelsResponse {
   per_page: number;
 }
 
-const PEXELS_API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
+const PEXELS_API_KEY = process.env.NEXT_PUBLIC_PEXELS_API_KEY;
 const PEXELS_API_BASE = 'https://api.pexels.com/v1';
 
 export async function searchPexelsPhotos(

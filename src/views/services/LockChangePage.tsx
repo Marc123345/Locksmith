@@ -1,7 +1,7 @@
 import { getServiceBySlug } from '@/data/services';
 import { standardPricing } from '@/data/pricing';
 import ServiceTemplate from './ServiceTemplate';
-import NotFoundPage from '@/pages/NotFoundPage';
+import NotFoundPage from '@/views/NotFoundPage';
 
 export default function LockChangePage() {
   const service = getServiceBySlug('lock-change');

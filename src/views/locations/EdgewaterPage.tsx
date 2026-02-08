@@ -1,9 +1,9 @@
 import { getLocationBySlug } from '@/data/locations';
 import LocationTemplate from './LocationTemplate';
-import NotFoundPage from '@/pages/NotFoundPage';
+import NotFoundPage from '@/views/NotFoundPage';
 
-export default function ParolePage() {
-  const location = getLocationBySlug('parole');
+export default function EdgewaterPage() {
+  const location = getLocationBySlug('edgewater');
 
   if (!location) {
     return <NotFoundPage />;

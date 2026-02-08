@@ -1,9 +1,9 @@
 import { getLocationBySlug } from '@/data/locations';
 import LocationTemplate from './LocationTemplate';
-import NotFoundPage from '@/pages/NotFoundPage';
+import NotFoundPage from '@/views/NotFoundPage';
 
-export default function EdgewaterPage() {
-  const location = getLocationBySlug('edgewater');
+export default function SevernaParkPage() {
+  const location = getLocationBySlug('severna-park');
 
   if (!location) {
     return <NotFoundPage />;
