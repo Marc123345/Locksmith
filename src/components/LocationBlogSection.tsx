@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, MapPin } from 'lucide-react';
+import { ArrowRight, Calendar, MapPin, BookOpen } from 'lucide-react';
+import { Card, CardContent, CardFooter } from './ui/card';
 import { Button } from './ui/button';
 import { supabase } from '@/lib/supabase';
 
@@ -19,6 +20,19 @@ interface LocationBlogSectionProps {
   heading?: string;
   limit?: number;
 }
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 export default function LocationBlogSection({
   locationName,
@@ -56,71 +70,79 @@ export default function LocationBlogSection({
     fetchPosts();
   }, [locationName, limit]);
 
-  if (loading) {
-    return null;
-  }
-
-  if (posts.length === 0) {
+  if (loading || posts.length === 0) {
     return null;
   }
 
   return (
-    <section className="py-16 bg-white" aria-label="Blog posts">
+    <section className="py-20 bg-slate-50" aria-label="Blog posts">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+            Blog
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{heading}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Helpful tips and guides about locksmith services in Annapolis and Anne Arundel County
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {posts.map((post, index) => (
-            <motion.article
-              key={post.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow group"
-            >
-              <Link to={`/blog/${post.slug}`} className="block p-6">
-                <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  <time dateTime={post.created_at}>
-                    {new Date(post.created_at).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric'
-                    })}
-                  </time>
-                  {post.location && (
-                    <>
-                      <span>•</span>
-                      <MapPin className="h-4 w-4" />
-                      <span>{post.location}</span>
-                    </>
-                  )}
-                </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                <span className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
-                  Read More
-                  <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {posts.map((post) => (
+            <motion.article key={post.id} variants={itemVariants}>
+              <Link to={`/blog/${post.slug}`} className="block h-full">
+                <Card className="h-full border-2 hover:border-primary/20 transition-all duration-300 hover:shadow-xl group flex flex-col">
+                  <CardContent className="pt-6 flex-grow">
+                    <div className="h-12 w-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/10 transition-colors">
+                      <BookOpen className="h-6 w-6" />
+                    </div>
+                    <div className="flex items-center gap-3 mb-3 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1.5">
+                        <Calendar className="h-3.5 w-3.5" />
+                        <time dateTime={post.created_at}>
+                          {new Date(post.created_at).toLocaleDateString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'
+                          })}
+                        </time>
+                      </div>
+                      {post.location && (
+                        <div className="flex items-center gap-1.5">
+                          <MapPin className="h-3.5 w-3.5" />
+                          <span>{post.location}</span>
+                        </div>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="pt-0">
+                    <span className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+                      Read More
+                      <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </CardFooter>
+                </Card>
               </Link>
             </motion.article>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -128,7 +150,7 @@ export default function LocationBlogSection({
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button variant="outline" size="lg" className="group" asChild>
+          <Button variant="outline" size="lg" className="group border-2" asChild>
             <Link to="/blog">
               View All Blog Posts
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

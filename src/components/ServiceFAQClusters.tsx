@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { HelpCircle, ChevronDown } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HelpCircle, ChevronDown, Home, Car, AlertTriangle } from 'lucide-react';
+import { Card, CardContent } from './ui/card';
 
 interface FAQ {
   question: string;
@@ -9,12 +10,14 @@ interface FAQ {
 
 interface FAQCluster {
   category: string;
+  icon: React.ReactNode;
   faqs: FAQ[];
 }
 
 const faqClusters: FAQCluster[] = [
   {
     category: "Emergency Lockout",
+    icon: <AlertTriangle className="h-5 w-5" />,
     faqs: [
       {
         question: "How fast can you respond to a lockout in Annapolis?",
@@ -32,6 +35,7 @@ const faqClusters: FAQCluster[] = [
   },
   {
     category: "Lock Changes & Rekeying",
+    icon: <Home className="h-5 w-5" />,
     faqs: [
       {
         question: "What's the difference between rekeying and changing locks?",
@@ -49,6 +53,7 @@ const faqClusters: FAQCluster[] = [
   },
   {
     category: "Car Keys & Programming",
+    icon: <Car className="h-5 w-5" />,
     faqs: [
       {
         question: "Can you make a new car key if I've lost all my keys?",
@@ -81,24 +86,26 @@ export default function ServiceFAQClusters() {
   };
 
   return (
-    <section className="py-16 bg-background" aria-label="Frequently asked questions by service type">
+    <section className="py-20 bg-white" aria-label="Frequently asked questions by service type">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-14"
         >
-          <HelpCircle className="h-12 w-12 text-primary mx-auto mb-4" />
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+            FAQ
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Common Questions About Locksmith Services in Annapolis
+            Common Questions About Locksmith Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Get answers to frequently asked questions organized by service type
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-10">
           {faqClusters.map((cluster, clusterIndex) => (
             <motion.div
               key={clusterIndex}
@@ -107,40 +114,57 @@ export default function ServiceFAQClusters() {
               viewport={{ once: true }}
               transition={{ delay: clusterIndex * 0.1 }}
             >
-              <h3 className="text-2xl font-bold mb-4 text-primary">{cluster.category}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  {cluster.icon}
+                </div>
+                <h3 className="text-2xl font-bold">{cluster.category}</h3>
+              </div>
+
               <div className="space-y-3">
                 {cluster.faqs.map((faq, faqIndex) => {
                   const key = `${clusterIndex}-${faqIndex}`;
                   const isOpen = openIndices.has(key);
 
                   return (
-                    <div
+                    <Card
                       key={faqIndex}
-                      className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden"
+                      className={`border-2 transition-all duration-300 overflow-hidden ${
+                        isOpen ? 'border-primary/20 shadow-lg' : 'hover:border-primary/10 hover:shadow-md'
+                      }`}
                     >
                       <button
                         onClick={() => toggleFAQ(clusterIndex, faqIndex)}
-                        className="w-full flex justify-between items-center p-6 text-left font-semibold text-lg hover:text-primary transition-colors"
+                        className="w-full flex justify-between items-center p-5 text-left group"
                       >
-                        <span>{faq.question}</span>
-                        <ChevronDown
-                          className={`ml-4 flex-shrink-0 text-primary transition-transform ${
-                            isOpen ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
-                      {isOpen && (
+                        <span className="font-semibold text-base pr-4 group-hover:text-primary transition-colors">
+                          {faq.question}
+                        </span>
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          animate={{ rotate: isOpen ? 180 : 0 }}
                           transition={{ duration: 0.3 }}
-                          className="px-6 pb-6 pt-2 text-muted-foreground"
+                          className="flex-shrink-0"
                         >
-                          {faq.answer}
+                          <ChevronDown className="h-5 w-5 text-primary" />
                         </motion.div>
-                      )}
-                    </div>
+                      </button>
+                      <AnimatePresence>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          >
+                            <CardContent className="pt-0 pb-5 px-5">
+                              <div className="border-t pt-4">
+                                <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                              </div>
+                            </CardContent>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </Card>
                   );
                 })}
               </div>
