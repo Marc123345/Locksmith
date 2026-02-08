@@ -1,6 +1,8 @@
+'use client';
+
 import { useState, useEffect } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
+import { useParams, notFound } from 'next/navigation';
 import { Calendar, MapPin, Tag, ArrowLeft, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BlogCard } from '@/components/BlogCard';
@@ -28,7 +30,7 @@ const BlogPostPage = () => {
   const [post, setPost] = useSafeState<BlogPost | null>(null);
   const [relatedPosts, setRelatedPosts] = useSafeState<BlogPost[]>([]);
   const [loading, setLoading] = useSafeState(true);
-  const [notFound, setNotFound] = useSafeState(false);
+  const [isNotFound, setIsNotFound] = useSafeState(false);
 
   useEffect(() => {
     if (slug) {
@@ -49,7 +51,7 @@ const BlogPostPage = () => {
       if (error) throw error;
 
       if (!data) {
-        setNotFound(true);
+        setIsNotFound(true);
         return;
       }
 
@@ -58,7 +60,7 @@ const BlogPostPage = () => {
       fetchRelatedPosts(data.category, data.location, data.id);
     } catch (error) {
       console.error('Error fetching blog post:', error);
-      setNotFound(true);
+      setIsNotFound(true);
     } finally {
       setLoading(false);
     }
@@ -113,8 +115,8 @@ const BlogPostPage = () => {
     }
   };
 
-  if (notFound) {
-    return <Navigate to="/blog" replace />;
+  if (isNotFound) {
+    notFound();
   }
 
   if (loading) {
@@ -129,7 +131,7 @@ const BlogPostPage = () => {
   }
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    notFound();
   }
 
   const formattedDate = new Date(post.published_date).toLocaleDateString('en-US', {
@@ -179,43 +181,15 @@ const BlogPostPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{post.title} | A Secure Annapolis Locksmith Blog</title>
-        <meta
-          name="description"
-          content={post.meta_description || post.excerpt}
-        />
-        <meta
-          name="keywords"
-          content={`locksmith ${post.location || 'Annapolis'}, ${post.category || 'locksmith services'}, ${post.tags?.join(', ') || 'lock repair, security'}`}
-        />
-        <meta name="geo.region" content="US-MD" />
-        <meta name="geo.placename" content={post.location || 'Annapolis'} />
-        <meta name="geo.position" content="38.9784;-76.4922" />
-        <meta name="ICBM" content="38.9784, -76.4922" />
-        <link
-          rel="canonical"
-          href={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`}
-        />
-        <meta property="og:title" content={`${post.title} | A Secure Annapolis Locksmith`} />
-        <meta property="og:description" content={post.meta_description || post.excerpt} />
-        <meta property="og:url" content={`https://www.asecureannapolislocksmith.com/blog/${post.slug}`} />
-        <meta property="og:type" content="article" />
-        <meta property="og:image" content={post.featured_image || 'https://www.asecureannapolislocksmith.com/image.png'} />
-        <meta property="article:published_time" content={post.published_date} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.meta_description || post.excerpt} />
-        <meta name="twitter:image" content={post.featured_image || 'https://www.asecureannapolislocksmith.com/image.png'} />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 pt-16">
         <article className="container mx-auto px-4 py-12 max-w-4xl">
           <Link
-            to="/blog"
+            href="/blog"
             className="inline-flex items-center text-primary hover:underline mb-6"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />

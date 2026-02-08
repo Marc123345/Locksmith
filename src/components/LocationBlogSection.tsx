@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, Calendar, MapPin, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardFooter } from './ui/card';
 import { Button } from './ui/button';
@@ -101,7 +103,7 @@ export default function LocationBlogSection({
         >
           {posts.map((post) => (
             <motion.article key={post.id} variants={itemVariants}>
-              <Link to={`/blog/${post.slug}`} className="block h-full">
+              <Link href={`/blog/${post.slug}`} className="block h-full">
                 <Card className="h-full border-2 hover:border-primary/20 transition-all duration-300 hover:shadow-xl group flex flex-col">
                   <CardContent className="pt-6 flex-grow">
                     <div className="h-12 w-12 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/10 transition-colors">
@@ -151,7 +153,7 @@ export default function LocationBlogSection({
           className="text-center mt-12"
         >
           <Button variant="outline" size="lg" className="group border-2" asChild>
-            <Link to="/blog">
+            <Link href="/blog">
               View All Blog Posts
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>

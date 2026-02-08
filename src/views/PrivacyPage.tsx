@@ -1,32 +1,12 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { Lock } from "lucide-react";
 
 export default function PrivacyPage() {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | A Secure Annapolis Locksmith</title>
-        <meta name="description" content="Read our privacy policy to understand how A Secure Annapolis Locksmith protects and handles your personal information and data." />
-        <meta name="keywords" content="privacy policy, data protection, personal information, Annapolis locksmith privacy, secure data handling" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/privacy" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/privacy" />
-        <meta property="og:title" content="Privacy Policy | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Read our privacy policy to understand how we protect your personal information." />
-        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/privacy" />
-        <meta property="twitter:title" content="Privacy Policy | A Secure Annapolis Locksmith" />
-        <meta property="twitter:description" content="Read our privacy policy to understand how we protect your personal information." />
-        <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-      </Helmet>
-
       <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
           <motion.div

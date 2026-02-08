@@ -1,10 +1,12 @@
+'use client';
+
 import React, { useCallback } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -93,8 +95,8 @@ const ServiceCard = React.memo(({ icon, title, description, features, image, hre
             className="w-full group border-2 hover:bg-primary hover:text-primary-foreground h-16 text-xl"
             asChild
           >
-            <Link 
-              to="/contact"
+            <Link
+              href="/contact"
               className="flex items-center justify-center"
               aria-label={`Request ${title} service`}
             >

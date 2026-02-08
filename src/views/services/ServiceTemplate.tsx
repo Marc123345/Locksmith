@@ -1,5 +1,6 @@
+'use client';
+
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, CheckCircle, Clock, Shield, Wrench } from 'lucide-react';
 import { CONTACT } from '@/utils/contact';
 import ContactForm from '@/components/ContactForm';
@@ -68,123 +69,87 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
 
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{service.metaTitle}</title>
-        <meta name="title" content={service.metaTitle} />
-        <meta name="description" content={service.metaDescription} />
-        <meta name="keywords" content={`${service.name}, ${service.name} Annapolis, locksmith ${service.slug}, emergency ${service.slug}, 24/7 ${service.slug}, professional locksmith, Anne Arundel County locksmith`} />
-
-        {/* Geographic Meta Tags */}
-        <meta name="geo.region" content="US-MD" />
-        <meta name="geo.placename" content="Annapolis, MD" />
-        <meta name="geo.position" content="38.978764;-76.492786" />
-        <meta name="ICBM" content="38.978764, -76.492786" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
-        <meta property="og:title" content={service.metaTitle} />
-        <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:image" content={service.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
-        <meta property="twitter:title" content={service.metaTitle} />
-        <meta property="twitter:description" content={service.metaDescription} />
-        <meta property="twitter:image" content={service.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
-
-        {/* Canonical */}
-        <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/services/${service.slug}`} />
-
-        {/* Robots directives */}
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-
-        {/* Schema.org Markup for Service */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": service.name,
-            "name": service.name,
-            "description": service.metaDescription,
-            "image": service.heroImage,
-            "provider": {
-              "@type": "Locksmith",
-              "name": "A Secure Annapolis Locksmith",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
-                "addressLocality": "Annapolis",
-                "addressRegion": "MD",
-                "postalCode": "21403",
-                "addressCountry": "US"
-              },
-              "telephone": CONTACT.PHONE,
-              "email": CONTACT.EMAIL,
-              "url": "https://www.asecureannapolislocksmith.com",
-              "priceRange": "$$",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "60"
-              }
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": service.name,
+          "name": service.name,
+          "description": service.metaDescription,
+          "image": service.heroImage,
+          "provider": {
+            "@type": "Locksmith",
+            "name": "A Secure Annapolis Locksmith",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
+              "addressLocality": "Annapolis",
+              "addressRegion": "MD",
+              "postalCode": "21403",
+              "addressCountry": "US"
             },
-            "areaServed": service.serviceAreas.map(area => ({
-              "@type": "City",
-              "name": area
-            })),
-            "availableChannel": {
-              "@type": "ServiceChannel",
-              "serviceUrl": `https://www.asecureannapolislocksmith.com/services/${service.slug}`,
-              "servicePhone": CONTACT.PHONE,
-              "availableLanguage": {
-                "@type": "Language",
-                "name": "English"
-              }
-            },
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "priceCurrency": "USD"
-              }
+            "telephone": CONTACT.PHONE,
+            "email": CONTACT.EMAIL,
+            "url": "https://www.asecureannapolislocksmith.com",
+            "priceRange": "$$",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "60"
             }
-          })}
-        </script>
+          },
+          "areaServed": service.serviceAreas.map(area => ({
+            "@type": "City",
+            "name": area
+          })),
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": `https://www.asecureannapolislocksmith.com/services/${service.slug}`,
+            "servicePhone": CONTACT.PHONE,
+            "availableLanguage": {
+              "@type": "Language",
+              "name": "English"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "USD"
+            }
+          }
+        }) }}
+      />
 
-        {/* BreadcrumbList Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.asecureannapolislocksmith.com"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Services",
-                "item": "https://www.asecureannapolislocksmith.com/services"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": service.name,
-                "item": `https://www.asecureannapolislocksmith.com/services/${service.slug}`
-              }
-            ]
-          })}
-        </script>
-      </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.asecureannapolislocksmith.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.asecureannapolislocksmith.com/services"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": service.name,
+              "item": `https://www.asecureannapolislocksmith.com/services/${service.slug}`
+            }
+          ]
+        }) }}
+      />
 
       <div className="pt-16 md:pt-20">
         <SpecialOfferBanner />

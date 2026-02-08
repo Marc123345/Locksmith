@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, Home, Car, Building2, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardFooter } from './ui/card';
 import { Button } from './ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { CONTACT } from '@/utils/contact';
 
 const pricingItems = [
@@ -114,7 +116,7 @@ export default function PricingGuide() {
         >
           {pricingItems.map((item, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Link to={item.link} className="block h-full">
+              <Link href={item.link} className="block h-full">
                 <Card className="h-full border-2 hover:border-primary/30 transition-all duration-300 hover:shadow-xl group relative overflow-hidden">
                   {item.tag && (
                     <div className="absolute top-0 right-0">

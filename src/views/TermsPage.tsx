@@ -1,32 +1,12 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import { ScrollText } from "lucide-react";
 
 export default function TermsPage() {
   return (
     <>
-      <Helmet>
-        <title>Terms of Service | A Secure Annapolis Locksmith</title>
-        <meta name="description" content="Read our terms of service for locksmith services in Annapolis, MD. Learn about our service agreements, warranties, and customer policies." />
-        <meta name="keywords" content="terms of service, locksmith warranty, service agreement, Annapolis locksmith terms, customer policies" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/terms" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/terms" />
-        <meta property="og:title" content="Terms of Service | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Read our terms of service for locksmith services in Annapolis, MD." />
-        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/terms" />
-        <meta property="twitter:title" content="Terms of Service | A Secure Annapolis Locksmith" />
-        <meta property="twitter:description" content="Read our terms of service for locksmith services in Annapolis, MD." />
-        <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-      </Helmet>
-
       <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
           <motion.div

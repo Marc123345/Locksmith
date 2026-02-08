@@ -1,5 +1,6 @@
+'use client';
+
 import { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, Clock, MapPin, Home, Building2, Car, Wrench } from 'lucide-react';
 import { CONTACT } from '@/utils/contact';
 import ContactForm from '@/components/ContactForm';
@@ -69,158 +70,125 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
 
   return (
     <>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>{location.metaTitle}</title>
-        <meta name="title" content={location.metaTitle} />
-        <meta name="description" content={location.metaDescription} />
-        <meta name="keywords" content={`locksmith ${location.name}, emergency locksmith ${location.name}, car locksmith ${location.name}, residential locksmith ${location.name}, commercial locksmith ${location.name}, lock rekey ${location.name}, 24/7 locksmith ${location.name}, mobile locksmith ${location.name}`} />
-
-        {/* Geographic Meta Tags */}
-        <meta name="geo.region" content="US-MD" />
-        <meta name="geo.placename" content={location.name} />
-        <meta name="geo.position" content="38.978764;-76.492786" />
-        <meta name="ICBM" content="38.978764, -76.492786" />
-
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
-        <meta property="og:title" content={location.metaTitle} />
-        <meta property="og:description" content={location.metaDescription} />
-        <meta property="og:image" content={location.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
-        <meta property="twitter:title" content={location.metaTitle} />
-        <meta property="twitter:description" content={location.metaDescription} />
-        <meta property="twitter:image" content={location.heroImage || 'https://www.asecureannapolislocksmith.com/og-image.jpg'} />
-
-        {/* Canonical */}
-        <link rel="canonical" href={`https://www.asecureannapolislocksmith.com/locations/${location.slug}`} />
-
-        {/* Schema.org Markup for LocalBusiness */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Locksmith",
-            "name": `A Secure Annapolis Locksmith - ${location.name}`,
-            "description": location.metaDescription,
-            "image": location.heroImage,
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
-              "addressLocality": "Annapolis",
-              "addressRegion": "MD",
-              "postalCode": "21403",
-              "addressCountry": "US"
-            },
-            "geo": {
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Locksmith",
+          "name": `A Secure Annapolis Locksmith - ${location.name}`,
+          "description": location.metaDescription,
+          "image": location.heroImage,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "222 Severn Ave Ste 1 Building 7-6A",
+            "addressLocality": "Annapolis",
+            "addressRegion": "MD",
+            "postalCode": "21403",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.978764,
+            "longitude": -76.492786
+          },
+          "url": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`,
+          "telephone": CONTACT.PHONE,
+          "email": CONTACT.EMAIL,
+          "priceRange": "$$",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+              "opens": "08:00",
+              "closes": "20:00"
+            }
+          ],
+          "areaServed": {
+            "@type": "City",
+            "name": location.name
+          },
+          "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
               "@type": "GeoCoordinates",
               "latitude": 38.978764,
               "longitude": -76.492786
             },
-            "url": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`,
-            "telephone": CONTACT.PHONE,
-            "email": CONTACT.EMAIL,
-            "priceRange": "$$",
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "08:00",
-                "closes": "20:00"
-              }
-            ],
-            "areaServed": {
-              "@type": "City",
-              "name": location.name
-            },
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 38.978764,
-                "longitude": -76.492786
-              },
-              "geoRadius": "25000"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "60"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Locksmith Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Emergency Lockout Service",
-                    "description": `24/7 emergency locksmith service in ${location.name}`
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Residential Locksmith",
-                    "description": `Home lock installation, rekeying, and repair in ${location.name}`
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Automotive Locksmith",
-                    "description": `Car key replacement, programming, and lockout service in ${location.name}`
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Commercial Locksmith",
-                    "description": `Business security systems and lock installation in ${location.name}`
-                  }
-                }
-              ]
-            }
-          })}
-        </script>
-
-        {/* BreadcrumbList Schema */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
+            "geoRadius": "25000"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "60"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Locksmith Services",
             "itemListElement": [
               {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://www.asecureannapolislocksmith.com"
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Emergency Lockout Service",
+                  "description": `24/7 emergency locksmith service in ${location.name}`
+                }
               },
               {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Locations",
-                "item": "https://www.asecureannapolislocksmith.com/locations"
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Residential Locksmith",
+                  "description": `Home lock installation, rekeying, and repair in ${location.name}`
+                }
               },
               {
-                "@type": "ListItem",
-                "position": 3,
-                "name": location.name,
-                "item": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Automotive Locksmith",
+                  "description": `Car key replacement, programming, and lockout service in ${location.name}`
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Commercial Locksmith",
+                  "description": `Business security systems and lock installation in ${location.name}`
+                }
               }
             ]
-          })}
-        </script>
-      </Helmet>
+          }
+        }) }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.asecureannapolislocksmith.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Locations",
+              "item": "https://www.asecureannapolislocksmith.com/locations"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": location.name,
+              "item": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`
+            }
+          ]
+        }) }}
+      />
 
       <div className="pt-16 md:pt-20">
         <SpecialOfferBanner />

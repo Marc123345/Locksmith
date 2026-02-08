@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Button } from "@/components/ui/button";
 import { Home, RefreshCw } from 'lucide-react';
 
@@ -26,11 +25,6 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, Error
     if (this.state.hasError) {
       return (
         <>
-          <Helmet>
-            <meta name="robots" content="noindex,nofollow" />
-            <title>Error | Annapolis Locksmith</title>
-          </Helmet>
-
           <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-b from-gray-50 to-white">
             <div className="text-center max-w-md">
               <div className="mb-6">
@@ -62,7 +56,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, Error
 
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <p className="text-sm text-gray-600">
-                  Need immediate assistance? <a href="tel:4105551234" className="text-blue-600 hover:underline">Call (410) 555-1234</a>
+                  Need immediate assistance? <a href="tel:4108496069" className="text-blue-600 hover:underline">Call (410) 849-6069</a>
                 </p>
               </div>
             </div>

@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { CONTACT } from '@/utils/contact';
 
 interface LocalBusinessSchemaProps {
@@ -177,10 +176,9 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
   }
 
   return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(baseSchema)}
-      </script>
-    </Helmet>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(baseSchema) }}
+    />
   );
 }

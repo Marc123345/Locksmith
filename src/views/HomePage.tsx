@@ -1,5 +1,6 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { HeroSection } from '@/components/HeroSection';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { FeatureSection } from '@/components/FeatureSection';
@@ -18,7 +19,7 @@ import ServiceFAQClusters from '@/components/ServiceFAQClusters';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star, Mail, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { CONTACT } from '@/utils/contact';
@@ -225,41 +226,16 @@ const itemVariants = {
 export default function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>Locksmith Annapolis MD | 4.9 Stars | Licensed & Insured | A Secure</title>
-        <meta
-          name="description"
-          content="A Secure Annapolis Locksmith -- rated 4.9 stars across Google and Thumbtack. Licensed, insured, locally owned since 2010. Emergency lockouts, lock changes, rekeying, car keys. Serving Annapolis, MD and Anne Arundel County. Call (410) 849-6069."
-        />
-        <meta
-          name="keywords"
-          content="locksmith Annapolis MD, Annapolis locksmith, emergency locksmith Annapolis, locksmith near me Annapolis, residential locksmith Annapolis MD, commercial locksmith Annapolis, car locksmith Annapolis, lock change Annapolis, rekey locks Annapolis, same-day locksmith Annapolis Maryland, locksmith 21403, locksmith Anne Arundel County"
-        />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/" />
-        <meta property="og:title" content="Locksmith Annapolis MD | 4.9 Stars | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts. 4.9 stars on Google and Thumbtack." />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-        <meta property="og:locale" content="en_US" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.asecureannapolislocksmith.com/" />
-        <meta name="twitter:title" content="Locksmith Annapolis MD | 4.9 Stars | A Secure Annapolis Locksmith" />
-        <meta name="twitter:description" content="Top-rated locksmith in Annapolis, MD since 2010. Licensed, insured, and locally owned. Fast response for home, business, and car lockouts." />
-
-        <meta name="geo.region" content="US-MD" />
-        <meta name="geo.placename" content="Annapolis" />
-        <meta name="geo.position" content="38.978764;-76.492786" />
-        <meta name="ICBM" content="38.978764, -76.492786" />
-      </Helmet>
       <LocalBusinessSchema page="home" />
       <FAQSchema faqs={faqs} />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-      </Helmet>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <HeroSection />
       <TrustedBySection />
       <LockoutGuide />
@@ -277,16 +253,16 @@ export default function HomePage() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-4">
-                When you're locked out in <strong>Annapolis, MD</strong>, need your <Link to="/services/lock-change" className="text-primary hover:underline">locks changed</Link>, or want to upgrade your home or business security, you shouldn't have to settle for anything less than fast, honest, and professional service. As a <strong>locally owned locksmith based at 222 Severn Ave in Annapolis</strong>, we've been serving our neighbors for over 15 years with a reputation built on honesty, transparency, and fair pricing.
+                When you're locked out in <strong>Annapolis, MD</strong>, need your <Link href="/services/lock-change" className="text-primary hover:underline">locks changed</Link>, or want to upgrade your home or business security, you shouldn't have to settle for anything less than fast, honest, and professional service. As a <strong>locally owned locksmith based at 222 Severn Ave in Annapolis</strong>, we've been serving our neighbors for over 15 years with a reputation built on honesty, transparency, and fair pricing.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <Link to="/locations/eastport" className="text-primary hover:underline font-semibold">Eastport</Link>, <Link to="/locations/bay-ridge" className="text-primary hover:underline font-semibold">Bay Ridge</Link>, <Link to="/locations/hillsmere-shores" className="text-primary hover:underline font-semibold">Hillsmere Shores</Link>, <Link to="/locations/severna-park" className="text-primary hover:underline font-semibold">Severna Park</Link>, and <Link to="/locations/edgewater" className="text-primary hover:underline font-semibold">Edgewater</Link>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
+                Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <Link href="/locations/eastport" className="text-primary hover:underline font-semibold">Eastport</Link>, <Link href="/locations/bay-ridge" className="text-primary hover:underline font-semibold">Bay Ridge</Link>, <Link href="/locations/hillsmere-shores" className="text-primary hover:underline font-semibold">Hillsmere Shores</Link>, <Link href="/locations/severna-park" className="text-primary hover:underline font-semibold">Severna Park</Link>, and <Link href="/locations/edgewater" className="text-primary hover:underline font-semibold">Edgewater</Link>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Every residential and commercial <Link to="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward <Link to="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over 100 combined reviews</strong>.
+                Every residential and commercial <Link href="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward <Link href="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over 100 combined reviews</strong>.
               </p>
               <p className="text-base leading-relaxed text-slate-600 italic border-l-4 border-primary pl-4">
-                Licensed Maryland locksmith serving Annapolis and Anne Arundel County since 2010 -- fully insured and bonded for residential, commercial, and automotive work. From <Link to="/locations/eastport" className="text-primary hover:underline">Eastport condo lockouts</Link> to <Link to="/locations/hillsmere-shores" className="text-primary hover:underline">Hillsmere Shores</Link> waterfront homes with sticky deadbolts, we handle the lock issues Annapolis residents see most.
+                Licensed Maryland locksmith serving Annapolis and Anne Arundel County since 2010 -- fully insured and bonded for residential, commercial, and automotive work. From <Link href="/locations/eastport" className="text-primary hover:underline">Eastport condo lockouts</Link> to <Link href="/locations/hillsmere-shores" className="text-primary hover:underline">Hillsmere Shores</Link> waterfront homes with sticky deadbolts, we handle the lock issues Annapolis residents see most.
               </p>
             </div>
           </motion.div>
@@ -341,7 +317,7 @@ export default function HomePage() {
               className="group"
               asChild
             >
-              <Link to="/services">
+              <Link href="/services">
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -503,7 +479,7 @@ export default function HomePage() {
               className="group"
               asChild
             >
-              <Link to="/testimonials">
+              <Link href="/testimonials">
                 View All Reviews
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -544,7 +520,7 @@ export default function HomePage() {
                         >
                           <MapPin className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
                           <Link
-                            to={area.href}
+                            href={area.href}
                             className="hover:text-primary transition-colors hover:underline"
                           >
                             {area.name}
@@ -646,7 +622,7 @@ export default function HomePage() {
               Residential Locksmith Services in Annapolis & Anne Arundel County
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-10">
-              Need a locksmith near <Link to="/locations/severna-park" className="text-primary hover:underline">Severna Park High School</Link>? Locked out near <Link to="/locations/eastport" className="text-primary hover:underline">City Dock</Link>? From <Link to="/locations/arnold" className="text-primary hover:underline">Arnold</Link> to <Link to="/locations/edgewater" className="text-primary hover:underline">Edgewater</Link>, our mobile locksmith service means no towing, no waiting at a shop, and no inflated prices. We come to you.
+              Need a locksmith near <Link href="/locations/severna-park" className="text-primary hover:underline">Severna Park High School</Link>? Locked out near <Link href="/locations/eastport" className="text-primary hover:underline">City Dock</Link>? From <Link href="/locations/arnold" className="text-primary hover:underline">Arnold</Link> to <Link href="/locations/edgewater" className="text-primary hover:underline">Edgewater</Link>, our mobile locksmith service means no towing, no waiting at a shop, and no inflated prices. We come to you.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
@@ -659,7 +635,7 @@ export default function HomePage() {
               ].map((loc) => (
                 <Link
                   key={loc.area}
-                  to={loc.href}
+                  href={loc.href}
                   className="block p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-md hover:border-primary/30 transition-all group"
                 >
                   <div className="flex items-center gap-2 mb-3">
@@ -681,7 +657,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-8">
               <Button variant="outline" size="lg" className="group" asChild>
-                <Link to="/locations">
+                <Link href="/locations">
                   View All Service Areas
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>

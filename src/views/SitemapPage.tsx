@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const mainPages = [
   {
@@ -211,7 +210,7 @@ export default function SitemapPage() {
         {pages.map((page) => (
           <div key={page.path} className="border-b pb-4">
             <Link
-              to={page.path}
+              href={page.path}
               className="text-xl font-semibold hover:text-primary transition-colors"
             >
               {page.title}
@@ -229,24 +228,6 @@ export default function SitemapPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Sitemap | A Secure Annapolis Locksmith - All Pages</title>
-        <meta name="description" content="Browse all pages on A Secure Annapolis Locksmith website. Find locksmith services, service areas, and helpful resources in Annapolis, MD." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/sitemap" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/sitemap" />
-        <meta property="og:title" content="Sitemap | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Browse all pages on our website. Find locksmith services and service areas in Annapolis, MD." />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/sitemap" />
-        <meta property="twitter:title" content="Sitemap | A Secure Annapolis Locksmith" />
-        <meta property="twitter:description" content="Browse all pages on our website. Find locksmith services and service areas in Annapolis, MD." />
-      </Helmet>
-
       <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">

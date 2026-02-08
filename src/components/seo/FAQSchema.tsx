@@ -1,5 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
 interface FAQItem {
   question: string;
   answer: string;
@@ -24,10 +22,9 @@ export default function FAQSchema({ faqs }: FAQSchemaProps) {
   };
 
   return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(faqSchema)}
-      </script>
-    </Helmet>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
   );
 }

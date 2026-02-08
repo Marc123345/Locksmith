@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Phone } from 'lucide-react';
 import { CONTACT } from "@/utils/contact";
 
@@ -39,7 +39,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
                   Contact Us
                 </a>
               ) : (
-                <Link to="/contact">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               )}
             </Button>
             <Button 
@@ -48,7 +48,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
               className="shadow-lg hover:shadow-xl min-w-[200px] bg-black text-white hover:bg-black/90" 
               asChild
             >
-              <Link to="/contact">Request Service</Link>
+              <Link href="/contact">Request Service</Link>
             </Button>
           </div>
         </div>

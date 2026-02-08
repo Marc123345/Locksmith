@@ -1,5 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { MapPin, ArrowRight } from 'lucide-react';
 import { getAllLocations } from '@/data/locations';
 import { motion } from 'framer-motion';
@@ -27,25 +28,6 @@ export default function LocationsPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Service Areas | A Secure Annapolis Locksmith</title>
-        <meta name="description" content="Find professional locksmith services in your area. We serve Annapolis, Severna Park, Arnold, Edgewater, and surrounding Anne Arundel County communities." />
-        <meta name="keywords" content="locksmith service areas, Annapolis locksmith, Anne Arundel County locksmith, local locksmith near me" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/locations" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/locations" />
-        <meta property="og:title" content="Service Areas | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Find professional locksmith services in your area across Anne Arundel County." />
-        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/locations" />
-        <meta property="twitter:title" content="Service Areas | A Secure Annapolis Locksmith" />
-        <meta property="twitter:description" content="Find professional locksmith services in your area across Anne Arundel County." />
-        <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-      </Helmet>
-
       <div className="min-h-screen bg-white pt-20">
         <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +56,7 @@ export default function LocationsPage() {
                   variants={itemVariants}
                 >
                   <Link
-                    to={`/locations/${location.slug}`}
+                    href={`/locations/${location.slug}`}
                     className="block group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all p-6 border border-gray-100 hover:-translate-y-1"
                   >
                     <div className="flex items-start justify-between mb-4">

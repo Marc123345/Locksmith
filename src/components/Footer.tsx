@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Facebook, Instagram, Twitter, Phone, MapPin, Clock } from "lucide-react";
 import { CONTACT } from "@/utils/contact";
 
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="space-y-4 lg:col-span-2">
-            <Link to="/" className="inline-block hover:opacity-80 transition-opacity" aria-label="Return to homepage">
+            <Link href="/" className="inline-block hover:opacity-80 transition-opacity" aria-label="Return to homepage">
               <img
                 src="https://i.imgur.com/VfpMzbE.png"
                 alt="A Secure Annapolis Locksmith Logo"
@@ -58,37 +58,37 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/testimonials" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/testimonials" className="text-muted-foreground hover:text-primary transition-colors">
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link to="/sitemap" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/sitemap" className="text-muted-foreground hover:text-primary transition-colors">
                   Sitemap
                 </Link>
               </li>
@@ -100,72 +100,72 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Service Areas</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/locations/annapolis" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/annapolis" className="text-muted-foreground hover:text-primary transition-colors">
                   Annapolis, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/arnold" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/arnold" className="text-muted-foreground hover:text-primary transition-colors">
                   Arnold, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/bay-ridge" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/bay-ridge" className="text-muted-foreground hover:text-primary transition-colors">
                   Bay Ridge, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/broadneck" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/broadneck" className="text-muted-foreground hover:text-primary transition-colors">
                   Broadneck, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/cape-st-claire" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/cape-st-claire" className="text-muted-foreground hover:text-primary transition-colors">
                   Cape St. Claire, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/crownsville" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/crownsville" className="text-muted-foreground hover:text-primary transition-colors">
                   Crownsville, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/eastport" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/eastport" className="text-muted-foreground hover:text-primary transition-colors">
                   Eastport, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/edgewater" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/edgewater" className="text-muted-foreground hover:text-primary transition-colors">
                   Edgewater, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/edgewater-beach" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/edgewater-beach" className="text-muted-foreground hover:text-primary transition-colors">
                   Edgewater Beach, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/hillsmere-shores" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/hillsmere-shores" className="text-muted-foreground hover:text-primary transition-colors">
                   Hillsmere Shores, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/mayo" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/mayo" className="text-muted-foreground hover:text-primary transition-colors">
                   Mayo, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/parole" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/parole" className="text-muted-foreground hover:text-primary transition-colors">
                   Parole, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/riva" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/riva" className="text-muted-foreground hover:text-primary transition-colors">
                   Riva, MD
                 </Link>
               </li>
               <li>
-                <Link to="/locations/severna-park" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/locations/severna-park" className="text-muted-foreground hover:text-primary transition-colors">
                   Severna Park, MD
                 </Link>
               </li>
@@ -177,32 +177,32 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/lock-change" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/lock-change" className="text-muted-foreground hover:text-primary transition-colors">
                   Lock Change
                 </Link>
               </li>
               <li>
-                <Link to="/services/lock-rekey" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/lock-rekey" className="text-muted-foreground hover:text-primary transition-colors">
                   Lock Rekey
                 </Link>
               </li>
               <li>
-                <Link to="/services/car-key-programming" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/car-key-programming" className="text-muted-foreground hover:text-primary transition-colors">
                   Car Key Programming
                 </Link>
               </li>
               <li>
-                <Link to="/services/emergency-lockout" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/emergency-lockout" className="text-muted-foreground hover:text-primary transition-colors">
                   Emergency Lockout
                 </Link>
               </li>
               <li>
-                <Link to="/services/lock-repair" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/lock-repair" className="text-muted-foreground hover:text-primary transition-colors">
                   Lock Repair
                 </Link>
               </li>
               <li>
-                <Link to="/services/lost-car-keys" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/services/lost-car-keys" className="text-muted-foreground hover:text-primary transition-colors">
                   Lost Car Keys
                 </Link>
               </li>
@@ -245,10 +245,10 @@ const Footer = () => {
             <div className="pt-4 border-t border-border">
               <p className="text-xs text-muted-foreground mb-2">Resources</p>
               <div className="flex flex-col space-y-2">
-                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Terms of Service
                 </Link>
               </div>
@@ -259,9 +259,9 @@ const Footer = () => {
         <div className="border-t border-border mt-8 pt-6 text-center text-sm text-muted-foreground">
           <p>© 2026 A Secure Annapolis Locksmith. All rights reserved.</p>
           <div className="mt-2 flex flex-wrap justify-center gap-x-4">
-            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-            <Link to="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
           </div>
         </div>
       </div>

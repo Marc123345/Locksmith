@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Phone, ChevronDown, MapPin, Home, Building2, Car, Key, Lock, Wrench, AlertCircle, Settings } from "lucide-react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X, Phone, ChevronDown, MapPin, Home, Car, Wrench, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/useScroll";
@@ -89,8 +90,8 @@ export const Header = () => {
   const [mobileLocationsOpen, setMobileLocationsOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const isScrolled = useScroll(10);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Close menu on route change
   useEffect(() => {
@@ -99,7 +100,7 @@ export const Header = () => {
     setServicesOpen(false);
     setMobileLocationsOpen(false);
     setMobileServicesOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
 
   const toggleMenu = useCallback(() => setIsOpen(prev => !prev), []);
   const closeMenu = useCallback(() => setIsOpen(false), []);
@@ -117,14 +118,14 @@ export const Header = () => {
 
   const isActive = useCallback((href: string) => {
     if (href === '/') {
-      return location.pathname === href;
+      return pathname === href;
     }
-    return location.pathname.startsWith(href);
-  }, [location.pathname]);
+    return pathname.startsWith(href);
+  }, [pathname]);
 
   // Handle navigation with hash
   const handleNavigation = (href: string) => {
-    navigate(href);
+    router.push(href);
     closeMenu();
     setLocationsOpen(false);
     setServicesOpen(false);
@@ -162,7 +163,7 @@ export const Header = () => {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16 md:h-20" role="navigation">
             <Link
-              to="/"
+              href="/"
               className="flex items-center hover:opacity-80 transition-opacity"
               onClick={closeMenu}
               aria-label="A Secure Annapolis Locksmith Home"
@@ -183,7 +184,7 @@ export const Header = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  href={link.href}
                   className={cn(
                     "text-base transition-colors relative py-2 px-4 font-medium rounded-lg",
                     isActive(link.href)
@@ -240,7 +241,7 @@ export const Header = () => {
                               {category.services.map((service) => (
                                 <Link
                                   key={service.href}
-                                  to={service.href}
+                                  href={service.href}
                                   className="block px-3 py-2.5 hover:bg-blue-50 rounded-lg transition-colors group"
                                   onClick={() => handleNavigation(service.href)}
                                 >
@@ -260,7 +261,7 @@ export const Header = () => {
                     <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-t border-border">
                       <div className="flex items-center justify-between">
                         <Link
-                          to="/services"
+                          href="/services"
                           className="text-sm text-primary font-semibold hover:underline"
                           onClick={() => handleNavigation('/services')}
                         >
@@ -317,7 +318,7 @@ export const Header = () => {
                             {category.locations.map((location) => (
                               <Link
                                 key={location.href}
-                                to={location.href}
+                                href={location.href}
                                 className="block px-3 py-2 text-sm hover:bg-blue-50 rounded-md transition-colors hover:text-primary font-medium group"
                                 onClick={() => handleNavigation(location.href)}
                               >
@@ -351,7 +352,7 @@ export const Header = () => {
               {afterDropdownLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  href={link.href}
                   className={cn(
                     "text-base transition-colors relative py-2 px-4 font-medium rounded-lg",
                     isActive(link.href)
@@ -440,7 +441,7 @@ export const Header = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 className={cn(
                   "block py-2 px-4 rounded-lg transition-colors font-medium",
                   isActive(link.href)
@@ -477,7 +478,7 @@ export const Header = () => {
                           {category.services.map((service) => (
                             <Link
                               key={service.href}
-                              to={service.href}
+                              href={service.href}
                               className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
                               onClick={() => handleNavigation(service.href)}
                             >
@@ -513,7 +514,7 @@ export const Header = () => {
                         {category.locations.map((location) => (
                           <Link
                             key={location.href}
-                            to={location.href}
+                            href={location.href}
                             className="block py-2 px-4 rounded-lg text-sm hover:bg-muted transition-colors"
                             onClick={() => handleNavigation(location.href)}
                           >
@@ -530,7 +531,7 @@ export const Header = () => {
             {afterDropdownLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.href}
+                href={link.href}
                 className={cn(
                   "block py-2 px-4 rounded-lg transition-colors font-medium",
                   isActive(link.href)

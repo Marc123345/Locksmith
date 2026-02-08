@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Calendar, MapPin, ArrowRight, Tag } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -33,7 +33,7 @@ export const BlogCard = ({
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
       {featuredImage && (
-        <Link to={`/blog/${slug}`} className="relative block overflow-hidden h-48" aria-label={`Read article: ${title}`}>
+        <Link href={`/blog/${slug}`} className="relative block overflow-hidden h-48" aria-label={`Read article: ${title}`}>
           <img
             src={featuredImage}
             alt={`${title} - locksmith blog post`}
@@ -74,7 +74,7 @@ export const BlogCard = ({
         </div>
 
         <Link
-          to={`/blog/${slug}`}
+          href={`/blog/${slug}`}
           className="hover:text-primary transition-colors"
         >
           <h3 className="text-xl font-bold leading-tight line-clamp-2">
@@ -102,7 +102,7 @@ export const BlogCard = ({
 
       <CardFooter>
         <Button asChild variant="outline" className="w-full group">
-          <Link to={`/blog/${slug}`} className="flex items-center justify-center">
+          <Link href={`/blog/${slug}`} className="flex items-center justify-center">
             Read More
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>

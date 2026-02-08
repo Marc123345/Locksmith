@@ -1,9 +1,10 @@
+'use client';
+
 import React, { useEffect, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, ArrowRight, Shield, BadgeCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from "framer-motion";
 import { CONTACT } from "@/utils/contact";
 import MapComponent from "@/components/GoogleMap";
@@ -118,32 +119,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us | A Secure Annapolis Locksmith - Get a Free Quote</title>
-        <meta
-          name="description"
-          content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call (410) 956-2210 for emergency lockout help or request a free quote online. Serving Annapolis, MD and surrounding areas."
-        />
-        <meta
-          name="keywords"
-          content="contact locksmith Annapolis, locksmith phone number, free locksmith quote, emergency locksmith contact, Annapolis locksmith near me"
-        />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/contact" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/contact" />
-        <meta property="og:title" content="Contact Us | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call for emergency lockout help or request a free quote online." />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/contact" />
-        <meta property="twitter:title" content="Contact Us | A Secure Annapolis Locksmith" />
-        <meta property="twitter:description" content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call for emergency lockout help or request a free quote online." />
-      </Helmet>
-
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <img

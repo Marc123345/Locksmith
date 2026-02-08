@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { ArrowRight, MapPin, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -37,7 +39,7 @@ export const RelatedContent = ({ links, title = 'Related Services & Areas' }: Re
               transition={{ delay: index * 0.1 }}
             >
               <Link
-                to={link.href}
+                href={link.href}
                 className="group block bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-transparent hover:border-blue-500"
               >
                 <div className="flex items-start gap-4">

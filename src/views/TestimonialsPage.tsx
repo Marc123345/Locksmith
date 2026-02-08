@@ -1,10 +1,11 @@
+'use client';
+
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import TestimonialCard from "@/components/TestimonialCard";
 import CallToAction from "@/components/CallToAction";
 import { Button } from "@/components/ui/button";
 import { Star, Quote, Lock, ThumbsUp, Users, MessageSquare } from "lucide-react";
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -139,27 +140,6 @@ const itemVariants = {
 export default function TestimonialsPage() {
   return (
     <>
-      <Helmet>
-        <title>Customer Testimonials & Reviews | A Secure Annapolis Locksmith</title>
-        <meta name="description" content="Read reviews from our satisfied customers in Annapolis, MD. See why we're the trusted locksmith with 4.9 stars and 1000+ happy customers since 2010." />
-        <meta name="keywords" content="locksmith reviews Annapolis, A Secure Annapolis testimonials, locksmith customer reviews, trusted locksmith Annapolis, verified locksmith reviews" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.asecureannapolislocksmith.com/testimonials" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.asecureannapolislocksmith.com/testimonials" />
-        <meta property="og:title" content="Customer Testimonials & Reviews | A Secure Annapolis Locksmith" />
-        <meta property="og:description" content="Read reviews from our satisfied customers. 4.9 stars with 1000+ happy customers since 2010." />
-        <meta property="og:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-        <meta property="og:site_name" content="A Secure Annapolis Locksmith" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/testimonials" />
-        <meta property="twitter:title" content="Customer Testimonials & Reviews | A Secure Annapolis Locksmith" />
-        <meta property="twitter:image" content="https://www.asecureannapolislocksmith.com/image.png" />
-        <meta property="twitter:description" content="Read reviews from our satisfied customers. 4.9 stars with 1000+ happy customers since 2010." />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
@@ -208,7 +188,7 @@ export default function TestimonialsPage() {
                 className="text-lg h-12 px-8"
                 asChild
               >
-                <Link to="/contact">Contact Us</Link>
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
           </motion.div>

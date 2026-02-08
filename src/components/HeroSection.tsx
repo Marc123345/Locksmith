@@ -1,8 +1,10 @@
+'use client';
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Shield, Clock, MapPin, Star, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { CONTACT } from "@/utils/contact";
 
 const containerVariants = {
@@ -104,7 +106,7 @@ export const HeroSection = () => {
                 className="h-16 md:h-20 px-10 md:px-12 text-xl md:text-2xl rounded-full border-slate-300 text-slate-700 bg-white/80 backdrop-blur-sm hover:bg-white transition-all shadow-sm"
                 asChild
               >
-                <Link to="/contact">Request a Quote</Link>
+                <Link href="/contact">Request a Quote</Link>
               </Button>
             </div>
 
