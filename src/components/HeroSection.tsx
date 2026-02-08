@@ -125,7 +125,7 @@ export const HeroSection = () => {
             {[
               { icon: Shield, title: "Licensed & Insured", sub: "Maryland Certified" },
               { icon: Clock, title: "20-Min Response", sub: "Local Emergency Service" },
-              { icon: CheckCircle2, title: "Price Guarantee", sub: "No Hidden Service Fees" }
+              { icon: CheckCircle2, title: "Upfront Pricing", sub: "No Hidden Service Fees" }
             ].map((feature, i) => (
               <div key={i} className="flex items-center gap-4 px-6 py-4 rounded-3xl bg-white/40 backdrop-blur-[2px] transition-colors hover:bg-white/80">
                 <div className="h-12 w-12 md:h-14 md:w-14 shrink-0 rounded-2xl bg-white border border-slate-100 flex items-center justify-center shadow-sm">

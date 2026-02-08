@@ -27,7 +27,7 @@ const steps = [
   {
     icon: <CheckCircle className="h-7 w-7" />,
     title: "Problem Solved",
-    description: "Fast, professional service with upfront pricing and a 3-month warranty.",
+    description: "Fast, professional service with upfront pricing by licensed technicians.",
     accent: "bg-emerald-500"
   }
 ];
