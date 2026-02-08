@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const teamMembers = [
   {
-    name: 'Roy',
+    name: 'Royi',
     role: 'Lead Locksmith & Owner',
     experience: '15+ years in the trade',
     areas: 'Eastport, Bay Ridge, Annapolis',
     specialties: ['Residential lock systems', 'Car lockouts', 'Smart lock installations'],
-    bio: 'Roy founded A Secure Annapolis Locksmith in 2010 and has been the go-to locksmith for Annapolis-area homeowners ever since. Customers consistently praise his professionalism, speed, and attention to detail.',
+    bio: 'Royi founded A Secure Annapolis Locksmith in 2010 and has been the go-to locksmith for Annapolis-area homeowners ever since. Customers consistently praise his professionalism, speed, and attention to detail.',
   },
   {
     name: 'Alan',

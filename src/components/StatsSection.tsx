@@ -13,7 +13,7 @@ const stats = [
     number: "4.9/5",
     label: "Top-Rated",
     icon: <Users className="h-8 w-8 text-primary" />,
-    description: "Based on 100+ verified reviews"
+    description: "Based on verified customer reviews"
   },
   {
     number: "20-Min",

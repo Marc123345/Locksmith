@@ -28,7 +28,7 @@ export default function ServicesPage() {
         "Emergency lockout service",
         "Master key systems",
       ],
-      price: "Starting at $75",
+      price: "Starting at $39/lock (rekey)",
       response: "Same-day service available",
       href: "/contact"
     },
@@ -101,7 +101,7 @@ export default function ServicesPage() {
     {
       icon: <BadgeCheck className="h-6 w-6 text-primary" />,
       title: "Quality Guarantee",
-      description: "100% satisfaction guarantee on all services",
+      description: "Satisfaction guaranteed on all services",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,

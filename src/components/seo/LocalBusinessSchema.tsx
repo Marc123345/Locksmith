@@ -55,8 +55,8 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 38.9729,
-      "longitude": -76.4810,
+      "latitude": 38.978764,
+      "longitude": -76.492786,
     },
     "areaServed": [
       { "@type": "City", "name": "Annapolis" },
@@ -192,7 +192,7 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "100",
+      "reviewCount": "60",
     },
     "review": schemaReviews,
   };

@@ -30,14 +30,14 @@ const processSteps = [
   {
     icon: CreditCard,
     title: 'Pay When Satisfied',
-    description: 'We accept cash, all major cards, Venmo, and Zelle. You only pay the quoted price -- nothing more.',
+    description: 'We accept cash, all major credit cards, Venmo, Zelle, and Google Pay. You only pay the quoted price -- nothing more.',
     detail: 'Invoice provided for every job',
   },
   {
     icon: ThumbsUp,
-    title: '3-Month Warranty',
-    description: 'Every lock change and installation is backed by a 3-month warranty. If something isn\'t right, we fix it free.',
-    detail: 'Warranty covers parts and labor',
+    title: '90-Day Warranty',
+    description: 'Every lock change and installation is backed by a 90-day warranty on parts and labor. If something isn\'t right, we fix it free.',
+    detail: 'Covers parts and labor',
   },
 ];
 

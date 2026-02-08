@@ -190,7 +190,7 @@ const faqs = [
   },
   {
     question: "Do you offer a warranty on lock changes in Annapolis?",
-    answer: "Yes, every residential and commercial lock change comes with a 3-month warranty. If something isn't right, we'll make it right at no additional charge."
+    answer: "Yes, every residential and commercial lock change comes with a 90-day warranty on parts and labor. If something isn't right, we'll make it right at no additional charge."
   },
   {
     question: "Can you work with high-security locks and smart locks?",
@@ -281,7 +281,7 @@ export default function HomePage() {
                 Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <Link to="/locations/eastport" className="text-primary hover:underline font-semibold">Eastport</Link>, <Link to="/locations/bay-ridge" className="text-primary hover:underline font-semibold">Bay Ridge</Link>, <Link to="/locations/hillsmere-shores" className="text-primary hover:underline font-semibold">Hillsmere Shores</Link>, <Link to="/locations/severna-park" className="text-primary hover:underline font-semibold">Severna Park</Link>, and <Link to="/locations/edgewater" className="text-primary hover:underline font-semibold">Edgewater</Link>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Every residential and commercial <Link to="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward <Link to="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over 100 combined reviews</strong>.
+                Every residential and commercial <Link to="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>90-day warranty on parts and labor</strong>. No hidden fees, no upsells -- just straightforward <Link to="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us, with a <strong>4.9-star rating across Google and Thumbtack</strong>.
               </p>
               <p className="text-base leading-relaxed text-slate-600 italic border-l-4 border-primary pl-4">
                 Licensed Maryland locksmith serving Annapolis and Anne Arundel County since 2010 -- fully insured and bonded for residential, commercial, and automotive work. From <Link to="/locations/eastport" className="text-primary hover:underline">Eastport condo lockouts</Link> to <Link to="/locations/hillsmere-shores" className="text-primary hover:underline">Hillsmere Shores</Link> waterfront homes with sticky deadbolts, we handle the lock issues Annapolis residents see most.
@@ -378,7 +378,7 @@ export default function HomePage() {
           >
             <h2 className="text-4xl font-bold mb-4">Verified Reviews from Annapolis Homeowners & Drivers</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              4.9 rating with 100+ verified reviews across Google and Thumbtack. These are real experiences from your neighbors.
+              4.9-star rating across Google and Thumbtack. These are real experiences from your neighbors.
             </p>
           </motion.div>
 

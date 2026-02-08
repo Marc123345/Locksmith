@@ -61,7 +61,7 @@ export default function ContactPage() {
     },
     {
       question: "What forms of payment do you accept?",
-      answer: "We accept all major credit cards, cash, and mobile payment options like Google Pay. We can also provide invoicing for commercial clients.",
+      answer: "We accept all major credit cards, cash, Venmo, Zelle, and Google Pay. We can also provide invoicing for commercial clients.",
     },
     {
       question: "Do you offer warranties on your work?",
@@ -103,7 +103,7 @@ export default function ContactPage() {
     {
       icon: <BadgeCheck className="h-8 w-8 text-primary" />,
       title: "Satisfaction Guaranteed",
-      description: "100% satisfaction guarantee on all services"
+      description: "Satisfaction guaranteed on all services"
     },
     {
       icon: <Lock className="h-8 w-8 text-primary" />,
@@ -122,7 +122,7 @@ export default function ContactPage() {
         <title>Contact Us | A Secure Annapolis Locksmith - Get a Free Quote</title>
         <meta
           name="description"
-          content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call (410) 956-2210 for emergency lockout help or request a free quote online. Serving Annapolis, MD and surrounding areas."
+          content="Contact A Secure Annapolis Locksmith for fast, reliable service. Call (410) 849-6069 for emergency lockout help or request a free quote online. Serving Annapolis, MD and surrounding areas."
         />
         <meta
           name="keywords"

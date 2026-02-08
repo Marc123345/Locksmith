@@ -106,15 +106,15 @@ const stats = [
   },
   {
     icon: <Users className="h-8 w-8 text-primary" />,
-    value: "1000+",
-    label: "Customers Served",
-    description: "Since 2010"
+    value: "60+",
+    label: "Google Reviews",
+    description: "Verified on Google"
   },
   {
     icon: <MessageSquare className="h-8 w-8 text-primary" />,
-    value: "50+",
-    label: "Verified Reviews",
-    description: "On Google"
+    value: "54",
+    label: "Thumbtack Reviews",
+    description: "Top Pro rated"
   }
 ];
 
@@ -141,7 +141,7 @@ export default function TestimonialsPage() {
     <>
       <Helmet>
         <title>Customer Testimonials & Reviews | A Secure Annapolis Locksmith</title>
-        <meta name="description" content="Read reviews from our satisfied customers in Annapolis, MD. See why we're the trusted locksmith with 4.9 stars and 1000+ happy customers since 2010." />
+        <meta name="description" content="Read reviews from our satisfied customers in Annapolis, MD. See why we're a trusted locksmith with a 4.9-star rating on Google and Thumbtack." />
         <meta name="keywords" content="locksmith reviews Annapolis, A Secure Annapolis testimonials, locksmith customer reviews, trusted locksmith Annapolis, verified locksmith reviews" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.asecureannapolislocksmith.com/testimonials" />
@@ -311,7 +311,7 @@ export default function TestimonialsPage() {
       {/* Call to Action */}
       <CallToAction
         title="Experience Our Professional Service"
-        subtitle="Join our satisfied customers and discover why we're Annapolis's most trusted locksmith."
+        subtitle="Join our satisfied customers and see why Annapolis homeowners trust us with their security."
         primaryButtonText="Contact Us"
         secondaryButtonText="View Services"
         variant="centered"
