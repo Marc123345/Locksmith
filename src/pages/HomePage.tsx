@@ -8,6 +8,7 @@ import ServiceSection from '@/components/ServiceSection';
 import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
+import LocationBlogSection from '@/components/LocationBlogSection';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
@@ -626,6 +627,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <LocationBlogSection
+        locationName="Annapolis"
+        heading="Latest From Our Locksmith Blog"
+      />
 
       <section className="py-16 bg-white" aria-label="Locksmith services by neighborhood in Annapolis">
         <div className="container mx-auto px-4">

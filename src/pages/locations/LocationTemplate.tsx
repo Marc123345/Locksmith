@@ -12,6 +12,7 @@ import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import IconShowcase from '@/components/IconShowcase';
 import ServiceVisuals from '@/components/ServiceVisuals';
 import RelatedContent from '@/components/RelatedContent';
+import LocationBlogSection from '@/components/LocationBlogSection';
 import { standardPricing } from '@/data/pricing';
 import { getTestimonialsByLocation } from '@/data/testimonials';
 import type { LocationData } from '@/data/locations';
@@ -495,6 +496,8 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           directions={location.directions}
           distance={location.distance}
         />
+
+        <LocationBlogSection locationName={location.name} />
 
         <RelatedContent links={relatedLinks} />
 
