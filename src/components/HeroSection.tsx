@@ -49,7 +49,7 @@ export const HeroSection = () => {
             variants={itemVariants}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 mb-8 leading-[0.9] drop-shadow-sm"
           >
-            A Secure <span className="text-primary italic font-serif font-medium">Annapolis</span> <br /> Locksmith
+            Annapolis, MD <br /> <span className="text-primary italic font-serif font-medium">Locksmith</span>
           </motion.h1>
 
           {/* Review Badges */}
