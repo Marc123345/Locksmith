@@ -74,7 +74,13 @@ const TestimonialCard = ({
             <div className="text-right">
               <div className="flex items-center text-sm text-muted-foreground">
                 <img
-                  src={source === "Google" ? "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" : "https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg"}
+                  src={
+                    source === "Thumbtack"
+                      ? "https://assets.thumbtack.com/images/t-favicon-v2.svg"
+                      : source === "Google"
+                        ? "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                        : "https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg"
+                  }
                   alt={`${source} review platform logo`}
                   width="16"
                   height="16"

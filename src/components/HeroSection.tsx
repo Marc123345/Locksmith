@@ -52,13 +52,13 @@ export const HeroSection = () => {
             A Secure <span className="text-primary italic font-serif font-medium">Annapolis</span> <br /> Locksmith
           </motion.h1>
 
-          {/* Prominent Google Review Badge */}
-          <motion.div variants={itemVariants} className="flex flex-col items-center mb-12">
+          {/* Review Badges */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-12">
             <div className="inline-flex items-center gap-6 px-6 py-4 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-transform hover:scale-[1.02]">
               <div className="flex flex-col items-start border-r border-slate-200 pr-6">
-                <img 
-                  src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" 
-                  alt="Google" 
+                <img
+                  src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
+                  alt="Google"
                   className="h-5 mb-1"
                   width="74"
                   height="24"
@@ -73,10 +73,38 @@ export const HeroSection = () => {
                   ))}
                 </div>
                 <p className="text-slate-900 font-bold text-lg md:text-xl">
-                  4.9 <span className="text-slate-500 font-normal text-sm md:text-base ml-1">Out of 60+ Reviews</span>
+                  4.9 <span className="text-slate-500 font-normal text-sm md:text-base ml-1">60+ Reviews</span>
                 </p>
               </div>
             </div>
+            <a
+              href="https://www.thumbtack.com/md/annapolis/locksmiths/secure-annapolis-locksmith/service/550518270306156552"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-4 px-6 py-4 rounded-3xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-[0_10px_40px_rgba(0,0,0,0.08)] transition-transform hover:scale-[1.02]"
+            >
+              <div className="flex flex-col items-start border-r border-slate-200 pr-4">
+                <img
+                  src="https://assets.thumbtack.com/images/t-favicon-v2.svg"
+                  alt="Thumbtack"
+                  className="h-6 mb-1"
+                  width="24"
+                  height="24"
+                  loading="eager"
+                />
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">Top Pro</span>
+              </div>
+              <div className="flex flex-col items-start leading-none">
+                <div className="flex gap-0.5 mb-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 md:h-5 md:w-5 fill-primary text-primary" />
+                  ))}
+                </div>
+                <p className="text-slate-900 font-bold text-lg md:text-xl">
+                  4.9 <span className="text-slate-500 font-normal text-sm md:text-base ml-1">54 Reviews</span>
+                </p>
+              </div>
+            </a>
           </motion.div>
 
           {/* Action Row */}
