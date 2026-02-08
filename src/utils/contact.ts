@@ -2,7 +2,6 @@ export const formatPhoneNumber = (phone: string): string => {
   const cleaned = phone.replace(/\D/g, '');
 
   if (cleaned.length !== 10) {
-    console.warn('Invalid phone number format');
     return phone;
   }
 
@@ -13,7 +12,6 @@ export const formatPhoneLink = (phone: string): string => {
   const cleaned = phone.replace(/\D/g, '');
 
   if (cleaned.length !== 10) {
-    console.warn('Invalid phone link format');
     return `tel:${phone}`;
   }
 
@@ -22,7 +20,6 @@ export const formatPhoneLink = (phone: string): string => {
 
 export const obfuscateEmail = (email: string): string => {
   if (!email || !email.includes('@') || !email.includes('.')) {
-    console.warn('Invalid email format');
     return email;
   }
   return email.replace('@', ' [at] ').replace('.', ' [dot] ');

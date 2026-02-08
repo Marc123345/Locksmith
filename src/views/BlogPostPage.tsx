@@ -59,8 +59,7 @@ const BlogPostPage = () => {
       setPost(data);
       incrementViewCount(data.id);
       fetchRelatedPosts(data.category, data.location, data.id);
-    } catch (error) {
-      console.error('Error fetching blog post:', error);
+    } catch {
       setIsNotFound(true);
     } finally {
       setLoading(false);
@@ -70,8 +69,8 @@ const BlogPostPage = () => {
   const incrementViewCount = async (postId: string) => {
     try {
       await supabase.rpc('increment_blog_view_count', { post_id: postId });
-    } catch (error) {
-      console.error('Error incrementing view count:', error);
+    } catch {
+      // non-critical, silently ignore
     }
   };
 
@@ -111,8 +110,8 @@ const BlogPostPage = () => {
 
         setRelatedPosts(fallbackData || []);
       }
-    } catch (error) {
-      console.error('Error fetching related posts:', error);
+    } catch {
+      // silently handle fetch errors
     }
   };
 

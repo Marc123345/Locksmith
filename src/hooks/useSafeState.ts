@@ -6,8 +6,8 @@ export function useSafeState<T>(initialState: T) {
   const setSafeState = useCallback((value: T | ((prev: T) => T)) => {
     try {
       setState(value);
-    } catch (error) {
-      console.error('Error setting state:', error);
+    } catch {
+      // silently handle state update errors
     }
   }, []);
 
