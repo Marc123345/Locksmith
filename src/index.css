@@ -122,18 +122,6 @@
 
 /* Custom utility classes for text contrast */
 @layer utilities {
-  .text-primary-light {
-    @apply text-primary-light;
-  }
-  .text-primary-lighter {
-    @apply text-primary-lighter;
-  }
-  .bg-primary-light {
-    @apply bg-primary-light;
-  }
-  .bg-primary-lighter {
-    @apply bg-primary-lightest;
-  }
   .hover-primary {
     @apply hover:text-primary transition-colors duration-200;
   }
