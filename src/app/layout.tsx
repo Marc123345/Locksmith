@@ -60,7 +60,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
+      </head>
+      <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5FYP20WLRN"
           strategy="afterInteractive"
@@ -73,7 +74,6 @@ export default function RootLayout({
             gtag('config', 'G-5FYP20WLRN');
           `}
         </Script>
-
         <Script
           src="https://plausible.io/js/pa-WxFh8_UBx64N5Mczv8jH0.js"
           strategy="afterInteractive"
@@ -84,8 +84,6 @@ export default function RootLayout({
             plausible.init()
           `}
         </Script>
-      </head>
-      <body>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
