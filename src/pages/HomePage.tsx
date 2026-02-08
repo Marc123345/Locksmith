@@ -9,7 +9,6 @@ import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
 import LocationBlogSection from '@/components/LocationBlogSection';
-import BusinessSnapshot from '@/components/BusinessSnapshot';
 import LockoutGuide from '@/components/LockoutGuide';
 import MeetTheTeam from '@/components/MeetTheTeam';
 import WhatToExpect from '@/components/WhatToExpect';
@@ -259,7 +258,6 @@ export default function HomePage() {
         <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
-      <BusinessSnapshot />
       <HeroSection />
       <TrustedBySection />
       <LockoutGuide />
