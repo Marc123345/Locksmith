@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DollarSign, Home, Car, Building2, CheckCircle, ArrowRight } from 'lucide-react';
+import { Home, Car, Building2, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardFooter } from './ui/card';
 import { Button } from './ui/button';
 import Link from 'next/link';

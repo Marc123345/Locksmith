@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { BookOpen, Search } from 'lucide-react';
 import { BlogCard } from '@/components/BlogCard';
 import { supabase } from '@/lib/supabase';
@@ -24,11 +24,7 @@ const BlogPage = () => {
   const [searchQuery, setSearchQuery] = useSafeState('');
   const [selectedCategory, setSelectedCategory] = useSafeState<string | null>(null);
 
-  useEffect(() => {
-    fetchBlogPosts();
-  }, []);
-
-  const fetchBlogPosts = async () => {
+  const fetchBlogPosts = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('blog_posts')
@@ -44,7 +40,11 @@ const BlogPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [setPosts, setLoading]);
+
+  useEffect(() => {
+    fetchBlogPosts();
+  }, [fetchBlogPosts]);
 
   const filteredPosts = posts.filter((post) => {
     const matchesSearch =

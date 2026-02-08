@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HelpCircle, ChevronDown, Home, Car, AlertTriangle } from 'lucide-react';
+import { ChevronDown, Home, Car, AlertTriangle } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 interface FAQ {

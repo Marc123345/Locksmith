@@ -13,11 +13,7 @@ interface CallToActionProps {
 }
 
 const CallToAction: React.FC<CallToActionProps> = ({
-  title,
-  subtitle,
   primaryButtonText,
-  secondaryButtonText,
-  variant = 'default'
 }) => {
   const isCallNow = primaryButtonText.toLowerCase().includes('call');
 

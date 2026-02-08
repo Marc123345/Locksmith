@@ -21,7 +21,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star, Mail, Wrench } from 'lucide-react';
+import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, ExternalLink, Star, Mail, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { CONTACT } from '@/utils/contact';
 import {

@@ -32,7 +32,7 @@ export function useMetaRobots(options: MetaRobotsOptions) {
         metaTag.parentNode.removeChild(metaTag);
       }
     };
-  }, [options.index, options.follow]);
+  }, [options]);
 }
 
 export function setNoIndex() {

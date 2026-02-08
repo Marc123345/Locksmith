@@ -1,4 +1,4 @@
-import { CONTACT, formatPhoneNumber, obfuscateEmail } from '@/utils/contact';
+import { CONTACT, obfuscateEmail } from '@/utils/contact';
 
 export const ContactInfo = () => {
   return (

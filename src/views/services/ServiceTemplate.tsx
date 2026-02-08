@@ -11,13 +11,13 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import ServiceVisuals from '@/components/ServiceVisuals';
 import RelatedContent from '@/components/RelatedContent';
-import { standardPricing } from '@/data/pricing';
+import { standardPricing, type PricingItem } from '@/data/pricing';
 import { getTestimonialsByService } from '@/data/testimonials';
 import type { ServiceData } from '@/data/services';
 
 interface ServiceTemplateProps {
   service: ServiceData;
-  pricing?: any[];
+  pricing?: PricingItem[];
 }
 
 export default function ServiceTemplate({ service, pricing = standardPricing }: ServiceTemplateProps) {

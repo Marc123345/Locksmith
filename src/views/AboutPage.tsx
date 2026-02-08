@@ -1,9 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Shield, Award, Clock, Users, Wrench, BadgeCheck, ArrowRight, Star, Lock, CheckCircle2, Heart } from 'lucide-react';
-import Link from "next/link";
+import { Shield, Award, Clock, Users, Wrench, BadgeCheck, Star, Lock, CheckCircle2, Heart } from 'lucide-react';
 import AboutSections from "@/components/AboutSections";
 import CallToAction from "@/components/CallToAction";
 import { motion } from "framer-motion";

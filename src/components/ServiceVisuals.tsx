@@ -5,7 +5,7 @@ interface ServiceVisualsProps {
   serviceName: string;
 }
 
-export const ServiceVisuals = ({ serviceName }: ServiceVisualsProps) => {
+export const ServiceVisuals = (_props: ServiceVisualsProps) => {
   const stats = [
     {
       icon: <Users className="h-8 w-8" />,

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams, notFound } from 'next/navigation';
@@ -33,13 +33,7 @@ const BlogPostPage = () => {
   const [loading, setLoading] = useSafeState(true);
   const [isNotFound, setIsNotFound] = useSafeState(false);
 
-  useEffect(() => {
-    if (slug) {
-      fetchBlogPost();
-    }
-  }, [slug]);
-
-  const fetchBlogPost = async () => {
+  const fetchBlogPost = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('blog_posts')
@@ -57,63 +51,59 @@ const BlogPostPage = () => {
       }
 
       setPost(data);
-      incrementViewCount(data.id);
-      fetchRelatedPosts(data.category, data.location, data.id);
+
+      try {
+        await supabase.rpc('increment_blog_view_count', { post_id: data.id });
+      } catch {
+        // non-critical, silently ignore
+      }
+
+      try {
+        let query = supabase
+          .from('blog_posts')
+          .select('*')
+          .eq('status', 'published')
+          .lte('published_date', new Date().toISOString().split('T')[0])
+          .neq('id', data.id)
+          .limit(3);
+
+        if (data.category) {
+          query = query.eq('category', data.category);
+        } else if (data.location) {
+          query = query.eq('location', data.location);
+        }
+
+        const { data: relatedData } = await query.order('published_date', { ascending: false });
+
+        if (relatedData && relatedData.length > 0) {
+          setRelatedPosts(relatedData);
+        } else {
+          const { data: fallbackData } = await supabase
+            .from('blog_posts')
+            .select('*')
+            .eq('status', 'published')
+            .lte('published_date', new Date().toISOString().split('T')[0])
+            .neq('id', data.id)
+            .order('published_date', { ascending: false })
+            .limit(3);
+
+          setRelatedPosts(fallbackData || []);
+        }
+      } catch {
+        // silently handle fetch errors
+      }
     } catch {
       setIsNotFound(true);
     } finally {
       setLoading(false);
     }
-  };
+  }, [slug, setPost, setIsNotFound, setRelatedPosts, setLoading]);
 
-  const incrementViewCount = async (postId: string) => {
-    try {
-      await supabase.rpc('increment_blog_view_count', { post_id: postId });
-    } catch {
-      // non-critical, silently ignore
+  useEffect(() => {
+    if (slug) {
+      fetchBlogPost();
     }
-  };
-
-  const fetchRelatedPosts = async (
-    category?: string,
-    location?: string,
-    currentPostId?: string
-  ) => {
-    try {
-      let query = supabase
-        .from('blog_posts')
-        .select('*')
-        .eq('status', 'published')
-        .lte('published_date', new Date().toISOString().split('T')[0])
-        .neq('id', currentPostId)
-        .limit(3);
-
-      if (category) {
-        query = query.eq('category', category);
-      } else if (location) {
-        query = query.eq('location', location);
-      }
-
-      const { data } = await query.order('published_date', { ascending: false });
-
-      if (data && data.length > 0) {
-        setRelatedPosts(data);
-      } else {
-        const { data: fallbackData } = await supabase
-          .from('blog_posts')
-          .select('*')
-          .eq('status', 'published')
-          .lte('published_date', new Date().toISOString().split('T')[0])
-          .neq('id', currentPostId)
-          .order('published_date', { ascending: false })
-          .limit(3);
-
-        setRelatedPosts(fallbackData || []);
-      }
-    } catch {
-      // silently handle fetch errors
-    }
-  };
+  }, [slug, fetchBlogPost]);
 
   if (isNotFound) {
     notFound();

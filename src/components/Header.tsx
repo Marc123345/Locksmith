@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -7,23 +7,6 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/useScroll";
 import { CONTACT } from "@/utils/contact";
-
-const locationLinks = [
-  { name: "Annapolis, MD", href: "/locations/annapolis" },
-  { name: "Arnold, MD", href: "/locations/arnold" },
-  { name: "Bay Ridge, MD", href: "/locations/bay-ridge" },
-  { name: "Broadneck, MD", href: "/locations/broadneck" },
-  { name: "Cape St. Claire, MD", href: "/locations/cape-st-claire" },
-  { name: "Crownsville, MD", href: "/locations/crownsville" },
-  { name: "Eastport, MD", href: "/locations/eastport" },
-  { name: "Edgewater, MD", href: "/locations/edgewater" },
-  { name: "Edgewater Beach, MD", href: "/locations/edgewater-beach" },
-  { name: "Hillsmere Shores, MD", href: "/locations/hillsmere-shores" },
-  { name: "Mayo, MD", href: "/locations/mayo" },
-  { name: "Parole, MD", href: "/locations/parole" },
-  { name: "Riva, MD", href: "/locations/riva" },
-  { name: "Severna Park, MD", href: "/locations/severna-park" },
-];
 
 const serviceCategories = [
   {
@@ -93,14 +76,19 @@ export const Header = () => {
   const isScrolled = useScroll(10);
   const pathname = usePathname();
   const router = useRouter();
+  const prevPathname = useRef(pathname);
 
-  // Close menu on route change
   useEffect(() => {
-    setIsOpen(false);
-    setLocationsOpen(false);
-    setServicesOpen(false);
-    setMobileLocationsOpen(false);
-    setMobileServicesOpen(false);
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      requestAnimationFrame(() => {
+        setIsOpen(false);
+        setLocationsOpen(false);
+        setServicesOpen(false);
+        setMobileLocationsOpen(false);
+        setMobileServicesOpen(false);
+      });
+    }
   }, [pathname]);
 
   const toggleMenu = useCallback(() => setIsOpen(prev => !prev), []);

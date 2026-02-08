@@ -104,11 +104,8 @@ export function generateGoogleMapsEmbedURL(): string {
   return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.8!2d${coordinates.lng}!3d${coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU4JzQzLjYiTiA3NsKwMjknMzQuMCJX!5e0!3m2!1sen!2sus!4v1234567890123`;
 }
 
-export function generateLocalBusinessJSON(options?: {
-  locationName?: string;
-  serviceName?: string;
-}) {
-  const { businessName, address, phone, email, coordinates, hours, serviceAreas } = LOCAL_SEO_CONFIG;
+export function generateLocalBusinessJSON() {
+  const { businessName, address, phone, email, coordinates, serviceAreas } = LOCAL_SEO_CONFIG;
 
   return {
     "@context": "https://schema.org",

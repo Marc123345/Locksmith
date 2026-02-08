@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, ArrowRight, Shield, BadgeCheck, Lock } from "lucide-react";
+import { Phone, MapPin, ArrowRight, Shield, BadgeCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from "framer-motion";
 import { CONTACT } from "@/utils/contact";
@@ -32,18 +30,19 @@ export default function ContactPage() {
   const jotformContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const container = jotformContainerRef.current;
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = 'https://form.jotform.com/jsform/253124306063446';
     script.async = true;
 
-    if (jotformContainerRef.current) {
-      jotformContainerRef.current.appendChild(script);
+    if (container) {
+      container.appendChild(script);
     }
 
     return () => {
-      if (jotformContainerRef.current && jotformContainerRef.current.contains(script)) {
-        jotformContainerRef.current.removeChild(script);
+      if (container && container.contains(script)) {
+        container.removeChild(script);
       }
     };
   }, []);
@@ -113,10 +112,6 @@ export default function ContactPage() {
       description: "Your security and privacy are our top priorities"
     }
   ];
-
-  const handleMapClick = () => {
-    window.open('https://www.google.com/localservices/prolist?g2lbs=AAEPWCv7euUMG85IwdlEmb2X8-cn3QPsrAn4SRB7wr2iIDoJQzP-9PUoC4VOPUEnCa2hH0RpaIwSsy7d7MF6kYAVed3BlyWdOw%3D%3D&hl=en-IL&gl=il&ssta=1&q=annapolis%20locksmith&oq=annapolis%20locksmith&slp=MgBSAggCYAB61AFDaE5oYm01aGNHOXNhWE1nYkc5amEzTnRhWFJoU0t1SXotYi1yNENBQ0ZvYkVBRVlBQmdCSWhOaGJtNWhjRzlzYVhNZ2JHOWphM050YVhSb2tnRUpiRzlqYTNOdGFYUm9xZ0ZVQ2dndmJTOHdablozWnhBQktnMGlDV3h2WTJ0emJXbDBhQ2dBTWg0UUFTSWF4QVBIOHB1MlhGV3BWOG9pVFNIUkZUcjB1SXl4Vkx3LXo5VXlGeEFDSWhOaGJtNWhjRzlzYVhNZ2JHOWphM050YVhSb5IBKwoLL2cvMXRsXzAyM2sKDS9nLzExaF9xZjdrMWMKDS9nLzExczN4eG5ycXA%3D&src=2&spp=Cg0vZy8xMWhfcWY3azFjOrABV2hzUUFSZ0FHQUVpRTJGdWJtRndiMnhwY3lCc2IyTnJjMjFwZEdpU0FRbHNiMk5yYzIxcGRHaWFBUUNxQVZRS0NDOXRMekJtZG5kbkVBRXFEU0lKYkc5amEzTnRhWFJvS0FBeUhoQUJJaHJFQThmeW03WmNWYWxYeWlKTklkRVZPdlM0akxGVXZEN1AxVElYRUFJaUUyRnVibUZ3YjJ4cGN5QnNiMk5yYzIxcGRHZz0%3D&serdesk=1&lrlstt=1743781529255&ved=2ahUKEwjX5aer3L6MAxUgRaQEHQ7cMegQvS56BAgmEAE&scp=Cg5nY2lkOmxvY2tzbWl0aBJAEhIJ1S9ncGX2t4kRSyeo0_1U-EMiEkFubmFwb2xpcywgTUQsIFVTQSoUDRAlNhcV1fZg0h02Xz8XJT6ia9IwABoJbG9ja3NtaXRoIhNhbm5hcG9saXMgbG9ja3NtaXRo', '_blank');
-  };
 
   return (
     <>

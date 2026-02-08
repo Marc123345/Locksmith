@@ -1,10 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import ServiceSection from "@/components/ServiceSection";
 import CallToAction from "@/components/CallToAction";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check, ArrowRight, Clock, Shield, BadgeCheck, MapPin, Phone, Lock, PenTool as Tool, Key, Home, Building2, Car, AlertTriangle } from "lucide-react";
+import { Clock, Shield, BadgeCheck, MapPin, Phone, Lock, PenTool as Tool, Key, Home, Building2, Car, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,7 +12,7 @@ import { CONTACT } from "@/utils/contact";
 import ServiceCard from "@/components/ServiceCard";
 
 export default function ServicesPage() {
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [, setHoveredService] = React.useState<string | null>(null);
 
   const serviceCategories = [
     {

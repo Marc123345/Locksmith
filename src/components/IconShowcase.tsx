@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Lock, Key, Shield, Smartphone, Building2, Home, Car, Clock, Zap, ThumbsUp } from 'lucide-react';
+import { Lock, Key, Shield, Smartphone, Building2, Zap, ThumbsUp } from 'lucide-react';
 
 interface IconShowcaseItem {
   icon: React.ReactNode;

@@ -6,7 +6,7 @@ interface ContactFormProps {
   locationPreference?: string;
 }
 
-const ContactForm = ({ pageSource, serviceType, locationPreference }: ContactFormProps = {}) => {
+const ContactForm = (_props: ContactFormProps = {}) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';

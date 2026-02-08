@@ -19,7 +19,7 @@ interface ServiceCardProps {
   className?: string;
 }
 
-const ServiceCard = React.memo(({ icon, title, description, features, image, href, className }: ServiceCardProps) => {
+const ServiceCard = React.memo(({ icon, title, description, features, image, className }: ServiceCardProps) => {
   const [isHovered, setIsHovered] = React.useState(false);
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
