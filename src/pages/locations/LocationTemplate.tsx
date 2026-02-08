@@ -344,10 +344,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 <p className="text-gray-600 mb-6 text-lg">
                   Need fast locksmith help in {location.name}? Fill out the form below and we'll respond immediately:
                 </p>
-                <ContactForm
-                  pageSource={`/locations/${location.slug}`}
-                  locationPreference={location.name}
-                />
+                <ContactForm />
               </div>
             </div>
           </div>

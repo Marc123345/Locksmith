@@ -120,19 +120,18 @@
   }
 }
 
-/* Custom utility classes for text contrast */
 @layer utilities {
   .text-primary-light {
-    @apply text-primary-light;
+    color: hsl(215 100% 45%);
   }
   .text-primary-lighter {
-    @apply text-primary-lighter;
+    color: hsl(215 100% 55%);
   }
   .bg-primary-light {
-    @apply bg-primary-light;
+    background-color: hsl(215 100% 45%);
   }
   .bg-primary-lighter {
-    @apply bg-primary-lightest;
+    background-color: hsl(215 100% 95%);
   }
   .hover-primary {
     @apply hover:text-primary transition-colors duration-200;
