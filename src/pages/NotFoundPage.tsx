@@ -60,7 +60,7 @@ export default function NotFoundPage() {
               Looking for something specific?
             </h3>
             <div className="flex flex-col gap-2 text-sm text-gray-600">
-              <p>Need emergency locksmith services? <a href="tel:4105551234" className="text-blue-600 hover:underline">Call (410) 555-1234</a></p>
+              <p>Need emergency locksmith services? <a href="tel:4108496069" className="text-blue-600 hover:underline">Call (410) 849-6069</a></p>
               <p>View our <Link to="/sitemap" className="text-blue-600 hover:underline">sitemap</Link> for a complete list of pages</p>
             </div>
           </div>

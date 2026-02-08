@@ -96,7 +96,7 @@ const stats = [
     icon: <Star className="h-8 w-8 text-yellow-400" />,
     value: "4.9",
     label: "Average Rating",
-    description: "Based on 60+ reviews"
+    description: "Based on 100+ reviews"
   },
   {
     icon: <ThumbsUp className="h-8 w-8 text-primary" />,

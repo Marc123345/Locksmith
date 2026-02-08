@@ -25,7 +25,7 @@ const showcaseItems: IconShowcaseItem[] = [
     icon: <Smartphone className="h-10 w-10" />,
     title: 'Smart Lock Upgrades',
     description: 'Modern security solutions with smart lock technology',
-    color: 'from-purple-500 to-purple-600'
+    color: 'from-slate-500 to-slate-700'
   },
   {
     icon: <Key className="h-10 w-10" />,

@@ -201,8 +201,8 @@ export default function NAPComponent({
         )}
 
         <div className="flex items-start gap-4">
-          <div className="bg-purple-100 rounded-full p-3">
-            <MapPin className="h-6 w-6 text-purple-600" />
+          <div className="bg-blue-100 rounded-full p-3">
+            <MapPin className="h-6 w-6 text-blue-600" />
           </div>
           <div>
             <div className="text-sm text-gray-500 font-medium mb-1">Our Location</div>

@@ -23,7 +23,7 @@ export const ServiceVisuals = ({ serviceName }: ServiceVisualsProps) => {
       icon: <Award className="h-8 w-8" />,
       value: '15+',
       label: 'Years Experience',
-      color: 'from-purple-500 to-purple-600'
+      color: 'from-slate-500 to-slate-700'
     },
     {
       icon: <TrendingUp className="h-8 w-8" />,

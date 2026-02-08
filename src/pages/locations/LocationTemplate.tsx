@@ -131,9 +131,21 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "opens": "08:00",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "opens": "07:00",
                 "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Friday",
+                "opens": "07:00",
+                "closes": "14:30"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "07:00",
+                "closes": "19:00"
               }
             ],
             "areaServed": {
@@ -152,7 +164,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "60"
+              "reviewCount": "100"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -317,8 +329,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
                     <Clock className="h-8 w-8 text-blue-600 mb-3" />
                     <h3 className="font-bold text-gray-900 mb-3 text-lg">Hours of Operation</h3>
-                    <p className="text-gray-700 font-medium">Mon–Sat: 8:00 AM – 8:00 PM</p>
-                    <p className="text-gray-700 font-medium">Sun: Emergency Services Only</p>
+                    <p className="text-gray-700 font-medium">Sun: 7:00 AM - 7:00 PM</p>
+                    <p className="text-gray-700 font-medium">Mon-Thu: 7:00 AM - 8:00 PM</p>
+                    <p className="text-gray-700 font-medium">Fri: 7:00 AM - 2:30 PM</p>
+                    <p className="text-gray-700 font-medium">Sat: Closed</p>
                   </div>
 
                   <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
@@ -406,8 +420,8 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 </p>
               </div>
 
-              <div className="group bg-gradient-to-br from-purple-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-purple-100">
-                <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="group bg-gradient-to-br from-slate-50 to-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 border border-slate-200">
+                <div className="bg-slate-700 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Building2 className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">

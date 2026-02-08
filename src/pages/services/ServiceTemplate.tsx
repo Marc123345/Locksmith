@@ -364,8 +364,8 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
               </div>
 
               <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 text-center">
-                <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                  <Wrench className="h-10 w-10 text-purple-600" />
+                <div className="bg-slate-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                  <Wrench className="h-10 w-10 text-slate-700" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3">
                   Expert Service
