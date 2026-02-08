@@ -2,6 +2,9 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   distDir: 'build',
+  webpack: (config) => {
+    return config;
+  },
   images: {
     remotePatterns: [
       { hostname: 'i.imgur.com' },
