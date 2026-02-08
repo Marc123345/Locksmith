@@ -6,7 +6,6 @@ import ContactForm from '@/components/ContactForm';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import TestimonialSection from '@/components/TestimonialSection';
-import DirectionsSection from '@/components/DirectionsSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import IconShowcase from '@/components/IconShowcase';
@@ -520,12 +519,6 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
         />
 
         <FAQSection faqs={location.faqs} />
-
-        <DirectionsSection
-          fromLocation={location.name}
-          directions={location.directions}
-          distance={location.distance}
-        />
 
         <LocationBlogSection locationName={location.name} />
 
