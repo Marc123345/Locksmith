@@ -29,7 +29,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
   const relatedLinks = [
     {
       title: 'Emergency Lockout Service',
-      description: `Fast same-day emergency lockout help in ${location.name}`,
+      description: `Fast emergency lockout help available 24/7 in ${location.name}`,
       href: '/services/emergency-lockout',
       type: 'service' as const
     },
@@ -76,7 +76,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
         <title>{location.metaTitle}</title>
         <meta name="title" content={location.metaTitle} />
         <meta name="description" content={location.metaDescription} />
-        <meta name="keywords" content={`locksmith ${location.name}, emergency locksmith ${location.name}, car locksmith ${location.name}, residential locksmith ${location.name}, commercial locksmith ${location.name}, lock rekey ${location.name}, same-day locksmith ${location.name}, mobile locksmith ${location.name}`} />
+        <meta name="keywords" content={`locksmith ${location.name}, emergency locksmith ${location.name}, car locksmith ${location.name}, residential locksmith ${location.name}, commercial locksmith ${location.name}, lock rekey ${location.name}, 24/7 locksmith ${location.name}, mobile locksmith ${location.name}`} />
 
         {/* Geographic Meta Tags */}
         <meta name="geo.region" content="US-MD" />
@@ -164,7 +164,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "reviewCount": "60"
+              "reviewCount": "100"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -175,7 +175,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Emergency Lockout Service",
-                    "description": `Same-day emergency locksmith service in ${location.name}`
+                    "description": `24/7 emergency locksmith service in ${location.name}`
                   }
                 },
                 {
@@ -437,10 +437,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Phone className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Same-Day Emergency Service
+                  24/7 Emergency Service
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Locked out? We provide same-day emergency locksmith services in {location.name} during business hours, Sunday through Friday. We arrive fast, fix the issue quickly, and get you back inside safely.
+                  Locked out late at night? We're available 24/7 for emergency locksmith services in {location.name}. We arrive fast, fix the issue quickly, and get you back inside safely.
                 </p>
               </div>
 
@@ -517,7 +517,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="text-3xl font-bold mb-2">✓</div>
-                <p className="text-white font-medium">Trusted by local residents</p>
+                <p className="text-white font-medium">Trusted by hundreds of residents</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="text-3xl font-bold mb-2">✓</div>

@@ -11,7 +11,7 @@ interface TestimonialSectionProps {
 export default function TestimonialSection({
   testimonials,
   title = 'What Our Clients Say',
-  subtitle = 'Trusted by homeowners and businesses across Anne Arundel County'
+  subtitle = 'Trusted by hundreds of satisfied customers in Anne Arundel County'
 }: TestimonialSectionProps) {
   return (
     <section className="py-16 bg-white">

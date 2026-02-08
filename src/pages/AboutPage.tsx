@@ -28,22 +28,22 @@ const stats = [
     description: "Serving since 2010"
   },
   { 
-    number: "4.9",
-    label: "Star Rating",
+    number: "1000+", 
+    label: "Satisfied Customers", 
     icon: <Users className="h-6 w-6 text-primary" />,
-    description: "Google & Thumbtack"
+    description: "5-star rated service"
   },
   { 
-    number: "Same-Day",
-    label: "Emergency Service",
+    number: "24/7", 
+    label: "Emergency Service", 
     icon: <Wrench className="h-6 w-6 text-primary" />,
-    description: "Sun-Fri availability"
+    description: "Always available"
   },
   { 
-    number: "98%",
-    label: "Satisfaction Rate",
+    number: "100%", 
+    label: "Satisfaction Rate", 
     icon: <Star className="h-6 w-6 text-primary" />,
-    description: "Based on customer feedback"
+    description: "Guaranteed results"
   },
 ];
 
@@ -161,7 +161,7 @@ const AboutPage = () => {
                       <Users className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-2">Trusted by Local Customers</h4>
+                      <h4 className="font-semibold text-lg mb-2">1000+ Happy Customers</h4>
                       <p className="text-muted-foreground">Trusted by homeowners and businesses across the region</p>
                     </div>
                   </div>

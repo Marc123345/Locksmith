@@ -19,8 +19,8 @@ const pricingRanges = [
     items: [
       { service: 'Car Lockout', range: '$95--$150', note: 'No towing needed' },
       { service: 'Standard Key Cut', range: '$120--$160', note: 'On-site mobile service' },
-      { service: 'Transponder Key', range: '$150--$180', note: 'Includes programming' },
-      { service: 'Key Fob Replacement', range: '$180--$250', note: 'Make/model dependent' },
+      { service: 'Transponder Key', range: '$150--$250', note: 'Includes programming' },
+      { service: 'Key Fob Replacement', range: '$180--$350', note: 'Make/model dependent' },
     ],
     href: '/services/car-key-programming',
   },

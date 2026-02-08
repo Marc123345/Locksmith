@@ -28,7 +28,7 @@ const benefits = [
   },
   {
     icon: Users,
-    title: '4.9-Star Rated on Google',
+    title: 'Hundreds of 5-Star Reviews',
     description: 'Trusted by customers across Anne Arundel County'
   }
 ];

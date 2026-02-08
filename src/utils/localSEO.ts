@@ -165,11 +165,11 @@ Business Name: ${businessName}
 Address: ${address.street}, ${address.city}, ${address.state} ${address.zip}
 Phone: ${phone}
 Email: ${email}
-Website: https://www.asecureannapolislocksmith.com
+Website: https://asecureannapolis.com
 
 Service Areas: ${LOCAL_SEO_CONFIG.serviceAreas.join(', ')}
 
-Description: A Secure Annapolis Locksmith provides professional locksmith services throughout Anne Arundel County, Maryland. We offer same-day emergency lockout service, residential locksmith solutions, commercial security systems, and automotive locksmith services. Our licensed and insured technicians serve Annapolis, Arnold, Severna Park, Edgewater, and surrounding areas with fast, reliable service.
+Description: A Secure Annapolis Locksmith provides professional locksmith services throughout Anne Arundel County, Maryland. We offer 24/7 emergency lockout service, residential locksmith solutions, commercial security systems, and automotive locksmith services. Our licensed and insured technicians serve Annapolis, Arnold, Severna Park, Edgewater, and surrounding areas with fast, reliable service.
 
 Categories: Locksmith, Emergency Locksmith, Residential Locksmith, Commercial Locksmith, Automotive Locksmith, Lock Repair, Key Duplication, Security Systems
   `.trim();
@@ -215,7 +215,7 @@ export function getLocalKeywords(location?: string, service?: string): string[] 
   const baseKeywords = [
     'locksmith',
     'emergency locksmith',
-    'same-day locksmith',
+    '24/7 locksmith',
     'local locksmith',
     'mobile locksmith'
   ];

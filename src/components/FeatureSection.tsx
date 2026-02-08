@@ -18,7 +18,7 @@ const features = [
   {
     icon: <Award className="h-10 w-10 text-primary" />,
     title: "Top-Rated Service",
-    description: "4.9/5 rating on Google and Thumbtack from verified customers in Annapolis and Anne Arundel County.",
+    description: "4.9/5 rating based on 100+ verified reviews across Google and Thumbtack from actual customers in Annapolis.",
   },
   {
     icon: <ThumbsUp className="h-10 w-10 text-primary" />,
