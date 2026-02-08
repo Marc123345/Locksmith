@@ -9,6 +9,7 @@ import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
 import LocationBlogSection from '@/components/LocationBlogSection';
+import BusinessSnapshot from '@/components/BusinessSnapshot';
 import LockoutGuide from '@/components/LockoutGuide';
 import MeetTheTeam from '@/components/MeetTheTeam';
 import WhatToExpect from '@/components/WhatToExpect';
@@ -30,15 +31,13 @@ import {
   type Review,
 } from '@/data/reviews';
 
-const findReview = (name: string) => allReviews.find(r => r.name === name);
-
 const featuredReviews: (Review & { highlight: string })[] = [
-  { highlight: 'Car Lockout -- 15 min arrival', ...(findReview('Desiree Henningsen') ?? allReviews[0]) },
-  { highlight: 'Whole-Home Rekey -- Annapolis', ...(findReview('Alexandra Paulson') ?? allReviews[1]) },
-  { highlight: 'Lock Install -- Same-Day Service', ...(findReview('H C') ?? allReviews[2]) },
-  { highlight: 'Emergency Lockout -- Instant Response', ...(findReview('RM Moreno') ?? allReviews[3]) },
-  { highlight: 'Lock Change -- Under 24 Hours', ...(findReview('Proton Flux') ?? allReviews[4]) },
-  { highlight: 'Same-Day Service -- No Extra Fees', ...(findReview('Debra Kupfer') ?? allReviews[5]) },
+  { ...allReviews.find(r => r.name === 'Desiree Henningsen')!, highlight: 'Car Lockout -- 15 min arrival' },
+  { ...allReviews.find(r => r.name === 'Alexandra Paulson')!, highlight: 'Whole-Home Rekey -- Annapolis' },
+  { ...allReviews.find(r => r.name === 'H C')!, highlight: 'Lock Install -- Same-Day Service' },
+  { ...allReviews.find(r => r.name === 'RM Moreno')!, highlight: 'Emergency Lockout -- Instant Response' },
+  { ...allReviews.find(r => r.name === 'Proton Flux')!, highlight: 'Lock Change -- Under 24 Hours' },
+  { ...allReviews.find(r => r.name === 'Debra Kupfer')!, highlight: 'Same-Day Service -- No Extra Fees' },
 ];
 
 const services = [
@@ -260,6 +259,7 @@ export default function HomePage() {
         <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
+      <BusinessSnapshot />
       <HeroSection />
       <TrustedBySection />
       <LockoutGuide />

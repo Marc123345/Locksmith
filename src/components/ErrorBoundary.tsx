@@ -62,7 +62,7 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, Error
 
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <p className="text-sm text-gray-600">
-                  Need immediate assistance? <a href="tel:4108496069" className="text-blue-600 hover:underline">Call (410) 849-6069</a>
+                  Need immediate assistance? <a href="tel:4105551234" className="text-blue-600 hover:underline">Call (410) 555-1234</a>
                 </p>
               </div>
             </div>

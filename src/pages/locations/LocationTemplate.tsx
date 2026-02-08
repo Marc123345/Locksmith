@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import TestimonialSection from '@/components/TestimonialSection';
+import DirectionsSection from '@/components/DirectionsSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import IconShowcase from '@/components/IconShowcase';
@@ -344,7 +345,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 <p className="text-gray-600 mb-6 text-lg">
                   Need fast locksmith help in {location.name}? Fill out the form below and we'll respond immediately:
                 </p>
-                <ContactForm />
+                <ContactForm
+                  pageSource={`/locations/${location.slug}`}
+                  locationPreference={location.name}
+                />
               </div>
             </div>
           </div>
@@ -516,6 +520,12 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
         />
 
         <FAQSection faqs={location.faqs} />
+
+        <DirectionsSection
+          fromLocation={location.name}
+          directions={location.directions}
+          distance={location.distance}
+        />
 
         <LocationBlogSection locationName={location.name} />
 

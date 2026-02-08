@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- DNS Prefetch & Preconnect for external resources -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://plausible.io" />
@@ -11,12 +12,33 @@
     <link rel="dns-prefetch" href="https://ik.imagekit.io" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-
+    
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.imgur.com/VfpMzbE.png" />
 
+    <!-- Defer non-critical analytics scripts -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-5FYP20WLRN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5FYP20WLRN');
+    </script>
+
+    <!-- Privacy-friendly analytics by Plausible (deferred) -->
+    <script defer src="https://plausible.io/js/pa-WxFh8_UBx64N5Mczv8jH0.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://plausible.io https://form.jotform.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.supabase.co https://ik.imagekit.io https://res.cloudinary.com https://plausible.io; frame-src 'self' https://www.google.com https://form.jotform.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
+
+    <!-- SEO Meta Tags -->
     <title>A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD</title>
     <meta name="title" content="A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD">
     <meta name="description" content="Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.">
@@ -25,7 +47,8 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     <meta name="author" content="A Secure Annapolis Locksmith">
-
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.asecureannapolislocksmith.com/">
     <meta property="og:title" content="A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD">
@@ -34,14 +57,17 @@
     <meta property="og:site_name" content="A Secure Annapolis Locksmith">
     <meta property="og:locale" content="en_US">
 
+    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.asecureannapolislocksmith.com/">
     <meta property="twitter:title" content="A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD">
     <meta property="twitter:description" content="Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.">
     <meta property="twitter:image" content="https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg">
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.asecureannapolislocksmith.com/" />
 
+    <!-- AI Content Metadata -->
     <meta name="ai-content-type" content="business-information">
     <meta name="ai-business-type" content="locksmith-service">
     <meta name="ai-business-name" content="A Secure Annapolis Locksmith">
@@ -51,20 +77,7 @@
     <meta name="ai-content-purpose" content="business-information, service-description, contact-information">
     <meta name="ai-last-updated" content="2025-03-24">
 
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-5FYP20WLRN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5FYP20WLRN');
-    </script>
-
-    <script defer src="https://plausible.io/js/pa-WxFh8_UBx64N5Mczv8jH0.js"></script>
-    <script>
-      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
-    </script>
-
+    <!-- Local Business Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -210,6 +223,7 @@
       }
     </script>
 
+    <!-- Service Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -248,6 +262,7 @@
       }
     </script>
 
+    <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -263,6 +278,7 @@
       }
     </script>
 
+    <!-- AI-Specific Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -304,13 +320,13 @@
             <strong>A Secure Annapolis Locksmith</strong>
           </p>
           <p style="color: #4b5563; margin-bottom: 10px;">
-            Phone: <a href="tel:4108496069" style="color: #2563eb;">(410) 849-6069</a>
+            📞 <strong>Phone:</strong> <a href="tel:4108496069" style="color: #2563eb;">(410) 849-6069</a>
           </p>
           <p style="color: #4b5563; margin-bottom: 10px;">
-            Address: 222 Severn Ave Ste 1 Building 7-6A, Annapolis, MD 21403
+            📍 <strong>Address:</strong> 222 Severn Ave Ste 1 Building 7-6A, Annapolis, MD 21403
           </p>
           <p style="color: #4b5563; margin-bottom: 10px;">
-            Email: <a href="mailto:info@asecureannapolislocksmith.com" style="color: #2563eb;">info@asecureannapolislocksmith.com</a>
+            ✉️ <strong>Email:</strong> <a href="mailto:info@asecureannapolislocksmith.com" style="color: #2563eb;">info@asecureannapolislocksmith.com</a>
           </p>
           <p style="color: #4b5563; margin-top: 20px; font-size: 14px;">
             We provide 24/7 emergency locksmith services in Annapolis and surrounding areas.
