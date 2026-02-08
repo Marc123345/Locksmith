@@ -131,21 +131,21 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             "openingHoursSpecification": [
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+                "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday"],
                 "opens": "07:00",
                 "closes": "20:00"
               },
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Friday",
+                "dayOfWeek": "Thursday",
                 "opens": "07:00",
-                "closes": "14:30"
+                "closes": "21:00"
               },
               {
                 "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Sunday",
+                "dayOfWeek": "Friday",
                 "opens": "07:00",
-                "closes": "19:00"
+                "closes": "15:00"
               }
             ],
             "areaServed": {
@@ -329,9 +329,9 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
                     <Clock className="h-8 w-8 text-blue-600 mb-3" />
                     <h3 className="font-bold text-gray-900 mb-3 text-lg">Hours of Operation</h3>
-                    <p className="text-gray-700 font-medium">Sun: 7:00 AM - 7:00 PM</p>
-                    <p className="text-gray-700 font-medium">Mon-Thu: 7:00 AM - 8:00 PM</p>
-                    <p className="text-gray-700 font-medium">Fri: 7:00 AM - 2:30 PM</p>
+                    <p className="text-gray-700 font-medium">Sun-Wed: 7:00 AM - 8:00 PM</p>
+                    <p className="text-gray-700 font-medium">Thu: 7:00 AM - 9:00 PM</p>
+                    <p className="text-gray-700 font-medium">Fri: 7:00 AM - 3:00 PM</p>
                     <p className="text-gray-700 font-medium">Sat: Closed</p>
                   </div>
 

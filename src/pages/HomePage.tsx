@@ -599,16 +599,16 @@ export default function HomePage() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b">
-                  <span className="font-semibold text-lg">Sunday</span>
-                  <span className="text-lg">7:00 AM - 7:00 PM</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b">
-                  <span className="font-semibold text-lg">Monday - Thursday</span>
+                  <span className="font-semibold text-lg">Sunday - Wednesday</span>
                   <span className="text-lg">7:00 AM - 8:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b">
+                  <span className="font-semibold text-lg">Thursday</span>
+                  <span className="text-lg">7:00 AM - 9:00 PM</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b">
                   <span className="font-semibold text-lg">Friday</span>
-                  <span className="text-lg">7:00 AM - 2:30 PM</span>
+                  <span className="text-lg">7:00 AM - 3:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b">
                   <span className="font-semibold text-lg">Saturday</span>

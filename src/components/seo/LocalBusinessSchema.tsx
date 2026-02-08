@@ -71,21 +71,21 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "07:00",
-        "closes": "19:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday"],
         "opens": "07:00",
         "closes": "20:00",
       },
       {
         "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "opens": "07:00",
+        "closes": "21:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Friday",
         "opens": "07:00",
-        "closes": "14:30",
+        "closes": "15:00",
       },
     ],
     "foundingDate": "2010",
