@@ -61,8 +61,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://plausible.io https://form.jotform.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://*.supabase.co https://ik.imagekit.io https://res.cloudinary.com https://plausible.io; frame-src 'self' https://www.google.com https://form.jotform.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;" />
-
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5FYP20WLRN"
           strategy="afterInteractive"
