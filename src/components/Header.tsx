@@ -7,7 +7,7 @@ import { useScroll } from "@/hooks/useScroll";
 import { CONTACT } from "@/utils/contact";
 
 const locationLinks = [
-  { name: "Annapolis, MD", href: "/" },
+  { name: "Annapolis, MD", href: "/locations/annapolis" },
   { name: "Arnold, MD", href: "/locations/arnold" },
   { name: "Bay Ridge, MD", href: "/locations/bay-ridge" },
   { name: "Broadneck, MD", href: "/locations/broadneck" },
@@ -28,7 +28,7 @@ const serviceCategories = [
     title: "Emergency Services",
     icon: AlertCircle,
     services: [
-      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "Same-day fast response" },
+      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "24/7 fast response" },
     ]
   },
   {
@@ -54,7 +54,7 @@ const locationCategories = [
   {
     title: "Central Annapolis",
     locations: [
-      { name: "Annapolis", href: "/" },
+      { name: "Annapolis", href: "/locations/annapolis" },
       { name: "Eastport", href: "/locations/eastport" },
       { name: "Parole", href: "/locations/parole" },
       { name: "Bay Ridge", href: "/locations/bay-ridge" },
@@ -267,7 +267,7 @@ export const Header = () => {
                           View All Services →
                         </Link>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-semibold text-gray-600">Same-Day Emergency Service</span>
+                          <span className="text-xs font-semibold text-gray-600">24/7 Emergency Service</span>
                           <a
                             href={`tel:${CONTACT.PHONE}`}
                             className="text-primary font-bold hover:text-primary/80 transition-colors"

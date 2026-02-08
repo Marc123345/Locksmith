@@ -10,7 +10,7 @@ export const FloatingPhone = () => {
       animate={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      className="fixed bottom-20 right-6 z-50 lg:bottom-6 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all group"
+      className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all group"
       aria-label="Call us now"
     >
       <Phone className="h-6 w-6" />

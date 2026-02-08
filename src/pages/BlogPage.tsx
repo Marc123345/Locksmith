@@ -31,7 +31,7 @@ const BlogPage = () => {
     try {
       const { data, error } = await supabase
         .from('blog_posts')
-        .select('id, title, slug, excerpt, published_date, featured_image, category, location, tags')
+        .select('*')
         .eq('status', 'published')
         .lte('published_date', new Date().toISOString().split('T')[0])
         .order('published_date', { ascending: false });

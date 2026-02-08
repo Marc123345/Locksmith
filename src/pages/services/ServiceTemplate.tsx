@@ -45,7 +45,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
     {
       title: 'Annapolis Locksmith',
       description: 'Local locksmith services in downtown Annapolis and Eastport',
-      href: '/',
+      href: '/locations/annapolis',
       type: 'location' as const
     },
     {
@@ -288,7 +288,10 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                 <p className="text-gray-600 mb-6 text-lg">
                   Need help with {service.name.toLowerCase()}? Fill out the form below and we'll respond immediately:
                 </p>
-                <ContactForm />
+                <ContactForm
+                  pageSource={`/services/${service.slug}`}
+                  serviceType={service.id}
+                />
               </div>
             </div>
           </div>

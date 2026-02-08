@@ -24,6 +24,7 @@ import ArnoldPage from '@/pages/locations/ArnoldPage';
 import EdgewaterPage from '@/pages/locations/EdgewaterPage';
 import SevernaParkPage from '@/pages/locations/SevernaParkPage';
 import CrownsvillePage from '@/pages/locations/CrownsvillePage';
+import AnnapolisPage from '@/pages/locations/AnnapolisPage';
 import ParolePage from '@/pages/locations/ParolePage';
 import BayRidgePage from '@/pages/locations/BayRidgePage';
 import HillsmereShoresPage from '@/pages/locations/HillsmereShoresPage';
@@ -78,7 +79,7 @@ function App() {
             <Route path="/locations/edgewater" element={<EdgewaterPage />} />
             <Route path="/locations/severna-park" element={<SevernaParkPage />} />
             <Route path="/locations/crownsville" element={<CrownsvillePage />} />
-            <Route path="/locations/annapolis" element={<Navigate to="/" replace />} />
+            <Route path="/locations/annapolis" element={<AnnapolisPage />} />
             <Route path="/locations/parole" element={<ParolePage />} />
             <Route path="/locations/bay-ridge" element={<BayRidgePage />} />
             <Route path="/locations/hillsmere-shores" element={<HillsmereShoresPage />} />

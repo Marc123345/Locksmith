@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 
-const ContactForm = () => {
+interface ContactFormProps {
+  pageSource?: string;
+  serviceType?: string;
+  locationPreference?: string;
+}
+
+const ContactForm = ({ pageSource, serviceType, locationPreference }: ContactFormProps = {}) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js';
@@ -24,15 +30,19 @@ const ContactForm = () => {
     <div className="w-full overflow-visible">
       <iframe
         id="JotFormIFrame-253124306063446"
-        title="Contact Form"
+        title="Royi Locksmith Form"
+        onLoad={() => window.parent.scrollTo(0,0)}
+        allowTransparency={true}
         allow="geolocation; microphone; camera; fullscreen; payment"
         src="https://form.jotform.com/253124306063446"
+        frameBorder="0"
         style={{
           minWidth: '100%',
           maxWidth: '100%',
           height: '800px',
-          border: 'none',
+          border: 'none'
         }}
+        scrolling="yes"
       />
     </div>
   );
