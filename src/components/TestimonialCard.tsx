@@ -76,7 +76,7 @@ const TestimonialCard = ({
                 <img
                   src={
                     source === "Thumbtack"
-                      ? "https://assets.thumbtack.com/images/t-favicon-v2.svg"
+                      ? "https://ik.imagekit.io/qcvroy8xpd/AxTr5f31u3m9vy4eluHPs76N6gbG0xQ8Eq+XAAj1HnGx3oevn+5KaCroNdUzTlDiM8CMqYLdqQ5noPJ3fkQ3PwO5pdGXPL3atcBHaHcKmlBUQv09+b1jrlIvhw+tvUJ+UGUs6hJEIaP0dkmHz8WmW1180f9ngOIL9OHECdU2CTIJ0ICVQtyjxi5hAdxyOj53sehc35L1JDQnKit+BSAAAAAElFTkSuQmCC.png"
                       : source === "Google"
                         ? "https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                         : "https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg"

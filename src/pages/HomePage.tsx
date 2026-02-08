@@ -299,7 +299,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
             >
               <img
-                src="https://assets.thumbtack.com/images/t-favicon-v2.svg"
+                src="https://ik.imagekit.io/qcvroy8xpd/AxTr5f31u3m9vy4eluHPs76N6gbG0xQ8Eq+XAAj1HnGx3oevn+5KaCroNdUzTlDiM8CMqYLdqQ5noPJ3fkQ3PwO5pdGXPL3atcBHaHcKmlBUQv09+b1jrlIvhw+tvUJ+UGUs6hJEIaP0dkmHz8WmW1180f9ngOIL9OHECdU2CTIJ0ICVQtyjxi5hAdxyOj53sehc35L1JDQnKit+BSAAAAAElFTkSuQmCC.png"
                 alt="Thumbtack reviews for A Secure Annapolis Locksmith"
                 className="h-5 w-5"
                 width="20"
