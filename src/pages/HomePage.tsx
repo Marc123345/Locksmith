@@ -9,11 +9,18 @@ import ServiceCard from '@/components/ServiceCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
 import LocationBlogSection from '@/components/LocationBlogSection';
+import BusinessSnapshot from '@/components/BusinessSnapshot';
+import LockoutGuide from '@/components/LockoutGuide';
+import MeetTheTeam from '@/components/MeetTheTeam';
+import WhatToExpect from '@/components/WhatToExpect';
+import LicensingSection from '@/components/LicensingSection';
+import PricingGuide from '@/components/PricingGuide';
+import ServiceFAQClusters from '@/components/ServiceFAQClusters';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star, Mail } from 'lucide-react';
+import { Home, Building2, Car, Phone, MapPin, ArrowRight, Clock, HelpCircle, ExternalLink, Star, Mail, Wrench } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { CONTACT } from '@/utils/contact';
 import {
@@ -21,7 +28,17 @@ import {
   googleReviews,
   THUMBTACK_URL,
   GOOGLE_BUSINESS_URL,
+  type Review,
 } from '@/data/reviews';
+
+const featuredReviews: (Review & { highlight: string })[] = [
+  { ...allReviews.find(r => r.name === 'Desiree Henningsen')!, highlight: 'Car Lockout -- 15 min arrival' },
+  { ...allReviews.find(r => r.name === 'Alexandra Paulson')!, highlight: 'Whole-Home Rekey -- Annapolis' },
+  { ...allReviews.find(r => r.name === 'H C')!, highlight: 'Lock Install -- Same-Day Service' },
+  { ...allReviews.find(r => r.name === 'RM Moreno')!, highlight: 'Emergency Lockout -- Instant Response' },
+  { ...allReviews.find(r => r.name === 'Proton Flux')!, highlight: 'Lock Change -- Under 24 Hours' },
+  { ...allReviews.find(r => r.name === 'Debra Kupfer')!, highlight: 'Same-Day Service -- No Extra Fees' },
+];
 
 const services = [
   {
@@ -242,8 +259,10 @@ export default function HomePage() {
         <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
       </Helmet>
+      <BusinessSnapshot />
       <HeroSection />
       <TrustedBySection />
+      <LockoutGuide />
 
       <section className="py-16 bg-white" aria-label="About A Secure Annapolis Locksmith">
         <div className="container mx-auto px-4">
@@ -254,7 +273,7 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Annapolis's Trusted Local Locksmith -- Serving Your Neighborhood Since 2010
+              Licensed Local Locksmith in Annapolis, MD -- Serving Anne Arundel County Since 2010
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p className="text-lg leading-relaxed mb-4">
@@ -263,14 +282,18 @@ export default function HomePage() {
               <p className="text-lg leading-relaxed mb-4">
                 Our technicians are fully trained, <strong>licensed, and insured</strong> -- bringing professionalism to every job from <strong>Downtown Annapolis</strong> and the <strong>City Dock</strong> to <Link to="/locations/eastport" className="text-primary hover:underline font-semibold">Eastport</Link>, <Link to="/locations/bay-ridge" className="text-primary hover:underline font-semibold">Bay Ridge</Link>, <Link to="/locations/hillsmere-shores" className="text-primary hover:underline font-semibold">Hillsmere Shores</Link>, <Link to="/locations/severna-park" className="text-primary hover:underline font-semibold">Severna Park</Link>, and <Link to="/locations/edgewater" className="text-primary hover:underline font-semibold">Edgewater</Link>. Unlike national dispatch centers, when you call us you're talking to a local team that knows the Annapolis area and <strong>Anne Arundel County</strong> inside and out.
               </p>
-              <p className="text-lg leading-relaxed">
-                Every residential and commercial <Link to="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward <Link to="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over {allReviews.length} combined reviews</strong>.
+              <p className="text-lg leading-relaxed mb-4">
+                Every residential and commercial <Link to="/services/lock-change" className="text-primary hover:underline">lock change</Link> comes with a <strong>3-month warranty</strong>. No hidden fees, no upsells -- just straightforward <Link to="/services" className="text-primary hover:underline">locksmith services</Link> at rates that make sense. That's why Annapolis homeowners and business owners trust us time and again, rating us <strong>4.9 stars across Google and Thumbtack with over 100 combined reviews</strong>.
+              </p>
+              <p className="text-base leading-relaxed text-slate-600 italic border-l-4 border-primary pl-4">
+                Licensed Maryland locksmith serving Annapolis and Anne Arundel County since 2010 -- fully insured and bonded for residential, commercial, and automotive work. From <Link to="/locations/eastport" className="text-primary hover:underline">Eastport condo lockouts</Link> to <Link to="/locations/hillsmere-shores" className="text-primary hover:underline">Hillsmere Shores</Link> waterfront homes with sticky deadbolts, we handle the lock issues Annapolis residents see most.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
+      <LicensingSection />
       <StatsSection />
       <FeatureSection />
 
@@ -282,9 +305,9 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">Locksmith Services in Annapolis, MD</h2>
+            <h2 className="text-4xl font-bold mb-4">Residential, Commercial & Automotive Locksmith in Annapolis</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Residential, commercial, and automotive locksmith solutions for Annapolis and Anne Arundel County.
+              Full-service locksmith solutions for homes, businesses, and vehicles across Annapolis and Anne Arundel County.
             </p>
           </motion.div>
 
@@ -335,14 +358,17 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">How We Can Help in Annapolis</h2>
+            <h2 className="text-4xl font-bold mb-4">Emergency Locksmith in Annapolis with 20-Minute Response</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From emergency lockouts to lock installations, we handle it all across Anne Arundel County.
+              From emergency lockouts to complete security upgrades, we handle it all across Anne Arundel County.
             </p>
           </motion.div>
           <ServiceSection />
         </div>
       </section>
+
+      <WhatToExpect />
+      <PricingGuide />
 
       <section className="py-16 bg-muted/30" aria-label="Customer reviews from Google and Thumbtack">
         <div className="container mx-auto px-4">
@@ -352,9 +378,9 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">What Annapolis Residents Are Saying</h2>
+            <h2 className="text-4xl font-bold mb-4">Verified Reviews from Annapolis Homeowners & Drivers</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Rated 4.9 stars with over 100 verified reviews across Google and Thumbtack. See what your neighbors think.
+              4.9 rating with 100+ verified reviews across Google and Thumbtack. These are real experiences from your neighbors.
             </p>
           </motion.div>
 
@@ -419,13 +445,26 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
-            {allReviews.map((review, index) => (
+            {featuredReviews.map((review, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
                 className="h-full"
               >
-                <TestimonialCard {...review} />
+                <div className="h-full flex flex-col">
+                  {review.service && (
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
+                        <Wrench className="h-3 w-3" />
+                        {review.service}
+                      </span>
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                        {review.highlight}
+                      </span>
+                    </div>
+                  )}
+                  <TestimonialCard {...review} />
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -473,6 +512,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <MeetTheTeam />
+
       <section className="py-16 bg-background" aria-label="Annapolis locksmith service area">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -483,7 +524,7 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h2 className="text-4xl font-bold">Serving Annapolis & All of Anne Arundel County</h2>
+              <h2 className="text-4xl font-bold">Locksmith Service Areas: Annapolis & Anne Arundel County</h2>
               <p className="text-lg text-muted-foreground">
                 We provide mobile locksmith services throughout <strong>Anne Arundel County</strong>. From the <strong>City Dock</strong> to <strong>Severna Park</strong>, we're your trusted local locksmith experts with 20-minute average response times.
               </p>
@@ -586,47 +627,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-background" aria-label="Frequently asked questions about Annapolis locksmith services">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <HelpCircle className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Annapolis Locksmith FAQ</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Common questions about locksmith services in Annapolis, MD and Anne Arundel County.
-            </p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <details className="group">
-                  <summary className="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg">
-                    <span>{faq.question}</span>
-                    <span className="ml-4 flex-shrink-0 text-primary group-open:rotate-180 transition-transform">
-                      &#9660;
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-6 pt-2 text-muted-foreground">
-                    {faq.answer}
-                  </div>
-                </details>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceFAQClusters />
 
       <LocationBlogSection
         locationName="Annapolis"
@@ -642,10 +643,10 @@ export default function HomePage() {
             className="max-w-5xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Your Neighborhood Locksmith in Anne Arundel County
+              Residential Locksmith Services in Annapolis & Anne Arundel County
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-10">
-              Whether you need an <Link to="/services/emergency-lockout" className="text-primary hover:underline">emergency lockout</Link> in <Link to="/locations/eastport" className="text-primary hover:underline">Eastport</Link>, a <Link to="/services/lock-rekey" className="text-primary hover:underline">lock rekey</Link> in <Link to="/locations/severna-park" className="text-primary hover:underline">Severna Park</Link>, or <Link to="/services/car-key-programming" className="text-primary hover:underline">car key programming</Link> in <Link to="/locations/arnold" className="text-primary hover:underline">Arnold</Link> -- we come to you. Our mobile locksmith service means no towing, no waiting at a shop, and no inflated prices.
+              Need a locksmith near <Link to="/locations/severna-park" className="text-primary hover:underline">Severna Park High School</Link>? Locked out near <Link to="/locations/eastport" className="text-primary hover:underline">City Dock</Link>? From <Link to="/locations/arnold" className="text-primary hover:underline">Arnold</Link> to <Link to="/locations/edgewater" className="text-primary hover:underline">Edgewater</Link>, our mobile locksmith service means no towing, no waiting at a shop, and no inflated prices. We come to you.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
