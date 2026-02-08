@@ -181,44 +181,44 @@ export const locations: LocationData[] = [
     id: 'annapolis',
     name: 'Annapolis, MD',
     slug: 'annapolis',
-    title: 'A Secure Annapolis Locksmith in Annapolis, MD',
-    subtitle: 'Professional Locksmith Services in Downtown Annapolis, Eastport, and Hillsmere Shores',
-    description: 'A Secure Annapolis Locksmith is your trusted local locksmith serving Annapolis, MD and surrounding neighborhoods. Whether you need emergency lockout service, lock installation, rekeying, or automotive locksmith solutions, we provide fast, reliable, and affordable service throughout the greater Annapolis area. As a locally owned and operated business based right here in Annapolis, we understand the unique security needs of our community.',
+    title: 'Annapolis\u2019s Trusted Local Locksmith',
+    subtitle: 'Flagship Location \u2014 Based in Annapolis',
+    description: 'Locked out downtown, moving into a new place in Murray Hill, or dealing with a broken key in Eastport? A Secure Annapolis Locksmith is based at 222 Severn Ave in Annapolis, so you get a nearby, Maryland\u2011licensed locksmith who knows the city and its buildings\u2014not a distant call center. We handle emergency lockouts, lock installation, rekeying, smart lock upgrades, and automotive key issues for homeowners, renters, and businesses across Annapolis.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto',
     contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
     neighborhoods: [
       'Downtown Annapolis',
+      'Historic District',
       'Eastport',
       'Hillsmere Shores',
+      'Bay Ridge',
       'Parole',
       'Murray Hill',
-      'Bay Ridge',
       'Admiral Heights'
     ],
-    distance: 'Local - Based in Annapolis',
-    responseTime: '15–25 minutes',
+    distance: 'Local \u2014 Based in Annapolis',
+    responseTime: '15\u201325 minutes',
     directions: [
-      'We\'re located in Eastport at 222 Severn Ave Ste 1 Building 7-6A',
-      'From Downtown Annapolis, cross Spa Creek Bridge',
-      'Turn right onto Severn Ave',
-      'We\'re on the right side near the waterfront'
+      'From Downtown Annapolis, cross Spa Creek Bridge into Eastport.',
+      'Turn right onto Severn Ave.',
+      'Continue to 222 Severn Ave Ste 1 Building 7\u20116A, on the right near the waterfront.'
     ],
     faqs: [
       {
         question: 'How fast can you respond in Annapolis?',
-        answer: 'Since we\'re based in Annapolis, we typically arrive within 15–25 minutes to most locations in the city.'
+        answer: 'Since we\u2019re based in Annapolis, we typically arrive within 15\u201325 minutes to most locations in the city, depending on traffic and time of day.'
       },
       {
         question: 'Do you serve all Annapolis neighborhoods?',
-        answer: 'Yes, we serve all of Annapolis including Downtown, Eastport, Parole, Murray Hill, Bay Ridge, and surrounding areas.'
+        answer: 'Yes. We regularly work in Downtown, Eastport, Parole, Murray Hill, Admiral Heights, Bay Ridge, Hillsmere Shores, and nearby communities in Anne Arundel County.'
       },
       {
         question: 'Are you available for emergency lockouts?',
-        answer: 'Absolutely. We offer 24/7 emergency locksmith services throughout Annapolis, MD.'
+        answer: 'We offer 24/7 emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability and ETA.'
       },
       {
         question: 'Do you install smart locks in Annapolis homes?',
-        answer: 'Yes, we install and service all major smart lock brands including August, Schlage, Yale, and Kwikset.'
+        answer: 'Yes. We install and configure popular brands like August, Schlage, Yale, and Kwikset, and can recommend options that fit Annapolis\u2019s mix of older and newer doors.'
       }
     ],
     metaTitle: 'Locksmith in Annapolis, MD | Local 24/7 Service',
