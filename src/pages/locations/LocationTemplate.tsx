@@ -483,12 +483,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           </div>
         </section>
 
-        {testimonials.length > 0 && (
-          <TestimonialSection
-            testimonials={testimonials}
-            title={`${location.name} Residents Trust Us`}
-          />
-        )}
+        <TestimonialSection
+          testimonials={testimonials}
+          title={`${location.name} Residents Trust Us`}
+        />
 
         <FAQSection faqs={location.faqs} />
 
