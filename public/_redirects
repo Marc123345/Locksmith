@@ -3,13 +3,5 @@ http://asecureannapolislocksmith.com/* https://www.asecureannapolislocksmith.com
 http://www.asecureannapolislocksmith.com/* https://www.asecureannapolislocksmith.com/:splat 301!
 https://asecureannapolislocksmith.com/* https://www.asecureannapolislocksmith.com/:splat 301!
 
-# Canonical redirect: /locations/annapolis -> homepage (same content)
-/locations/annapolis https://www.asecureannapolislocksmith.com/ 301!
-
-# Strip trailing slashes to prevent duplicate content (1, 2, and 3 segment paths)
-/:path1/ /:path1 301!
-/:path1/:path2/ /:path1/:path2 301!
-/:path1/:path2/:path3/ /:path1/:path2/:path3 301!
-
 # SPA fallback - must be last
 /* /index.html 200

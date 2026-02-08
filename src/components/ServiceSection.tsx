@@ -50,12 +50,12 @@ const ServiceSection = () => {
     },
     emergency: {
       title: "Emergency Services",
-      description: "Same-day emergency locksmith service across Annapolis and Anne Arundel County.",
+      description: "Same-day locksmith services when you need help the most.",
       image: "https://ik.imagekit.io/qcvroy8xpd/image-gen%20(3)_B7OOO72hK.jpg?tr=f-auto,q-auto",
       icon: <AlertTriangle className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Same-day availability",
-        "20-minute average response",
+        "Fast response times",
         "All types of lockouts",
         "Lock repairs",
         "Emergency rekeying",
