@@ -1,19 +1,20 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, Clock, MapPin, Home, Building2, Car, Wrench } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, Home, Building2, Car, Wrench, MessageSquareQuote, Lightbulb } from 'lucide-react';
 import { CONTACT } from '@/utils/contact';
 import ContactForm from '@/components/ContactForm';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import TestimonialSection from '@/components/TestimonialSection';
-import DirectionsSection from '@/components/DirectionsSection';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import IconShowcase from '@/components/IconShowcase';
 import ServiceVisuals from '@/components/ServiceVisuals';
 import RelatedContent from '@/components/RelatedContent';
+import LocationBlogSection from '@/components/LocationBlogSection';
 import { standardPricing } from '@/data/pricing';
 import { getTestimonialsByLocation } from '@/data/testimonials';
+import { locationNarratives } from '@/data/locationNarratives';
 import type { LocationData } from '@/data/locations';
 
 interface LocationTemplateProps {
@@ -22,6 +23,7 @@ interface LocationTemplateProps {
 
 export default function LocationTemplate({ location }: LocationTemplateProps) {
   const testimonials = getTestimonialsByLocation(location.id);
+  const narrative = locationNarratives[location.slug];
 
   // Related services and locations for internal linking
   const relatedLinks = [
@@ -46,7 +48,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
     {
       title: 'Annapolis Locksmith',
       description: 'Professional locksmith services in downtown Annapolis and Eastport',
-      href: '/locations/annapolis',
+      href: '/',
       type: 'location' as const
     },
     {
@@ -242,9 +244,14 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {location.title}
               </h1>
-              <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
                 {location.subtitle}
               </p>
+              {narrative && (
+                <p className="text-lg text-blue-200 mb-4 max-w-2xl mx-auto">
+                  {narrative.cta} Call now for fast, local service.
+                </p>
+              )}
 
               <div className="flex flex-wrap justify-center gap-4 mt-10">
                 <a
@@ -283,6 +290,29 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   </p>
                 </div>
 
+                {narrative && (
+                  <div className="space-y-6 mt-8">
+                    <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
+                      <div className="flex items-start gap-3 mb-3">
+                        <Lightbulb className="h-5 w-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                        <h3 className="font-bold text-gray-900">Local Insight</h3>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed">
+                        {narrative.localColor}
+                      </p>
+                    </div>
+                    <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                      <div className="flex items-start gap-3 mb-3">
+                        <MessageSquareQuote className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <h3 className="font-bold text-gray-900">Recent Job in {location.name}</h3>
+                      </div>
+                      <p className="text-gray-700 text-sm leading-relaxed italic">
+                        "{narrative.localStory}"
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 <div className="grid md:grid-cols-2 gap-6 mt-8">
                   <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
                     <Clock className="h-8 w-8 text-blue-600 mb-3" />
@@ -314,10 +344,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 <p className="text-gray-600 mb-6 text-lg">
                   Need fast locksmith help in {location.name}? Fill out the form below and we'll respond immediately:
                 </p>
-                <ContactForm
-                  pageSource={`/locations/${location.slug}`}
-                  locationPreference={location.name}
-                />
+                <ContactForm />
               </div>
             </div>
           </div>
@@ -439,10 +466,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Call Now for Immediate Locksmith Help in {location.name}
+              {narrative?.cta || `Call Now for Immediate Locksmith Help in ${location.name}`}
             </h2>
             <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-              Don't wait when security is at stake. Whether you're locked out or upgrading your locks, call A Secure Annapolis Locksmith today.
+              Don't wait when security is at stake. Licensed, insured technicians ready in {location.responseTime}. Call A Secure Annapolis Locksmith today.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 mb-12">
@@ -483,20 +510,14 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
           </div>
         </section>
 
-        {testimonials.length > 0 && (
-          <TestimonialSection
-            testimonials={testimonials}
-            title={`${location.name} Residents Trust Us`}
-          />
-        )}
+        <TestimonialSection
+          testimonials={testimonials}
+          title={`${location.name} Residents Trust Us`}
+        />
 
         <FAQSection faqs={location.faqs} />
 
-        <DirectionsSection
-          fromLocation={location.name}
-          directions={location.directions}
-          distance={location.distance}
-        />
+        <LocationBlogSection locationName={location.name} />
 
         <RelatedContent links={relatedLinks} />
 

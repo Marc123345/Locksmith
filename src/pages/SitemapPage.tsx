@@ -42,11 +42,11 @@ const mainPages = [
 
 const locationPages = [
   {
-    path: '/locations/annapolis',
-    title: 'Annapolis, MD',
+    path: '/',
+    title: 'Annapolis, MD (Home)',
     description: 'Professional locksmith services in Downtown Annapolis, Eastport, and Hillsmere Shores',
     lastMod: '2025-03-24',
-    priority: '0.9'
+    priority: '1.0'
   },
   {
     path: '/locations/arnold',
