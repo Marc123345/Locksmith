@@ -1,4 +1,3 @@
 {
-  "/page": "app/page.js",
-  "/locations/cape-st-claire/page": "app/locations/cape-st-claire/page.js"
+  "/page": "app/page.js"
 }
