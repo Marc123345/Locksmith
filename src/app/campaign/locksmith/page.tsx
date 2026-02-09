@@ -106,9 +106,9 @@ function ReviewCard({ name, testimonial, date }: { name: string; testimonial: st
 
   return (
     <div className="flex-shrink-0 w-[300px] md:w-auto md:flex-1">
-      <div className="bg-[#191919] rounded-xl p-5 h-full border border-[#191919] hover:-translate-y-1 transition-transform duration-300">
+      <div className="bg-blue-900 rounded-xl p-5 h-full border border-blue-800 hover:-translate-y-1 transition-transform duration-300">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 rounded-full bg-[#2a2a2a] flex items-center justify-center text-white font-semibold text-sm">
+          <div className="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center text-white font-semibold text-sm">
             {name.charAt(0)}
           </div>
           <div className="flex-1 min-w-0">
@@ -182,7 +182,7 @@ function LocksmithCampaignContent() {
   }, [nextReview]);
 
   return (
-    <div className="min-h-screen bg-black text-white" style={{ fontFamily: '"Inter", sans-serif' }}>
+    <div className="min-h-screen bg-blue-950 text-white" style={{ fontFamily: '"Inter", sans-serif' }}>
 
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
@@ -190,7 +190,7 @@ function LocksmithCampaignContent() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto)' }}
         />
-        <div className="absolute inset-0 bg-black/[.58]" />
+        <div className="absolute inset-0 bg-blue-900/60" />
 
         <div className="relative z-10 w-full max-w-3xl mx-auto px-4 py-20 text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-4 font-medium">
@@ -223,7 +223,7 @@ function LocksmithCampaignContent() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-[#111] border-y border-white/10">
+      <section className="bg-blue-900 border-y border-white/10">
         <div className="max-w-4xl mx-auto px-4 py-8">
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
@@ -246,7 +246,7 @@ function LocksmithCampaignContent() {
       </section>
 
       {/* Services */}
-      <section className="bg-black py-16">
+      <section className="bg-blue-950 py-16">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10" style={{ fontFamily: '"Montserrat", sans-serif' }}>
             Our Services
@@ -260,7 +260,7 @@ function LocksmithCampaignContent() {
               'Commercial Lock Systems',
               'Automotive Locksmith Services',
             ].map((service) => (
-              <div key={service} className="flex items-center gap-3 py-3 px-4 rounded-lg bg-[#111] border border-white/5">
+              <div key={service} className="flex items-center gap-3 py-3 px-4 rounded-lg bg-blue-900 border border-white/5">
                 <CheckCircle className="h-5 w-5 text-emerald-400 flex-shrink-0" />
                 <span className="text-white/90 text-[15px]">{service}</span>
               </div>
@@ -270,7 +270,7 @@ function LocksmithCampaignContent() {
       </section>
 
       {/* Trust Badges */}
-      <section className="bg-[#0a0a0a] py-12">
+      <section className="bg-blue-950 py-12">
         <div className="max-w-3xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
             <div className="text-right">
@@ -300,7 +300,7 @@ function LocksmithCampaignContent() {
       </section>
 
       {/* Reviews Section */}
-      <section className="bg-black py-16 overflow-hidden">
+      <section className="bg-blue-950 py-16 overflow-hidden">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
 
@@ -361,7 +361,7 @@ function LocksmithCampaignContent() {
                 <button
                   onClick={prevReview}
                   aria-label="Previous review"
-                  className="w-8 h-8 rounded-full bg-[#191919] border border-white/10 flex items-center justify-center hover:bg-[#2a2a2a] transition-colors"
+                  className="w-8 h-8 rounded-full bg-blue-900 border border-white/10 flex items-center justify-center hover:bg-blue-800 transition-colors"
                 >
                   <svg className="w-3 h-3 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M15 18l-6-6 6-6" />
@@ -378,7 +378,7 @@ function LocksmithCampaignContent() {
                 <button
                   onClick={nextReview}
                   aria-label="Next review"
-                  className="w-8 h-8 rounded-full bg-[#191919] border border-white/10 flex items-center justify-center hover:bg-[#2a2a2a] transition-colors"
+                  className="w-8 h-8 rounded-full bg-blue-900 border border-white/10 flex items-center justify-center hover:bg-blue-800 transition-colors"
                 >
                   <svg className="w-3 h-3 text-white/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M9 18l6-6-6-6" />
@@ -396,7 +396,7 @@ function LocksmithCampaignContent() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1600&q=80)' }}
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-blue-900/70" />
 
         <div className="relative z-10 max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: '"Montserrat", sans-serif' }}>
@@ -417,7 +417,7 @@ function LocksmithCampaignContent() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a0a0a] border-t border-white/5 py-8">
+      <footer className="bg-blue-950 border-t border-white/5 py-8">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-white/40 text-sm">
             A Secure Annapolis Locksmith &middot; {CONTACT.ADDRESS}
@@ -426,7 +426,7 @@ function LocksmithCampaignContent() {
       </footer>
 
       {showDebug && (
-        <div className="bg-[#111] border-t border-white/10 px-4 py-4 text-xs">
+        <div className="bg-blue-900 border-t border-white/10 px-4 py-4 text-xs">
           <div className="max-w-4xl mx-auto">
             <h3 className="font-bold text-white/50 mb-2 uppercase tracking-wide text-[11px]">Debug</h3>
             <div className="flex flex-wrap gap-x-6 gap-y-1 text-white/40">
@@ -446,7 +446,7 @@ function LocksmithCampaignContent() {
 export default function LocksmithCampaignPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-blue-950 flex items-center justify-center">
         <div className="text-center">
           <div className="text-lg text-white/60">Loading...</div>
         </div>
