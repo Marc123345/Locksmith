@@ -7,7 +7,7 @@ const credentials = [
   {
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
     title: "State Licensed",
-    detail: "MD Registry #4920",
+    detail: "MD Registry #143",
     description: "Fully licensed by the State of Maryland to perform all locksmith services."
   },
   {
