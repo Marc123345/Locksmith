@@ -50,7 +50,8 @@ export default function LocationBlogSection({
         let query = supabase
           .from('blog_posts')
           .select('id, title, slug, excerpt, location, created_at')
-          .eq('published', true)
+          .eq('status', 'published')
+          .lte('published_date', new Date().toISOString().split('T')[0])
           .order('created_at', { ascending: false })
           .limit(limit);
 
