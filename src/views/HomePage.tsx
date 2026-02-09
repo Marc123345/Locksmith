@@ -608,7 +608,6 @@ export default function HomePage() {
       <ServiceFAQClusters />
 
       <LocationBlogSection
-        locationName="Annapolis"
         heading="Latest From Our Locksmith Blog"
       />
 
