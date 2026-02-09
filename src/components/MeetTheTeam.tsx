@@ -8,7 +8,7 @@ const values = [
     icon: <Shield className="h-10 w-10 text-primary" />,
     title: "Licensed & Insured",
     description: "All technicians are fully licensed by the State of Maryland, bonded, and insured for your protection.",
-    stat: "MD #143"
+    stat: "MD #413"
   },
   {
     icon: <Users className="h-10 w-10 text-primary" />,

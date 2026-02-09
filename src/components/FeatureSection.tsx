@@ -8,7 +8,7 @@ const features = [
   {
     icon: <Shield className="h-10 w-10 text-primary" />,
     title: "Licensed & Insured",
-    description: "Maryland licensed (Registry #143), bonded, and fully insured. All technicians carry valid state credentials.",
+    description: "Maryland licensed (Registry #413), bonded, and fully insured. All technicians carry valid state credentials.",
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
