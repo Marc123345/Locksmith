@@ -1,7 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { Phone, MessageSquare, Shield, Clock, Star, CheckCircle } from 'lucide-react';
+import { Phone, Shield, Clock, Star, CheckCircle } from 'lucide-react';
 import { CONTACT } from '@/utils/contact';
 import { useState, Suspense, useEffect, useCallback } from 'react';
 import { googleReviews } from '@/data/reviews';
@@ -141,7 +141,6 @@ function ReviewCard({ name, testimonial, date }: { name: string; testimonial: st
 
 function LocksmithCampaignContent() {
   const searchParams = useSearchParams();
-  const [showForm, setShowForm] = useState(false);
   const [reviewIndex, setReviewIndex] = useState(0);
 
   const rawKeyword = (searchParams.get('keyword') || '').toLowerCase().trim();
@@ -189,7 +188,7 @@ function LocksmithCampaignContent() {
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80)' }}
+          style={{ backgroundImage: 'url(https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto)' }}
         />
         <div className="absolute inset-0 bg-black/[.58]" />
 
@@ -270,113 +269,33 @@ function LocksmithCampaignContent() {
         </div>
       </section>
 
-      {/* Contact Form Toggle */}
+      {/* Trust Badges */}
       <section className="bg-[#0a0a0a] py-12">
-        <div className="max-w-xl mx-auto px-4 text-center">
-          <button
-            onClick={() => setShowForm(!showForm)}
-            className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-medium transition-colors"
-          >
-            <MessageSquare className="h-4 w-4" />
-            {showForm ? 'Hide Contact Form' : 'Prefer to send a message? Click here'}
-          </button>
-
-          {showForm && (
-            <div className="mt-8 text-left">
-              <form className="space-y-4" onSubmit={(e) => {
-                e.preventDefault();
-                const formData = new FormData(e.currentTarget);
-
-                if (window.gtag) {
-                  window.gtag('event', 'form_submit', {
-                    keyword: rawKeyword,
-                    campaign: utmCampaign,
-                    service_type: serviceType,
-                    location: location,
-                    event_category: 'engagement',
-                    event_label: 'Contact Form Submission'
-                  });
-                }
-
-                if (window.plausible) {
-                  window.plausible('Form Submit', {
-                    props: {
-                      keyword: rawKeyword,
-                      campaign: utmCampaign,
-                      service_type: serviceType,
-                      location: location
-                    }
-                  });
-                }
-
-                alert('Thank you! We will contact you shortly at ' + formData.get('phone'));
-              }}>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm text-white/60 mb-1.5">
-                      Your Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white placeholder-white/30 focus:ring-2 focus:ring-white/20 focus:border-transparent outline-none transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm text-white/60 mb-1.5">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white placeholder-white/30 focus:ring-2 focus:ring-white/20 focus:border-transparent outline-none transition-all"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm text-white/60 mb-1.5">
-                    Service Needed
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    defaultValue={serviceType}
-                    className="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-white/20 focus:border-transparent outline-none transition-all"
-                  >
-                    <option value="Emergency Locksmith">Emergency Locksmith</option>
-                    <option value="Automotive Locksmith">Automotive Locksmith</option>
-                    <option value="Residential Locksmith">Residential Locksmith</option>
-                    <option value="Commercial Locksmith">Commercial Locksmith</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm text-white/60 mb-1.5">
-                    Brief Description
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={3}
-                    className="w-full px-4 py-3 bg-[#191919] border border-white/10 rounded-lg text-white placeholder-white/30 focus:ring-2 focus:ring-white/20 focus:border-transparent outline-none transition-all resize-none"
-                    placeholder="Tell us what you need help with..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-white text-black font-bold py-3.5 px-6 rounded-lg transition-all hover:bg-white/90"
-                >
-                  Send Message
-                </button>
-                <p className="text-xs text-white/40 text-center">
-                  For immediate assistance, call {CONTACT.PHONE_DISPLAY}
-                </p>
-              </form>
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+            <div className="text-right">
+              <img
+                src="https://asecurelocksmithllc.com/wp-content/uploads/2024/03/4.8-1.png"
+                alt="4.8 Star Google Rating - A Secure Locksmith LLC"
+                width={473}
+                height={108}
+                className="w-[260px] sm:w-[300px] h-auto"
+              />
             </div>
-          )}
+            <a
+              href="https://www.marylandrecommendations.com/top-10/best-locksmith-baltimore/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/yFQ8q03/MD-recommendations-top-10-badge-2.png"
+                alt="Maryland Recommendations Top 10 Best Locksmith Baltimore"
+                width={150}
+                height={150}
+                className="w-[120px] sm:w-[150px] h-auto hover:scale-105 transition-transform"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
