@@ -237,8 +237,11 @@ const Footer = () => {
               <div className="flex items-start">
                 <Clock className="h-4 w-4 mr-2 text-primary shrink-0 mt-1" />
                 <div className="text-sm">
-                  <p className="font-semibold text-foreground">24/7 Emergency Service</p>
-                  <p className="text-muted-foreground text-xs">Mon-Sat: 8AM-8PM | Sun: Emergency Only</p>
+                  <p className="font-semibold text-foreground">Business Hours</p>
+                  <p className="text-muted-foreground text-xs">Mon-Thu: 7AM-8PM</p>
+                  <p className="text-muted-foreground text-xs">Fri: 7AM-2:30PM | Sat: Closed</p>
+                  <p className="text-muted-foreground text-xs">Sun: 7AM-7PM</p>
+                  <p className="text-primary font-semibold text-xs mt-1">24/7 Emergency Available</p>
                 </div>
               </div>
             </div>
