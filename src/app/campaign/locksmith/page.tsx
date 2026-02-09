@@ -219,6 +219,31 @@ function LocksmithCampaignContent() {
               Available Now &middot; 20-30 Minute Response
             </p>
           </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-10">
+            <div className="text-right">
+              <img
+                alt="4.8 Star Google Rating - A Secure Locksmith LLC"
+                width={473}
+                height={108}
+                className="w-[260px] sm:w-[300px] h-auto"
+                src="https://asecurelocksmithllc.com/wp-content/uploads/2024/03/4.8-1.png"
+              />
+            </div>
+            <a
+              href="https://www.marylandrecommendations.com/top-10/best-locksmith-baltimore/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                alt="Maryland Recommendations Top 10 Best Locksmith Baltimore"
+                width={150}
+                height={150}
+                className="w-[120px] sm:w-[150px] h-auto hover:scale-105 transition-transform"
+                src="https://i.ibb.co/yFQ8q03/MD-recommendations-top-10-badge-2.png"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
