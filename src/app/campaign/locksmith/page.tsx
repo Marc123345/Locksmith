@@ -51,6 +51,14 @@ function detectLocation(keyword: string): string {
   if (lowerKeyword.includes('riva')) return 'Riva';
   if (lowerKeyword.includes('howard county')) return 'Howard County';
   if (lowerKeyword.includes('catonsville')) return 'Catonsville';
+  if (lowerKeyword.includes('towson')) return 'Towson';
+  if (lowerKeyword.includes('white marsh')) return 'White Marsh';
+  if (lowerKeyword.includes('timonium')) return 'Timonium';
+  if (lowerKeyword.includes('dundalk')) return 'Dundalk';
+  if (lowerKeyword.includes('rosedale')) return 'Rosedale';
+  if (lowerKeyword.includes('halethorpe')) return 'Halethorpe';
+  if (lowerKeyword.includes('parkville')) return 'Parkville';
+  if (lowerKeyword.includes('pikesville')) return 'Pikesville';
   if (lowerKeyword.includes('baltimore city') || lowerKeyword.includes('baltimore')) return 'Baltimore';
 
   return 'Your Area';
@@ -139,6 +147,7 @@ function LocksmithCampaignContent() {
   const rawKeyword = (searchParams.get('keyword') || '').toLowerCase().trim();
   const utmCampaign = searchParams.get('utm_campaign') || '';
   const matchType = searchParams.get('matchtype') || '';
+  const showDebug = searchParams.get('debug') === 'true';
 
   const serviceType = detectServiceType(rawKeyword);
   const location = detectLocation(rawKeyword);
@@ -497,19 +506,20 @@ function LocksmithCampaignContent() {
         </div>
       </footer>
 
-      {/* Debug Box */}
-      <div className="bg-[#111] border-t border-white/10 px-4 py-4 text-xs">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="font-bold text-white/50 mb-2 uppercase tracking-wide text-[11px]">Debug</h3>
-          <div className="flex flex-wrap gap-x-6 gap-y-1 text-white/40">
-            <span>Keyword: {rawKeyword || '(none)'}</span>
-            <span>Campaign: {utmCampaign || '(none)'}</span>
-            <span>Match: {matchType || '(none)'}</span>
-            <span>Service: {serviceType}</span>
-            <span>Location: {location}</span>
+      {showDebug && (
+        <div className="bg-[#111] border-t border-white/10 px-4 py-4 text-xs">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="font-bold text-white/50 mb-2 uppercase tracking-wide text-[11px]">Debug</h3>
+            <div className="flex flex-wrap gap-x-6 gap-y-1 text-white/40">
+              <span>Keyword: {rawKeyword || '(none)'}</span>
+              <span>Campaign: {utmCampaign || '(none)'}</span>
+              <span>Match: {matchType || '(none)'}</span>
+              <span>Service: {serviceType}</span>
+              <span>Location: {location}</span>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
