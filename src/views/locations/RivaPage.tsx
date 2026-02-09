@@ -27,7 +27,7 @@ const services = [
 
 const relatedLinks = [
   { title: 'Lock Rekey Service', description: 'Professional rekeying services in Riva', href: '/services/lock-rekey', type: 'service' as const },
-  { title: 'Emergency Lockout', description: '24/7 emergency lockout help in Riva', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout', description: 'Same-day emergency lockout help in Riva', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Annapolis Locksmith', description: 'Professional locksmith in downtown Annapolis', href: '/locations/annapolis', type: 'location' as const },
   { title: 'Parole Locksmith', description: 'Fast locksmith service near Annapolis Mall', href: '/locations/parole', type: 'location' as const },
   { title: 'Edgewater Locksmith', description: 'Locksmith services in Edgewater and South River', href: '/locations/edgewater', type: 'location' as const },

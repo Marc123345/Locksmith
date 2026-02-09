@@ -27,7 +27,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
   const relatedLinks = [
     {
       title: 'Emergency Lockout Service',
-      description: '24/7 emergency locksmith service available throughout Anne Arundel County',
+      description: 'Same-day emergency locksmith service available throughout Anne Arundel County',
       href: '/services/emergency-lockout',
       type: 'service' as const
     },
@@ -390,7 +390,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
             <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="text-3xl font-bold mb-2">✓</div>
-                <p className="text-white font-medium">24/7 Emergency Service</p>
+                <p className="text-white font-medium">Same-Day Emergency Service</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <div className="text-3xl font-bold mb-2">✓</div>

@@ -214,7 +214,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <div className="space-y-4">
               <div>
-                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">24/7 Emergency</p>
+                <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wide">Same Day Service</p>
                 <a
                   href={`tel:${CONTACT.PHONE}`}
                   className="inline-flex items-center text-primary hover:underline font-bold text-xl"
@@ -241,7 +241,7 @@ const Footer = () => {
                   <p className="text-muted-foreground text-xs">Mon-Thu: 7AM-8PM</p>
                   <p className="text-muted-foreground text-xs">Fri: 7AM-2:30PM | Sat: Closed</p>
                   <p className="text-muted-foreground text-xs">Sun: 7AM-7PM</p>
-                  <p className="text-primary font-semibold text-xs mt-1">24/7 Emergency Available</p>
+                  <p className="text-primary font-semibold text-xs mt-1">Same Day Service Available</p>
                 </div>
               </div>
             </div>

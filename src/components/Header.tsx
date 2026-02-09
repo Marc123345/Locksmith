@@ -15,7 +15,7 @@ const serviceCategories = [
     title: "Emergency Services",
     icon: AlertCircle,
     services: [
-      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "24/7 fast response" },
+      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "Same-day fast response" },
     ]
   },
   {
@@ -258,7 +258,7 @@ export const Header = () => {
                           View All Services →
                         </Link>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-semibold text-gray-600">24/7 Emergency Service</span>
+                          <span className="text-xs font-semibold text-gray-600">Same Day Service</span>
                           <a
                             href={`tel:${CONTACT.PHONE}`}
                             className="text-primary font-bold hover:text-primary/80 transition-colors"

@@ -22,7 +22,7 @@ const services = [
   { icon: Home, title: 'Residential Locksmith', description: 'Lock installations, rekeying, and repairs for Crownsville homes and estates.' },
   { icon: Car, title: 'Automotive Locksmith', description: 'Car lockouts, key replacement, and transponder programming on site.' },
   { icon: Building2, title: 'Commercial Locksmith', description: 'Business security solutions, access control, and master key systems.' },
-  { icon: Phone, title: 'Emergency Service', description: '24/7 emergency lockout assistance with rapid response to Crownsville.' },
+  { icon: Phone, title: 'Emergency Service', description: 'Same-day emergency lockout assistance with rapid response to Crownsville.' },
 ];
 
 const faqs = [
@@ -34,7 +34,7 @@ const faqs = [
 
 const relatedLinks = [
   { title: 'Lock Rekey Service', description: 'Professional rekeying for Crownsville homes', href: '/services/lock-rekey', type: 'service' as const },
-  { title: 'Emergency Lockout', description: '24/7 emergency lockout help in Crownsville', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout', description: 'Same-day emergency lockout help in Crownsville', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Annapolis Locksmith', description: 'Professional locksmith in downtown Annapolis', href: '/locations/annapolis', type: 'location' as const },
   { title: 'Severna Park Locksmith', description: 'Locksmith services in Severna Park area', href: '/locations/severna-park', type: 'location' as const },
   { title: 'Riva Locksmith', description: 'Locksmith services along the Riva Road corridor', href: '/locations/riva', type: 'location' as const },

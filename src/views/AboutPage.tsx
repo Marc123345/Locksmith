@@ -33,7 +33,7 @@ const stats = [
     description: "5-star rated service"
   },
   { 
-    number: "24/7", 
+    number: "Same Day",
     label: "Emergency Service", 
     icon: <Wrench className="h-6 w-6 text-primary" />,
     description: "Always available"

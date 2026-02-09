@@ -47,7 +47,7 @@ export default function ArnoldPage() {
                 <p className="text-lg text-blue-100/80 mb-8 leading-relaxed">
                   Proudly serving Arnold, Cape St. Claire, Bay Hills, and the entire Broadneck Peninsula
                   with fast, reliable locksmith services. Our local technicians know this community inside
-                  and out and are ready to help 24/7.
+                  and out and are ready to help with same-day service.
                 </p>
                 <a
                   href={`tel:${CONTACT.PHONE}`}
@@ -158,7 +158,7 @@ export default function ArnoldPage() {
                   high-security lock solutions. We keep your commercial property secure and accessible.
                 </p>
                 <p className="text-gray-600">
-                  Locked out at 2 AM on Broadneck Peninsula? Our 24/7 emergency locksmith service ensures
+                  Locked out on Broadneck Peninsula? Our same-day emergency locksmith service ensures
                   you are never stranded. Fast response, fair pricing, every time.
                 </p>
               </div>

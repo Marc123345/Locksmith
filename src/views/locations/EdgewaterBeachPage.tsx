@@ -20,7 +20,7 @@ const services = [
   { icon: Home, label: 'Residential', desc: 'Waterfront home lock services, rekeying, and coastal-grade deadbolts', color: 'text-blue-600', border: 'border-b-blue-500' },
   { icon: Car, label: 'Automotive', desc: 'Car lockouts, key programming, and transponder key replacement', color: 'text-blue-600', border: 'border-b-blue-500' },
   { icon: Building2, label: 'Commercial', desc: 'Business security, access control, and master key systems', color: 'text-blue-600', border: 'border-b-blue-500' },
-  { icon: Phone, label: 'Emergency', desc: '24/7 emergency lockout response in under 30 minutes', color: 'text-blue-600', border: 'border-b-blue-500' },
+  { icon: Phone, label: 'Emergency', desc: 'Same-day emergency lockout response in under 30 minutes', color: 'text-blue-600', border: 'border-b-blue-500' },
   { icon: Anchor, label: 'Marine/Dock Locks', desc: 'Corrosion-resistant locks for docks, boathouses, and piers', color: 'text-blue-600', border: 'border-b-blue-500' },
   { icon: Smartphone, label: 'Smart Security', desc: 'Smart locks and keyless entry for modern waterfront homes', color: 'text-blue-600', border: 'border-b-blue-500' },
 ];
@@ -29,7 +29,7 @@ const faqs = [
   { question: 'Do you offer marine-grade locks for waterfront properties?', answer: 'Yes, we specialize in corrosion-resistant, marine-grade lock hardware designed to withstand the harsh salt air and moisture conditions common in Edgewater Beach waterfront homes.' },
   { question: 'How fast can you reach Edgewater Beach?', answer: 'We are approximately 7 miles from Edgewater Beach and typically arrive within 20-30 minutes for standard and emergency calls.' },
   { question: 'Do you service dock and boathouse locks?', answer: 'Absolutely. We install and repair locks for docks, boathouses, piers, and other marine structures using specialized hardware built for coastal environments.' },
-  { question: 'Are your services available on weekends?', answer: 'Yes, we offer 24/7 locksmith services including weekends and holidays for all Edgewater Beach residents and businesses.' },
+  { question: 'Are your services available on weekends?', answer: 'Yes, we offer same-day locksmith services including weekends and holidays for all Edgewater Beach residents and businesses.' },
 ];
 
 const relatedLinks = [

@@ -62,7 +62,7 @@ const emergencySteps = [
 ];
 
 const relatedLinks = [
-  { title: 'Emergency Lockout Service', description: 'Fast emergency lockout help available 24/7 in Annapolis, MD', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout Service', description: 'Fast emergency lockout help available same day in Annapolis, MD', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Lock Rekey Service', description: 'Professional lock rekeying for enhanced security in Annapolis, MD', href: '/services/lock-rekey', type: 'service' as const },
   { title: 'Car Key Programming', description: 'Automotive key cutting and programming services in Annapolis, MD', href: '/services/car-key-programming', type: 'service' as const },
   { title: 'Severna Park Locksmith', description: 'Fast, affordable locksmith services in Severna Park and Benfield', href: '/locations/severna-park', type: 'location' as const },
@@ -211,7 +211,7 @@ export default function AnnapolisPage() {
                 <Phone className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">24/7 Emergency Lockout Service</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Same-Day Emergency Lockout Service</h2>
                 <p className="text-gray-600 mt-2">
                   Lockouts and broken locks can happen anytime. Our on&#8209;call technician responds to emergency requests in Annapolis days, nights, weekends, and holidays, always with a clear ETA and price range before you confirm.
                 </p>
