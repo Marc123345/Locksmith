@@ -190,7 +190,7 @@ function LocksmithCampaignContent() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://ik.imagekit.io/qcvroy8xpd/b7d05ff9-8ea5-4fbd-be55-91559f1ba0ef_vPmkbx7Fe.jpeg?tr=f-auto,q-auto)' }}
         />
-        <div className="absolute inset-0 bg-blue-900/60" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 w-full max-w-3xl mx-auto px-4 py-20 text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-4 font-medium">
