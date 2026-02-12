@@ -41,11 +41,11 @@ export async function generateMetadata(
   return {
     title: `${post.title} | A Secure Annapolis Locksmith`,
     description,
-    alternates: { canonical: `https://www.asecureannapolislocksmith.com/blog/${post.slug}` },
+    alternates: { canonical: `https://asecureannapolislocksmith.com/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description,
-      url: `https://www.asecureannapolislocksmith.com/blog/${post.slug}`,
+      url: `https://asecureannapolislocksmith.com/blog/${post.slug}`,
       type: 'article',
       ...(post.featured_image && { images: [post.featured_image] }),
     },

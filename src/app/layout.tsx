@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'A Secure Annapolis Locksmith' }],
   openGraph: {
     type: 'website',
-    url: 'https://www.asecureannapolislocksmith.com/',
+    url: 'https://asecureannapolislocksmith.com/',
     title: 'Locksmith Annapolis MD - A Secure Annapolis Locksmith',
     description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
   },
   alternates: {
-    canonical: 'https://www.asecureannapolislocksmith.com/',
+    canonical: 'https://asecureannapolislocksmith.com/',
   },
   icons: {
     icon: 'https://i.imgur.com/VfpMzbE.png',

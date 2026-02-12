@@ -7,11 +7,11 @@ const service = getServiceBySlug('lock-rekey')
 export const metadata: Metadata = {
   title: service?.metaTitle ?? 'Lock Rekey Services in Annapolis, MD | A Secure Annapolis Locksmith',
   description: service?.metaDescription,
-  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/services/lock-rekey' },
+  alternates: { canonical: 'https://asecureannapolislocksmith.com/services/lock-rekey' },
   openGraph: {
     title: service?.metaTitle,
     description: service?.metaDescription,
-    url: 'https://www.asecureannapolislocksmith.com/services/lock-rekey',
+    url: 'https://asecureannapolislocksmith.com/services/lock-rekey',
   },
 }
 

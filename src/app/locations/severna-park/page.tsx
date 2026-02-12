@@ -7,11 +7,11 @@ const location = getLocationBySlug('severna-park')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Severna Park, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/severna-park' },
+  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/severna-park' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://www.asecureannapolislocksmith.com/locations/severna-park',
+    url: 'https://asecureannapolislocksmith.com/locations/severna-park',
   },
 }
 

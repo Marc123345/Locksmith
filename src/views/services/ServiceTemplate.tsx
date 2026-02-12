@@ -91,7 +91,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
             },
             "telephone": CONTACT.PHONE,
             "email": CONTACT.EMAIL,
-            "url": "https://www.asecureannapolislocksmith.com",
+            "url": "https://asecureannapolislocksmith.com",
             "priceRange": "$$",
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -105,7 +105,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
           })),
           "availableChannel": {
             "@type": "ServiceChannel",
-            "serviceUrl": `https://www.asecureannapolislocksmith.com/services/${service.slug}`,
+            "serviceUrl": `https://asecureannapolislocksmith.com/services/${service.slug}`,
             "servicePhone": CONTACT.PHONE,
             "availableLanguage": {
               "@type": "Language",
@@ -133,19 +133,19 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.asecureannapolislocksmith.com"
+              "item": "https://asecureannapolislocksmith.com"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Services",
-              "item": "https://www.asecureannapolislocksmith.com/services"
+              "item": "https://asecureannapolislocksmith.com/services"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": service.name,
-              "item": `https://www.asecureannapolislocksmith.com/services/${service.slug}`
+              "item": `https://asecureannapolislocksmith.com/services/${service.slug}`
             }
           ]
         }) }}

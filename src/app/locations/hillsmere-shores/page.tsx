@@ -7,11 +7,11 @@ const location = getLocationBySlug('hillsmere-shores')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Hillsmere Shores, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/hillsmere-shores' },
+  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/hillsmere-shores' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://www.asecureannapolislocksmith.com/locations/hillsmere-shores',
+    url: 'https://asecureannapolislocksmith.com/locations/hillsmere-shores',
   },
 }
 

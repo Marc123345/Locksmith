@@ -20,6 +20,17 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.asecureannapolislocksmith.com',
+          },
+        ],
+        destination: 'https://asecureannapolislocksmith.com/:path*',
+        permanent: true,
+      },
+      {
         source: '/services/residential',
         destination: '/services#residential',
         permanent: true,
@@ -38,6 +49,27 @@ const nextConfig: NextConfig = {
         source: '/services/emergency',
         destination: '/services#emergency',
         permanent: true,
+      },
+    ]
+  },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
       },
     ]
   },
