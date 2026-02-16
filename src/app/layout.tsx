@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.asecureannapolislocksmith.com'),
   title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
   description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
-  keywords: 'locksmith, Annapolis locksmith, residential locksmith, commercial locksmith, automotive locksmith, car lockout, house lockout, lock repair, lock installation, key cutting, key programming',
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   authors: [{ name: 'A Secure Annapolis Locksmith' }],
   openGraph: {
@@ -30,17 +29,6 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: 'https://i.imgur.com/VfpMzbE.png',
-  },
-  other: {
-    'revisit-after': '7 days',
-    'ai-content-type': 'business-information',
-    'ai-business-type': 'locksmith-service',
-    'ai-business-name': 'A Secure Annapolis Locksmith',
-    'ai-business-location': 'Annapolis, Maryland, United States',
-    'ai-business-services': 'residential-locksmith, commercial-locksmith, automotive-locksmith, emergency-lockout',
-    'ai-content-topics': 'locksmith, security, locks, keys, emergency-service',
-    'ai-content-purpose': 'business-information, service-description, contact-information',
-    'ai-last-updated': '2025-03-24',
   },
 }
 
