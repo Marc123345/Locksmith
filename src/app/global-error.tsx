@@ -8,6 +8,9 @@ export default function GlobalError({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <body>
         <div style={{
           minHeight: '100vh',
