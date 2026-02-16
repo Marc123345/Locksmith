@@ -20,4 +20,5 @@ Disallow: /error
 Disallow: /*?error=*
 
 # Sitemap location
+Sitemap: https://www.asecureannapolislocksmith.com/sitemap.xml
 Sitemap: https://www.asecureannapolislocksmith.com/sitemap-index.xml

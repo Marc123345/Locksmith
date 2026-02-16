@@ -4,6 +4,7 @@ import { ClientLayout } from './client-layout'
 import '../index.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.asecureannapolislocksmith.com'),
   title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
   description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
   keywords: 'locksmith, Annapolis locksmith, residential locksmith, commercial locksmith, automotive locksmith, car lockout, house lockout, lock repair, lock installation, key cutting, key programming',
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
   },
   alternates: {
-    canonical: 'https://www.asecureannapolislocksmith.com/',
+    canonical: '/',
   },
   icons: {
     icon: 'https://i.imgur.com/VfpMzbE.png',
@@ -60,6 +61,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
         <Script
