@@ -16,6 +16,8 @@ Disallow: /test/
 Disallow: /.well-known/
 Disallow: /*?*utm_*
 Disallow: /*?*sessionid*
+Disallow: /error
+Disallow: /*?error=*
 
 # Sitemap location
 Sitemap: https://www.asecureannapolislocksmith.com/sitemap-index.xml
