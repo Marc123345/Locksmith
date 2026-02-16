@@ -115,10 +115,10 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "A Secure Annapolis Locksmith",
-  "url": "https://asecureannapolislocksmith.com",
+  "url": "https://www.asecureannapolislocksmith.com",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://asecureannapolislocksmith.com/?q={search_term_string}",
+    "target": "https://www.asecureannapolislocksmith.com/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -129,7 +129,7 @@ const serviceSchema = {
   "serviceType": "Locksmith",
   "provider": {
     "@type": "Locksmith",
-    "@id": "https://asecureannapolislocksmith.com/#locksmith",
+    "@id": "https://www.asecureannapolislocksmith.com/#locksmith",
     "name": "A Secure Annapolis Locksmith",
   },
   "areaServed": {
@@ -731,7 +731,7 @@ export default function HomePage() {
               </div>
             </div>
             <meta itemProp="name" content="A Secure Annapolis Locksmith" />
-            <meta itemProp="url" content="https://asecureannapolislocksmith.com" />
+            <meta itemProp="url" content="https://www.asecureannapolislocksmith.com" />
             <meta itemProp="priceRange" content="$$" />
             <span className="hidden" itemProp="geo" itemScope itemType="https://schema.org/GeoCoordinates">
               <meta itemProp="latitude" content="38.978764" />

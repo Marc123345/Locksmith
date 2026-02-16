@@ -7,11 +7,11 @@ const location = getLocationBySlug('parole')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Parole, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/parole' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/parole' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/parole',
+    url: 'https://www.asecureannapolislocksmith.com/locations/parole',
   },
 }
 

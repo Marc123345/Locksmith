@@ -10,10 +10,10 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
   const baseSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Locksmith",
-    "@id": "https://asecureannapolislocksmith.com/#locksmith",
+    "@id": "https://www.asecureannapolislocksmith.com/#locksmith",
     "name": "A Secure Annapolis Locksmith",
-    "url": "https://asecureannapolislocksmith.com/",
-    "image": "https://asecureannapolislocksmith.com/path-to-your-logo.png",
+    "url": "https://www.asecureannapolislocksmith.com/",
+    "image": "https://www.asecureannapolislocksmith.com/path-to-your-logo.png",
     "description": "Licensed, insured Annapolis locksmith providing residential, commercial and automotive locksmith services with 20-minute response times across Anne Arundel County.",
     "telephone": "+1-410-849-6069",
     "email": CONTACT.EMAIL,

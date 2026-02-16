@@ -7,11 +7,11 @@ const location = getLocationBySlug('edgewater')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Edgewater, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/edgewater' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/edgewater' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/edgewater',
+    url: 'https://www.asecureannapolislocksmith.com/locations/edgewater',
   },
 }
 

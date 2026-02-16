@@ -7,11 +7,11 @@ const location = getLocationBySlug('eastport')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Eastport, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/eastport' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/eastport' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/eastport',
+    url: 'https://www.asecureannapolislocksmith.com/locations/eastport',
   },
 }
 

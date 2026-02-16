@@ -7,11 +7,11 @@ const location = getLocationBySlug('broadneck')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Broadneck, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/broadneck' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/broadneck' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/broadneck',
+    url: 'https://www.asecureannapolislocksmith.com/locations/broadneck',
   },
 }
 

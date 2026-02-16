@@ -143,7 +143,7 @@ const BlogPostPage = () => {
     },
     publisher: {
       '@type': 'LocalBusiness',
-      '@id': 'https://asecureannapolislocksmith.com/#localbusiness',
+      '@id': 'https://www.asecureannapolislocksmith.com/#localbusiness',
       name: 'A Secure Annapolis Locksmith',
       image: 'https://i.imgur.com/VfpMzbE.png',
       telephone: CONTACT.PHONE,

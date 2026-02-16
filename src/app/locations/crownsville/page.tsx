@@ -7,11 +7,11 @@ const location = getLocationBySlug('crownsville')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Crownsville, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/crownsville' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/crownsville' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/crownsville',
+    url: 'https://www.asecureannapolislocksmith.com/locations/crownsville',
   },
 }
 

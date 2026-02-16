@@ -7,11 +7,11 @@ const location = getLocationBySlug('riva')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Riva, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/riva' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/riva' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/riva',
+    url: 'https://www.asecureannapolislocksmith.com/locations/riva',
   },
 }
 

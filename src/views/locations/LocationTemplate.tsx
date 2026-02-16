@@ -91,7 +91,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
             "latitude": 38.978764,
             "longitude": -76.492786
           },
-          "url": `https://asecureannapolislocksmith.com/locations/${location.slug}`,
+          "url": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`,
           "telephone": CONTACT.PHONE,
           "email": CONTACT.EMAIL,
           "priceRange": "$$",
@@ -172,19 +172,19 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://asecureannapolislocksmith.com"
+              "item": "https://www.asecureannapolislocksmith.com"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Locations",
-              "item": "https://asecureannapolislocksmith.com/locations"
+              "item": "https://www.asecureannapolislocksmith.com/locations"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": location.name,
-              "item": `https://asecureannapolislocksmith.com/locations/${location.slug}`
+              "item": `https://www.asecureannapolislocksmith.com/locations/${location.slug}`
             }
           ]
         }) }}

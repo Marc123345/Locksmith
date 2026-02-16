@@ -7,11 +7,11 @@ const service = getServiceBySlug('emergency-lockout')
 export const metadata: Metadata = {
   title: service?.metaTitle ?? 'Emergency Lockout Service in Annapolis, MD | A Secure Annapolis Locksmith',
   description: service?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/services/emergency-lockout' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/services/emergency-lockout' },
   openGraph: {
     title: service?.metaTitle,
     description: service?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/services/emergency-lockout',
+    url: 'https://www.asecureannapolislocksmith.com/services/emergency-lockout',
   },
 }
 

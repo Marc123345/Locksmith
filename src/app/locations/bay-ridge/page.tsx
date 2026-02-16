@@ -7,11 +7,11 @@ const location = getLocationBySlug('bay-ridge')
 export const metadata: Metadata = {
   title: location?.metaTitle ?? 'Locksmith in Bay Ridge, MD | A Secure Annapolis Locksmith',
   description: location?.metaDescription,
-  alternates: { canonical: 'https://asecureannapolislocksmith.com/locations/bay-ridge' },
+  alternates: { canonical: 'https://www.asecureannapolislocksmith.com/locations/bay-ridge' },
   openGraph: {
     title: location?.metaTitle,
     description: location?.metaDescription,
-    url: 'https://asecureannapolislocksmith.com/locations/bay-ridge',
+    url: 'https://www.asecureannapolislocksmith.com/locations/bay-ridge',
   },
 }
 
