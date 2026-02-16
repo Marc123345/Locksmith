@@ -5,14 +5,14 @@ import '../index.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.asecureannapolislocksmith.com'),
-  title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
+  title: 'A Secure Annapolis Locksmith - Professional 24/7 Emergency Locksmith Services in Annapolis, MD',
   description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   authors: [{ name: 'A Secure Annapolis Locksmith' }],
   openGraph: {
     type: 'website',
     url: 'https://www.asecureannapolislocksmith.com/',
-    title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
+    title: 'A Secure Annapolis Locksmith - Professional 24/7 Emergency Locksmith Services in Annapolis, MD',
     description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
     siteName: 'A Secure Annapolis Locksmith',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
+    title: 'A Secure Annapolis Locksmith - Professional 24/7 Emergency Locksmith Services in Annapolis, MD',
     description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
   },
