@@ -165,7 +165,7 @@ const servicePages = [
   {
     path: '/services/emergency-lockout',
     title: 'Emergency Lockout Services',
-    description: '24/7 emergency lockout help in Annapolis',
+    description: 'Same-day emergency lockout help in Annapolis',
     lastMod: '2025-03-24',
     priority: '0.9'
   },

@@ -176,7 +176,7 @@ export const services: ServiceData[] = [
       'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto'
     ],
     features: [
-      'Rapid Response – 24/7 Availability',
+      'Rapid Response – Same-Day Availability',
       'Non-Destructive Entry',
       'Smart Lock & Keypad Unlocks',
       'On-the-Spot Rekeying or Lock Replacement',
@@ -193,7 +193,7 @@ export const services: ServiceData[] = [
     ],
     processSteps: [
       {
-        title: '24/7 Emergency Response',
+        title: 'Same-Day Emergency Response',
         description: 'Our team is on standby around the clock to respond to your emergency — including holidays and weekends.'
       },
       {
@@ -227,8 +227,8 @@ export const services: ServiceData[] = [
         answer: 'Yes! We handle smart locks, keypads, and electronic deadbolts during emergency house lockouts.'
       }
     ],
-    metaTitle: 'Emergency Lockout Service in Annapolis, MD | 24/7 Help',
-    metaDescription: '24/7 emergency house lockout service in Annapolis. Fast response in 20-30 minutes. Non-destructive entry. Licensed & insured. Call (410) 849-6069 now.'
+    metaTitle: 'Emergency Lockout Service in Annapolis, MD | Same Day Help',
+    metaDescription: 'Same-day emergency house lockout service in Annapolis. Fast response in 20-30 minutes. Non-destructive entry. Licensed & insured. Call (410) 849-6069 now.'
   },
   {
     id: 'lock-repair',

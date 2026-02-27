@@ -4,15 +4,15 @@ import { ClientLayout } from './client-layout'
 import '../index.css'
 
 export const metadata: Metadata = {
-  title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
+  metadataBase: new URL('https://www.asecureannapolislocksmith.com'),
+  title: 'A Secure Annapolis Locksmith - Professional 24/7 Emergency Locksmith Services in Annapolis, MD',
   description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
-  keywords: 'locksmith, Annapolis locksmith, residential locksmith, commercial locksmith, automotive locksmith, car lockout, house lockout, lock repair, lock installation, key cutting, key programming',
   robots: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
   authors: [{ name: 'A Secure Annapolis Locksmith' }],
   openGraph: {
     type: 'website',
     url: 'https://www.asecureannapolislocksmith.com/',
-    title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
+    title: 'A Secure Annapolis Locksmith - Professional 24/7 Emergency Locksmith Services in Annapolis, MD',
     description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
     siteName: 'A Secure Annapolis Locksmith',
@@ -20,26 +20,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
+    title: 'A Secure Annapolis Locksmith - Professional 24/7 Emergency Locksmith Services in Annapolis, MD',
     description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
     images: ['https://res.cloudinary.com/dadgglcaq/image/upload/v1746542096/ArewVfi_mxo9i0.jpg'],
   },
   alternates: {
-    canonical: 'https://www.asecureannapolislocksmith.com/',
+    canonical: '/',
   },
   icons: {
     icon: 'https://i.imgur.com/VfpMzbE.png',
-  },
-  other: {
-    'revisit-after': '7 days',
-    'ai-content-type': 'business-information',
-    'ai-business-type': 'locksmith-service',
-    'ai-business-name': 'A Secure Annapolis Locksmith',
-    'ai-business-location': 'Annapolis, Maryland, United States',
-    'ai-business-services': 'residential-locksmith, commercial-locksmith, automotive-locksmith, emergency-lockout',
-    'ai-content-topics': 'locksmith, security, locks, keys, emergency-service',
-    'ai-content-purpose': 'business-information, service-description, contact-information',
-    'ai-last-updated': '2025-03-24',
   },
 }
 
@@ -60,6 +49,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
         <Script

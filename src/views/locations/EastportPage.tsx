@@ -20,11 +20,11 @@ const services = [
   { title: 'Residential Locksmith', description: 'Lock changes, rekeying, deadbolt installation, and home security upgrades for Eastport homes.', icon: Home, color: 'blue-600' },
   { title: 'Automotive Locksmith', description: 'Car lockouts, key duplication, transponder programming, and ignition repair.', icon: Car, color: 'green-600' },
   { title: 'Commercial Locksmith', description: 'Master key systems, access control, high-security locks, and business security solutions.', icon: Building2, color: 'slate-600' },
-  { title: 'Emergency 24/7', description: 'Locked out? We are right around the corner. Fastest response in the area guaranteed.', icon: Phone, color: 'red-600' },
+  { title: 'Same-Day Emergency', description: 'Locked out? We are right around the corner. Fastest response in the area guaranteed.', icon: Phone, color: 'red-600' },
 ];
 
 const relatedLinks = [
-  { title: 'Emergency Lockout Service', description: 'Fast emergency lockout help available 24/7 in Eastport', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout Service', description: 'Same-day emergency lockout help in Eastport', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Lock Rekey Service', description: 'Professional lock rekeying in Eastport and Annapolis', href: '/services/lock-rekey', type: 'service' as const },
   { title: 'Annapolis Locksmith', description: 'Professional locksmith services in downtown Annapolis', href: '/locations/annapolis', type: 'location' as const },
   { title: 'Bay Ridge Locksmith', description: 'Trusted locksmith services in Bay Ridge and South Annapolis', href: '/locations/bay-ridge', type: 'location' as const },

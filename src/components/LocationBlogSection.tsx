@@ -14,7 +14,7 @@ interface BlogPost {
   slug: string;
   excerpt: string;
   location: string;
-  created_at: string;
+  published_date: string;
 }
 
 interface LocationBlogSectionProps {
@@ -49,9 +49,10 @@ export default function LocationBlogSection({
       try {
         let query = supabase
           .from('blog_posts')
-          .select('id, title, slug, excerpt, location, created_at')
-          .eq('published', true)
-          .order('created_at', { ascending: false })
+          .select('id, title, slug, excerpt, location, published_date')
+          .eq('status', 'published')
+          .lte('published_date', new Date().toISOString().split('T')[0])
+          .order('published_date', { ascending: false })
           .limit(limit);
 
         if (locationName) {
@@ -112,8 +113,8 @@ export default function LocationBlogSection({
                     <div className="flex items-center gap-3 mb-3 text-sm text-muted-foreground">
                       <div className="flex items-center gap-1.5">
                         <Calendar className="h-3.5 w-3.5" />
-                        <time dateTime={post.created_at}>
-                          {new Date(post.created_at).toLocaleDateString('en-US', {
+                        <time dateTime={post.published_date}>
+                          {new Date(post.published_date + 'T00:00:00').toLocaleDateString('en-US', {
                             month: 'short',
                             day: 'numeric',
                             year: 'numeric'

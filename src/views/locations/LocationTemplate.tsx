@@ -28,7 +28,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
   const relatedLinks = [
     {
       title: 'Emergency Lockout Service',
-      description: `Fast emergency lockout help available 24/7 in ${location.name}`,
+      description: `Fast same-day emergency lockout help in ${location.name}`,
       href: '/services/emergency-lockout',
       type: 'service' as const
     },
@@ -130,7 +130,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Emergency Lockout Service",
-                  "description": `24/7 emergency locksmith service in ${location.name}`
+                  "description": `Same-day emergency locksmith service in ${location.name}`
                 }
               },
               {
@@ -247,7 +247,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <p className="mb-4">
                     As a locally owned and operated locksmith company serving {location.name} and Anne Arundel County,
                     we pride ourselves on delivering fast, reliable service with competitive pricing. Our licensed and
-                    insured technicians are available {location.responseTime === '24/7' ? '24 hours a day, 7 days a week' : 'with response times of ' + location.responseTime}.
+                    insured technicians are available with response times of {location.responseTime}.
                   </p>
                 </div>
 
@@ -361,10 +361,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Phone className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  24/7 Emergency Service
+                  Same-Day Emergency Service
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Locked out late at night? We're available 24/7 for emergency locksmith services in {location.name}. We arrive fast, fix the issue quickly, and get you back inside safely.
+                  Locked out? We are available for same-day emergency locksmith services in {location.name}. We arrive fast, fix the issue quickly, and get you back inside safely.
                 </p>
               </div>
 

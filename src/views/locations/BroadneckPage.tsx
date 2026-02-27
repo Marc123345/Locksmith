@@ -20,7 +20,7 @@ const services = [
   { title: 'Residential Security', desc: 'Home lockouts, rekeying, deadbolt upgrades, and full security solutions for Broadneck Peninsula homes.', icon: Home, color: 'text-blue-600' },
   { title: 'Auto Locksmith', desc: 'Car lockouts, key cutting, transponder programming, and ignition repair across the peninsula.', icon: Car, color: 'text-blue-600' },
   { title: 'Commercial Locks', desc: 'Master key systems, access control, and high-security lock solutions for Broadneck businesses.', icon: Building2, color: 'text-slate-600' },
-  { title: 'Emergency Service', desc: '24/7 emergency lockout response with 20-30 minute arrival times throughout Broadneck.', icon: Phone, color: 'text-red-500' },
+  { title: 'Emergency Service', desc: 'Same-day emergency lockout response with 20-30 minute arrival times throughout Broadneck.', icon: Phone, color: 'text-red-500' },
   { title: 'Lock Repair', desc: 'Expert lock repair, maintenance, and restoration for all residential and commercial lock types.', icon: Wrench, color: 'text-amber-500' },
   { title: 'Smart Lock Install', desc: 'Professional installation of August, Schlage, Yale, and Kwikset smart locks for modern homes.', icon: Smartphone, color: 'text-blue-600' },
 ];
@@ -35,7 +35,7 @@ const peninsulaAreas = [
 ];
 
 const relatedLinks = [
-  { title: 'Emergency Lockout Service', description: '24/7 emergency lockout help on Broadneck Peninsula', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout Service', description: 'Same-day emergency lockout help on Broadneck Peninsula', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Car Key Programming', description: 'Auto key services in the Broadneck area', href: '/services/car-key-programming', type: 'service' as const },
   { title: 'Arnold Locksmith', description: 'Expert locksmith services in Arnold and Bay Hills', href: '/locations/arnold', type: 'location' as const },
   { title: 'Cape St. Claire Locksmith', description: 'Community locksmith in Cape St. Claire', href: '/locations/cape-st-claire', type: 'location' as const },

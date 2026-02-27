@@ -53,7 +53,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Do you offer 24-hour locksmith services in Arnold?',
-        answer: 'Yes. We provide emergency locksmith services in Arnold, MD 24/7 — including nights, weekends, and holidays.'
+        answer: 'Yes. We provide same-day emergency locksmith services in Arnold, MD — including nights, weekends, and holidays.'
       },
       {
         question: 'Can I book a locksmith in Arnold online?',
@@ -65,7 +65,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Arnold, MD | A Secure Annapolis Locksmith',
-    metaDescription: 'Fast, affordable locksmith services in Arnold, MD. Serving Cape St. Claire, Bay Hills & Broadneck Peninsula. 24/7 emergency service. Call (410) 849-6069.'
+    metaDescription: 'Fast, affordable locksmith services in Arnold, MD. Serving Cape St. Claire, Bay Hills & Broadneck Peninsula. Same-day emergency service. Call (410) 849-6069.'
   },
   {
     id: 'edgewater',
@@ -105,7 +105,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Edgewater, MD | Fast & Reliable Service',
-    metaDescription: 'Professional locksmith services in Edgewater, Mayo & Woodland Beach. Same-day service, 24/7 emergency lockouts. Licensed & insured. Call (410) 849-6069.'
+    metaDescription: 'Professional locksmith services in Edgewater, Mayo & Woodland Beach. Same-day service, emergency lockouts. Licensed & insured. Call (410) 849-6069.'
   },
   {
     id: 'severna-park',
@@ -214,14 +214,14 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Are you available for emergency lockouts?',
-        answer: 'We offer 24/7 emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability and ETA.'
+        answer: 'We offer same-day emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability and ETA.'
       },
       {
         question: 'Do you install smart locks in Annapolis homes?',
         answer: 'Yes. We install and configure popular brands like August, Schlage, Yale, and Kwikset, and can recommend options that fit Annapolis\u2019s mix of older and newer doors.'
       }
     ],
-    metaTitle: 'Locksmith in Annapolis, MD | Local 24/7 Service',
+    metaTitle: 'Locksmith in Annapolis, MD | Local Same Day Service',
     metaDescription: 'Expert locksmith services in Annapolis, MD. Residential, commercial & automotive. Emergency lockouts, rekeying, smart locks. Local & licensed. Call (410) 849-6069.'
   },
   {
@@ -300,7 +300,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Do you offer emergency locksmith services in Bay Ridge?',
-        answer: 'Yes, we provide 24/7 emergency locksmith services throughout Bay Ridge and South Annapolis.'
+        answer: 'Yes, we provide same-day emergency locksmith services throughout Bay Ridge and South Annapolis.'
       }
     ],
     metaTitle: 'Locksmith in Bay Ridge, MD | Trusted Waterfront Community Service',
@@ -419,7 +419,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Do you offer emergency services in Riva?',
-        answer: 'Yes, we offer 24/7 emergency locksmith services throughout Riva and the surrounding area.'
+        answer: 'Yes, we offer same-day emergency locksmith services throughout Riva and the surrounding area.'
       }
     ],
     metaTitle: 'Locksmith in Riva, MD | Fast & Professional Service',
@@ -582,7 +582,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Do you offer emergency locksmith services in Mayo?',
-        answer: 'Yes, we provide 24/7 emergency locksmith services throughout Mayo and southern Anne Arundel County.'
+        answer: 'Yes, we provide same-day emergency locksmith services throughout Mayo and southern Anne Arundel County.'
       }
     ],
     metaTitle: 'Locksmith in Mayo, MD | Fast & Trusted Local Service',

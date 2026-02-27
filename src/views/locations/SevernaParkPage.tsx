@@ -16,7 +16,7 @@ import SpecialOfferBanner from '@/components/SpecialOfferBanner';
 import LocationJsonLd from '@/components/locations/LocationJsonLd';
 
 const relatedLinks = [
-  { title: 'Emergency Lockout Service', description: '24/7 emergency lockout service near Severna Park', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout Service', description: 'Same-day emergency lockout service near Severna Park', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Lock Change Service', description: 'Complete lock replacement for Severna Park homes', href: '/services/lock-change', type: 'service' as const },
   { title: 'Car Key Programming', description: 'Automotive key services in Severna Park', href: '/services/car-key-programming', type: 'service' as const },
   { title: 'Arnold Locksmith', description: 'Expert locksmith in Arnold and Bay Hills', href: '/locations/arnold', type: 'location' as const },
@@ -27,7 +27,7 @@ const services = [
   { name: 'Home Security', description: 'Premium residential lock solutions for Severna Park homes', icon: Home, color: 'text-blue-600', bg: 'bg-blue-100' },
   { name: 'Car Key Services', description: 'Key cutting, fob programming, and emergency car lockouts', icon: Key, color: 'text-sky-600', bg: 'bg-sky-100' },
   { name: 'Business Locks', description: 'Commercial-grade security for local businesses', icon: Building2, color: 'text-slate-700', bg: 'bg-slate-100' },
-  { name: 'Emergency Help', description: '24/7 rapid response for lockouts and urgent needs', icon: Phone, color: 'text-red-500', bg: 'bg-red-100' },
+  { name: 'Emergency Help', description: 'Same-day rapid response for lockouts and urgent needs', icon: Phone, color: 'text-red-500', bg: 'bg-red-100' },
   { name: 'Lock Repair', description: 'Expert repair and maintenance for all lock types', icon: Wrench, color: 'text-amber-500', bg: 'bg-amber-100' },
   { name: 'Smart Locks', description: 'Modern smart lock installation and integration', icon: Smartphone, color: 'text-teal-600', bg: 'bg-teal-100' },
 ];
@@ -61,7 +61,7 @@ export default function SevernaParkPage() {
               </h1>
               <p className="text-lg text-blue-200 mb-8 leading-relaxed">
                 Serving Severna Park, Benfield, Chartwell, and surrounding neighborhoods with
-                top-tier locksmith services. Available 24/7 with 20-30 minute response times.
+                top-tier locksmith services. Available same day with 20-30 minute response times.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a

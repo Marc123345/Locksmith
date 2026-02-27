@@ -18,7 +18,7 @@ import NotFoundPage from '@/views/NotFoundPage';
 
 const relatedLinks = [
   { title: 'Lock Rekey Service', description: 'Professional rekeying for Hillsmere Shores homes', href: '/services/lock-rekey', type: 'service' as const },
-  { title: 'Emergency Lockout', description: '24/7 emergency lockout in Hillsmere Shores', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout', description: 'Same-day emergency lockout in Hillsmere Shores', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Annapolis Locksmith', description: 'Professional locksmith in downtown Annapolis', href: '/locations/annapolis', type: 'location' as const },
   { title: 'Bay Ridge Locksmith', description: 'Trusted locksmith in Bay Ridge', href: '/locations/bay-ridge', type: 'location' as const },
   { title: 'Eastport Locksmith', description: 'Your local Eastport locksmith', href: '/locations/eastport', type: 'location' as const },
@@ -27,7 +27,7 @@ const relatedLinks = [
 const faqs = [
   { question: 'How quickly can you reach Hillsmere Shores?', answer: 'We typically arrive in Hillsmere Shores within 15-25 minutes of your call. Our technicians are familiar with the neighborhood and surrounding areas.' },
   { question: 'Do you service the entire Hillsmere Shores community?', answer: 'Yes, we cover all of Hillsmere Shores, the Forest Drive Corridor, and South Annapolis areas with full locksmith services.' },
-  { question: 'Are you available for emergencies at night?', answer: 'Absolutely. We provide 24/7 emergency locksmith services to Hillsmere Shores residents, including nights, weekends, and holidays.' },
+  { question: 'Are you available for emergencies at night?', answer: 'Absolutely. We provide same-day emergency locksmith services to Hillsmere Shores residents, including weekends and holidays.' },
   { question: 'Can you rekey all locks in my Hillsmere Shores home?', answer: 'Yes, we offer complete home rekeying services so all your doors work with a single key, which is especially popular with new homeowners in the area.' },
 ];
 
@@ -35,7 +35,7 @@ const services = [
   { icon: Home, label: 'Home Security', desc: 'Lock installation, rekeying, and smart lock upgrades for your Hillsmere Shores home.', color: 'bg-blue-600' },
   { icon: Key, label: 'Car Key Help', desc: 'Key cutting, fob programming, and emergency car lockout assistance.', color: 'bg-green-600' },
   { icon: Building2, label: 'Business Locks', desc: 'Commercial lock solutions, access control, and master key systems.', color: 'bg-slate-600' },
-  { icon: Phone, label: 'Emergency 24/7', desc: 'Round-the-clock emergency locksmith response for any situation.', color: 'bg-red-500' },
+  { icon: Phone, label: 'Same-Day Emergency', desc: 'Same-day emergency locksmith response for any situation.', color: 'bg-red-500' },
 ];
 
 export default function HillsmereShoresPage() {
@@ -149,7 +149,7 @@ export default function HillsmereShoresPage() {
         <section className="bg-gradient-to-br from-slate-800 to-gray-900 py-16 md:py-20">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Call Your Hillsmere Shores Locksmith</h2>
-            <p className="text-slate-300 mb-8 text-lg">Available 24/7 for all your residential, automotive, and commercial lock needs.</p>
+            <p className="text-slate-300 mb-8 text-lg">Available for same-day residential, automotive, and commercial lock needs.</p>
             <Link href={`tel:${CONTACT.PHONE}`} className="inline-flex items-center gap-2 bg-white text-slate-800 font-semibold px-10 py-4 rounded-lg text-lg hover:bg-slate-100 transition-colors">
               <Phone className="w-5 h-5" />
               {CONTACT.PHONE}

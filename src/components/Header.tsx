@@ -15,7 +15,7 @@ const serviceCategories = [
     title: "Emergency Services",
     icon: AlertCircle,
     services: [
-      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "24/7 fast response" },
+      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "Same-day fast response" },
     ]
   },
   {
@@ -206,7 +206,8 @@ export const Header = () => {
                   <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", servicesOpen && "rotate-180")} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[700px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-[60]">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[700px] max-w-[95vw] z-[60]">
+                  <div className="bg-background border border-border rounded-xl shadow-2xl">
                     <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
                       <div className="flex items-center gap-2">
                         <Wrench className="h-5 w-5" />
@@ -258,7 +259,7 @@ export const Header = () => {
                           View All Services →
                         </Link>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-semibold text-gray-600">24/7 Emergency Service</span>
+                          <span className="text-xs font-semibold text-gray-600">Same Day Service</span>
                           <a
                             href={`tel:${CONTACT.PHONE}`}
                             className="text-primary font-bold hover:text-primary/80 transition-colors"
@@ -268,6 +269,7 @@ export const Header = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
                   </div>
                 )}
               </div>
@@ -290,7 +292,8 @@ export const Header = () => {
                   <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", locationsOpen && "rotate-180")} />
                 </button>
                 {locationsOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[600px] max-w-[95vw] bg-background border border-border rounded-xl shadow-2xl z-[60]">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[600px] max-w-[95vw] z-[60]">
+                  <div className="bg-background border border-border rounded-xl shadow-2xl">
                     <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4 text-white">
                       <div className="flex items-center gap-2">
                         <MapPin className="h-5 w-5" />
@@ -335,6 +338,7 @@ export const Header = () => {
                         </a>
                       </div>
                     </div>
+                  </div>
                   </div>
                 )}
               </div>
@@ -396,11 +400,7 @@ export const Header = () => {
       {/* Desktop Dropdown Overlay */}
       {(locationsOpen || servicesOpen) && (
         <div
-          className="hidden lg:block fixed inset-0 bg-black/20 z-40 transition-opacity duration-200"
-          onClick={() => {
-            setLocationsOpen(false);
-            setServicesOpen(false);
-          }}
+          className="hidden lg:block fixed inset-0 bg-black/20 z-40 pointer-events-none"
           aria-hidden="true"
         />
       )}

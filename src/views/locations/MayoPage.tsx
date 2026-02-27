@@ -20,7 +20,7 @@ const services = [
   { title: 'Residential Locksmith', desc: 'Home lockouts, rekeying, deadbolt installation, and security upgrades for Mayo homes.', icon: Home, color: 'text-blue-600', border: 'border-t-blue-500' },
   { title: 'Automotive Locksmith', desc: 'Car lockouts, key cutting, transponder programming, and ignition repair for all makes.', icon: Car, color: 'text-blue-600', border: 'border-t-blue-500' },
   { title: 'Commercial Locksmith', desc: 'Master key systems, access control, and high-security locks for Mayo businesses.', icon: Building2, color: 'text-blue-600', border: 'border-t-blue-500' },
-  { title: 'Emergency Service', desc: '24/7 emergency lockout assistance with 20-30 minute response times in Mayo.', icon: Phone, color: 'text-blue-600', border: 'border-t-blue-500' },
+  { title: 'Emergency Service', desc: 'Same-day emergency lockout assistance with 20-30 minute response times in Mayo.', icon: Phone, color: 'text-blue-600', border: 'border-t-blue-500' },
 ];
 
 const trustPoints = [
@@ -30,7 +30,7 @@ const trustPoints = [
 ];
 
 const relatedLinks = [
-  { title: 'Emergency Lockout', description: '24/7 emergency lockout help in Mayo', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout', description: 'Same-day emergency lockout help in Mayo', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Lock Rekey Service', description: 'Professional rekeying for Mayo homes', href: '/services/lock-rekey', type: 'service' as const },
   { title: 'Edgewater Locksmith', description: 'Locksmith services in Edgewater', href: '/locations/edgewater', type: 'location' as const },
   { title: 'Edgewater Beach Locksmith', description: 'Waterfront locksmith in Edgewater Beach', href: '/locations/edgewater-beach', type: 'location' as const },

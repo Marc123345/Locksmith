@@ -20,7 +20,7 @@ const services = [
   { title: 'Residential', description: 'Complete home lock services for Bay Ridge waterfront properties', icon: Home, color: 'bg-blue-600' },
   { title: 'Automotive', description: 'Car key replacement, fob programming, and lockouts', icon: Car, color: 'bg-blue-600' },
   { title: 'Commercial', description: 'Business security solutions and access control systems', icon: Building2, color: 'bg-slate-700' },
-  { title: 'Emergency', description: '24/7 emergency lockout service with rapid response', icon: Phone, color: 'bg-red-500' },
+  { title: 'Emergency', description: 'Same-day emergency lockout service with rapid response', icon: Phone, color: 'bg-red-500' },
   { title: 'Lock Installation', description: 'New lock installation and upgrades for all door types', icon: Lock, color: 'bg-blue-500' },
   { title: 'High-Security', description: 'Premium high-security lock systems for maximum protection', icon: Shield, color: 'bg-blue-600' },
 ];
@@ -28,13 +28,13 @@ const services = [
 const faqs = [
   { question: 'How fast can you reach Bay Ridge?', answer: 'We typically arrive in Bay Ridge within 15-25 minutes since we are located just 3 miles away in Annapolis.' },
   { question: 'Do you offer high-security locks for waterfront homes?', answer: 'Yes, we specialize in high-security lock systems ideal for waterfront properties in Bay Ridge, including corrosion-resistant options.' },
-  { question: 'Are you available for emergencies at night?', answer: 'Absolutely. We provide 24/7 emergency locksmith services to Bay Ridge residents any time of day or night.' },
+  { question: 'Are you available for emergencies at night?', answer: 'Absolutely. We provide same-day emergency locksmith services to Bay Ridge residents any time of day.' },
   { question: 'Can you rekey all locks in my Bay Ridge home?', answer: 'Yes, we can rekey all locks in your home in a single visit, giving you new keys while keeping your existing hardware.' },
 ];
 
 const relatedLinks = [
   { title: 'Lock Change Service', description: 'High-security lock installation for Bay Ridge homes', href: '/services/lock-change', type: 'service' as const },
-  { title: 'Emergency Lockout', description: '24/7 emergency lockout in Bay Ridge', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout', description: 'Same-day emergency lockout in Bay Ridge', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Annapolis Locksmith', description: 'Professional locksmith in downtown Annapolis', href: '/locations/annapolis', type: 'location' as const },
   { title: 'Eastport Locksmith', description: 'Your local Eastport locksmith', href: '/locations/eastport', type: 'location' as const },
   { title: 'Hillsmere Shores Locksmith', description: 'Neighborhood locksmith in Hillsmere Shores', href: '/locations/hillsmere-shores', type: 'location' as const },

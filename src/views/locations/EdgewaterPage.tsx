@@ -20,13 +20,13 @@ const services = [
   { title: 'Home Locks', desc: 'Lockouts, rekeying, deadbolts, and security upgrades for Edgewater homes.', icon: Home, color: 'text-blue-600' },
   { title: 'Car Keys', desc: 'Car lockouts, key cutting, transponder programming, and ignition repair.', icon: Car, color: 'text-green-600' },
   { title: 'Business Security', desc: 'Master key systems, access control, and high-security locks for businesses.', icon: Building2, color: 'text-slate-600' },
-  { title: 'Emergency 24/7', desc: 'Round-the-clock emergency lockout service with fast response times.', icon: Phone, color: 'text-red-500' },
+  { title: 'Same-Day Emergency', desc: 'Same-day emergency lockout service with fast response times.', icon: Phone, color: 'text-red-500' },
   { title: 'Lock Repair', desc: 'Expert repair, maintenance, and restoration for all lock types and brands.', icon: Wrench, color: 'text-amber-500' },
   { title: 'Smart Locks', desc: 'Installation and setup of August, Schlage, Yale, and Kwikset smart locks.', icon: Smartphone, color: 'text-teal-500' },
 ];
 
 const relatedLinks = [
-  { title: 'Emergency Lockout', description: '24/7 emergency lockout service in Edgewater', href: '/services/emergency-lockout', type: 'service' as const },
+  { title: 'Emergency Lockout', description: 'Same-day emergency lockout service in Edgewater', href: '/services/emergency-lockout', type: 'service' as const },
   { title: 'Lost Car Keys', description: 'Car key replacement in Edgewater', href: '/services/lost-car-keys', type: 'service' as const },
   { title: 'Annapolis Locksmith', description: 'Professional locksmith in downtown Annapolis', href: '/locations/annapolis', type: 'location' as const },
   { title: 'Mayo Locksmith', description: 'Locksmith services in Mayo', href: '/locations/mayo', type: 'location' as const },
