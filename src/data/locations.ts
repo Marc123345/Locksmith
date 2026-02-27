@@ -214,7 +214,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Are you available for emergency lockouts?',
-        answer: 'We offer 24/7 emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability and ETA.'
+        answer: 'We offer 24/7 emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability.'
       },
       {
         question: 'Do you install smart locks in Annapolis homes?',
@@ -504,7 +504,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Broadneck, MD | Peninsula-Wide Service',
-    metaDescription: 'Professional locksmith serving Broadneck Peninsula. Residential, commercial & automotive services. Fast response times. Licensed. Call (410) 849-6069.'
+    metaDescription: 'Professional locksmith serving Broadneck Peninsula. Residential, commercial & automotive services. Licensed & insured. Call (410) 849-6069.'
   },
   {
     id: 'edgewater-beach',
@@ -553,7 +553,7 @@ export const locations: LocationData[] = [
     slug: 'mayo',
     title: 'A Secure Annapolis Locksmith in Mayo, MD',
     subtitle: 'Reliable Locksmith Services in Mayo and South River Communities',
-    description: 'Mayo, MD residents trust A Secure Annapolis Locksmith for dependable locksmith services. Our mobile team serves the Mayo area with fast response times and professional solutions for all your residential, commercial, and automotive locksmith needs. From emergency lockouts to complete security system installations, we\'re your local locksmith partner in Mayo.',
+    description: 'Mayo, MD residents trust A Secure Annapolis Locksmith for dependable locksmith services. Our mobile team serves the Mayo area with professional solutions for all your residential, commercial, and automotive locksmith needs. From emergency lockouts to complete security system installations, we\'re your local locksmith partner in Mayo.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
     contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
     neighborhoods: [

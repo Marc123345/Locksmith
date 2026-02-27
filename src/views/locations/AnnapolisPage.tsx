@@ -213,7 +213,7 @@ export default function AnnapolisPage() {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900">24/7 Emergency Lockout Service</h2>
                 <p className="text-gray-600 mt-2">
-                  Lockouts and broken locks can happen anytime. Our on&#8209;call technician responds to emergency requests in Annapolis days, nights, weekends, and holidays, always with a clear ETA and price range before you confirm.
+                  Lockouts and broken locks can happen anytime. Our on&#8209;call technician responds to emergency requests in Annapolis days, nights, weekends, and holidays, always with a clear quote before you confirm.
                 </p>
               </div>
             </div>
