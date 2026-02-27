@@ -50,7 +50,7 @@ export default function ContactPage() {
   const faqs = [
     {
       question: "How quickly can you respond to an emergency?",
-      answer: "For emergency lockouts, we typically arrive within 20-30 minutes in the Annapolis area during business hours. Response times may vary based on your location and current demand.",
+      answer: "We offer same-day emergency lockout service in the Annapolis area during business hours. Availability may vary based on your location and current demand.",
     },
     {
       question: "Are your locksmiths licensed and insured?",
@@ -58,7 +58,7 @@ export default function ContactPage() {
     },
     {
       question: "Do you provide free estimates?",
-      answer: "Yes, we provide free estimates for all non-emergency services. For emergency services, we'll provide a clear price quote over the phone before dispatching a technician.",
+      answer: "Yes, we can discuss your needs over the phone and provide details before dispatching a technician.",
     },
     {
       question: "What forms of payment do you accept?",

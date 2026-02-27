@@ -17,11 +17,11 @@ import LocationJsonLd from '@/components/locations/LocationJsonLd';
 import type { PricingItem } from '@/data/pricing';
 
 const annapolisPricing: PricingItem[] = [
-  { service: 'Home Lockout', price: 'Starting at $95', description: 'Fast, damage\u2011free entry in most cases' },
-  { service: 'Car Lockout Service', price: 'Starting at $95', description: 'Mobile service wherever your vehicle is parked' },
-  { service: 'Rekeying', price: 'Starting at $39 per lock', description: 'Cost\u2011effective when you don\u2019t need new hardware' },
-  { service: 'Smart Lock Installation', price: 'Starting at $120', description: 'Includes removal of old locks and setup of your new system' },
-  { service: 'Service Call Fee', price: '$39', description: 'Applied to all completed service visits' },
+  { service: 'Home Lockout', price: 'Call for quote', description: 'Fast, damage\u2011free entry in most cases' },
+  { service: 'Car Lockout Service', price: 'Call for quote', description: 'Mobile service wherever your vehicle is parked' },
+  { service: 'Rekeying', price: 'Call for quote', description: 'Cost\u2011effective when you don\u2019t need new hardware' },
+  { service: 'Smart Lock Installation', price: 'Call for quote', description: 'Includes removal of old locks and setup of your new system' },
+  { service: 'Service Call Fee', price: 'Call for quote', description: 'Applied to all completed service visits' },
 ];
 
 const vanAreas = [
@@ -58,7 +58,7 @@ const emergencySteps = [
   'Move to a safe, visible spot near your door, lobby, or vehicle.',
   'Avoid forcing the lock or prying the door\u2014this often causes damage that is more expensive than a professional opening.',
   'Call (410) 849\u20116069 and tell us what happened (home, car, or business).',
-  'We\u2019ll explain your options, give you a price range, and dispatch a technician with an ETA.',
+  'We\u2019ll explain your options and dispatch a technician.',
 ];
 
 const relatedLinks = [
@@ -99,7 +99,7 @@ export default function AnnapolisPage() {
                 {location.description}
               </p>
               <p className="text-lg text-blue-100/70 mb-8">
-                Call {CONTACT.PHONE_DISPLAY} or <Link href="/contact" className="underline text-blue-200 hover:text-white transition-colors">request a free quote</Link> to get clear pricing and an accurate arrival time before you book.
+                Call {CONTACT.PHONE_DISPLAY} or <Link href="/contact" className="underline text-blue-200 hover:text-white transition-colors">request a free quote</Link> and we&apos;ll explain your options before you book.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href={`tel:${CONTACT.PHONE}`} className="inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors text-lg">
@@ -121,7 +121,7 @@ export default function AnnapolisPage() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Your Neighbors in Annapolis</h2>
                 <p className="text-lg text-gray-600 mb-4">
-                  A Secure Annapolis Locksmith has been serving Annapolis for more than 15 years, working with historic homes, waterfront properties, condos, and commercial buildings throughout the city. Because our shop is just across Spa Creek in Eastport, our technicians are already driving through Downtown, Parole, Bay Ridge, and Hillsmere Shores every day, keeping typical response times in the 15&ndash;25 minute range for most Annapolis calls.
+                  A Secure Annapolis Locksmith has been serving Annapolis for more than 15 years, working with historic homes, waterfront properties, condos, and commercial buildings throughout the city. Because our shop is just across Spa Creek in Eastport, our technicians are already driving through Downtown, Parole, Bay Ridge, and Hillsmere Shores every day, providing same-day service for most Annapolis calls.
                 </p>
               </div>
               <div>
@@ -144,8 +144,8 @@ export default function AnnapolisPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <Clock className="h-6 w-6 text-blue-400 mx-auto mb-2" />
-                <p className="text-2xl font-bold text-white">15&ndash;25 min</p>
-                <p className="text-slate-400 text-sm">Typical Response Time</p>
+                <p className="text-2xl font-bold text-white">Same-Day</p>
+                <p className="text-slate-400 text-sm">Service Available</p>
               </div>
               <div>
                 <Shield className="h-6 w-6 text-blue-400 mx-auto mb-2" />
@@ -213,7 +213,7 @@ export default function AnnapolisPage() {
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Same-Day Emergency Lockout Service</h2>
                 <p className="text-gray-600 mt-2">
-                  Lockouts and broken locks can happen anytime. Our on&#8209;call technician responds to emergency requests in Annapolis days, nights, weekends, and holidays, always with a clear ETA and price range before you confirm.
+                  Lockouts and broken locks can happen anytime. Our on&#8209;call technician responds to emergency requests in Annapolis days, nights, weekends, and holidays, and we will confirm availability before dispatch.
                 </p>
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function AnnapolisPage() {
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-green-300 flex-shrink-0 mt-0.5" />
                 <p className="text-blue-100 leading-relaxed">
-                  Most Annapolis lockouts are opened non&#8209;destructively in just a few minutes, and if your lock is worn or unsafe, we can repair or replace it on the spot.
+                  Most Annapolis lockouts are opened non&#8209;destructively and efficiently, and if your lock is worn or unsafe, we can repair or replace it on the spot.
                 </p>
               </div>
             </div>

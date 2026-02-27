@@ -38,7 +38,7 @@ export const locations: LocationData[] = [
       'Bay Dale'
     ],
     distance: '5.5 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'Head south on MD-2 (Ritchie Hwy) toward Annapolis',
       'Turn left onto Rowe Blvd',
@@ -49,7 +49,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'How fast can a locksmith arrive in Arnold, MD?',
-        answer: 'Our mobile locksmiths are based in Annapolis and typically reach Arnold within 20–30 minutes.'
+        answer: 'Our mobile locksmiths are based in Annapolis and serve Arnold with same-day service. Call for current availability.'
       },
       {
         question: 'Do you offer 24-hour locksmith services in Arnold?',
@@ -84,7 +84,7 @@ export const locations: LocationData[] = [
       'Southern Anne Arundel County'
     ],
     distance: '6 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'Take MD-2 N over the South River Bridge',
       'Merge onto Rowe Blvd, then Duke of Gloucester St',
@@ -101,7 +101,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'How soon can you get here?',
-        answer: 'We typically respond within 20–30 minutes of your call in the Edgewater area.'
+        answer: 'We offer same-day service in the Edgewater area. Call for current availability.'
       }
     ],
     metaTitle: 'Locksmith in Edgewater, MD | Fast & Reliable Service',
@@ -123,7 +123,7 @@ export const locations: LocationData[] = [
       'Surrounding Neighborhoods'
     ],
     distance: '9 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'Take MD-2 S to Annapolis',
       'Continue to Rowe Blvd > Duke of Gloucester',
@@ -132,7 +132,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'How quickly can you respond?',
-        answer: 'Usually within 20–30 minutes in Severna Park.'
+        answer: 'We offer same-day service in Severna Park. Call for current availability.'
       },
       {
         question: 'Do you work on high-security locks?',
@@ -157,7 +157,7 @@ export const locations: LocationData[] = [
       'Arden on the Severn'
     ],
     distance: '10 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'Head southeast on Crownsville Rd',
       'Merge onto US-50 E',
@@ -197,7 +197,7 @@ export const locations: LocationData[] = [
       'Admiral Heights'
     ],
     distance: 'Local \u2014 Based in Annapolis',
-    responseTime: '15\u201325 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Downtown Annapolis, cross Spa Creek Bridge into Eastport.',
       'Turn right onto Severn Ave.',
@@ -206,7 +206,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'How fast can you respond in Annapolis?',
-        answer: 'Since we\u2019re based in Annapolis, we typically arrive within 15\u201325 minutes to most locations in the city, depending on traffic and time of day.'
+        answer: 'Since we are based in Annapolis, we offer same-day service to most locations in the city. Call for current availability.'
       },
       {
         question: 'Do you serve all Annapolis neighborhoods?',
@@ -214,7 +214,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'Are you available for emergency lockouts?',
-        answer: 'We offer same-day emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability and ETA.'
+        answer: 'We offer same-day emergency lockout service for homes, businesses, and vehicles. Call (410) 849\u20116069 anytime and we\u2019ll confirm availability.'
       },
       {
         question: 'Do you install smart locks in Annapolis homes?',
@@ -241,7 +241,7 @@ export const locations: LocationData[] = [
       'West Annapolis'
     ],
     distance: '2 miles',
-    responseTime: '10–20 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Annapolis Mall, head east on Jennifer Rd',
       'Turn right onto Riva Rd',
@@ -256,7 +256,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'How quickly can you reach Parole?',
-        answer: 'We typically arrive in Parole within 10–20 minutes from our Annapolis location.'
+        answer: 'Parole is just 2 miles from our Annapolis location. We offer same-day service. Call for availability.'
       },
       {
         question: 'Can you rekey apartment locks in Parole?',
@@ -264,7 +264,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Parole, MD | Fast Response Near Annapolis Mall',
-    metaDescription: 'Professional locksmith near Parole & Annapolis Mall. Car lockouts, home rekeying, commercial locks. 10-20 min response. Licensed. Call (410) 849-6069.'
+    metaDescription: 'Professional locksmith near Parole & Annapolis Mall. Car lockouts, home rekeying, commercial locks. Same-day service. Licensed. Call (410) 849-6069.'
   },
   {
     id: 'bay-ridge',
@@ -281,7 +281,7 @@ export const locations: LocationData[] = [
       'Quiet Waters Park Area'
     ],
     distance: '3 miles',
-    responseTime: '15–25 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Bay Ridge, head north on Bay Ridge Ave',
       'Turn left onto Forest Dr',
@@ -292,7 +292,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'Do you serve Bay Ridge residents?',
-        answer: 'Yes, Bay Ridge is within our primary service area. We typically arrive within 15–25 minutes.'
+        answer: 'Yes, Bay Ridge is within our primary service area, just 3 miles from our location.'
       },
       {
         question: 'Can you install high-security locks for waterfront homes?',
@@ -321,7 +321,7 @@ export const locations: LocationData[] = [
       'South Annapolis'
     ],
     distance: '4 miles',
-    responseTime: '15–25 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Hillsmere Shores, head north on Hillsmere Dr',
       'Turn right onto Forest Dr',
@@ -332,7 +332,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'How fast can you get to Hillsmere Shores?',
-        answer: 'We typically reach Hillsmere Shores within 15–25 minutes of your call.'
+        answer: 'Hillsmere Shores is within our primary service area, just 4 miles away. Call for same-day service.'
       },
       {
         question: 'Do you install smart locks in Hillsmere Shores homes?',
@@ -344,7 +344,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Hillsmere Shores, MD | Your Neighborhood Expert',
-    metaDescription: 'Professional locksmith serving Hillsmere Shores. Emergency lockouts, rekeying, smart locks. Fast response, fair prices. Licensed. Call (410) 849-6069.'
+    metaDescription: 'Professional locksmith serving Hillsmere Shores. Emergency lockouts, rekeying, smart locks. Same-day service. Licensed. Call (410) 849-6069.'
   },
   {
     id: 'eastport',
@@ -361,7 +361,7 @@ export const locations: LocationData[] = [
       'Maritime Republic of Eastport'
     ],
     distance: '0 miles - Based in Eastport',
-    responseTime: '10–15 minutes',
+    responseTime: 'Same-day',
     directions: [
       'We\'re located at 222 Severn Ave Ste 1 Building 7-6A in Eastport',
       'Near the waterfront and Eastport business district',
@@ -374,7 +374,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'How fast can you respond in Eastport?',
-        answer: 'Since we\'re based right here, we typically arrive within 10–15 minutes anywhere in Eastport.'
+        answer: 'Since we\'re based right here at 222 Severn Ave, Eastport is our home turf.'
       },
       {
         question: 'Do you serve both residential and commercial clients in Eastport?',
@@ -382,7 +382,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Eastport, MD | Based Right in Your Neighborhood',
-    metaDescription: 'Local Eastport locksmith at 222 Severn Ave. Fastest response times. Residential, commercial & marine locksmith services. Call (410) 849-6069.'
+    metaDescription: 'Local Eastport locksmith at 222 Severn Ave. Residential, commercial & marine locksmith services. Call (410) 849-6069.'
   },
   {
     id: 'riva',
@@ -400,7 +400,7 @@ export const locations: LocationData[] = [
       'West Annapolis'
     ],
     distance: '4 miles',
-    responseTime: '15–25 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Riva, head east on Riva Rd toward Annapolis',
       'Continue straight through Parole',
@@ -411,7 +411,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'Do you serve the Riva area?',
-        answer: 'Yes, Riva is well within our service area. We typically arrive within 15–25 minutes.'
+        answer: 'Yes, Riva is well within our service area, just 4 miles from our location.'
       },
       {
         question: 'Can you install commercial locks for businesses on Riva Rd?',
@@ -440,7 +440,7 @@ export const locations: LocationData[] = [
       'Cape St. Claire Beach'
     ],
     distance: '6 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Cape St. Claire, head west toward MD-2',
       'Turn right onto Ritchie Hwy (MD-2) South',
@@ -451,7 +451,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'How long does it take to reach Cape St. Claire?',
-        answer: 'We typically arrive in Cape St. Claire within 20–30 minutes from our Annapolis location.'
+        answer: 'Cape St. Claire is within our service area, about 6 miles from our Annapolis location.'
       },
       {
         question: 'Do you work with Cape St. Claire HOA requirements?',
@@ -481,7 +481,7 @@ export const locations: LocationData[] = [
       'Broadneck Area'
     ],
     distance: '6–8 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Broadneck area, head south on Ritchie Hwy (MD-2)',
       'Continue toward Annapolis',
@@ -492,7 +492,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'Do you serve the entire Broadneck Peninsula?',
-        answer: 'Yes, we provide locksmith services throughout the Broadneck Peninsula, typically arriving within 20–30 minutes.'
+        answer: 'Yes, we provide locksmith services throughout the Broadneck Peninsula.'
       },
       {
         question: 'Can you service Broadneck High School and area schools?',
@@ -504,7 +504,7 @@ export const locations: LocationData[] = [
       }
     ],
     metaTitle: 'Locksmith in Broadneck, MD | Peninsula-Wide Service',
-    metaDescription: 'Professional locksmith serving Broadneck Peninsula. Residential, commercial & automotive services. Fast response times. Licensed. Call (410) 849-6069.'
+    metaDescription: 'Professional locksmith serving Broadneck Peninsula. Residential, commercial & automotive services. Same-day service. Licensed. Call (410) 849-6069.'
   },
   {
     id: 'edgewater-beach',
@@ -522,7 +522,7 @@ export const locations: LocationData[] = [
       'Waterfront Communities'
     ],
     distance: '7 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Edgewater Beach, head north on MD-2',
       'Continue toward Annapolis over South River Bridge',
@@ -537,7 +537,7 @@ export const locations: LocationData[] = [
       },
       {
         question: 'How fast can you respond to Edgewater Beach?',
-        answer: 'We typically arrive in Edgewater Beach within 20–30 minutes of your call.'
+        answer: 'Edgewater Beach is within our service area, about 7 miles from our Annapolis location.'
       },
       {
         question: 'Can you install locks on boat houses and docks?',
@@ -553,7 +553,7 @@ export const locations: LocationData[] = [
     slug: 'mayo',
     title: 'A Secure Annapolis Locksmith in Mayo, MD',
     subtitle: 'Reliable Locksmith Services in Mayo and South River Communities',
-    description: 'Mayo, MD residents trust A Secure Annapolis Locksmith for dependable locksmith services. Our mobile team serves the Mayo area with fast response times and professional solutions for all your residential, commercial, and automotive locksmith needs. From emergency lockouts to complete security system installations, we\'re your local locksmith partner in Mayo.',
+    description: 'Mayo, MD residents trust A Secure Annapolis Locksmith for dependable locksmith services. Our mobile team serves the Mayo area with professional solutions for all your residential, commercial, and automotive locksmith needs. From emergency lockouts to complete security system installations, we\'re your local locksmith partner in Mayo.',
     heroImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(11)_dwZTbXGi6.png?tr=f-auto,q-auto',
     contentImage: 'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(7)_l8viIEP0Wf.jpg?tr=f-auto,q-auto',
     neighborhoods: [
@@ -563,7 +563,7 @@ export const locations: LocationData[] = [
       'Southern Anne Arundel'
     ],
     distance: '7 miles',
-    responseTime: '20–30 minutes',
+    responseTime: 'Same-day',
     directions: [
       'From Mayo, head northwest toward MD-2',
       'Turn right onto MD-2 North',
@@ -574,7 +574,7 @@ export const locations: LocationData[] = [
     faqs: [
       {
         question: 'Do you provide locksmith services in Mayo, MD?',
-        answer: 'Yes, Mayo is within our primary service area with typical response times of 20–30 minutes.'
+        answer: 'Yes, Mayo is within our primary service area, about 7 miles from our Annapolis location.'
       },
       {
         question: 'Can you rekey homes in Mayo after moving?',

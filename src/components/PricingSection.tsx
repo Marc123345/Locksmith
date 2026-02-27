@@ -19,7 +19,7 @@ export default function PricingSection({ pricing, showDiscount = true }: Pricing
             Transparent Pricing
           </h2>
           <p className="text-xl text-gray-600">
-            Clear, upfront pricing with no hidden fees
+            Licensed, bonded, and insured for your protection
           </p>
         </div>
 

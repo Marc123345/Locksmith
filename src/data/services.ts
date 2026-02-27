@@ -51,7 +51,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         question: 'How long does a lock change take?',
-        answer: 'Most residential lock changes are completed within 30–60 minutes.'
+        answer: 'A standard lock change is a straightforward process. Our technician will give you an estimated timeframe on-site.'
       },
       {
         question: 'Can you supply new locks?',
@@ -81,7 +81,7 @@ export const services: ServiceData[] = [
     ],
     features: [
       'Cost-effective alternative to lock replacement',
-      'Fast service — usually 10–15 minutes per lock',
+      'Efficient service per lock',
       'Works with all major brands (Schlage, Kwikset, Yale, Baldwin)',
       'Master key systems available',
       'Same-day mobile service'
@@ -112,7 +112,7 @@ export const services: ServiceData[] = [
       },
       {
         question: 'How long does rekeying take?',
-        answer: 'Usually 10–15 minutes per lock.'
+        answer: 'Our technician will complete the job efficiently and give you a timeframe on-site.'
       },
       {
         question: 'Can you rekey smart locks?',
@@ -120,7 +120,7 @@ export const services: ServiceData[] = [
       }
     ],
     metaTitle: 'Lock Rekey Services in Annapolis, MD | Fast & Affordable',
-    metaDescription: 'Professional lock rekeying in Annapolis. Cost-effective security upgrade. 10-15 minutes per lock. Master key systems available. Call (410) 849-6069.'
+    metaDescription: 'Professional lock rekeying in Annapolis. Cost-effective security upgrade. Master key systems available. Call (410) 849-6069.'
   },
   {
     id: 'car-key-programming',
@@ -141,7 +141,7 @@ export const services: ServiceData[] = [
       'Imports (Toyota, Honda, Nissan, Hyundai)',
       'Luxury brands (BMW, Lexus, Audi, Mercedes)',
       'Keyless entry and proximity smart keys',
-      'On-site service in 30–45 minutes'
+      'On-site mobile service'
     ],
     serviceAreas: ['Annapolis', 'Parole', 'Eastport', 'Hillsmere Shores'],
     faqs: [
@@ -151,7 +151,7 @@ export const services: ServiceData[] = [
       },
       {
         question: 'How long does programming take?',
-        answer: 'Usually 30–45 minutes per key.'
+        answer: 'Our technician will give you an estimated timeframe on-site.'
       },
       {
         question: 'Do you handle all makes and models?',
@@ -176,11 +176,11 @@ export const services: ServiceData[] = [
       'https://ik.imagekit.io/qcvroy8xpd/image-gen%20(9)_Xh3CkNmTP.png?tr=f-auto,q-auto'
     ],
     features: [
-      'Rapid Response – Same-Day Availability',
+      'Same-Day Availability',
       'Non-Destructive Entry',
       'Smart Lock & Keypad Unlocks',
       'On-the-Spot Rekeying or Lock Replacement',
-      'Arrives in 30 minutes or less'
+      'Mobile service comes to your location'
     ],
     serviceAreas: [
       'Eastport',
@@ -212,7 +212,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         question: 'How long does it take for a locksmith to arrive in an emergency?',
-        answer: 'In most cases, we arrive in 20–30 minutes to any Annapolis location.'
+        answer: 'We offer same-day emergency response. Call us and we will confirm availability and dispatch a technician.'
       },
       {
         question: 'Will the lock or door be damaged during entry?',
@@ -228,7 +228,7 @@ export const services: ServiceData[] = [
       }
     ],
     metaTitle: 'Emergency Lockout Service in Annapolis, MD | Same Day Help',
-    metaDescription: 'Same-day emergency house lockout service in Annapolis. Fast response in 20-30 minutes. Non-destructive entry. Licensed & insured. Call (410) 849-6069 now.'
+    metaDescription: 'Same-day emergency house lockout service in Annapolis. Non-destructive entry. Licensed & insured. Call (410) 849-6069 now.'
   },
   {
     id: 'lock-repair',
@@ -264,7 +264,7 @@ export const services: ServiceData[] = [
       },
       {
         question: 'How fast can you respond to lock repair calls?',
-        answer: 'We typically arrive within 20–30 minutes for lock repair service in Annapolis.'
+        answer: 'We offer same-day lock repair service throughout Annapolis. Call to confirm availability.'
       }
     ],
     metaTitle: 'Lock Repair in Annapolis, MD | Fast & Professional Service',
@@ -303,11 +303,11 @@ export const services: ServiceData[] = [
       },
       {
         question: 'How long does the process take?',
-        answer: 'Most keys are cut and programmed within 30–45 minutes.'
+        answer: 'Our technician will give you an estimated timeframe on-site.'
       }
     ],
     metaTitle: 'Lost Car Key Replacement in Annapolis, MD | Mobile Service',
-    metaDescription: 'Lost your car keys? Mobile car key replacement in Annapolis. Cut & program on-site in 30-45 minutes. Most makes & models. Call (410) 849-6069.'
+    metaDescription: 'Lost your car keys? Mobile car key replacement in Annapolis. On-site cut & programming. Most makes & models. Call (410) 849-6069.'
   }
 ];
 

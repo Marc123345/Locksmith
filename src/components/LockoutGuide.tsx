@@ -14,8 +14,8 @@ const steps = [
   },
   {
     icon: <Clock className="h-7 w-7" />,
-    title: "20-Min Response",
-    description: "Average response time for emergency lockouts across Annapolis.",
+    title: "Same-Day Dispatch",
+    description: "We dispatch a local technician for emergency lockouts across Annapolis.",
     accent: "bg-teal-500"
   },
   {
@@ -27,7 +27,7 @@ const steps = [
   {
     icon: <CheckCircle className="h-7 w-7" />,
     title: "Problem Solved",
-    description: "Fast, professional service with upfront pricing by licensed technicians.",
+    description: "Professional service by licensed and insured technicians.",
     accent: "bg-emerald-500"
   }
 ];
@@ -111,7 +111,7 @@ export default function LockoutGuide() {
             </a>
           </Button>
           <p className="text-sm text-muted-foreground">
-            Service call fee starts at {CONTACT.SERVICE_CALL_FEE}
+            Licensed, bonded &amp; insured in Maryland
           </p>
         </motion.div>
       </div>

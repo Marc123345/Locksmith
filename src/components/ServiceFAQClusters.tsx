@@ -23,7 +23,7 @@ const faqClusters: FAQCluster[] = [
     faqs: [
       {
         question: "How fast can you respond to a lockout in Annapolis?",
-        answer: "We provide 20-minute average response times for emergency lockouts throughout the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole."
+        answer: "We offer same-day emergency lockout service throughout the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole. We dispatch the nearest available technician."
       },
       {
         question: "Do you charge extra for emergency service?",
@@ -45,7 +45,7 @@ const faqClusters: FAQCluster[] = [
       },
       {
         question: "How long does it take to change a lock?",
-        answer: "A standard lock change typically takes 15-30 minutes per lock. Rekeying is usually faster, around 10-15 minutes per lock."
+        answer: "A standard lock change is a straightforward process. Rekeying is usually even quicker. Our technician will give you an estimated timeframe on-site."
       },
       {
         question: "Do you offer a warranty on lock changes?",
@@ -63,7 +63,7 @@ const faqClusters: FAQCluster[] = [
       },
       {
         question: "How much does car key programming cost?",
-        answer: "Pricing varies by vehicle make, model, and year. Basic keys start around $150, while high-security and smart keys may cost more. We provide upfront quotes before starting work."
+        answer: "Pricing varies by vehicle make, model, and year. We provide upfront quotes before starting any work. Call us for a free estimate."
       },
       {
         question: "Do you come to me for car key service?",

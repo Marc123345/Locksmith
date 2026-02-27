@@ -12,8 +12,8 @@ const features = [
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
-    title: "20-Minute Response",
-    description: "Fast dispatch for emergency lockouts. We minimize your wait time and get you back inside quickly.",
+    title: "Same-Day Emergency Service",
+    description: "Local dispatch for emergency lockouts throughout Annapolis and Anne Arundel County.",
   },
   {
     icon: <Award className="h-10 w-10 text-primary" />,
@@ -32,8 +32,8 @@ const features = [
   },
   {
     icon: <BadgeCheck className="h-10 w-10 text-primary" />,
-    title: "Upfront Pricing",
-    description: "No hidden fees. You'll know the cost before we start—no surprise charges added to the bill.",
+    title: "Locally Owned Business",
+    description: "We're not a call center. We're a real Annapolis locksmith business you can visit at 222 Severn Ave.",
   },
 ];
 
@@ -44,7 +44,7 @@ export const FeatureSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">What Sets Us Apart</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We're not a dispatch center—we're a locally owned locksmith business with real technicians, transparent pricing, and verifiable credentials.
+            We're not a dispatch center—we're a locally owned locksmith business with real technicians and verifiable credentials.
           </p>
         </div>
         

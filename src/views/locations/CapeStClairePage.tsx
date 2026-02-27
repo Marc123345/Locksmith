@@ -28,7 +28,7 @@ const services = [
   { title: 'Residential Locks', description: 'Lock changes, rekeying, deadbolt installation, and smart lock setup for Cape St. Claire homes.', icon: Home, color: 'blue-600', href: '/services/lock-change' },
   { title: 'Auto Key Services', description: 'Car lockouts, key cutting, transponder programming, and ignition repair at your location.', icon: Car, color: 'green-600', href: '/services/car-key-programming' },
   { title: 'Commercial Security', description: 'Master key systems, access control, and high-security solutions for local businesses.', icon: Building2, color: 'slate-600', href: '/services/commercial-locksmith' },
-  { title: 'Emergency Lockout', description: 'Locked out? Fast response to Cape St. Claire for home, car, and office lockouts.', icon: Phone, color: 'red-500', href: '/services/emergency-lockout' },
+  { title: 'Emergency Lockout', description: 'Locked out? Same-day service to Cape St. Claire for home, car, and office lockouts.', icon: Phone, color: 'red-500', href: '/services/emergency-lockout' },
 ];
 
 export default function CapeStClairePage() {
@@ -55,7 +55,7 @@ export default function CapeStClairePage() {
               Trusted Locksmith for the<br />Cape St. Claire Community
             </h1>
             <p className="text-lg md:text-xl text-blue-100/80 mb-8 max-w-2xl mx-auto">
-              Professional locksmith services tailored for Cape St. Claire&apos;s beach community. HOA-compatible installations, fast response, and trusted by your neighbors.
+              Professional locksmith services tailored for Cape St. Claire&apos;s beach community. HOA-compatible installations, trusted by your neighbors.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href={`tel:${CONTACT.PHONE}`} className="inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-900 font-bold px-8 py-4 rounded-lg transition-colors text-lg">
@@ -83,7 +83,7 @@ export default function CapeStClairePage() {
                 <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-7 h-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">20-30 Min Response</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Same-Day Service</h3>
                 <p className="text-gray-600">Just 6 miles from our Annapolis shop, we reach Cape St. Claire quickly for emergencies and scheduled appointments alike.</p>
               </div>
               <div className="bg-white rounded-2xl shadow-sm border border-blue-200 p-8 text-center">

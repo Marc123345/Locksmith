@@ -40,6 +40,6 @@ export const CONTACT = {
     { day: 'Friday', hours: '7:00 AM - 2:30 PM' },
     { day: 'Saturday', hours: 'Closed' },
   ],
-  SERVICE_CALL_FEE: '$39',
+  SERVICE_CALL_FEE: 'Call for details',
   EMERGENCY_AVAILABLE: 'Same-Day'
 } as const;

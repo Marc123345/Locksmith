@@ -25,7 +25,7 @@ const relatedLinks = [
 ];
 
 const services = [
-  { name: 'Emergency Lockout', desc: 'Fast response for home, car, and office lockouts', border: 'border-t-red-500', icon: Phone },
+  { name: 'Emergency Lockout', desc: 'Same-day service for home, car, and office lockouts', border: 'border-t-red-500', icon: Phone },
   { name: 'Lock Rekey', desc: 'Affordable rekeying for homes and apartments', border: 'border-t-blue-500', icon: Key },
   { name: 'Car Keys', desc: 'Key cutting, programming, and replacement', border: 'border-t-green-500', icon: Car },
   { name: 'Lock Change', desc: 'Full lock replacement and upgrades', border: 'border-t-amber-500', icon: Lock },
@@ -51,7 +51,7 @@ export default function ParolePage() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <span className="inline-flex items-center gap-2 bg-blue-600/30 text-blue-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
               <Clock className="w-4 h-4" />
-              10-20 Min Response
+              Same-Day Service
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Fast Locksmith Service Near Annapolis Mall
@@ -153,7 +153,7 @@ export default function ParolePage() {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Locked Out Near Annapolis Mall?</h2>
             <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
-              Our mobile locksmiths are just minutes away from Parole. Call now for fast, affordable service.
+              Our mobile locksmiths serve the Parole area. Call now for same-day service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`tel:${CONTACT.PHONE}`} className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-lg font-semibold transition-colors">

@@ -22,11 +22,11 @@ const services = [
   { icon: Home, title: 'Residential Locksmith', description: 'Lock installations, rekeying, and repairs for Crownsville homes and estates.' },
   { icon: Car, title: 'Automotive Locksmith', description: 'Car lockouts, key replacement, and transponder programming on site.' },
   { icon: Building2, title: 'Commercial Locksmith', description: 'Business security solutions, access control, and master key systems.' },
-  { icon: Phone, title: 'Emergency Service', description: 'Same-day emergency lockout assistance with rapid response to Crownsville.' },
+  { icon: Phone, title: 'Emergency Service', description: 'Same-day emergency lockout assistance in Crownsville.' },
 ];
 
 const faqs = [
-  { question: 'How quickly can you reach Crownsville?', answer: 'We typically arrive in Crownsville within 20-30 minutes, covering all areas including Herald Harbor and Arden on the Severn.' },
+  { question: 'How quickly can you reach Crownsville?', answer: 'We serve all of Crownsville including Herald Harbor and Arden on the Severn with same-day service.' },
   { question: 'Do you service rural properties in Crownsville?', answer: 'Yes, we service all properties in the Crownsville area including rural homes, farms, and estates throughout the community.' },
   { question: 'What are your hours for Crownsville service calls?', answer: 'We are available 7 days a week for scheduled and emergency locksmith services in Crownsville and surrounding areas.' },
   { question: 'Can you rekey locks at my Crownsville home?', answer: 'Absolutely. We offer professional lock rekeying for all residential properties in Crownsville at competitive rates.' },
@@ -109,8 +109,8 @@ export default function CrownsvillePage() {
                   <div className="flex items-start gap-4">
                     <Clock className="mt-0.5 h-6 w-6 flex-shrink-0 text-blue-600" />
                     <div>
-                      <p className="font-semibold text-gray-900">Response Time</p>
-                      <p className="text-gray-600">20-30 minutes</p>
+                      <p className="font-semibold text-gray-900">Availability</p>
+                      <p className="text-gray-600">Same-day service</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

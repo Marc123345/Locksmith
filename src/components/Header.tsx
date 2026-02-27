@@ -15,7 +15,7 @@ const serviceCategories = [
     title: "Emergency Services",
     icon: AlertCircle,
     services: [
-      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "Same-day fast response" },
+      { name: "Emergency Lockout", href: "/services/emergency-lockout", description: "Same-day service available" },
     ]
   },
   {
@@ -299,7 +299,7 @@ export const Header = () => {
                         <MapPin className="h-5 w-5" />
                         <h3 className="text-lg font-bold">Anne Arundel County Service Areas</h3>
                       </div>
-                      <p className="text-xs text-blue-100 mt-1">Fast, local locksmith service throughout the region</p>
+                      <p className="text-xs text-blue-100 mt-1">Local locksmith service throughout the region</p>
                     </div>
                     <div className="grid grid-cols-3 gap-6 p-6">
                       {locationCategories.map((category) => (

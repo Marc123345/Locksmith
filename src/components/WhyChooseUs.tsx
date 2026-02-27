@@ -8,8 +8,8 @@ const benefits = [
   },
   {
     icon: Clock,
-    title: 'Fast Emergency Response',
-    description: 'Arrive in 20-30 minutes for most locations'
+    title: 'Same-Day Emergency Service',
+    description: 'Local technicians dispatched throughout Anne Arundel County'
   },
   {
     icon: Shield,

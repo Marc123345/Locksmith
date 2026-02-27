@@ -16,10 +16,10 @@ const stats = [
     description: "Based on 60+ verified reviews"
   },
   {
-    number: "20-Min",
-    label: "Response Time",
+    number: "Same-Day",
+    label: "Service Available",
     icon: <Wrench className="h-8 w-8 text-primary" />,
-    description: "Fast emergency service"
+    description: "Local emergency dispatch"
   },
   {
     number: "#413",

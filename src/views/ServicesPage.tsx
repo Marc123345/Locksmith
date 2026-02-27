@@ -29,7 +29,7 @@ export default function ServicesPage() {
         "Emergency lockout service",
         "Master key systems",
       ],
-      price: "Starting at $75",
+      price: "Call for quote",
       response: "Same-day service available",
       href: "/contact"
     },
@@ -65,7 +65,7 @@ export default function ServicesPage() {
         "Transponder keys",
       ],
       price: "Estimates provided on-site",
-      response: "Fast response times",
+      response: "Same-day service",
       href: "/contact"
     },
     {
@@ -76,7 +76,7 @@ export default function ServicesPage() {
       icon: <AlertTriangle className="h-8 w-8 text-white" />,
       features: [
         "Same-day availability",
-        "Fast response times",
+        "Same-day service available",
         "All types of lockouts",
         "Lock repairs",
         "Emergency rekeying",

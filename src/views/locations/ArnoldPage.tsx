@@ -86,7 +86,7 @@ export default function ArnoldPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Fast Local Response</h3>
                 <p className="text-gray-600">
-                  20-30 minute response times throughout the Arnold area. Our technicians are nearby and
+                  Same-day service throughout the Arnold area. Our technicians are nearby and
                   ready to assist you day or night.
                 </p>
               </div>
@@ -97,7 +97,7 @@ export default function ArnoldPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Community Trusted</h3>
                 <p className="text-gray-600">
                   Trusted by Arnold families and businesses for years. Licensed, insured, and committed
-                  to honest pricing with no hidden fees.
+                  to honest service with no hidden fees.
                 </p>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function ArnoldPage() {
                 </p>
                 <p className="text-gray-600">
                   Locked out on Broadneck Peninsula? Our same-day emergency locksmith service ensures
-                  you are never stranded. Fast response, fair pricing, every time.
+                  you are never stranded. Professional service, every time.
                 </p>
               </div>
             </div>

@@ -19,7 +19,7 @@ const steps = [
   {
     icon: <DollarSign className="h-7 w-7" />,
     title: "Upfront Pricing",
-    description: "No surprises. You'll know the cost before we start any work. No hidden fees.",
+    description: "No surprises. We explain all options and costs before we start any work.",
     number: "03"
   },
   {

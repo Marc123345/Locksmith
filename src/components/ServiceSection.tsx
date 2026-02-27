@@ -58,11 +58,11 @@ const ServiceSection = () => {
       icon: <AlertTriangle className="h-5 w-5 sm:h-6 sm:w-6" />,
       features: [
         "Same-day availability",
-        "Fast response times",
         "All types of lockouts",
         "Lock repairs",
         "Emergency rekeying",
         "Break-in repairs",
+        "Board-up service",
       ],
     }
   };

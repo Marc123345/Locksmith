@@ -12,8 +12,8 @@ const pricingItems = [
   {
     icon: <Home className="h-6 w-6" />,
     service: "House Lockout",
-    price: "$39",
-    priceLabel: "Starting at",
+    price: "Call for quote",
+    priceLabel: "",
     details: "Service call + labor. No hidden fees.",
     link: "/services/emergency-lockout",
     tag: "Most Popular"
@@ -21,8 +21,8 @@ const pricingItems = [
   {
     icon: <Home className="h-6 w-6" />,
     service: "Lock Change",
-    price: "$75",
-    priceLabel: "Starting at",
+    price: "Call for quote",
+    priceLabel: "",
     details: "Includes basic hardware and installation.",
     link: "/services/lock-change",
     tag: null
@@ -30,8 +30,8 @@ const pricingItems = [
   {
     icon: <Home className="h-6 w-6" />,
     service: "Rekey Service",
-    price: "$25",
-    priceLabel: "Per lock from",
+    price: "Call for quote",
+    priceLabel: "",
     details: "Discounts for multiple locks.",
     link: "/services/lock-rekey",
     tag: "Best Value"
@@ -39,8 +39,8 @@ const pricingItems = [
   {
     icon: <Car className="h-6 w-6" />,
     service: "Car Lockout",
-    price: "$50",
-    priceLabel: "Starting at",
+    price: "Call for quote",
+    priceLabel: "",
     details: "No towing needed. We come to you.",
     link: "/services/lost-car-keys",
     tag: null
@@ -48,8 +48,8 @@ const pricingItems = [
   {
     icon: <Car className="h-6 w-6" />,
     service: "Car Key Programming",
-    price: "$150",
-    priceLabel: "Starting at",
+    price: "Call for quote",
+    priceLabel: "",
     details: "Varies by make and model.",
     link: "/services/car-key-programming",
     tag: null
@@ -66,7 +66,7 @@ const pricingItems = [
 ];
 
 const pricingFeatures = [
-  "Upfront pricing before we start",
+  "We explain all options before we start",
   "No hidden fees or surprise charges",
   "3-month warranty on all lock changes",
   "Same-day service in most cases",
@@ -103,7 +103,7 @@ export default function PricingGuide() {
             Locksmith Pricing in Annapolis
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No surprises, no hidden fees. Here's what you can expect to pay for common locksmith services.
+            No surprises. Here's an overview of our common locksmith services.
           </p>
         </motion.div>
 
@@ -171,7 +171,7 @@ export default function PricingGuide() {
               </div>
               <div className="text-center mt-6 pt-5 border-t">
                 <p className="text-sm text-muted-foreground mb-3">
-                  Final pricing depends on your specific needs.
+                  Call us for a free estimate tailored to your specific needs.
                 </p>
                 <Button size="lg" asChild>
                   <a href={`tel:${CONTACT.PHONE}`} className="flex items-center justify-center">
