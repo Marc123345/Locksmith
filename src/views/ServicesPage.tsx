@@ -29,8 +29,6 @@ export default function ServicesPage() {
         "Emergency lockout service",
         "Master key systems",
       ],
-      price: "Starting at $75",
-      response: "Same-day service available",
       href: "/contact"
     },
     {
@@ -46,8 +44,6 @@ export default function ServicesPage() {
         "Door closers",
         "Security consultation"
       ],
-      price: "Custom quotes available",
-      response: "Same day service",
       href: "/contact"
     },
     {
@@ -64,8 +60,6 @@ export default function ServicesPage() {
         "High-security keys",
         "Transponder keys",
       ],
-      price: "Estimates provided on-site",
-      response: "Fast response times",
       href: "/contact"
     },
     {
@@ -76,14 +70,12 @@ export default function ServicesPage() {
       icon: <AlertTriangle className="h-8 w-8 text-white" />,
       features: [
         "Same-day availability",
-        "Fast response times",
+        "Same-day service",
         "All types of lockouts",
         "Lock repairs",
         "Emergency rekeying",
         "Break-in repairs",
       ],
-      price: "Estimates provided on-site",
-      response: "Priority service",
       href: "/contact"
     },
   ];
@@ -91,7 +83,7 @@ export default function ServicesPage() {
   const benefits = [
     {
       icon: <Clock className="h-6 w-6 text-primary" />,
-      title: "Fast Response",
+      title: "Same-Day Service",
       description: "Same-day service available in Annapolis",
     },
     {
@@ -102,7 +94,7 @@ export default function ServicesPage() {
     {
       icon: <BadgeCheck className="h-6 w-6 text-primary" />,
       title: "Quality Guarantee",
-      description: "100% satisfaction guarantee on all services",
+      description: "Satisfaction guarantee on all services",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,

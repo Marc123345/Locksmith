@@ -14,7 +14,6 @@ import LockoutGuide from '@/components/LockoutGuide';
 import MeetTheTeam from '@/components/MeetTheTeam';
 import WhatToExpect from '@/components/WhatToExpect';
 import LicensingSection from '@/components/LicensingSection';
-import PricingGuide from '@/components/PricingGuide';
 import ServiceFAQClusters from '@/components/ServiceFAQClusters';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
@@ -35,10 +34,10 @@ import {
 const findReview = (name: string) => allReviews.find(r => r.name === name);
 
 const featuredReviews: (Review & { highlight: string })[] = [
-  { highlight: 'Car Lockout -- 15 min arrival', ...(findReview('Desiree Henningsen') ?? allReviews[0]) },
+  { highlight: 'Car Lockout -- Quick Arrival', ...(findReview('Desiree Henningsen') ?? allReviews[0]) },
   { highlight: 'Whole-Home Rekey -- Annapolis', ...(findReview('Alexandra Paulson') ?? allReviews[1]) },
   { highlight: 'Lock Install -- Same-Day Service', ...(findReview('H C') ?? allReviews[2]) },
-  { highlight: 'Emergency Lockout -- Instant Response', ...(findReview('RM Moreno') ?? allReviews[3]) },
+  { highlight: 'Emergency Lockout -- Professional Service', ...(findReview('RM Moreno') ?? allReviews[3]) },
   { highlight: 'Lock Change -- Under 24 Hours', ...(findReview('Proton Flux') ?? allReviews[4]) },
   { highlight: 'Same-Day Service -- No Extra Fees', ...(findReview('Debra Kupfer') ?? allReviews[5]) },
 ];
@@ -182,7 +181,7 @@ const faqs = [
   },
   {
     question: "How quickly can you respond to an emergency lockout in Annapolis?",
-    answer: "We provide 20-minute average response times for emergency lockouts in the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole. We dispatch the nearest available technician to minimize your wait time."
+    answer: "We dispatch the nearest available technician to minimize your wait time for emergency lockouts in the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole."
   },
   {
     question: "Do you charge extra for after-hours service?",
@@ -202,7 +201,7 @@ const faqs = [
   },
   {
     question: "How much does a locksmith cost in Annapolis, MD?",
-    answer: "Our service call fee starts at $39. Final pricing depends on the type of service needed. We always provide upfront pricing before starting any work -- no hidden fees or surprise charges."
+    answer: "Final pricing depends on the type of service needed. We always provide upfront pricing before starting any work -- no hidden fees or surprise charges. Call us for a free quote."
   }
 ];
 
@@ -335,7 +334,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-4">Emergency Locksmith in Annapolis with 20-Minute Response</h2>
+            <h2 className="text-4xl font-bold mb-4">Emergency Locksmith in Annapolis</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               From emergency lockouts to complete security upgrades, we handle it all across Anne Arundel County.
             </p>
@@ -345,7 +344,7 @@ export default function HomePage() {
       </section>
 
       <WhatToExpect />
-      <PricingGuide />
+      {/* PricingGuide removed for Google Ads compliance */}
 
       <section className="py-16 bg-muted/30" aria-label="Customer reviews from Google and Thumbtack">
         <div className="container mx-auto px-4">
@@ -504,7 +503,7 @@ export default function HomePage() {
             >
               <h2 className="text-4xl font-bold">Locksmith Service Areas: Annapolis & Anne Arundel County</h2>
               <p className="text-lg text-muted-foreground">
-                We provide mobile locksmith services throughout <strong>Anne Arundel County</strong>. From the <strong>City Dock</strong> to <strong>Severna Park</strong>, we're your trusted local locksmith experts with 20-minute average response times.
+                We provide mobile locksmith services throughout <strong>Anne Arundel County</strong>. From the <strong>City Dock</strong> to <strong>Severna Park</strong>, we're your trusted local locksmith experts.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {serviceAreaLinks.map((group, gi) => (
@@ -744,7 +743,7 @@ export default function HomePage() {
 
       <CallToAction
         title="Need a Locksmith in Annapolis?"
-        subtitle="Licensed technicians ready to help. 20-min average response time across Annapolis and Anne Arundel County."
+        subtitle="Licensed technicians ready to help across Annapolis and Anne Arundel County."
         primaryButtonText="Contact Us"
         secondaryButtonText="Request Service"
         variant="centered"

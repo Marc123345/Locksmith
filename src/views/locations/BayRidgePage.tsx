@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, Shield, Clock, Key, Home, Car, Building2, Lock, MapPin, Star, Anchor } from 'lucide-react';
+import { Phone, Shield, Key, Home, Car, Building2, Lock, MapPin, Star, Anchor } from 'lucide-react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import FAQSection from '@/components/FAQSection';
@@ -26,7 +26,7 @@ const services = [
 ];
 
 const faqs = [
-  { question: 'How fast can you reach Bay Ridge?', answer: 'We typically arrive in Bay Ridge within 15-25 minutes since we are located just 3 miles away in Annapolis.' },
+  { question: 'How fast can you reach Bay Ridge?', answer: 'We dispatch the nearest available technician to Bay Ridge. We are located just 3 miles away in Annapolis.' },
   { question: 'Do you offer high-security locks for waterfront homes?', answer: 'Yes, we specialize in high-security lock systems ideal for waterfront properties in Bay Ridge, including corrosion-resistant options.' },
   { question: 'Are you available for emergencies at night?', answer: 'Absolutely. We provide 24/7 emergency locksmith services to Bay Ridge residents any time of day or night.' },
   { question: 'Can you rekey all locks in my Bay Ridge home?', answer: 'Yes, we can rekey all locks in your home in a single visit, giving you new keys while keeping your existing hardware.' },
@@ -69,7 +69,7 @@ export default function BayRidgePage() {
               <span className="text-blue-200 text-sm font-medium">Waterfront Community</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Trusted Locksmith in Bay Ridge</h1>
-            <p className="text-xl text-blue-100/80 mb-4 max-w-2xl mx-auto">Professional locksmith services for Bay Ridge, South Annapolis, and the Quiet Waters Park area. Just 3 miles away with 15-25 minute response times.</p>
+            <p className="text-xl text-blue-100/80 mb-4 max-w-2xl mx-auto">Professional locksmith services for Bay Ridge, South Annapolis, and the Quiet Waters Park area. Just 3 miles away — licensed &amp; insured.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link href={`tel:${CONTACT.PHONE}`} className="inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-blue-900 font-bold py-4 px-8 rounded-lg transition-colors text-lg">
                 <Phone className="w-5 h-5" /> Call Now
@@ -91,7 +91,7 @@ export default function BayRidgePage() {
               <div className="grid md:grid-cols-3 gap-8">
                 {[
                   { icon: Shield, title: 'High-Security Locks', desc: 'Premium lock systems built for waterfront properties' },
-                  { icon: Clock, title: 'Fast 15-25 Min Response', desc: 'Close proximity means rapid arrival times' },
+                  { icon: MapPin, title: 'Local Service', desc: 'Serving Bay Ridge and the surrounding area' },
                   { icon: Key, title: 'All Lock Types', desc: 'Residential, commercial, and automotive service' },
                 ].map((item) => (
                   <div key={item.title} className="text-center">

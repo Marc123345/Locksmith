@@ -20,7 +20,7 @@ const services = [
   { title: 'Home Locks', desc: 'Lockouts, rekeying, deadbolts, and security upgrades for Edgewater homes.', icon: Home, color: 'text-blue-600' },
   { title: 'Car Keys', desc: 'Car lockouts, key cutting, transponder programming, and ignition repair.', icon: Car, color: 'text-green-600' },
   { title: 'Business Security', desc: 'Master key systems, access control, and high-security locks for businesses.', icon: Building2, color: 'text-slate-600' },
-  { title: 'Emergency 24/7', desc: 'Round-the-clock emergency lockout service with fast response times.', icon: Phone, color: 'text-red-500' },
+  { title: 'Emergency 24/7', desc: 'Round-the-clock emergency lockout service.', icon: Phone, color: 'text-red-500' },
   { title: 'Lock Repair', desc: 'Expert repair, maintenance, and restoration for all lock types and brands.', icon: Wrench, color: 'text-amber-500' },
   { title: 'Smart Locks', desc: 'Installation and setup of August, Schlage, Yale, and Kwikset smart locks.', icon: Smartphone, color: 'text-teal-500' },
 ];
@@ -74,8 +74,8 @@ export default function EdgewaterPage() {
                     <Clock className="h-6 w-6 text-slate-300" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-400">Response Time</p>
-                    <p className="text-2xl font-bold text-white">{location.responseTime}</p>
+                    <p className="text-sm text-slate-400">Availability</p>
+                    <p className="text-2xl font-bold text-white">7 Days a Week</p>
                   </div>
                 </div>
                 <div className="border-t border-white/10" />

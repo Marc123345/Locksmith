@@ -246,7 +246,7 @@ export default function TestimonialsPage() {
                 ))}
               </div>
               <p className="text-xl md:text-2xl text-muted-foreground italic mb-8">
-                "After calling another local locksmith and getting a estimate of 90 minutes till they could come and a hefty $149 price tag, I called A Secure Annapolis Locksmith to see what they could do. They quoted me $95 and were at my car in 15 minutes!"
+                "After calling another local locksmith and getting a long wait time and a high price, I called A Secure Annapolis Locksmith. They quoted me a fair price and arrived quickly!"
               </p>
               <div>
                 <p className="font-semibold text-lg">Desiree Henningsen</p>

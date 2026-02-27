@@ -50,7 +50,7 @@ export default function ContactPage() {
   const faqs = [
     {
       question: "How quickly can you respond to an emergency?",
-      answer: "For emergency lockouts, we typically arrive within 20-30 minutes in the Annapolis area during business hours. Response times may vary based on your location and current demand.",
+      answer: "For emergency lockouts, we dispatch the nearest available technician in the Annapolis area. Response times may vary based on your location and current demand.",
     },
     {
       question: "Are your locksmiths licensed and insured?",

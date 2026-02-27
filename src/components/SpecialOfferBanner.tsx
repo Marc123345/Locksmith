@@ -7,7 +7,7 @@ export default function SpecialOfferBanner() {
         <div className="flex items-center justify-center text-center">
           <Tag className="h-6 w-6 text-white mr-3 flex-shrink-0" />
           <p className="text-lg font-bold text-white">
-            Special Offer: Book online now and save 10% on your next locksmith service!
+            Licensed &amp; Insured — Upfront pricing provided before work begins. Call for a free quote!
           </p>
         </div>
       </div>

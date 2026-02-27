@@ -207,7 +207,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                   <p className="mb-4">{service.description}</p>
                   <p className="mb-4">
                     At A Secure Annapolis Locksmith, we provide expert {service.name.toLowerCase()} with
-                    fast response times and competitive pricing. Our licensed and insured technicians are
+                    upfront pricing and no hidden fees. Our licensed and insured technicians are
                     available to serve {service.serviceAreas.length > 0 ? service.serviceAreas.join(', ') : 'Anne Arundel County'} with
                     professional service you can trust.
                   </p>
@@ -312,7 +312,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                   Fast Response
                 </h3>
                 <p className="text-gray-700">
-                  We arrive quickly, typically within 20-30 minutes for emergency services throughout Annapolis and surrounding areas.
+                  We dispatch the nearest available technician for emergency services throughout Annapolis and surrounding areas.
                 </p>
               </div>
 

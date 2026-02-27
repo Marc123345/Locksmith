@@ -247,7 +247,7 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <p className="mb-4">
                     As a locally owned and operated locksmith company serving {location.name} and Anne Arundel County,
                     we pride ourselves on delivering fast, reliable service with competitive pricing. Our licensed and
-                    insured technicians are available {location.responseTime === '24/7' ? '24 hours a day, 7 days a week' : 'with response times of ' + location.responseTime}.
+                    insured technicians are available to assist you 7 days a week.
                   </p>
                 </div>
 
@@ -385,10 +385,10 @@ export default function LocationTemplate({ location }: LocationTemplateProps) {
                   <Clock className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Fast Response Time
+                  Prompt Dispatch
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Our mobile locksmiths typically arrive in {location.responseTime} for emergency and scheduled services throughout {location.name} and surrounding areas.
+                  Our mobile locksmiths dispatch promptly for emergency and scheduled services throughout {location.name} and surrounding areas. We come to you.
                 </p>
               </div>
             </div>

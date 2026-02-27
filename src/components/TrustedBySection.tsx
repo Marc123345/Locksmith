@@ -16,7 +16,7 @@ export const TrustedBySection = () => {
     {
       icon: Clock,
       title: "Rapid Response",
-      subtitle: "20-min dispatch"
+      subtitle: "Same-day service"
     },
     {
       icon: Users,

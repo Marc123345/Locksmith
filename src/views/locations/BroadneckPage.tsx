@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, Clock, MapPin, Shield, Star, Home, Car, Building2, Wrench, Smartphone, ChevronRight, Waves } from 'lucide-react';
+import { Phone, Mail, MapPin, Shield, Star, Home, Car, Building2, Wrench, Smartphone, ChevronRight, Waves } from 'lucide-react';
 import { getLocationBySlug } from '@/data/locations';
 import { standardPricing } from '@/data/pricing';
 import { CONTACT } from '@/utils/contact';
@@ -20,7 +20,7 @@ const services = [
   { title: 'Residential Security', desc: 'Home lockouts, rekeying, deadbolt upgrades, and full security solutions for Broadneck Peninsula homes.', icon: Home, color: 'text-blue-600' },
   { title: 'Auto Locksmith', desc: 'Car lockouts, key cutting, transponder programming, and ignition repair across the peninsula.', icon: Car, color: 'text-blue-600' },
   { title: 'Commercial Locks', desc: 'Master key systems, access control, and high-security lock solutions for Broadneck businesses.', icon: Building2, color: 'text-slate-600' },
-  { title: 'Emergency Service', desc: '24/7 emergency lockout response with 20-30 minute arrival times throughout Broadneck.', icon: Phone, color: 'text-red-500' },
+  { title: 'Emergency Service', desc: '24/7 emergency lockout response throughout Broadneck.', icon: Phone, color: 'text-red-500' },
   { title: 'Lock Repair', desc: 'Expert lock repair, maintenance, and restoration for all residential and commercial lock types.', icon: Wrench, color: 'text-amber-500' },
   { title: 'Smart Lock Install', desc: 'Professional installation of August, Schlage, Yale, and Kwikset smart locks for modern homes.', icon: Smartphone, color: 'text-blue-600' },
 ];
@@ -104,8 +104,8 @@ export default function BroadneckPage() {
               </div>
               <div className="mt-6 flex items-center justify-center gap-6 text-sm text-blue-700">
                 <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
-                  <span>20-30 min response</span>
+                  <MapPin className="h-4 w-4" />
+                  <span>Serving Broadneck</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Shield className="h-4 w-4" />

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import { Clock, Users, Wrench, Shield } from "lucide-react";
+import { Clock, Users, MapPin, Shield } from "lucide-react";
 
 const stats = [
   {
@@ -16,10 +16,10 @@ const stats = [
     description: "Based on 60+ verified reviews"
   },
   {
-    number: "20-Min",
-    label: "Response Time",
-    icon: <Wrench className="h-8 w-8 text-primary" />,
-    description: "Fast emergency service"
+    number: "Local",
+    label: "Mobile Service",
+    icon: <MapPin className="h-8 w-8 text-primary" />,
+    description: "We come to you across Anne Arundel County"
   },
   {
     number: "#4920",

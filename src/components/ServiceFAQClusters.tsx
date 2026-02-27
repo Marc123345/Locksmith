@@ -23,7 +23,7 @@ const faqClusters: FAQCluster[] = [
     faqs: [
       {
         question: "How fast can you respond to a lockout in Annapolis?",
-        answer: "We provide 20-minute average response times for emergency lockouts throughout the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole."
+        answer: "We dispatch the nearest available technician to minimize your wait time for emergency lockouts throughout the Annapolis area, including Downtown, Eastport, Bay Ridge, and Parole."
       },
       {
         question: "Do you charge extra for emergency service?",
@@ -63,7 +63,7 @@ const faqClusters: FAQCluster[] = [
       },
       {
         question: "How much does car key programming cost?",
-        answer: "Pricing varies by vehicle make, model, and year. Basic keys start around $150, while high-security and smart keys may cost more. We provide upfront quotes before starting work."
+        answer: "Pricing varies by vehicle make, model, and year. We provide upfront quotes before starting work."
       },
       {
         question: "Do you come to me for car key service?",

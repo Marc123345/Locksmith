@@ -86,8 +86,7 @@ export default function ArnoldPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Fast Local Response</h3>
                 <p className="text-gray-600">
-                  20-30 minute response times throughout the Arnold area. Our technicians are nearby and
-                  ready to assist you day or night.
+                  We dispatch the nearest available technician throughout the Arnold area, ready to assist you day or night.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-sm border border-blue-100">

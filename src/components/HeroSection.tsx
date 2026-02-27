@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Shield, Clock, MapPin, Star, CheckCircle2 } from "lucide-react";
+import { Phone, ArrowRight, Shield, MapPin, Star, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -124,7 +124,7 @@ export const HeroSection = () => {
           >
             {[
               { icon: Shield, title: "Licensed & Insured", sub: "Maryland Certified" },
-              { icon: Clock, title: "20-Min Response", sub: "Local Emergency Service" },
+              { icon: MapPin, title: "Locally Owned", sub: "Annapolis Based Since 2010" },
               { icon: CheckCircle2, title: "Upfront Pricing", sub: "No Hidden Service Fees" }
             ].map((feature, i) => (
               <div key={i} className="flex items-center gap-4 px-6 py-4 rounded-3xl bg-white/40 backdrop-blur-[2px] transition-colors hover:bg-white/80">

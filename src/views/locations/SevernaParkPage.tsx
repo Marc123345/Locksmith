@@ -61,7 +61,7 @@ export default function SevernaParkPage() {
               </h1>
               <p className="text-lg text-blue-200 mb-8 leading-relaxed">
                 Serving Severna Park, Benfield, Chartwell, and surrounding neighborhoods with
-                top-tier locksmith services. Available 24/7 with 20-30 minute response times.
+                top-tier locksmith services. Available 24/7 — licensed &amp; insured.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
