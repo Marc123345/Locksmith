@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, Clock, Shield, Home, Building2, Key, Car, Lock, Smartphone, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, Mail, Shield, Home, Building2, Key, Car, Lock, Smartphone, MapPin, ArrowRight } from 'lucide-react';
 import { getLocationBySlug } from '@/data/locations';
 import { standardPricing } from '@/data/pricing';
 import { CONTACT } from '@/utils/contact';
@@ -25,7 +25,7 @@ const relatedLinks = [
 ];
 
 const services = [
-  { name: 'Emergency Lockout', desc: 'Fast response for home, car, and office lockouts', border: 'border-t-red-500', icon: Phone },
+  { name: 'Emergency Lockout', desc: 'Home, car, and office lockout service', border: 'border-t-red-500', icon: Phone },
   { name: 'Lock Rekey', desc: 'Affordable rekeying for homes and apartments', border: 'border-t-blue-500', icon: Key },
   { name: 'Car Keys', desc: 'Key cutting, programming, and replacement', border: 'border-t-green-500', icon: Car },
   { name: 'Lock Change', desc: 'Full lock replacement and upgrades', border: 'border-t-amber-500', icon: Lock },
@@ -50,8 +50,8 @@ export default function ParolePage() {
         <section className="bg-gradient-to-b from-gray-900 to-blue-950 text-white py-20 md:py-28">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <span className="inline-flex items-center gap-2 bg-blue-600/30 text-blue-300 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              <Clock className="w-4 h-4" />
-              10-20 Min Response
+              <MapPin className="w-4 h-4" />
+              Serving Parole
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Fast Locksmith Service Near Annapolis Mall

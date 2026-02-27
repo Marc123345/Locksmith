@@ -14,7 +14,7 @@ export default function LocalBusinessSchema({ page = 'home', locationName }: Loc
     "name": "A Secure Annapolis Locksmith",
     "url": "https://www.asecureannapolislocksmith.com/",
     "image": "https://www.asecureannapolislocksmith.com/path-to-your-logo.png",
-    "description": "Licensed, insured Annapolis locksmith providing residential, commercial and automotive locksmith services with 20-minute response times across Anne Arundel County.",
+    "description": "Licensed, insured Annapolis locksmith providing residential, commercial and automotive locksmith services across Anne Arundel County.",
     "telephone": "+1-410-849-6069",
     "email": CONTACT.EMAIL,
     "priceRange": "$$",

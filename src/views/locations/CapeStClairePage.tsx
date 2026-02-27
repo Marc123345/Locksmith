@@ -83,8 +83,8 @@ export default function CapeStClairePage() {
                 <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-7 h-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">20-30 Min Response</h3>
-                <p className="text-gray-600">Just 6 miles from our Annapolis shop, we reach Cape St. Claire quickly for emergencies and scheduled appointments alike.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Local Service</h3>
+                <p className="text-gray-600">Just 6 miles from our Annapolis shop, we serve Cape St. Claire for emergencies and scheduled appointments alike.</p>
               </div>
               <div className="bg-white rounded-2xl shadow-sm border border-blue-200 p-8 text-center">
                 <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">

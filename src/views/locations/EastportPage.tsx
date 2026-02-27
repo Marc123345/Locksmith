@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, Phone, Clock, Home, Car, Building2, Shield, Star, Navigation } from 'lucide-react';
+import { MapPin, Phone, Home, Car, Building2, Shield, Star, Navigation } from 'lucide-react';
 import { getLocationBySlug } from '@/data/locations';
 import { standardPricing } from '@/data/pricing';
 import { CONTACT } from '@/utils/contact';
@@ -129,12 +129,12 @@ export default function EastportPage() {
             <div className="max-w-2xl mx-auto">
               <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-8 md:p-10 text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-blue-600" />
+                  <MapPin className="w-8 h-8 text-blue-600" />
                 </div>
-                <p className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Fastest Response in the Area</p>
-                <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">10-15 Minutes</p>
+                <p className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2">Your Local Eastport Locksmith</p>
+                <p className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">Local</p>
                 <p className="text-gray-600 text-lg">
-                  Because we are based in Eastport, we arrive faster than any other locksmith. No long waits — just your neighbor showing up to help.
+                  Because we are based in Eastport, we dispatch technicians promptly. No long waits — just your neighbor showing up to help.
                 </p>
               </div>
             </div>

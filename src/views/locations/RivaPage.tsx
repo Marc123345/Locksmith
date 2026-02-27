@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, CalendarDays, Shield, Home, Car, Building2, Wrench, Key, ChevronRight } from 'lucide-react';
+import { Phone, Mail, MapPin, CalendarDays, Shield, Home, Car, Building2, Wrench, Key, ChevronRight } from 'lucide-react';
 import { getLocationBySlug } from '@/data/locations';
 import { standardPricing } from '@/data/pricing';
 import { CONTACT } from '@/utils/contact';
@@ -20,7 +20,7 @@ const services = [
   { title: 'Residential Locksmith', desc: 'Home lockouts, rekeying, deadbolt installation, and security upgrades for Riva homes along the South River.', icon: Home, color: 'bg-blue-600' },
   { title: 'Automotive Locksmith', desc: 'Car lockouts, key cutting, transponder programming, and ignition repair for Riva residents.', icon: Car, color: 'bg-sky-600' },
   { title: 'Commercial Locksmith', desc: 'Master key systems, access control, and high-security locks for Riva Road Corridor businesses.', icon: Building2, color: 'bg-slate-600' },
-  { title: 'Emergency Lockout', desc: 'Fast emergency lockout service with 15-25 minute response times throughout the Riva area.', icon: Phone, color: 'bg-red-500' },
+  { title: 'Emergency Lockout', desc: 'Fast emergency lockout service throughout the Riva area.', icon: Phone, color: 'bg-red-500' },
   { title: 'Lock Repair', desc: 'Expert lock repair, maintenance, and restoration for all lock types in Riva and South River.', icon: Wrench, color: 'bg-amber-500' },
   { title: 'Rekey Service', desc: 'Professional lock rekeying to enhance security for your Riva home or business without replacing hardware.', icon: Key, color: 'bg-blue-500' },
 ];
@@ -50,8 +50,8 @@ export default function RivaPage() {
         <section className="bg-gradient-to-br from-blue-800 to-sky-950 py-20 md:py-28">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/30 text-sky-200 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              <Clock className="w-4 h-4" />
-              15-25 Min Response
+              <MapPin className="w-4 h-4" />
+              Serving Riva
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Professional Locksmith Services in Riva, MD
@@ -81,9 +81,9 @@ export default function RivaPage() {
                 <p className="text-gray-500 text-sm">Away</p>
               </div>
               <div className="bg-white border border-blue-200 rounded-xl p-6 text-center shadow-sm">
-                <Clock className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                <p className="text-2xl font-bold text-gray-900">15-25 Min</p>
-                <p className="text-gray-500 text-sm">Response Time</p>
+                <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <p className="text-2xl font-bold text-gray-900">Local</p>
+                <p className="text-gray-500 text-sm">Mobile Service</p>
               </div>
               <div className="bg-white border border-blue-200 rounded-xl p-6 text-center shadow-sm">
                 <CalendarDays className="w-8 h-8 text-blue-600 mx-auto mb-3" />

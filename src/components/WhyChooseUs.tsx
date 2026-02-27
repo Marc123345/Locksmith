@@ -9,7 +9,7 @@ const benefits = [
   {
     icon: Clock,
     title: 'Fast Emergency Response',
-    description: 'Arrive in 20-30 minutes for most locations'
+    description: 'We dispatch technicians promptly across most locations'
   },
   {
     icon: Shield,

@@ -17,11 +17,11 @@ import LocationJsonLd from '@/components/locations/LocationJsonLd';
 import type { PricingItem } from '@/data/pricing';
 
 const annapolisPricing: PricingItem[] = [
-  { service: 'Home Lockout', price: 'Starting at $95', description: 'Fast, damage\u2011free entry in most cases' },
-  { service: 'Car Lockout Service', price: 'Starting at $95', description: 'Mobile service wherever your vehicle is parked' },
-  { service: 'Rekeying', price: 'Starting at $39 per lock', description: 'Cost\u2011effective when you don\u2019t need new hardware' },
-  { service: 'Smart Lock Installation', price: 'Starting at $120', description: 'Includes removal of old locks and setup of your new system' },
-  { service: 'Service Call Fee', price: '$39', description: 'Applied to all completed service visits' },
+  { service: 'Home Lockout', price: 'Call for a Free Quote', description: 'Professional, damage\u2011free entry in most cases' },
+  { service: 'Car Lockout Service', price: 'Call for a Free Quote', description: 'Mobile service wherever your vehicle is parked' },
+  { service: 'Rekeying', price: 'Call for a Free Quote', description: 'Cost\u2011effective when you don\u2019t need new hardware' },
+  { service: 'Smart Lock Installation', price: 'Call for a Free Quote', description: 'Includes removal of old locks and setup of your new system' },
+  { service: 'Service Call Fee', price: 'Call for a Free Quote', description: 'Applied to all completed service visits' },
 ];
 
 const vanAreas = [
@@ -58,7 +58,7 @@ const emergencySteps = [
   'Move to a safe, visible spot near your door, lobby, or vehicle.',
   'Avoid forcing the lock or prying the door\u2014this often causes damage that is more expensive than a professional opening.',
   'Call (410) 849\u20116069 and tell us what happened (home, car, or business).',
-  'We\u2019ll explain your options, give you a price range, and dispatch a technician with an ETA.',
+  'We\u2019ll explain your options, give you a quote, and dispatch a technician.',
 ];
 
 const relatedLinks = [
@@ -121,7 +121,7 @@ export default function AnnapolisPage() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Your Neighbors in Annapolis</h2>
                 <p className="text-lg text-gray-600 mb-4">
-                  A Secure Annapolis Locksmith has been serving Annapolis for more than 15 years, working with historic homes, waterfront properties, condos, and commercial buildings throughout the city. Because our shop is just across Spa Creek in Eastport, our technicians are already driving through Downtown, Parole, Bay Ridge, and Hillsmere Shores every day, keeping typical response times in the 15&ndash;25 minute range for most Annapolis calls.
+                  A Secure Annapolis Locksmith has been serving Annapolis for more than 15 years, working with historic homes, waterfront properties, condos, and commercial buildings throughout the city. Because our shop is just across Spa Creek in Eastport, our technicians are already driving through Downtown, Parole, Bay Ridge, and Hillsmere Shores every day.
                 </p>
               </div>
               <div>
@@ -144,8 +144,8 @@ export default function AnnapolisPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <Clock className="h-6 w-6 text-blue-400 mx-auto mb-2" />
-                <p className="text-2xl font-bold text-white">15&ndash;25 min</p>
-                <p className="text-slate-400 text-sm">Typical Response Time</p>
+                <p className="text-2xl font-bold text-white">Local</p>
+                <p className="text-slate-400 text-sm">Mobile Service</p>
               </div>
               <div>
                 <Shield className="h-6 w-6 text-blue-400 mx-auto mb-2" />

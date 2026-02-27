@@ -14,8 +14,8 @@ const steps = [
   },
   {
     icon: <Clock className="h-7 w-7" />,
-    title: "20-Min Response",
-    description: "Average response time for emergency lockouts across Annapolis.",
+    title: "Prompt Dispatch",
+    description: "We dispatch the nearest available technician for emergency lockouts across Annapolis.",
     accent: "bg-teal-500"
   },
   {

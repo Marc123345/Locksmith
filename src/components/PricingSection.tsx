@@ -4,10 +4,9 @@ import type { PricingItem } from '../data/pricing';
 
 interface PricingSectionProps {
   pricing: PricingItem[];
-  showDiscount?: boolean;
 }
 
-export default function PricingSection({ pricing, showDiscount = true }: PricingSectionProps) {
+export default function PricingSection({ pricing }: PricingSectionProps) {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,8 +28,8 @@ export default function PricingSection({ pricing, showDiscount = true }: Pricing
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {item.service}
               </h3>
-              <p className="text-2xl font-bold text-blue-600 mb-2">
-                {item.price}
+              <p className="text-lg font-semibold text-blue-600 mb-2">
+                Call for a Free Quote
               </p>
               {item.description && (
                 <p className="text-sm text-gray-600">
@@ -40,17 +39,6 @@ export default function PricingSection({ pricing, showDiscount = true }: Pricing
             </Card>
           ))}
         </div>
-
-        {showDiscount && (
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-6 text-center">
-            <p className="text-2xl font-bold text-white mb-2">
-              Special Offer: Save 10% When You Book Online!
-            </p>
-            <p className="text-blue-100">
-              Use our contact form to schedule service and receive an instant discount
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );

@@ -312,7 +312,7 @@ export default function ServiceTemplate({ service, pricing = standardPricing }: 
                   Fast Response
                 </h3>
                 <p className="text-gray-700">
-                  We arrive quickly, typically within 20-30 minutes for emergency services throughout Annapolis and surrounding areas.
+                  We dispatch the nearest available technician for emergency services throughout Annapolis and surrounding areas.
                 </p>
               </div>
 

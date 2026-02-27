@@ -12,7 +12,7 @@ const features = [
   },
   {
     icon: <Clock className="h-10 w-10 text-primary" />,
-    title: "20-Minute Response",
+    title: "Prompt Dispatch",
     description: "Fast dispatch for emergency lockouts. We minimize your wait time and get you back inside quickly.",
   },
   {

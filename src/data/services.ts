@@ -212,7 +212,7 @@ export const services: ServiceData[] = [
     faqs: [
       {
         question: 'How long does it take for a locksmith to arrive in an emergency?',
-        answer: 'In most cases, we arrive in 20–30 minutes to any Annapolis location.'
+        answer: 'We dispatch the nearest available technician to your location in Annapolis.'
       },
       {
         question: 'Will the lock or door be damaged during entry?',
@@ -228,7 +228,7 @@ export const services: ServiceData[] = [
       }
     ],
     metaTitle: 'Emergency Lockout Service in Annapolis, MD | 24/7 Help',
-    metaDescription: '24/7 emergency house lockout service in Annapolis. Fast response in 20-30 minutes. Non-destructive entry. Licensed & insured. Call (410) 849-6069 now.'
+    metaDescription: '24/7 emergency house lockout service in Annapolis. Non-destructive entry. Licensed & insured. Call (410) 849-6069 now.'
   },
   {
     id: 'lock-repair',
@@ -264,7 +264,7 @@ export const services: ServiceData[] = [
       },
       {
         question: 'How fast can you respond to lock repair calls?',
-        answer: 'We typically arrive within 20–30 minutes for lock repair service in Annapolis.'
+        answer: 'We dispatch the nearest available technician for lock repair service in Annapolis.'
       }
     ],
     metaTitle: 'Lock Repair in Annapolis, MD | Fast & Professional Service',

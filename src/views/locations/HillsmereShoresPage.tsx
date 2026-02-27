@@ -1,6 +1,6 @@
 'use client';
 
-import { Clock, Home, Key, Building2, Phone, MapPin, Timer, Map, Shield } from 'lucide-react';
+import { Home, Key, Building2, Phone, MapPin, Timer, Map, Shield } from 'lucide-react';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import FAQSection from '@/components/FAQSection';
@@ -25,7 +25,7 @@ const relatedLinks = [
 ];
 
 const faqs = [
-  { question: 'How quickly can you reach Hillsmere Shores?', answer: 'We typically arrive in Hillsmere Shores within 15-25 minutes of your call. Our technicians are familiar with the neighborhood and surrounding areas.' },
+  { question: 'How quickly can you reach Hillsmere Shores?', answer: 'We dispatch the nearest available technician to Hillsmere Shores. Our technicians are familiar with the neighborhood and surrounding areas.' },
   { question: 'Do you service the entire Hillsmere Shores community?', answer: 'Yes, we cover all of Hillsmere Shores, the Forest Drive Corridor, and South Annapolis areas with full locksmith services.' },
   { question: 'Are you available for emergencies at night?', answer: 'Absolutely. We provide 24/7 emergency locksmith services to Hillsmere Shores residents, including nights, weekends, and holidays.' },
   { question: 'Can you rekey all locks in my Hillsmere Shores home?', answer: 'Yes, we offer complete home rekeying services so all your doors work with a single key, which is especially popular with new homeowners in the area.' },
@@ -52,8 +52,8 @@ export default function HillsmereShoresPage() {
         <section className="bg-gradient-to-br from-slate-800 to-gray-900 text-white py-20 md:py-28">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
-              <Clock className="w-4 h-4" />
-              15-25 Min Response
+              <MapPin className="w-4 h-4" />
+              Serving Hillsmere Shores
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Your Neighborhood Locksmith in Hillsmere Shores
@@ -88,8 +88,8 @@ export default function HillsmereShoresPage() {
                     <Timer className="w-5 h-5 text-slate-600" />
                   </div>
                   <div>
-                    <p className="text-sm text-slate-500 font-medium">Response Time</p>
-                    <p className="text-lg font-semibold text-slate-800">15-25 Minutes</p>
+                    <p className="text-sm text-slate-500 font-medium">Availability</p>
+                    <p className="text-lg font-semibold text-slate-800">7 Days a Week</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">

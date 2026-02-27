@@ -12,54 +12,42 @@ const pricingItems = [
   {
     icon: <Home className="h-6 w-6" />,
     service: "House Lockout",
-    price: "$39",
-    priceLabel: "Starting at",
-    details: "Service call + labor. No hidden fees.",
+    details: "Call for a Free Quote",
     link: "/services/emergency-lockout",
     tag: "Most Popular"
   },
   {
     icon: <Home className="h-6 w-6" />,
     service: "Lock Change",
-    price: "$75",
-    priceLabel: "Starting at",
-    details: "Includes basic hardware and installation.",
+    details: "Call for a Free Quote",
     link: "/services/lock-change",
     tag: null
   },
   {
     icon: <Home className="h-6 w-6" />,
     service: "Rekey Service",
-    price: "$25",
-    priceLabel: "Per lock from",
-    details: "Discounts for multiple locks.",
+    details: "Call for a Free Quote",
     link: "/services/lock-rekey",
     tag: "Best Value"
   },
   {
     icon: <Car className="h-6 w-6" />,
     service: "Car Lockout",
-    price: "$50",
-    priceLabel: "Starting at",
-    details: "No towing needed. We come to you.",
+    details: "Call for a Free Quote",
     link: "/services/lost-car-keys",
     tag: null
   },
   {
     icon: <Car className="h-6 w-6" />,
     service: "Car Key Programming",
-    price: "$150",
-    priceLabel: "Starting at",
-    details: "Varies by make and model.",
+    details: "Call for a Free Quote",
     link: "/services/car-key-programming",
     tag: null
   },
   {
     icon: <Building2 className="h-6 w-6" />,
     service: "Commercial Locks",
-    price: "Quote",
-    priceLabel: "Custom",
-    details: "Contact us for commercial pricing.",
+    details: "Call for a Free Quote",
     link: "/services",
     tag: null
   }
@@ -97,13 +85,13 @@ export default function PricingGuide() {
           className="text-center mb-14"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            Transparent Pricing
+            Our Services
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Locksmith Pricing in Annapolis
+            Locksmith Services in Annapolis
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            No surprises, no hidden fees. Here's what you can expect to pay for common locksmith services.
+            No surprises, no hidden fees. Call us for a free quote on any locksmith service.
           </p>
         </motion.div>
 
@@ -134,8 +122,6 @@ export default function PricingGuide() {
                         <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">
                           {item.service}
                         </h3>
-                        <p className="text-xs text-muted-foreground mb-1">{item.priceLabel}</p>
-                        <p className="text-3xl font-bold text-primary">{item.price}</p>
                       </div>
                     </div>
                   </CardContent>
