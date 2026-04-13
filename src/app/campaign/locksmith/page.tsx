@@ -1,7 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-import { Phone, Shield, Clock, Star, CheckCircle } from 'lucide-react';
+import { Phone, Shield, Clock, Star, CircleCheck as CheckCircle } from 'lucide-react';
 import { CONTACT } from '@/utils/contact';
 import { useState, Suspense, useEffect, useCallback } from 'react';
 import { googleReviews } from '@/data/reviews';
@@ -67,6 +67,11 @@ function detectLocation(keyword: string): string {
 function trackPhoneClick(keyword: string, campaign: string, serviceType: string, location: string) {
   if (typeof window !== 'undefined') {
     if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-16480759104/PhoRCNTilY4cEMDa0bI9',
+        'value': 1.0,
+        'currency': 'USD'
+      });
       window.gtag('event', 'phone_click', {
         keyword: keyword,
         campaign: campaign,

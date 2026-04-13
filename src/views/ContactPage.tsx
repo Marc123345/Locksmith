@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Script from 'next/script';
 import { Phone, MapPin, ArrowRight, Shield, BadgeCheck, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
@@ -115,6 +116,15 @@ export default function ContactPage() {
 
   return (
     <>
+      <Script id="google-ads-conversion" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-16480759104/PhoRCNTilY4cEMDa0bI9',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        `}
+      </Script>
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image
