@@ -4,7 +4,7 @@ import React, { useState, useCallback, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, Phone, ChevronDown, MapPin, Home, Car, Wrench, AlertCircle } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, MapPin, Hop as Home, Car, Wrench, CircleAlert as AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useScroll } from "@/hooks/useScroll";
@@ -161,7 +161,7 @@ export const Header = () => {
             >
               <Image
                 src="https://i.imgur.com/VfpMzbE.png"
-                alt="A Secure Annapolis Locksmith"
+                alt=""
                 width={200}
                 height={64}
                 className="h-12 w-auto md:h-16"
