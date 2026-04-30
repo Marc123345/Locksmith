@@ -13,7 +13,7 @@ const Footer = () => {
             <Link href="/" className="inline-block hover:opacity-80 transition-opacity" aria-label="Return to homepage">
               <Image
                 src="https://i.imgur.com/VfpMzbE.png"
-                alt="A Secure Annapolis Locksmith"
+                alt="A Secure Annapolis Locksmith Logo"
                 width={200}
                 height={64}
                 className="h-16 w-auto"
