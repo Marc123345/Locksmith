@@ -161,7 +161,7 @@ export const Header = () => {
             >
               <Image
                 src="https://i.imgur.com/VfpMzbE.png"
-                alt="A Secure Annapolis Locksmith Logo"
+                alt="A Secure Annapolis Locksmith"
                 width={200}
                 height={64}
                 className="h-12 w-auto md:h-16"
