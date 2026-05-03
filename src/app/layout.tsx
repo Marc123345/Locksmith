@@ -4,6 +4,7 @@ import { ClientLayout } from './client-layout'
 import '../index.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.asecureannapolislocksmith.com'),
   title: 'A Secure Annapolis Locksmith - Professional Locksmith Services in Annapolis, MD',
   description: 'Licensed & insured locksmith services in Annapolis. Residential, commercial & automotive locksmith solutions. Emergency lockouts, rekeying, security systems & more.',
   keywords: 'locksmith, Annapolis locksmith, residential locksmith, commercial locksmith, automotive locksmith, car lockout, house lockout, lock repair, lock installation, key cutting, key programming',
@@ -27,9 +28,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.asecureannapolislocksmith.com/',
   },
-  icons: {
-    icon: 'https://i.imgur.com/VfpMzbE.png',
-  },
   other: {
     'revisit-after': '7 days',
     'ai-content-type': 'business-information',
@@ -51,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="https://i.imgur.com/VfpMzbE.png" type="image/png" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://plausible.io" />
