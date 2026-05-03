@@ -1,128 +1,24 @@
 'use client';
 
-import { useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams, notFound } from 'next/navigation';
 import { Calendar, MapPin, Tag, ArrowLeft, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { BlogCard } from '@/components/BlogCard';
-import { supabase } from '@/lib/supabase';
-import { useSafeState } from '@/hooks/useSafeState';
+import { getPostBySlug, getRelatedPosts } from '@/data/blogPosts';
 import { CONTACT } from '@/utils/contact';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  content: string;
-  excerpt: string;
-  author: string;
-  published_date: string;
-  featured_image?: string;
-  category?: string;
-  location?: string;
-  tags?: string[];
-  meta_description?: string;
-}
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useSafeState<BlogPost | null>(null);
-  const [relatedPosts, setRelatedPosts] = useSafeState<BlogPost[]>([]);
-  const [loading, setLoading] = useSafeState(true);
-  const [isNotFound, setIsNotFound] = useSafeState(false);
 
-  const fetchBlogPost = useCallback(async () => {
-    try {
-      const { data, error } = await supabase
-        .from('blog_posts')
-        .select('*')
-        .eq('slug', slug)
-        .eq('status', 'published')
-        .lte('published_date', new Date().toISOString().split('T')[0])
-        .maybeSingle();
-
-      if (error) throw error;
-
-      if (!data) {
-        setIsNotFound(true);
-        return;
-      }
-
-      setPost(data);
-
-      try {
-        await supabase.rpc('increment_blog_view_count', { post_id: data.id });
-      } catch {
-        // non-critical, silently ignore
-      }
-
-      try {
-        let query = supabase
-          .from('blog_posts')
-          .select('*')
-          .eq('status', 'published')
-          .lte('published_date', new Date().toISOString().split('T')[0])
-          .neq('id', data.id)
-          .limit(3);
-
-        if (data.category) {
-          query = query.eq('category', data.category);
-        } else if (data.location) {
-          query = query.eq('location', data.location);
-        }
-
-        const { data: relatedData } = await query.order('published_date', { ascending: false });
-
-        if (relatedData && relatedData.length > 0) {
-          setRelatedPosts(relatedData);
-        } else {
-          const { data: fallbackData } = await supabase
-            .from('blog_posts')
-            .select('*')
-            .eq('status', 'published')
-            .lte('published_date', new Date().toISOString().split('T')[0])
-            .neq('id', data.id)
-            .order('published_date', { ascending: false })
-            .limit(3);
-
-          setRelatedPosts(fallbackData || []);
-        }
-      } catch {
-        // silently handle fetch errors
-      }
-    } catch {
-      setIsNotFound(true);
-    } finally {
-      setLoading(false);
-    }
-  }, [slug, setPost, setIsNotFound, setRelatedPosts, setLoading]);
-
-  useEffect(() => {
-    if (slug) {
-      fetchBlogPost();
-    }
-  }, [slug, fetchBlogPost]);
-
-  if (isNotFound) {
-    notFound();
-  }
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-          <p className="mt-4 text-muted-foreground">Loading article...</p>
-        </div>
-      </div>
-    );
-  }
+  const post = getPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
+
+  const relatedPosts = getRelatedPosts(post.id, post.category, post.location);
 
   const formattedDate = new Date(post.published_date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -161,7 +57,9 @@ const BlogPostPage = () => {
         latitude: '38.9784',
         longitude: '-76.4922',
       },
-      areaServed: post.location ? [post.location, 'Anne Arundel County', 'Maryland'] : ['Annapolis', 'Anne Arundel County', 'Maryland'],
+      areaServed: post.location
+        ? [post.location, 'Anne Arundel County', 'Maryland']
+        : ['Annapolis', 'Anne Arundel County', 'Maryland'],
       logo: {
         '@type': 'ImageObject',
         url: 'https://i.imgur.com/VfpMzbE.png',

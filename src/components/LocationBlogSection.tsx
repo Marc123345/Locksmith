@@ -1,21 +1,12 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, Calendar, MapPin, BookOpen } from 'lucide-react';
 import { Card, CardContent, CardFooter } from './ui/card';
 import { Button } from './ui/button';
-import { supabase } from '@/lib/supabase';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  location: string;
-  created_at: string;
-}
+import { getPublishedPosts } from '@/data/blogPosts';
 
 interface LocationBlogSectionProps {
   locationName?: string;
@@ -41,38 +32,15 @@ export default function LocationBlogSection({
   heading = "Latest Blog Posts",
   limit = 3
 }: LocationBlogSectionProps) {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchPosts() {
-      try {
-        let query = supabase
-          .from('blog_posts')
-          .select('id, title, slug, excerpt, location, created_at')
-          .eq('status', 'published')
-          .order('created_at', { ascending: false })
-          .limit(limit);
-
-        if (locationName) {
-          query = query.or(`location.eq.${locationName},location.is.null`);
-        }
-
-        const { data, error } = await query;
-
-        if (error) throw error;
-        setPosts(data || []);
-      } catch {
-        // silently handle fetch errors
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchPosts();
+  const posts = useMemo(() => {
+    const all = getPublishedPosts();
+    const filtered = locationName
+      ? all.filter((p) => !p.location || p.location === locationName)
+      : all;
+    return filtered.slice(0, limit);
   }, [locationName, limit]);
 
-  if (loading || posts.length === 0) {
+  if (posts.length === 0) {
     return null;
   }
 
