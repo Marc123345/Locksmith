@@ -1,33 +1,66 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useEffect, useCallback } from 'react';
 import { BookOpen, Search } from 'lucide-react';
 import { BlogCard } from '@/components/BlogCard';
-import { getPublishedPosts } from '@/data/blogPosts';
+import { supabase } from '@/lib/supabase';
+import { useSafeState } from '@/hooks/useSafeState';
+
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  published_date: string;
+  featured_image?: string;
+  category?: string;
+  location?: string;
+  tags?: string[];
+}
 
 const BlogPage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [posts, setPosts] = useSafeState<BlogPost[]>([]);
+  const [loading, setLoading] = useSafeState(true);
+  const [searchQuery, setSearchQuery] = useSafeState('');
+  const [selectedCategory, setSelectedCategory] = useSafeState<string | null>(null);
 
-  const posts = useMemo(() => getPublishedPosts(), []);
+  const fetchBlogPosts = useCallback(async () => {
+    try {
+      const { data, error } = await supabase
+        .from('blog_posts')
+        .select('*')
+        .eq('status', 'published')
+        .lte('published_date', new Date().toISOString().split('T')[0])
+        .order('published_date', { ascending: false });
 
-  const categories = useMemo(
-    () => Array.from(new Set(posts.map((p) => p.category).filter(Boolean))) as string[],
-    [posts]
-  );
+      if (error) throw error;
+      setPosts(data || []);
+    } catch {
+      // silently handle fetch errors
+    } finally {
+      setLoading(false);
+    }
+  }, [setPosts, setLoading]);
 
-  const filteredPosts = useMemo(
-    () =>
-      posts.filter((post) => {
-        const matchesSearch =
-          searchQuery === '' ||
-          post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase());
-        const matchesCategory = !selectedCategory || post.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-      }),
-    [posts, searchQuery, selectedCategory]
-  );
+  useEffect(() => {
+    fetchBlogPosts();
+  }, [fetchBlogPosts]);
+
+  const filteredPosts = posts.filter((post) => {
+    const matchesSearch =
+      searchQuery === '' ||
+      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase());
+
+    const matchesCategory =
+      !selectedCategory || post.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = Array.from(
+    new Set(posts.map((post) => post.category).filter(Boolean))
+  ) as string[];
 
   return (
     <>
@@ -86,7 +119,12 @@ const BlogPage = () => {
             )}
           </div>
 
-          {filteredPosts.length > 0 ? (
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+              <p className="mt-4 text-muted-foreground">Loading articles...</p>
+            </div>
+          ) : filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {filteredPosts.map((post) => (
                 <BlogCard

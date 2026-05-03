@@ -1,18 +1,33 @@
 import type { Metadata } from 'next'
+import { createClient } from '@supabase/supabase-js'
 import BlogPostPage from '@/views/BlogPostPage'
-import { getPostBySlug, getPublishedPosts } from '@/data/blogPosts'
 
+// 1. Define the Props type for Next.js 15
 type PageProps = {
   params: Promise<{ slug: string }>
 }
 
-export async function generateStaticParams() {
-  return getPublishedPosts().map((post) => ({ slug: post.slug }))
-}
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
-export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const { slug } = await props.params
-  const post = getPostBySlug(slug)
+// 2. Add Dynamic Route Configuration
+export const dynamic = 'force-dynamic'
+export const dynamicParams = true
+
+export async function generateMetadata(
+  props: PageProps
+): Promise<Metadata> {
+  // 3. Await the params promise before accessing properties
+  const params = await props.params
+  const slug = params.slug
+
+  const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  const { data: post } = await supabase
+    .from('blog_posts')
+    .select('title, excerpt, meta_description, featured_image, slug')
+    .eq('slug', slug)
+    .eq('status', 'published')
+    .maybeSingle()
 
   if (!post) {
     return {
